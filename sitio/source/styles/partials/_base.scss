@@ -1,0 +1,46 @@
+@import 'normalize';
+
+/* =Base
+----------------------------------------------- */
+*, *:after, *::before{
+	box-sizing: border-box;
+}
+body {
+	font-family: font(Roboto);
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 400;
+	overflow-x: hidden;
+	/* WP */
+	&.admin-bar{
+		.site-header{
+			&_fixed{
+				margin-top: 32px;
+			}
+		}
+		.mfp-wrap,
+		.site-nav{
+			margin-top: 32px;
+		}
+	}
+/* End WP */
+}
+a{
+	color: get-color(red);
+	text-decoration: underline;	
+}
+b,
+strong {
+  font-weight: bold;
+}
+figure{
+	margin: 0;
+}
+blockquote{
+	margin: 0;
+}
+p{
+	color: rgba(get-color(dark),.8);	
+	font-family: $roboto;
+	font-size: ms(0);
+}

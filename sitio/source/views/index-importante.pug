@@ -1,0 +1,144 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+
+		-var hasSearch = false;
+		include partials/header
+
+		main.site-main
+			section.section.bg-bluedark.elem-bg
+				img(data-src=`${temp}hero-home.jpg`, alt="").img-desktop.img-to-bg
+				.container
+					.row
+						.col-xs-12.col-sm-12.col-md-7
+							article.article.article--dark.text-light
+								h2.article_title.title--light Estás en Gob.cl
+								p Tu guía para acceder de manera simple y rápida a información del Gobierno de Chile.
+								.search-form.search-form--large
+									input(type="search" placeholder="Escribe aquí lo que deseas buscar").search-form_input
+									button(type="submit").search-form_button.search-form_button--submit: i.icon-search
+									button(type="button").search-form_button.search-form_button--cancel: i.icon-delete
+			section.visible-xs
+				.container
+					.row
+						.col-xs-12
+							.overflowed-xs
+								a(href="#").button.button--block Sigue el Mensaje Presidencial del 21 de mayo
+			section.section.section--medium.bg-bluedark.hidden-xs
+				.container
+					ul.list-ib
+						li Lo más buscado:
+						li: a(href="#").link.link--clean Subsidio habitacional
+						li: a(href="#").link.link--clean Bono por hijo
+						li: a(href="#").link.link--clean Gratuidad
+						li: a(href="#").link.link--clean Cuenta pública
+
+			section.section.nopadding
+				.container
+					.row
+						.col-xs-12.col-sm-12.col-md-8.col-lg-6
+							article.card-new
+								h2.card-new_title Trámites y beneficios
+								p.card-new_text Conoce cuales son las instrucciones relacionadas con ras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+								a(href="#").card-new_more.hidden-lg Más información
+					.row
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--text-dark.link--has-dot-red Certificación de convertidores catalíticos de reposición
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--text-dark Concurso para inscribir nuevos taxis
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--text-dark Certificación de vehículos a gas
+					.clearfix
+						a(href="#").more.more--right Ver más
+					
+					//- article.card-new
+						h2.card-new_title Noticias y avances
+						p.card-new_text Conoce cuales son las instrucciones relacionadas con ras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+						a(href="#").card-new_more Más información
+			
+			section.section
+				.container
+					h2.title Noticias
+					.row
+						.col-xs-12.col-sm-12.col-md-6
+							article.new.new--has-thumbnail-sm
+								figure.new_figure
+									img(data-src=`${temp}new-1.jpg` alt="").img-desktop.img-responsive
+								span.new_category Seguridad
+								h2.new_title: a(href="#") Transportes renueva bus de servicio subsidiado que beneficia a 500 personas de localidades apartadas de Lanco
+						.col-xs-12.col-sm-12.col-md-6
+							article.new.new--has-thumbnail-sm
+								figure.new_figure
+									img(data-src=`${temp}new-1.jpg` alt="").img-desktop.img-responsive
+								span.new_category Seguridad
+								h2.new_title: a(href="#") Ministra de MTT participa en lanzamiento de primer concurso literario para trabajadores del Transantiago y Metro
+						.col-xs-12.col-sm-12.col-md-6
+							article.new.new--has-thumbnail-sm
+								figure.new_figure
+									img(data-src=`${temp}new-1.jpg` alt="").img-desktop.img-responsive
+								span.new_category Seguridad
+								h2.new_title: a(href="#") #SiManejasNoChatees: la campaña que busca que los conductores dejen el celular mientras conducen
+						.col-xs-12.col-sm-12.col-md-6
+							article.new.new--has-thumbnail-sm
+								figure.new_figure
+									img(data-src=`${temp}new-1.jpg` alt="").img-desktop.img-responsive
+								span.new_category Seguridad
+								h2.new_title: a(href="#") #SiManejasNoChatees: la campaña que busca que los conductores dejen el celular mientras conducen
+					.clearfix
+						a(href="#").more.more--right Ver más
+			section.section
+				.container
+					.row
+						.col-xs-12.col-sm-4.col-md-6
+							.card-new
+								h2.card-new_title Instituciones
+								p.card-new_text Conoce cuales son las instrucciones relacionadas con ras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+								a(href="#").card-new_more Más información
+						.col-xs-12.col-sm-4.col-md-6
+							.card-new
+								h2.card-new_title Acerca de Chile
+								p.card-new_text Conoce cuales son las instrucciones relacionadas con ras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+								a(href="#").card-new_more Más información
+	
+			section.section.nopadding.visible-xs-block
+				.container
+					.card-small
+						h5.card-small_title
+							a(href="#").card-small_link
+								| Acerca de Chile
+								i.icon-arrow-right-black.icon--right
+						.card-small_body
+							p Bajada ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+					.card-small
+						h5.card-small_title
+							a(href="#").card-small_link
+								| Conoce Chile
+								i.icon-arrow-right-black.icon--right
+						.card-small_body
+							p Bajada ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					
+					.row.hidden-xs.hidden-sm
+						.table-sm-row
+							.col-sm-6.background-image-expand
+								div.background-image-expand_bg.background-image-expand_bg--left
+								img(src=`${temp}acerca-de.jpg`, alt="").img-to-bg
+							.col-sm-6
+								.article-section
+									h5.heading-medium Acerca de Chile
+									p Información para turistas, migrantes y quienes quieran estudiar o hacer negocios en Chile.
+									br
+									a(href="#").button.button--clean.button--more Ver más
+		include partials/footer
+	include partials/scripts
+		//- script(src="js/page.js" type="text/javascript")
+

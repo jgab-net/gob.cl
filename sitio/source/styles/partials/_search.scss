@@ -1,0 +1,77 @@
+.site-search{
+	position: fixed;
+	// top: 64px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	z-index: -1;
+	transition: opacity .3s;
+	padding: 32px 0 110px;
+	overflow-y: scroll;
+	// padding-bottom: 110px;
+	@include mq($from: tablet ) {
+		padding: 72px 0 0;
+	}
+	&.active{
+		opacity: 1;
+		z-index: 100;
+	}
+	&_button-results{
+		padding-top: 57px;
+		&.fixed{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 25;
+			padding: 15px 15px 25px;
+		}
+	}
+}
+body{
+	&.search-active{
+		overflow: hidden;
+		.site-header{
+			&_fixed{
+				@include mq($until: tablet ) {
+					background-color: get-color(bluedark);
+					border-bottom: get-color(bluedark);
+				}
+			}
+			.logo_text{
+				@include mq($until: tablet ) {
+					color: rgba(get-color(white),.8);
+				}
+			}
+			.menu-trigger,
+			.toggle-search{
+				display: none !important;
+			}
+			.goto{
+				@include mq($until: tablet ) {
+					display: block;
+				}
+			}
+		}
+		
+		.site-search{
+			opacity: 1;
+			z-index: 100;
+		}
+	}
+}
+
+.search{
+	&_section{
+		background-color: rgba(get-color(white),.05);
+		// margin: 0 0 25px;
+		@include mq($from: tablet ) {
+			// margin: 0 0 25px;
+		}
+    @include mq($from: desktop ) {
+      margin: 0 0 100px;
+    }
+	}
+}

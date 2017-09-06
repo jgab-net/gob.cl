@@ -1,0 +1,47 @@
+header.site-header
+	.site-header_fixed
+		.container
+			a.logo(href="index.html")
+				i.icon-gob
+				span.logo_text Gob.cl
+			//- .site-header_right
+				if hasSearch
+					label(for="search-form").toggle-search: i.icon-search
+				//- label(for="menu-trigger").menu-trigger: i.icon-burguer
+				//- label(for="menu-trigger").menu-trigger
+
+ 
+			input(type="checkbox" id="menu-trigger").menu-trigger-input
+			//- a(href="/" title=`${projectName}` class="site-logo")
+				img(src=`images/logo.png` width="auto" alt=`Logo ${projectName}`)
+			label(for="menu-trigger").menu-trigger
+				span
+			if hasSearch
+				button.toggle-search.active-search: i.icon-search
+			nav.navigation
+				//- .navigation_content
+				.container
+					h6.heading-label Secciones
+					ul
+						li: a(href="#").link.overflowed-xs Trámites y servicios
+						li: a(href="#").link.overflowed-xs Noticias
+						li: a(href="#").link.overflowed-xs Instituciones
+					h6.heading-label Transparencia
+					ul
+						li: a(href="#").link.link--text-dark.overflowed-xs Programa de Gobierno 2014 - 2018
+						li: a(href="#").link.link--text-dark.overflowed-xs Programa de Gobierno 2014 - 2018
+						li: a(href="#").link.link--text-dark.overflowed-xs Programa de Gobierno 2014 - 2018
+
+					.navigation_bottom
+						.row
+							.col-xs-8
+								ul
+									li: a(href="#").link.link--text-dark.overflowed-xs Programa de Gobierno 2014 - 2018
+									li: a(href="#").link.link--text-dark.overflowed-xs Programa de Gobierno 2014 - 2018
+									li: a(href="#").link.link--text-dark.overflowed-xs Programa de Gobierno 2014 - 2018
+							.col-xs-4
+								ul.social
+									li: a(href="#"): i.icon-facebook
+									li: a(href="#"): i.icon-twitter
+									li: a(href="#"): i.icon-instagram
+									li: a(href="#"): i.icon-youtube

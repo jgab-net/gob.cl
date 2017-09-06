@@ -1,0 +1,73 @@
+.tabs{
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	height: 77px;
+	width: 100%;
+	background-color: transparent;
+	margin: 0 auto;
+	white-space: nowrap;
+	display: table;
+	table-layout: fixed;
+	.tab{
+		// background-color: white;
+		// display: inline-block;
+		display: table-cell;
+		text-align: center;
+		line-height: 77px;
+		height: 77px;
+		padding: 0;
+		padding-right: 10px;
+		margin: 0;
+		a{
+			background-color: get-color("bluesky");
+			border: 2px solid get-color("bluesky");
+			border-bottom: 0;
+			color: get-color("graydark");
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 0 20px;
+			font-size: ms(1);
+			font-weight: 700;
+			// line-height: ms(4);
+			margin-right: 10px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			transition: color .28s ease;
+			position: relative;
+			z-index: 4;
+			transition: background-color .5s;
+			@include mq($from: tablet ) {
+				padding: 0 24px;
+			}
+			&.active{
+				background-color: white;
+				color: get-color(blue);
+				border-color: get-color(blue);
+				z-index: 6;
+			}
+		}
+		&:last-child{
+			padding-right: 0px;
+		}
+	}
+	&-content{
+		border: 2px solid get-color(blue);
+		background-color: white;
+		color: get-color("graydark");
+		padding: 30px 34px;
+		margin-top: -2px;
+		position: relative;
+		z-index: 5;
+	}
+}
+.tab-content{
+	display: none;
+	opacity: 0;
+	transition: opacity .5s;
+	&.active{
+		display: block;
+		opacity: 1;
+	}
+}

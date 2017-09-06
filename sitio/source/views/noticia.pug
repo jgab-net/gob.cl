@@ -1,0 +1,56 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Noticia | #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		-var hasSearch = true;
+		include partials/header
+
+		main.site-main
+			section.section
+				//- h1.article_title.title--light Noticias
+				.container
+					.row
+						.col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+							article.main-post
+								time.main-post_date 11 AGO 2017
+								h1.main-post_title Presidenta en el inicio de la Campaña de Vacunación contra el Virus Papiloma Humano: “Esta una vacuna necesaria y segura”
+								img(src=`${temp}new-hero.jpg`, alt="").article-hero_img.img-responsive
+								//- h2.article-hero_main-title
+								p “Es el momento de emprender este cambio, de dar un nuevo paso que permita ampliar la protección y las garantías para nuestros compatriotas”, dijo la Presidenta Michelle Bachelet.
+								p La Mandataria, Michelle Bachelet, junto a la ministra de Salud, Carmen Castillo, inició en el Colegio Poeta Vicente Huidobro, de la comuna de Lo Prado, la Campaña de Vacunación contra el Virus Papiloma Humano (VPH). Este año se contempla la administración de 234.872 dosis para niñas de 4° básico (primera dosis) y 5° básico (segunda dosis). Desde 2014, se han administrado 855.000 dosis de la vacuna en la población escolar: “Estamos contentos porque ya hemos cumplido una primera etapa y ya entramos en régimen con esta vacuna. ¿Qué quiere decir esto? Que, a partir de ahora, cada año se vacunará a las alumnas de 4° y 5° básico para asegurar que reciban las dos dosis que se requieren para prevenir.
+								blockquote
+									p Luego, hizo un llamado a la ciudadanía a ser responsables con la salud personal en el que destacó “lo importante es vacunarse para la protección de la salud futura de estas niñas, y pedimos también a los medios que informen, que puedan transmitir a los papás y mamás la certeza de que esta es una vacuna necesaria y es una vacuna segura.
+
+			
+
+				
+					.row
+						.col-xs-12
+							h3.title Noticias relacionadas
+						.col-xs-12.col-md-6
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link Presidenta inauguró el nuevo Estadio Diaguita de Ovalle
+						.col-xs-12.col-md-6
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link Mandataria inauguró jardín infantil en Coquimbo y recuerda a víctima de los Derechos Humanos
+						.col-xs-12.col-md-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link Presidenta inauguró el nuevo Estadio Diaguita de Ovalle
+
+		include partials/search
+		include partials/footer
+	include partials/scripts

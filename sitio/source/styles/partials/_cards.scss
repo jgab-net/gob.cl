@@ -1,0 +1,111 @@
+.card{
+	&_title{
+		font-family: $robotoSlab;
+		font-size: ms(2);
+		line-height: 24px;
+	}
+	&_text{
+		opacity: .6;
+	}
+	&_more{
+		color: get-color(red);
+		text-decoration: underline;
+	}
+}
+
+.card-new{
+	padding: 20px 0;
+	border-bottom: 1px solid get-color(lightgray);
+	@include mq($from: tablet ) {
+		border-bottom: 0;
+	}
+	&_title{
+		font-family: $robotoSlab;
+		font-weight: normal;
+		font-size: ms(3);
+		line-height: 24px;
+	}
+	&_text{
+		color: rgba( get-color(dark) , .6);
+	}
+	&_more{
+		color: get-color(red);
+		text-decoration: underline;
+	}
+}
+
+.card-small{
+	background:rgba( get-color(bluedark) , .05);
+	border-bottom: 1px solid get-color(lightgray);
+	padding: 15px;
+	margin-left: -15px;
+	margin-right: -15px;
+	@include mq($from: desktop ) {
+		border-bottom: 0;
+	}
+	&_body{
+		padding-left: 60px;
+	}
+	&_title{
+		color: get-color(dark);
+		font-family: $roboto;
+		font-size: ms(0);
+		font-weight: 400;
+		line-height: 24px;
+	}
+	&_text{
+		color:rgba( get-color(dark) , .6);
+		font-size: ms(-1);
+		font-family: $roboto;
+	}
+	&_link{
+		color: get-color(dark);
+	}
+	&_more{
+		color: get-color(red);
+		text-decoration: underline;
+	}
+}
+
+.card-data{
+	padding: 25px 0;
+	&_title{
+		color: get-color(dark);
+		font-size: ms(6);
+		span{
+			font-family: $robotoSlab;
+			font-weight: 400;
+			line-height: 38px;
+			display: block;
+			margin: 0 0 9px;
+		}
+		small{
+			display: block;			
+			font-family: $roboto;
+			font-size: 21px;
+			font-weight: 400;
+			line-height: 24px;
+		}
+	}
+	&_text{
+		color: rgba(get-color(dark), .6);
+		font-size: ms(-1);
+		font-family: $roboto;
+	}
+}
+
+// Chileatiende
+.card-kind{
+	margin: 0 0 30px;
+	// height: 345px;
+	&_header{
+		background-color: get-color(lightgray);
+		overflow: hidden;
+		padding: 0 15px;
+	}
+	&_body{
+		background-color: get-color(light);
+		height: 280px;
+		overflow-y: scroll;
+	}
+}

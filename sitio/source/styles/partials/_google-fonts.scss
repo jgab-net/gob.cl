@@ -1,0 +1,19 @@
+// Google Fonts Families
+$roboto : 'Roboto' ,sans-serif;
+$robotoSlab : 'Roboto Slab', monospace;
+
+$fonts:(
+	RobotoSlab : $robotoSlab,
+	Roboto : $roboto
+);
+
+@function font($font) {
+	@if map-has-key($fonts, $font) {
+		$font: map-get($fonts, $font);
+	} @else {
+		@if type-of($font) != font {
+			@error "Font name: `#{$font}` not found."
+		}
+	}
+	@return $font;
+}

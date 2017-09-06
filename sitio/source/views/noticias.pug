@@ -1,0 +1,125 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Noticias | #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		-var hasSearch = true;
+		include partials/header
+
+		main.site-main
+			section.section.nopadding.bg-bluedark
+				//- h1.article_title.title--light Noticias
+				.container
+					article.article-hero.article--dark.text-light
+						//- span.article_category trámites y beneficios
+						.row
+							.col-xs-12.col-sm-12
+								h1.heading-large Noticias
+							.col-xs-12.col-sm-12.col-md-6.col-lg-6
+								img(src=`${temp}new-hero.jpg`, alt="").article-hero_img.img-responsive
+							.col-xs-12.col-sm-12.col-md-6.col-lg-6
+								time.article-hero_date 11 AGO 2017
+								h2.article-hero_main-title
+									a(href="noticia.html") Jefa de Estado firmó Proyectos de Ley que crean un nuevo ahorro colectivo en el marco de la Reforma al Sistema de Pensiones
+
+								p “Es el momento de emprender este cambio, de dar un nuevo paso que permita ampliar la protección y las garantías para nuestros compatriotas”, dijo la Presidenta Michelle Bachelet.
+								p.hidden-xs Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis.
+			
+			section.section.section--medium
+				.container
+					h2.heading-label filtrar por:
+					.tags.overflowed-xs
+						.tags_content
+							.tags_item: a(href="#").ctag.hover Todos
+							.tags_item: a(href="#").ctag Salud
+							.tags_item: a(href="#").ctag Seguridad
+							.tags_item: a(href="#").ctag Economía y empleo
+					
+					.row
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Presidenta inauguró el nuevo Estadio Diaguita de Ovalle
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Mandataria inauguró jardín infantil en Coquimbo y recuerda a víctima de los Derechos Humanos
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Ministro Undurraga encabezó visita inspectiva final a la construcción del nuevo Hospital Regional de Antofagasta
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Presidenta en el inicio de la Campaña de Vacunación contra el Virus Papiloma Humano: “Esta una vacuna necesaria y segura”
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark En la noche de este sábado 12 de agosto comienza el horario de verano
+						
+
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Presidenta inauguró el nuevo Estadio Diaguita de Ovalle
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Mandataria inauguró jardín infantil en Coquimbo y recuerda a víctima de los Derechos Humanos
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Ministro Undurraga encabezó visita inspectiva final a la construcción del nuevo Hospital Regional de Antofagasta
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Presidenta en el inicio de la Campaña de Vacunación contra el Virus Papiloma Humano: “Esta una vacuna necesaria y segura”
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark En la noche de este sábado 12 de agosto comienza el horario de verano
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark Presidenta en el inicio de la Campaña de Vacunación contra el Virus Papiloma Humano: “Esta una vacuna necesaria y segura”
+						.col-xs-12.col-sm-12.col-md-6.col-lg-6.hidden-xs
+							article.new.new--mobile
+								time.new_date 11 AGO 2017 
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="noticia.html").link.link--text-dark En la noche de este sábado 12 de agosto comienza el horario de verano
+
+						.col-xs-12.col-sm-12.col-lg-4.col-lg-offset-4.hidden-xs.text-xs-center.text-sm-center
+							a(href="#").button.button--clean.button--more Cargar más
+
+		include partials/search
+		include partials/footer
+	include partials/scripts
+		//- script(src="js/page.js" type="text/javascript")
+
