@@ -1,0 +1,114 @@
+@import 
+'partials/mixins',
+'partials/settings',
+'partials/libraries',
+
+'partials/google-fonts',
+'partials/colors'
+;
+.c{
+	&-header{
+		box-shadow: 1px 2px 1px 1px #E3E5EF;		
+	}
+	&-buttons{
+		.button{
+			margin: ms(1) 0;
+		}
+	}
+	&-title{
+		color: #54698D;
+		font-family: $roboto;
+	}
+	&-sub-title{
+		color: #16325C;
+		font-family: $roboto;
+		font-size: ms(0);
+	}
+	&-color{
+		margin: 0 0 30px;	
+		&_circle{
+			@include circle(60px);
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			&:after{
+				content: "";
+				background: #FFFFFF;
+				box-shadow: 0 8px 14px 0 rgba(168,183,199,0.50);
+				border-radius: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+		&_text{
+			display: inline-block;
+			margin-left: 15px;
+			vertical-align: middle;
+		}
+	}
+}
+.c-box{
+	border-bottom: 1px solid get-color(dark);
+	&_title{
+		font-size: ms(6);
+		color: get-color(dark);
+	}
+	&_text{
+		font-size: ms(2);
+		color: rgba(get-color(dark), 0.8);
+		padding: 30px 0;
+	}
+	
+}
+.c-collapsible{
+	padding: 50px 0;
+	.collapsible-block{
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.collapsible_item{
+		border-bottom: 0;
+	}
+}
+.aux-box{
+	border-bottom:  1px solid rgba(get-color(bluedark), 0.1);
+	// color: get-color(dark);
+	padding: 30px 0 10px;
+	&_side-text{
+		font-size: ms(-2);
+		font-family: Roboto;
+		color: get-color(dark);
+	}
+	&_font-large{
+		font-size: ms(6);
+		color: get-color(dark);
+	}
+	&_font-medium{
+		font-size: ms(2);
+		color: get-color(dark);
+	}
+	&_roboto{
+		color: get-color(dark);
+		font-family: Roboto;
+		&_font--head-medium{
+			font-size: 21px;
+			color: rgba(get-color(dark), 0.6);
+		}
+		&_font-medium{
+			font-size: ms(0);
+
+		}
+		&_underline{
+			text-decoration: underline;
+		}
+		&_font-head{
+			font-size: ms(-3);
+			opacity: 0.92;
+		}
+	}
+	
+}

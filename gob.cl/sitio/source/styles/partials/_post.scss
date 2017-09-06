@@ -1,0 +1,82 @@
+.main-post{
+	margin-bottom: 60px;
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $robotoSlab;
+	}
+	&_title{
+		font-size: ms(2)
+	}
+	&_date{
+		color: rgba(get-color(dark),.6);
+		font-size: ms(-3);
+		display: inline-block;
+		margin: 0 0 12px;
+	}
+	p{
+		color: rgba( get-color(dark) , .6);
+		font-family: $roboto;
+		line-height: 24px;		
+	}
+	small{
+		color: rgba( get-color(dark) , .8);
+		font-family: $roboto;
+		font-size: ms(-1);
+	}
+	blockquote{
+		padding-left: 59px;
+		margin: 40px 0;
+		p{
+			color: rgba( get-color(dark) , .5);		
+			font-family: $roboto;
+			font-style: italic;
+		}
+	}
+}
+
+.notice{
+	color: rgba( get-color(white) , 1);
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 15px;
+	min-height: 99px;
+	&--red{
+	 background: rgba( get-color(red), 1);		
+		
+	}
+	&--red-dark{
+		background: rgba( get-color(darkred) , 1);		
+		
+	}
+	&--green{
+		background: rgba( get-color(green), 1);		
+		 
+	 }
+	&_title{
+		font-family: $roboto;
+    font-weight: 300;
+    font-size: ms(-3);
+    line-height: 13px;
+    letter-spacing: 1.5px;
+    padding: 5px 0;
+    margin: 0;
+    text-transform: uppercase;
+	}
+	&_date{
+		color: rgba(get-color(white),.8);		
+		font-family: $roboto;
+    font-weight: 300;
+    font-size: ms(2);
+    line-height: 24px;
+	}
+	p{
+    font-size: ms(-1);
+		
+	}
+	
+}
+.step{
+	// width: 200px;
+	padding: 15px 14px;
+	border: 1px solid get-color(lightgray);
+	margin: 0 2px;
+}

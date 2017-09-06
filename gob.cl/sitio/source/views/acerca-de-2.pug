@@ -1,0 +1,71 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Acerca de | #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+
+		-var hasSearch = false;
+		include partials/header
+
+		main.site-main
+			section.section.bg-bluedark
+				.container
+					.profile.profile--bluedark.text-light
+						.profile_header
+							h3.profile_title Paola Tapia Salas
+							span.profile_job Ministra de Transportes y Telecomunicaciones
+						
+						.profile_body
+							div.profile_image
+								img(src=`${temp}paola-tapia.png`, alt="").img-responsive
+								
+							p Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. 
+							
+							ul.profile_info
+								li: a(href="#").profile_twitter @paolatapiasalas
+								li: span Teléfono: (56-6) 1234-5678 
+								li: span Correo electrónico: info@gob.cl 
+		section.section
+				.container
+					.row
+						.col-xs-12.col-sm-12
+							article
+								h2.heading-medium Negocio
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar pretium tellus nec accumsan.
+								a(href="#").link.link--text-dark.overflowed-xs Convenciones y congresos
+								a(href="#").link.link--text-dark.overflowed-xs Viajes de incentivo
+								a(href="#").link.overflowed-xs This is Chile
+								a(href="#").link.overflowed-xs Startup Chile
+								a(href="#").link.overflowed-xs Invest Chile
+								a(href="#").link.overflowed-xs Pro Chile
+
+						.col-xs-12.col-sm-12
+							article
+								h2.heading-medium Migración
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar pretium tellus nec accumsan.
+								a(href="#").link.link--text-dark.overflowed-xs Chilenos
+								a(href="#").link.link--text-dark.overflowed-xs Idioma
+								a(href="#").link.link--text-dark.overflowed-xs Demografía
+								a(href="#").link.link--text-dark.overflowed-xs Residencia
+								a(href="#").link.link--text-dark.overflowed-xs Permanencia definitiva
+								a(href="#").link.overflowed-xs Extranjería
+						.col-xs-12.col-sm-12
+							article
+								h2.heading-medium Estudios
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pulvinar pretium tellus nec accumsan.
+								a(href="#").link.link--text-dark.overflowed-xs Requisitos y trámites
+								a(href="#").link.link--text-dark.overflowed-xs Oferta académica
+								a(href="#").link.link--text-dark.overflowed-xs Hospedaje
+								a(href="#").link.link--text-dark.overflowed-xs Moneda
+								a(href="#").link.link--text-dark.overflowed-xs Clima y estaciones
+								a(href="#").link.overflowed-xs Learn Chile
+					
+					
+		include partials/footer
+	include partials/scripts
+		//- script(src="js/page.js" type="text/javascript")
+

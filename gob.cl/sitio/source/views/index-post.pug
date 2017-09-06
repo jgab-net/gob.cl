@@ -1,0 +1,51 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		include partials/header
+
+		main.site-main
+			section.section.bg-bluedark
+				.container
+					article.article.article--dark
+						h2.article_title.title--light Educación
+						p Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+						.search-form
+							input(type="search" placeholder="Escribe aquí lo que deseas buscar").search-form_input
+							button(type="submit").search-form_button.search-form_button--submit: i.icon-search
+							button(type="button" style="display:none").search-form_button.search-form_button--cancel: i.icon-delete
+			section.section
+				.container
+					article.post
+						p Sketch symbols are great because they provide one central place to manage components. Buttons are some of the easiest components to create, but like text fields, they have a lot of different states, colors, and styles. So it usually means creating a bunch of different symbols.
+						
+						blockquote
+							p “¿Cómo estará Buzoni? Es una pregunta que me hago con inquietud. Estará inmóvil, apoyando su espalda en la pared de piedra, con una mano puesta con cierta suavidad en ese delgado tron­co de eucalipto que sirve de columna”
+
+						p Sketch symbols are great because they provide one central place to manage components. Buttons are some of the easiest components to create, but like text fields, they have a lot of different states, colors, and styles. So it usually means creating a bunch of different symbols.
+
+					article.card-new
+						h2.card-new_title Trámites
+						p.card-new_text Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+						a(href="#").card-new_more Más información
+					
+					article.card-new
+						h2.card-new_title Noticias y avances
+						p.card-new_text Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+						a(href="#").card-new_more Más información
+					
+					article.card-new
+						h2.card-new_title Instituciones
+						p.card-new_text Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+						a(href="#").card-new_more Más información
+			
+
+		include partials/footer
+	include partials/scripts
+		//- script(src="js/page.js" type="text/javascript")
+

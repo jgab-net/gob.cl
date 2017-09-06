@@ -1,0 +1,78 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Región | #{projectName}
+block body
+	body
+		-var hasSearch = true;
+		include partials/header
+
+		main.site-main
+			section.bg-light
+				.container
+					ol.breadcrumb
+						li: a(href="#") Home
+						li: a(href="#") Instituciones
+			section.section.bg-bluedark
+				.container
+					article.text-light
+						//- span.article_category trámites y beneficios
+						h2.heading-large Región del Biobío
+						p Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis.
+						p Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis.
+						p Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis.
+			section.section.nopadding
+				.container
+					article.card-new
+						h2.card-new_title Intendencia
+						p.card-new_text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+			section.bg-light
+				.container
+					.row
+						.table-md-row
+							.col-xs-12.col-md-8
+								.profile
+									.profile_header
+										h3.profile_title Rodrigo Díaz Wörner
+										span.profile_job Intendente de la región del Biobío
+									
+									.profile_body
+										div.profile_image
+											img(src=`${temp}paola-tapia.png`, alt="").img-responsive
+											
+										p Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. 
+										
+										ul.profile_info
+											li: a(href="#").profile_twitter @intendenciabiobio
+											li: span Teléfono: (56-6) 1234-5678 
+											li: span Correo electrónico: info@gob.cl
+							.col-xs-12.col-sm-12.col-md-4.bottom
+								.profile_buttons.overflowed-xs
+									a(href="#").button.button--block Ir al sitio de la intendencia
+			
+			section.section.nopadding
+				.container
+					.row
+						.col-xs-12.col-md-6
+							article.card-new
+								h2.card-new_title Municipio
+								h3.heading-label Noticias y avances
+								.select
+									select(name="")
+										option(value="Los Ángeles") Los Ángeles
+						.col-xs-12.col-md-6
+							article.card-new
+								h2.card-new_title Los Ángeles
+								p.card-new_text Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. 
+								ul.profile_info
+									li: a(href="#").profile_twitter @municipio
+									li: span Teléfono: (56-6) 1234-5678 
+									li: span Correo electrónico: info@gob.cl
+								
+								a(href="#").link.overflowed-xs www.municipio.cl
+
+		include partials/search
+		include partials/footer
+	include partials/scripts

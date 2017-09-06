@@ -1,0 +1,52 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| #{projectName}
+block cssPage
+	//- link(rel='stylesheet', href='css/page.css')
+block body
+	body
+		-var hasSearch = false;
+		include partials/header
+
+		main.site-main
+			section.section.bg-bluedark
+				.container
+					article.article.article--dark.text-light
+						span.article_category trámites y beneficios
+						h2.heading-large Trámites
+						p Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+						.search-form
+							input(type="search" placeholder="Escribe aquí lo que deseas buscar").search-form_input
+							button(type="submit").search-form_button.search-form_button--submit: i.icon-search
+							button(type="button").search-form_button.search-form_button--cancel: i.icon-delete
+			section.section.section--nopadding
+				.container
+					h2.title Los más consultados
+					.overflowed
+						a(href="#").link.link--has-dot-red Cambio de domicilio electoral
+						a(href="#").link.link--has-dot-red Certificado de antecedentes
+						a(href="#").link Precio de un bono FONASA
+						a(href="#").link Buscador de farmacias de turno
+						a(href="#").link Bono por logro escolar
+						a(href="#").link Bono de invierno 2017
+			section.section.section--nopadding
+				.container
+					h2.title ¿Qué trámite buscas?
+					.tags.overflowed
+						.tags_content
+							.tags_item: a(href="#").ctag.hover Educación
+							.tags_item: a(href="#").ctag Salud
+							.tags_item: a(href="#").ctag Seguridad
+							.tags_item: a(href="#").ctag Economía y empleo
+					.overflowed
+						a(href="#").link.link--text-dark.link--has-dot-red Beca Residencia Indígena para la educación superior
+						a(href="#").link.link--text-dark.link--has-dot-red Beca Presidente de la República para estudiantes de educación superior
+						a(href="#").link.link--text-dark Certificado de título de educación media técnico-profesional
+					
+		include partials/search
+		include partials/footer
+	include partials/scripts
+		//- script(src="js/page.js" type="text/javascript")
+

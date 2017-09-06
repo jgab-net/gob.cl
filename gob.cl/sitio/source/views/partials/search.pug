@@ -1,0 +1,63 @@
+.site-search.bg-bluedark
+	section
+		.container
+			.row
+				.col-sm-12.col-md-8.col-lg-7
+					.search-form.search-form--large
+						form(action="resultados.html")
+							input(type="search" placeholder="Escribe aquí lo que deseas buscar")#input-search.search-form_input
+							button(type="submit").search-form_button.search-form_button--submit: i.icon-search
+							button(type="button").search-form_button.search-form_button--cancel: i.icon-delete
+
+				.col-sm-12.col-sm-12
+					h2.heading-label.heading-label--light Temas
+					.tags.overflowed-xs
+						.tags_content
+							.tags_item: a(href="#").ctag.ctag--clarity Educación
+							.tags_item: a(href="#").ctag.ctag--clarity Salud
+							.tags_item: a(href="#").ctag.ctag--clarity Seguridad
+							.tags_item: a(href="#").ctag.ctag--clarity Economía y empleo
+							.tags_item: a(href="#").ctag.ctag--clarity Calidad de vida y ciudad
+
+			.row
+				.col-sm-12.col-md-4.col-lg-4
+					h2.heading-label.heading-label--light Tramites
+					div.search_section.overflowed-xs
+						a(href="#").link.link--text-light.link--has-dot-red Bono trabajo mujer
+						a(href="#").link.link--text-light Programa Mujer Jefa de Hogar
+						a(href="#").link.link--text-light Programa Mujer Jefa de Hogar
+						a(href="#").link.link--text-light.hidden-xs Programa Mujer Jefa de Hogar
+						a(href="#").link.link--text-light.hidden-xs Programa Mujer Jefa de Hogar
+						a(href="#").link.link--text-light.hidden-xs Programa Mujer Jefa de Hogar
+						.clearfix
+							a(href="#").more.more--right Ver más
+				
+				.col-sm-12.col-md-4.col-lg-4
+					h2.heading-label.heading-label--light Noticias
+					div.search_section.overflowed-xs
+						article.new.new--small
+							span.new_category.new_category--light Economia y empleo
+							h2.new_title: a(href="#").link.link--text-light Mandataria celebró el noveno aniversario de la Reforma Previsional
+						article.new.new--small
+							span.new_category.new_category--light Economia y empleo
+							h2.new_title: a(href="#").link.link--text-light Presidenta promulgó la Ley de Tenencia Responsable de Mascotas y Animales de Compañía
+						article.new.new--small
+							span.new_category.new_category--light Economia y empleo
+							h2.new_title: a(href="#").link.link--text-light Yo Apoyo Tres Causales: El sitio con lo que necesitas saber del histórico proyecto de ley
+						.clearfix
+							a(href="#").more.more--right Ver más
+				
+				.col-sm-12.col-md-4.col-lg-4
+					h2.heading-label.heading-label--light Instituciones
+					div.search_section.overflowed-xs
+						a(href="#").link.link--text-light Ministerio de transporte
+						a(href="#").link.link--text-light Ministerio de Relaciones Exteriores de Chile
+						a(href="#").link.link--text-light Gobierno Regional del Biobío
+						a(href="#").link.link--text-light.hidden-xs Ministerio de transporte
+						a(href="#").link.link--text-light.hidden-xs Ministerio de Relaciones Exteriores de Chile
+						a(href="#").link.link--text-light.hidden-xs Gobierno Regional del Biobío
+						.clearfix
+							a(href="#").more.more--right Ver más
+				.col-xs-12.col-sm-12.text-xs-center.text-sm-center
+					.site-search_button-results
+						a(href="resultados.html").button.button--clean.button--more Ver todos los resultados
