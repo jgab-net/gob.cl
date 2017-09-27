@@ -26,35 +26,55 @@
     <header class="site-header">
       <div class="site-header_fixed">
         <div class="container"><a class="logo" href="index.html"><i class="icon-gob"></i><span class="logo_text">Gob.cl</span></a>
+          <div class="site-header_right hidden-xs"><a class="link link--dib" href="tramites.html">Trámites y beneficios</a><a class="link link--dib" href="noticias.html">Noticias</a><a class="link link--dib" href="instituciones.html">Instituciones</a><a class="btn-search toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close btn-search_icon"></i></a>
+          </div>
           <input class="menu-trigger-input" type="checkbox" id="menu-trigger">
-          <label class="menu-trigger" for="menu-trigger"><span></span></label>
-          <button class="toggle-search active-search"><i class="icon-search"></i></button>
+          <label class="menu-trigger" for="menu-trigger"><span></span></label><a class="btn-search btn-search--mobile toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close-white btn-search_icon"></i></a>
+          <div class="login">
+            <div class="form">
+              <div class="form_field">
+                <label for="">Ingrese su usuario o Email</label>
+                <input type="text" placeholder="Email@gob.cl">
+              </div>
+              <div class="form_field">
+                <label for="">Password</label>
+                <input type="text" placeholder="*****"><a class="link login_link" href="#">Recuperar password</a>
+              </div>
+              <button class="button button--block login_submit" type="submit">Ingresar</button>
+            </div>
+          </div>
           <nav class="navigation">
             <div class="container">
               <h6 class="heading-label">Secciones</h6>
               <ul>
-                <li><a class="link overflowed-xs" href="#">Trámites y servicios</a></li>
-                <li><a class="link overflowed-xs" href="#">Noticias</a></li>
-                <li><a class="link overflowed-xs" href="#">Instituciones</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Trámites y beneficios</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Noticias</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Instituciones</a></li>
               </ul>
               <h6 class="heading-label">Ejes</h6>
-<ul>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Educación</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Salud</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Seguridad</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Economía y empleo</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Calidad de vida y ciudad</a></li>
-</ul>
-              <div class="navigation_bottom">
+              <ul>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Educación</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Salud</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Seguridad</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Economía y empleo</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Calidad de vida y ciudad</a></li>
+              </ul>
+              <div class="navigation_bottom"><a class="navigation_logo" href="#"><i class="icon-gob"></i></a>
+                <h4 class="heading-label text-white">Loreim</h4>
                 <div class="row">
-                  <div class="col-xs-8">
+                  <div class="col-xs-12">
                     <ul>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
                     </ul>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-xs-4">
+                    <p class="text-white">Escríbenos</p>
+                  </div>
+                  <div class="col-xs-8">
                     <ul class="social">
                       <li><a href="#"><i class="icon-facebook"></i></a></li>
                       <li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -77,12 +97,11 @@
               <div class="col-xs-12 col-sm-12">
                 <h1 class="heading-large">Noticias</h1>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"><img class="article-hero_img img-responsive" src="images/temp/new-hero.jpg" alt=""></div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5"><img class="article-hero_img img-responsive" src="images/temp/new-hero.jpg" alt=""></div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <time class="article-hero_date">11 AGO 2017</time>
                 <h2 class="article-hero_main-title"><a href="noticia.html">Jefa de Estado firmó Proyectos de Ley que crean un nuevo ahorro colectivo en el marco de la Reforma al Sistema de Pensiones</a></h2>
-                <p>“Es el momento de emprender este cambio, de dar un nuevo paso que permita ampliar la protección y las garantías para nuestros compatriotas”, dijo la Presidenta Michelle Bachelet.</p>
-                <p class="hidden-xs">Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis.</p>
+                <p>“Es el momento de emprender este cambio, de dar un nuevo paso que permita ampliar la protección y las garantías para nuestros compatriotas”, dijo la Presidenta Michelle Bachelet.</p><a class="link link--clean text-red" href="noticia.html">Ver noticia completa</a>
               </div>
             </div>
           </article>
@@ -90,23 +109,23 @@
       </section>
       <section class="section section--medium">
         <div class="container">
-          <h2 class="heading-label">filtrar por:</h2>
+          <h2 class="heading-label">Filtrar por Temas:</h2>
           <div class="tags overflowed-xs">
             <div class="tags_content">
-              <div class="tags_item"><a class="ctag hover" href="#">Todos</a></div>
-              <div class="tags_item"><a class="ctag" href="#">Educación</a></div>
-              <div class="tags_item"><a class="ctag" href="#">Salud</a></div>
-              <div class="tags_item"><a class="ctag" href="#">Seguridad</a></div>
-              <div class="tags_item"><a class="ctag" href="#">Economía y empleo</a></div>
-              <div class="tags_item"><a class="ctag" href="#">Calidad de vida y ciudad</a></div>
+              <div class="tags_item"><a class="filter active" href="#">Todas</a></div>
+              <div class="tags_item"><a class="filter" href="#">Salud</a></div>
+              <div class="tags_item"><a class="filter" href="#">Seguridad</a></div>
+              <div class="tags_item"><a class="filter" href="#">Economía y empleo</a></div>
+              <div class="tags_item"><a class="filter" href="#">Calidad de vida y ciudad</a></div>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <article class="new new--mobile">
                 <time class="new_date">11 AGO 2017 </time>
-                <figure class="new_figure-mobile"><img class="img-responsive" src="images/temp/new-1.jpg" alt=""></figure>
+                <figure class="new_figure-mobile"><img class="img-responsive" src="images/temp/new-2.jpg" alt=""></figure>
                 <h2 class="new_title"><a class="link link--text-dark" href="noticia.html">Presidenta inauguró el nuevo Estadio Diaguita de Ovalle</a></h2>
+                <p class="new_text">Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula acconsecte…</p>
               </article>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -190,6 +209,35 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class="container">
+          <div class="row section-social">
+            <div class="table-md-row">
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 middle">
+                <p class="section-social_label">Síguenos a través de redes sociales:</p>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8 middle">
+                <div class="row">
+                  <div class="table-md-row">
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-facebook"></i></span><span class="social_name">Facebook</span><span class="social_url">/gobiernodechile</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-twitter"></i></span><span class="social_name">Twitter</span><span class="social_url">@Gobiernodechile</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-instagram"></i></span><span class="social_name">Instagram</span><span class="social_url">/gobiernodechile</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-youtube"></i></span><span class="social_name">Youtube</span><span class="social_url">Lamoneda</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <div class="site-search bg-bluedark">
       <section>
@@ -205,7 +253,7 @@
               </div>
             </div>
             <div class="col-sm-12 col-sm-12">
-              <h2 class="heading-label heading-label--light">Temas</h2>
+              <h2 class="heading-label heading-label--light">Filtrar por Temas</h2>
               <div class="tags overflowed-xs">
                 <div class="tags_content">
                   <div class="tags_item"><a class="ctag ctag--clarity" href="#">Educación</a></div>
@@ -272,19 +320,15 @@
               </ul>
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-sm-12 col-lg-3 bottom">
-              <ul class="social">
-                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-instagram"></i></a></li>
-                <li><a href="#"><i class="icon-youtube"></i></a></li>
-              </ul>
+            <div class="col-sm-12 col-lg-3"><a class="link" href="#">Visitas a La Moneda</a>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery.easing.js"></script>
+    <script src="js/lib/slick.js"></script>
+    <script src="js/app-min.js"></script>
   </body>
-  <script src="js/plugins-min.js"></script>
-  <script src="js/app-min.js"></script>
 </html>

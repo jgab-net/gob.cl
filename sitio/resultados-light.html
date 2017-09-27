@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-    <title>Gob.cl
+    <title>Resultados | Gob.cl
     </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
@@ -26,34 +26,55 @@
     <header class="site-header">
       <div class="site-header_fixed">
         <div class="container"><a class="logo" href="index.html"><i class="icon-gob"></i><span class="logo_text">Gob.cl</span></a>
+          <div class="site-header_right hidden-xs"><a class="link link--dib" href="tramites.html">Trámites y beneficios</a><a class="link link--dib" href="noticias.html">Noticias</a><a class="link link--dib" href="instituciones.html">Instituciones</a><a class="btn-search toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close btn-search_icon"></i></a>
+          </div>
           <input class="menu-trigger-input" type="checkbox" id="menu-trigger">
-          <label class="menu-trigger" for="menu-trigger"><span></span></label>
+          <label class="menu-trigger" for="menu-trigger"><span></span></label><a class="btn-search btn-search--mobile toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close-white btn-search_icon"></i></a>
+          <div class="login">
+            <div class="form">
+              <div class="form_field">
+                <label for="">Ingrese su usuario o Email</label>
+                <input type="text" placeholder="Email@gob.cl">
+              </div>
+              <div class="form_field">
+                <label for="">Password</label>
+                <input type="text" placeholder="*****"><a class="link login_link" href="#">Recuperar password</a>
+              </div>
+              <button class="button button--block login_submit" type="submit">Ingresar</button>
+            </div>
+          </div>
           <nav class="navigation">
             <div class="container">
               <h6 class="heading-label">Secciones</h6>
               <ul>
-                <li><a class="link overflowed-xs" href="#">Trámites y servicios</a></li>
-                <li><a class="link overflowed-xs" href="#">Noticias</a></li>
-                <li><a class="link overflowed-xs" href="#">Instituciones</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Trámites y beneficios</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Noticias</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Instituciones</a></li>
               </ul>
               <h6 class="heading-label">Ejes</h6>
-<ul>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Educación</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Salud</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Seguridad</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Economía y empleo</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Calidad de vida y ciudad</a></li>
-</ul>
-              <div class="navigation_bottom">
+              <ul>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Educación</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Salud</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Seguridad</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Economía y empleo</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Calidad de vida y ciudad</a></li>
+              </ul>
+              <div class="navigation_bottom"><a class="navigation_logo" href="#"><i class="icon-gob"></i></a>
+                <h4 class="heading-label text-white">Loreim</h4>
                 <div class="row">
-                  <div class="col-xs-8">
+                  <div class="col-xs-12">
                     <ul>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
                     </ul>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-xs-4">
+                    <p class="text-white">Escríbenos</p>
+                  </div>
+                  <div class="col-xs-8">
                     <ul class="social">
                       <li><a href="#"><i class="icon-facebook"></i></a></li>
                       <li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -69,41 +90,135 @@
       </div>
     </header>
     <main class="site-main">
-      <section class="section">
+      <section class="section--medium bg-bluedark text-light">
         <div class="container">
-          <div class="search-form">
-            <input class="search-form_input" type="search" placeholder="Escribe aquí lo que deseas buscar" value="Becas">
-            <button class="search-form_button search-form_button--submit" type="submit"><i class="icon-search"></i></button>
-            <button class="search-form_button search-form_button--cancel" type="button"><i class="icon-delete"></i></button>
-          </div>
-          <div class="filters">
-            <div class="row">
-              <div class="col-xs-6">
-                <div>
-                  <label for="">Filtrar por:</label>
-                  <div class="select">
-                    <select name="">
-                      <option>Trámites</option>
-                    </select>
-                  </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-7">
+              <p class="heading-label">231 Resultados</p>
+              <div class="search-form">
+                <input class="search-form_input" type="search" placeholder="Escribe aquí lo que deseas buscar" value="Becas">
+                <button class="search-form_button search-form_button--submit" type="submit"><i class="icon-search"></i></button>
+                <button class="search-form_button search-form_button--cancel" type="button"><i class="icon-delete"></i></button>
+              </div>
+              <div class="tags overflowed-xs">
+                <div class="tags_content">
+                  <div class="tags_item"><a class="ctag ctag--clarity active" href="#">Habitacional</a></div>
+                  <div class="tags_item"><a class="ctag ctag--clarity active" href="#">Al empleo</a></div>
+                  <div class="tags_item"><a class="ctag ctag--clarity" href="#">Para la familia</a></div>
+                  <div class="tags_item"><a class="ctag ctag--clarity" href="#">Calidad de vida y ciudad</a></div>
                 </div>
               </div>
-              <div class="col-xs-6">
-                <div>
-                  <label for="">Ordenar por:</label>
-                  <div class="select">
-                    <select name="">
-                      <option>Az</option>
-                    </select>
+              <div class="filters">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div>
+                      <label class="heading-label" for="">Tema</label>
+                      <div class="select select--dark">
+                        <select name="">
+                          <option>Todos</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                    <div>
+                      <label class="heading-label" for="">Institución</label>
+                      <div class="select select--dark">
+                        <select name="">
+                          <option>Todos</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="section--medium">
+        <div class="container">
           <div class="overflowed"><a class="link link--has-dot-red" href="#">Beca Indígena para estudiantes de educación básica y media (postulación y renovación)</a><a class="link link--has-dot-red" href="#">Beca Presidente de la República para estudiantes de educación superior (renovación)</a><a class="link" href="#">Beca Patagonia Aysén (postulación ó renovación)</a><a class="link" href="#">Beca de Integración Territorial (BIT)</a><a class="link" href="#">Beca de Integración Territorial (BIT)</a><a class="link" href="#">Beca Indígena para estudiantes de educación básica y media (postulación y renovación)</a><a class="link" href="#">Beca Indígena para estudiantes de educación básica y media (postulación y renovación)</a><a class="link" href="#">Beca Presidente de la República para estudiantes de educación superior (renovación)</a><a class="link" href="#">Beca Presidente de la República para estudiantes de educación superior (renovación)</a><a class="link" href="#">Beca Patagonia Aysén (postulación ó renovación)</a><a class="link" href="#">Beca de Integración Territorial (BIT)</a><a class="link" href="#">Beca de Integración Territorial (BIT)</a><a class="link" href="#">Beca Presidente de la República para estudiantes de educación superior (renovación)</a></div>
         </div>
       </section>
+      <section class="hidden-xs">
+        <div class="container">
+          <h3 class="heading-label">Loreim ipsum</h3>
+          <div class="row section--medium bg-bluedarkgray">
+            <div class="col-xs-12 col-md-4">
+              <div class="overflowed-xs overflowed-sm"><a class="link link--medium link--text-dark" href="#">¿Qué es ChileAtiende?</a><a class="link link--medium link--text-dark" href="#">Centro de Ayuda</a><a class="link link--medium link--text-dark" href="#">Trámites disponibles en sucursales</a></div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="overflowed-xs overflowed-sm"><a class="link link--medium link--text-dark" href="#">Instituciones asociadas</a><a class="link link--medium link--text-dark" href="#">Política de privacidad</a><a class="link link--medium link--text-dark" href="#">Mapa de sitio</a></div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="overflowed-xs overflowed-sm"><a class="link link--medium link--text-dark" href="#">API para desarrolladores</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <div class="site-search bg-bluedark">
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-7">
+              <div class="search-form search-form--large">
+                <form action="resultados.html">
+                  <input class="search-form_input" type="search" placeholder="Escribe aquí lo que deseas buscar" id="input-search">
+                  <button class="search-form_button search-form_button--submit" type="submit"><i class="icon-search"></i></button>
+                  <button class="search-form_button search-form_button--cancel" type="button"><i class="icon-delete"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="col-sm-12 col-sm-12">
+              <h2 class="heading-label heading-label--light">Filtrar por Temas</h2>
+              <div class="tags overflowed-xs">
+                <div class="tags_content">
+                  <div class="tags_item"><a class="ctag ctag--clarity" href="#">Educación</a></div>
+                  <div class="tags_item"><a class="ctag ctag--clarity" href="#">Salud</a></div>
+                  <div class="tags_item"><a class="ctag ctag--clarity" href="#">Seguridad</a></div>
+                  <div class="tags_item"><a class="ctag ctag--clarity" href="#">Economía y empleo</a></div>
+                  <div class="tags_item"><a class="ctag ctag--clarity" href="#">Calidad de vida y ciudad</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4">
+              <h2 class="heading-label heading-label--light">Tramites</h2>
+              <div class="search_section overflowed-xs"><a class="link link--text-light link--has-dot-red" href="#">Bono trabajo mujer</a><a class="link link--text-light" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a>
+                <div class="clearfix"><a class="more more--right" href="#">Ver más</a></div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+              <h2 class="heading-label heading-label--light">Noticias</h2>
+              <div class="search_section overflowed-xs">
+                <article class="new new--small"><span class="new_category new_category--light">Economia y empleo</span>
+                  <h2 class="new_title"><a class="link link--text-light" href="#">Mandataria celebró el noveno aniversario de la Reforma Previsional</a></h2>
+                </article>
+                <article class="new new--small"><span class="new_category new_category--light">Economia y empleo</span>
+                  <h2 class="new_title"><a class="link link--text-light" href="#">Presidenta promulgó la Ley de Tenencia Responsable de Mascotas y Animales de Compañía</a></h2>
+                </article>
+                <article class="new new--small"><span class="new_category new_category--light">Economia y empleo</span>
+                  <h2 class="new_title"><a class="link link--text-light" href="#">Yo Apoyo Tres Causales: El sitio con lo que necesitas saber del histórico proyecto de ley</a></h2>
+                </article>
+                <div class="clearfix"><a class="more more--right" href="#">Ver más</a></div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+              <h2 class="heading-label heading-label--light">Instituciones</h2>
+              <div class="search_section overflowed-xs"><a class="link link--text-light" href="#">Ministerio de transporte</a><a class="link link--text-light" href="#">Ministerio de Relaciones Exteriores de Chile</a><a class="link link--text-light" href="#">Gobierno Regional del Biobío</a><a class="link link--text-light hidden-xs" href="#">Ministerio de transporte</a><a class="link link--text-light hidden-xs" href="#">Ministerio de Relaciones Exteriores de Chile</a><a class="link link--text-light hidden-xs" href="#">Gobierno Regional del Biobío</a>
+                <div class="clearfix"><a class="more more--right" href="#">Ver más</a></div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 text-xs-center text-sm-center">
+              <div class="site-search_button-results"><a class="button button--clean button--more" href="resultados.html">Ver todos los resultados</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <footer class="site-footer">
       <div class="container"><a class="site-footer_logo" href="#"><i class="icon-gob"></i></a>
         <div class="row hidden-xs">
@@ -136,7 +251,9 @@
         </div>
       </div>
     </footer>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery.easing.js"></script>
+    <script src="js/lib/slick.js"></script>
+    <script src="js/app-min.js"></script>
   </body>
-  <script src="js/plugins-min.js"></script>
-  <script src="js/app-min.js"></script>
 </html>

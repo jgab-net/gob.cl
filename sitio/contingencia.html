@@ -26,35 +26,55 @@
     <header class="site-header">
       <div class="site-header_fixed">
         <div class="container"><a class="logo" href="index.html"><i class="icon-gob"></i><span class="logo_text">Gob.cl</span></a>
+          <div class="site-header_right hidden-xs"><a class="link link--dib" href="tramites.html">Trámites y beneficios</a><a class="link link--dib" href="noticias.html">Noticias</a><a class="link link--dib" href="instituciones.html">Instituciones</a><a class="btn-search toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close btn-search_icon"></i></a>
+          </div>
           <input class="menu-trigger-input" type="checkbox" id="menu-trigger">
-          <label class="menu-trigger" for="menu-trigger"><span></span></label>
-          <button class="toggle-search active-search"><i class="icon-search"></i></button>
+          <label class="menu-trigger" for="menu-trigger"><span></span></label><a class="btn-search btn-search--mobile toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close-white btn-search_icon"></i></a>
+          <div class="login">
+            <div class="form">
+              <div class="form_field">
+                <label for="">Ingrese su usuario o Email</label>
+                <input type="text" placeholder="Email@gob.cl">
+              </div>
+              <div class="form_field">
+                <label for="">Password</label>
+                <input type="text" placeholder="*****"><a class="link login_link" href="#">Recuperar password</a>
+              </div>
+              <button class="button button--block login_submit" type="submit">Ingresar</button>
+            </div>
+          </div>
           <nav class="navigation">
             <div class="container">
               <h6 class="heading-label">Secciones</h6>
               <ul>
-                <li><a class="link overflowed-xs" href="#">Trámites y servicios</a></li>
-                <li><a class="link overflowed-xs" href="#">Noticias</a></li>
-                <li><a class="link overflowed-xs" href="#">Instituciones</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Trámites y beneficios</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Noticias</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Instituciones</a></li>
               </ul>
               <h6 class="heading-label">Ejes</h6>
-<ul>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Educación</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Salud</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Seguridad</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Economía y empleo</a></li>
-  <li><a class="link link--text-dark overflowed-xs" href="educacion.html">Calidad de vida y ciudad</a></li>
-</ul>
-              <div class="navigation_bottom">
+              <ul>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Educación</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Salud</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Seguridad</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Economía y empleo</a></li>
+                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Calidad de vida y ciudad</a></li>
+              </ul>
+              <div class="navigation_bottom"><a class="navigation_logo" href="#"><i class="icon-gob"></i></a>
+                <h4 class="heading-label text-white">Loreim</h4>
                 <div class="row">
-                  <div class="col-xs-8">
+                  <div class="col-xs-12">
                     <ul>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
-                      <li><a class="link link--text-dark overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
+                      <li><a class="link link--text-light overflowed-xs" href="#">Programa de Gobierno 2014 - 2018</a></li>
                     </ul>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-xs-4">
+                    <p class="text-white">Escríbenos</p>
+                  </div>
+                  <div class="col-xs-8">
                     <ul class="social">
                       <li><a href="#"><i class="icon-facebook"></i></a></li>
                       <li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -69,37 +89,51 @@
         </div>
       </div>
     </header>
-    <main class="site-main"><a class="button button--block" href="#">Continúa navegando en Gob.cl</a>
-      <section class="section bg-yellow">
-        <div class="container">
-          <article class="article article--dark">
-            <h2 class="heading-large">Terremoto en Arica</h2>
-            <h3 class="heading-sub">The quick brown fox jumps over the lazy dog.</h3>
-            <p>Sketch symbols are great because they provide one central place to manage components. Buttons are some of the easiest components to create, but like text fields, they have a lot of different states, colors, and styles. So it usually means creating a bunch of different symbols.</p>
-          </article>
-        </div>
-      </section>
-      <section class="section--medium bg-bluedark">
+    <main class="site-main"><a class="button button--bluedark button--block visible-xs-block" href="#">Salir del modo contingencia</a><a class="button button--block hidden-xs" href="#">Continúa navegando en Gob.cl</a>
+      <section>
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-              <div class="schedule">
-                <div class="schedule_left">
-                  <time class="schedule_time schedule_time--has-dot">12:50</time>
-                </div>
-                <div class="schedule_right"><a class="schedule_link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></div>
+            <div class="table-sm-row table-md-row table-lg-row">
+              <div class="col-sm-6 col-lg-6 top bg-yellow expand-yellow-left">
+                <article>
+                  <div class="row">
+                    <div class="col-xs-12 col-md-10">
+                      <h2 class="heading-large">Terremoto en Arica</h2>
+                      <h3 class="heading-sub">The quick brown fox jumps over the lazy dog.</h3>
+                      <p>Sketch symbols are great because they provide one central place to manage components. Buttons are some of the easiest components to create, but like text fields, they have a lot of different states, colors, and styles. So it usually means creating a bunch of different symbols.</p>
+                    </div>
+                  </div>
+                </article>
               </div>
-              <div class="schedule">
-                <div class="schedule_left">
-                  <time class="schedule_time schedule_time--has-dot">11:35</time>
+              <div class="col-sm-6 col-lg-6 top bg-bluedark article--dark expand-bluedark-right">
+                <div class="row">
+                  <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="schedule">
+                      <div class="schedule_left">
+                        <time class="schedule_time schedule_time--has-dot">12:50</time>
+                      </div>
+                      <div class="schedule_right"><a class="schedule_link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></div>
+                    </div>
+                    <div class="schedule">
+                      <div class="schedule_left">
+                        <time class="schedule_time schedule_time--has-dot">11:35</time>
+                      </div>
+                      <div class="schedule_right"><a class="schedule_link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></div>
+                    </div>
+                    <div class="schedule">
+                      <div class="schedule_left">
+                        <time class="schedule_time">12:50</time>
+                      </div>
+                      <div class="schedule_right"><a class="schedule_link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></div>
+                    </div>
+                    <div class="schedule hidden-xs">
+                      <div class="schedule_left">
+                        <time class="schedule_time">12:50</time>
+                      </div>
+                      <div class="schedule_right"><a class="schedule_link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="schedule_right"><a class="schedule_link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></div>
-              </div>
-              <div class="schedule">
-                <div class="schedule_left">
-                  <time class="schedule_time">12:50</time>
-                </div>
-                <div class="schedule_right"><a class="schedule_link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</a></div>
               </div>
             </div>
           </div>
@@ -113,7 +147,11 @@
               <div class="card-small">
                 <h5 class="card-small_title"><a class="card-small_link" href="#">Onemi<i class="icon-arrow-right-black icon--right"></i></a></h5>
                 <div class="card-small_body">
-                  <p class="card-small_text">Actúa frente a situaciones de riesgo colectivo, emergencias, desastres y catástrofes de origen natural o provocados por la acción humana.</p>
+                  <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                      <p class="card-small_text">Bajada ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,7 +159,40 @@
               <div class="card-small">
                 <h5 class="card-small_title"><a class="card-small_link" href="#">Shoa<i class="icon-arrow-right-black icon--right"></i></a></h5>
                 <div class="card-small_body">
-                  <p class="card-small_text">Entidad encargada de dar seguridad a las navegaciones que transitan por el mar territorial, alta mar, aguas interiores, ríos y lagos.</p>
+                  <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                      <p class="card-small_text">Bajada ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row section-social">
+            <div class="table-md-row">
+              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 middle">
+                <p class="section-social_label">Síguenos a través de redes sociales:</p>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8 middle">
+                <div class="row">
+                  <div class="table-md-row">
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-facebook"></i></span><span class="social_name">Facebook</span><span class="social_url">/gobiernodechile</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-twitter"></i></span><span class="social_name">Twitter</span><span class="social_url">@Gobiernodechile</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-instagram"></i></span><span class="social_name">Instagram</span><span class="social_url">/gobiernodechile</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-youtube"></i></span><span class="social_name">Youtube</span><span class="social_url">Lamoneda</span></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,7 +214,7 @@
               </div>
             </div>
             <div class="col-sm-12 col-sm-12">
-              <h2 class="heading-label heading-label--light">Temas</h2>
+              <h2 class="heading-label heading-label--light">Filtrar por Temas</h2>
               <div class="tags overflowed-xs">
                 <div class="tags_content">
                   <div class="tags_item"><a class="ctag ctag--clarity" href="#">Educación</a></div>
@@ -210,19 +281,15 @@
               </ul>
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-sm-12 col-lg-3 bottom">
-              <ul class="social">
-                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-instagram"></i></a></li>
-                <li><a href="#"><i class="icon-youtube"></i></a></li>
-              </ul>
+            <div class="col-sm-12 col-lg-3"><a class="link" href="#">Visitas a La Moneda</a>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery.easing.js"></script>
+    <script src="js/lib/slick.js"></script>
+    <script src="js/app-min.js"></script>
   </body>
-  <script src="js/plugins-min.js"></script>
-  <script src="js/app-min.js"></script>
 </html>
