@@ -3324,13 +3324,21 @@ ul ul {
   .tab-content.active {
     display: block;
     opacity: 1; }
-
+.site-main {
+  opacity: 1;
+  -webkit-transition: opacity .6s ease-in-out;
+  transition: opacity .6s ease-in-out; }
+  
 .site-search {
-  position: fixed;
+  position: absolute;
+  margin-top: 64px;
+  left: 0;
+  right: 0;
+  top: 0;
   opacity: 0;
   z-index: -1;
-  -webkit-transition: opacity .6s;
-  transition: opacity .6s;
+  -webkit-transition: opacity .6s ease-in-out;
+  transition: opacity .6s ease-in-out;
   padding: 32px 0 110px; }
   @media (min-width: 48em) {
     .site-search {
@@ -3411,9 +3419,18 @@ body.search-active .site-header .menu-trigger {
     display: block; } }
 
 body.search-active .site-main {
-  display: none; }
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  margin-top: 64px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1; }
 
 body.search-active .site-search {
+  margin-top: 0;
   opacity: 1;
   z-index: 111;
   position: relative; }
@@ -4087,7 +4104,7 @@ body.search-active .btn-search .icon-search {
       height: 434px; } }
   @media (min-width: 75em) {
     .featured-card {
-      height: 362px; } }
+      height: 292px; } }
   .featured-card.has-icon:after {
     content: "";
     background-image: url("../images/icons/featured.svg");
@@ -4114,9 +4131,9 @@ body.search-active .btn-search .icon-search {
   .featured-card_title {
     color: #111111;
     font-family: "Roboto Slab", monospace;
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 38px;
+    line-height: 26px;
     margin: 0 0 15px; }
   .featured-card_date {
     color: rgba(17, 17, 17, 0.6);
