@@ -28,40 +28,6 @@
     <header class="site-header">
       <div class="site-header_fixed">
         <div class="container"><a class="logo" href="index.html"><i class="icon-gob"></i><span class="logo_text">Gob.cl</span></a>
-          <div class="goto">
-            <input class="goto_input" type="checkbox" id="header-goto">
-            <label class="goto_trigger" for="header-goto">Ir a</label>
-            <ul class="goto_menu">
-              <li><a class="link link--medium link--dib link--text-light" href="#">Gob.cl</a></li>
-              <li><a class="link link--medium link--dib link--text-light" href="#">Datos</a></li>
-              <li><a class="link link--medium link--dib link--text-light" href="#">Lorem Ipsum</a></li>
-            </ul>
-          </div>
-          <input class="menu-trigger-input" type="checkbox" id="menu-trigger">
-          <label class="menu-trigger visible-xs-block" for="menu-trigger"><span></span></label>
-          <nav class="navigation">
-            <div class="container">
-              <h6 class="heading-label">Lorem</h6>
-              <ul>
-                <li><a class="link overflowed-xs" href="#">¿Qué es ChileAtiende?</a></li>
-                <li><a class="link overflowed-xs" href="#">Centro de Ayuda</a></li>
-                <li><a class="link overflowed-xs" href="tel:+56 2 226904000">Teléfono: +56 2 226904000</a></li>
-              </ul>
-            </div>
-            <div class="bg-light">
-              <div class="container">
-                <h6 class="heading-label">Lorem</h6>
-                <ul>
-                  <li><a class="link link--text-dark overflowed-xs" href="#">¿Qué es ChileAtiende?</a></li>
-                  <li><a class="link link--text-dark overflowed-xs" href="#">Centro de Ayuda</a></li>
-                  <li><a class="link link--text-dark overflowed-xs" href="#">Trámites disponibles en sucursales</a></li>
-                  <li><a class="link link--text-dark overflowed-xs" href="#">Instituciones asociadas</a></li>
-                  <li><a class="link link--text-dark overflowed-xs" href="#">Política de privacidad</a></li>
-                  <li><a class="link link--text-dark overflowed-xs" href="#">Mapa de sitio</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
         </div>
       </div>
     </header>
@@ -70,6 +36,7 @@
         <div class="container">
           <article class="text-light">
             <h1 class="heading-large">Librería Framework kit Gobierno</h1>
+            <p>Este framework de UI fue construido con el fin de generar un estándar para utilizarse en el diseño de sitios de gobierno. A continuación se presentan los elementos construidos y su forma de utilizarlos al momento de desarrollar front-end.</p>
           </article>
         </div>
       </section>
@@ -744,37 +711,185 @@
                 <h2 class="heading-large">6. Formularios</h2>
                 <article>
                   <div class="row c-buttons">
-                    <div class="form">
-                      <div class="form_field">
-                        <input type="text" placeholder="placeholder">
-                      </div>
-                      <div class="form_field">
-                        <textarea></textarea>
-                      </div>
-                      <div class="form_field">
-                        <div class="select">
-                          <select name="">
-                            <option value="">Lorem ipsum dolor</option>
-                            <option value="">Lorem ipsum dolor</option>
-                            <option value="">Lorem ipsum dolor</option>
-                          </select>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Inputs</h2>
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <label for="">Text label</label>
+                            <input type="text" placeholder="Texto">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="" class="error">Error label</label>
+                            <input type="text" placeholder="Texto" class="error">
+                            <span class="alert error on-input">Error alert text</span>
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="" class="success">Success Label</label>
+                            <input type="text" placeholder="Texto" class="success">
+                            <span class="alert success on-input">Success alert text</span>
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">Success Label</label>
+                            <input type="text" placeholder="Texto" class="warning">
+                            <span class="alert warning on-input">Warning alert text</span>
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">Password</label>
+                            <input type="password" placeholder="Texto" value="Texto">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">Readonly</label>
+                            <input readonly type="text" placeholder="Texto" value="Texto">
+                          </div>
+                          <div class="col-sm-3">
+                            <label for="">Disabled</label>
+                            <input disabled type="text" placeholder="Texto" value="Texto">
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="">Input</label>
+                            <input type="text" placeholder="Texto">
+                            <small>Help text example</small>
+                          </div>
                         </div>
-                      </div>
-                      <div class="form_field">
-                        <div class="radio">
-                          <input class="radio_input" type="radio" name="asas" checked>
-                          <div class="radio_text">Lorem ipsum dolor</div>
-                        </div>
-                        <div class="radio">
-                          <input class="radio_input" type="radio" name="asas">
-                          <div class="radio_text">Lorem ipsum dolor</div>
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <label for="">Date input</label>
+                            <input type="date">
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="search-form">
-                      <input class="search-form_input active-search" type="search" placeholder="Escribe aquí lo que deseas buscar">
-                      <button class="search-form_button search-form_button--submit" type="submit"><i class="icon-search"></i></button>
-                      <button class="search-form_button search-form_button--cancel" type="button"><i class="icon-delete"></i></button>
+                    <div class="row section">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Select</h2>
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <label for="">Select label</label>
+                            <select>
+                              <option value="">Option 1</option>
+                              <option value="">Option 2</option>
+                              <option value="">Option 3</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-6">
+                            <label for="">Select label</label>
+                            <select>
+                              <option value="">Option 1</option>
+                              <option value="">Option 2</option>
+                              <option value="">Option 3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row section">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Radio buttons</h2>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label class="form-check-label">
+                              <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                            <label class="form-check-label">
+                              <input type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                                Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                            <label class="form-check-label">
+                              <input type="radio" name="gridRadios" id="gridRadios1" value="option1" disabled>
+                                Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row section">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Checkboxes</h2>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label class="form-check-label">
+                                <input type="checkbox" value="">
+                                Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                            <label class="form-check-label">
+                                <input type="checkbox" value="">
+                                Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                            <label class="form-check-label">
+                                <input type="checkbox" value="" disabled>
+                                Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row section">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Buttons</h2>
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <a class="button button--block" href="#">Continuar</a>
+                          </div>
+                          <div class="col-sm-3">
+                            <a class="button button--lightgray button--block" href="#">Guardar</a>
+                          </div>
+                          <div class="col-sm-6">
+                            <a class="link--text-dark link-v" href="#">Tercer nivel</a>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <a class="button button--block disabled-button" href="#">Continuar</a>
+                          </div>
+                          <div class="col-sm-3">
+                            <a class="button button--lightgray button--block disabled-button" href="#">Guardar</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row section">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Alerts</h2>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <span class="alert error">This is a danger alert—check it out!</span>
+                          </div>
+                          <div class="col-sm-12">
+                            <span class="alert success">This is a success alert—check it out!</span>
+                          </div>
+                          <div class="col-sm-12">
+                            <span class="alert warning">This is a warning alert—check it out!</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row section">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Textarea</h2>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label for="">Text label</label>
+                            <textarea></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row section">
+                      <div class="col-sm-12">
+                        <h2 class="heading-medium">Steps</h2>
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <ul class="steps">
+                              <li style="width: 25%;" class="active"><a href="#">Paso 1</a></li><li style="width: 25%;"><a href="#" class="next">Paso 2</a></li><li style="width: 25%;"><a href="#" class="next">Paso 3</a></li><li style="width: 25%;"><a href="#" class="next">Paso 4</a></li>
+                            </ul>
+                            <ul class="steps">
+                              <li style="width: 25%;" class="active"><a href="#" class="last">Paso 1</a></li><li style="width: 25%;" class="active"><a href="#" class="last">Paso 2</a></li><li style="width: 25%;" class="active"><a href="#">Paso 3</a></li><li style="width: 25%;"><a href="#" class="next">Paso 4</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="c-collapsible">
                       <div class="collapsible-block"> 

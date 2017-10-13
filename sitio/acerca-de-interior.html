@@ -25,11 +25,11 @@
   <body>
     <header class="site-header">
       <div class="site-header_fixed">
-        <div class="container"><a class="logo" href="index.html"><i class="icon-gob"></i><span class="logo_text">Gob.cl</span></a>
-          <div class="site-header_right hidden-xs"><a class="link link--dib" href="tramites.html">Trámites y beneficios</a><a class="link link--dib" href="noticias.html">Noticias</a><a class="link link--dib" href="instituciones.html">Instituciones</a><a class="btn-search toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close btn-search_icon"></i></a>
+        <div class="container"><a class="logo" href="index.html"><i class="icon-gob"></i></a>
+          <div class="site-header_right hidden-xs"><a class="link link--dib" href="tramites.html">Trámites y beneficios</a><a class="link link--dib" href="noticias.html">Noticias</a><a class="link link--dib" href="instituciones.html">Instituciones</a><a class="btn-search toggle-search" href="#"><i class="ic-search btn-search_icon"></i><i class="ic-close btn-search_icon"></i></a>
           </div>
           <input class="menu-trigger-input" type="checkbox" id="menu-trigger">
-          <label class="menu-trigger" for="menu-trigger"><span></span></label><a class="btn-search btn-search--mobile toggle-search" href="#"><i class="icon-search btn-search_icon"></i><i class="icon-close-white btn-search_icon"></i></a>
+          <label class="menu-trigger" for="menu-trigger"><span></span></label><a class="btn-search btn-search--mobile toggle-search" href="#"><i class="ic-search btn-search_icon"></i><i class="ic-close btn-search_icon"></i></a>
           <div class="login">
             <div class="form">
               <div class="form_field">
@@ -50,16 +50,10 @@
                 <li><a class="link link--medium overflowed-xs" href="#">Trámites y beneficios</a></li>
                 <li><a class="link link--medium overflowed-xs" href="#">Noticias</a></li>
                 <li><a class="link link--medium overflowed-xs" href="#">Instituciones</a></li>
+                <li><a class="link link--medium overflowed-xs" href="#">Acerca de Chile</a></li>
               </ul>
-              <h6 class="heading-label">Ejes</h6>
-              <ul>
-                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Educación</a></li>
-                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Salud</a></li>
-                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Seguridad</a></li>
-                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Economía y empleo</a></li>
-                <li><a class="link link--medium link--text-dark overflowed-xs" href="educacion.html">Calidad de vida y ciudad</a></li>
-              </ul>
-              <div class="navigation_bottom"><a class="navigation_logo" href="#"><i class="icon-gob"></i></a>
+              <!-- FIn ejes opcionales -->
+              <div class="navigation_bottom"><a class="navigation_logo" href="#"><i class="icon-gob-footer"></i></a>
                 <h4 class="heading-label text-white">Loreim</h4>
                 <div class="row">
                   <div class="col-xs-12">
@@ -76,10 +70,10 @@
                   </div>
                   <div class="col-xs-8">
                     <ul class="social">
-                      <li><a href="#"><i class="icon-facebook"></i></a></li>
-                      <li><a href="#"><i class="icon-twitter"></i></a></li>
-                      <li><a href="#"><i class="icon-instagram"></i></a></li>
-                      <li><a href="#"><i class="icon-youtube"></i></a></li>
+                      <li><a href="#"><i class="ic-facebook"></i></a></li>
+                      <li><a href="#"><i class="ic-twitter"></i></a></li>
+                      <li><a href="#"><i class="ic-instagram"></i></a></li>
+                      <li><a href="#"><i class="ic-youtube"></i></a></li>
                     </ul>
                   </div>
                 </div>
@@ -93,19 +87,29 @@
       <section class="bg-light">
         <div class="container">
           <ol class="breadcrumb">
-            <li><a href="#">Lorem</a></li>
-            <li><a href="#">Lorem</a></li>
-            <li><a href="#">Lorem</a></li>
-            <li><a href="#">Lorem</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Acerca de Chile</a></li>
+            <li><a href="#">Nuestro país</a></li>
           </ol>
         </div>
       </section>
-      <section class="section bg-bluedark">
+      <section class="section--medium bg-bluedark">
         <div class="container">
           <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-5 pull-md-right col-lg-4 col-lg-offset-1">
+              <div class="toolbar">
+                <div class="toolbar_content"><a class="toolbar-button toolbar-button--contrast" href="#"><span class="toolbar-button_content"><i class="ic-contrast toolbar-button_icon"></i></span></a><a class="toolbar-button toolbar-button--less" href="#"><span class="toolbar-button_content"><i class="ic-font-size-less toolbar-button_icon"></i></span></a><a class="toolbar-button toolbar-button--plus" href="#"><span class="toolbar-button_content"><i class="ic-font-size-plus toolbar-button_icon"></i></span></a>
+                  <div class="toolbar_player"><a class="toolbar-button toolbar-button--listen" href="#track" id="listen"><span class="toolbar-button_content"><i class="toolbar-button_icon ic-volume"></i><span class="toolbar-button_text">Escuchar</span></span></a>
+                    <div class="toolbar-player hide"><a class="toolbar-player_toggle" href="#"><span class="toolbar-button_content"><i class="ic-pause toolbar-button_icon-pause"></i><i class="ic-play toolbar-button_icon-play"></i></span></a>
+                      <div class="toolbar-player_timeline"><span></span></div><a class="toolbar-player_download" href="media/National_Anthem_of_Chile.ogg" download><span class="toolbar-button_content"><i class="ic-download"></i></span></a>
+                    </div>
+                  </div>
+                </div><a class="toolbar-button toolbar-button--toggle" href="#"><span class="toolbar-button_content"><i class="ic-accessibility toolbar-button_icon"></i><i class="ic-close toolbar-button_icon"></i></span></a>
+              </div>
+            </div>
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
               <article class="text-light">
-                <h1 class="heading-large">Nuestro País</h1><br><br>
+                <h1 class="heading-large">Nuestro País</h1>
                 <p>Chile está situado a lo largo de la costa occidental del cono sur de Sudamérica, entre el segmento más alto de la Cordillera de los Andes y el Océano Pacífico. Su forma es única: es uno de los países más largos del mundo, con 4.300 km de longitud, pero simultáneamente uno de los más angostos, con una anchura promedio de sólo 180 km. Posee toda la clase de climas existentes en el planeta exceptuando solo al clima tropical.</p>
                 <p>La lengua oficial de Chile es el español, y su moneda el peso chileno. La población es mestiza, mezcla de europeos e indígenas, cuyas tradiciones aún se perciben en algunas partes del país. La tasa de alfabetismo es de 94%, sobresaliendo como una de las más altas de Latinoamérica.</p>
               </article>
@@ -113,151 +117,172 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section>
         <div class="container">
-          <article>
-            <h2 class="heading-medium">Turismo</h2>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-7">
-                <p>Chile se describe constituido por tres zonas geográficas. La primera de ellas, Chile continental, comprende una franja en la costa occidental del Cono Sur que se extiende entre los paralelos <span class="type">17°29'57"</span> S y <span class="type">56°32'12"</span> S, mayormente desde la ribera sudoriental del océano Pacífico hasta las cumbres más altas de la cordillera de los Andes. Alcanza un largo de 4270 km,​ un ancho máximo de 445 km en los 52°21' S y un ancho mínimo de 90 km en los 31°37' S. Limita con Perú al norte, Bolivia al nordeste y Argentina al este, totalizando 7801 km de fronteras terrestres, y el paso Drake al sur. La segunda, Chile insular, corresponde a un conjunto de islas de origen volcánico en el océano Pacífico Sur: el archipiélago de Juan Fernández y las islas Desventuradas, pertenecientes a Sudamérica, la isla Salas y Gómez y la isla de Pascua, ubicadas en Oceanía. La tercera, el Territorio Chileno Antártico,​ es una zona de la Antártica​ de 1 250 257,6 km² entre los meridianos 53° O y 90° O sobre la cual Chile reclama soberanía, prolongando su límite meridional hasta el Polo Sur. Esta reclamación está suspendida según lo estipulado por el Tratado Antártico​ del que Chile es signatario. Debido a lo anterior, Chile se define como un país tricontinental.​</p>
-                <p>Chile tiene una costa de 6435 km de longitud​ y ejerce derechos exclusivos, reclamaciones de diverso grado y soberanía sobre su espacio marítimo, llamado Mar chileno.​ Este comprende cuatro zonas el mar territorial (120 827 km²) la zona contigua (131 669 km²),la zona económica exclusiva (3 681 989 km²)​ y la correspondiente plataforma continental (161 338 km²)​</p>
-                <p>Es considerado un país de ingreso alto y en vías de desarrollo Sus más de 18 millones de habitantes​ promedian índices de alfabetización​ calidad de vida​ crecimiento económico desarrollo humano esperanza de vida globalización y PIB per cápita que se encuentran entre los más altos de América Latina.</p><a class="link link--clean text-dark" href="#">Descargar archivo original</a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-5">
-                <div class="card-info"><span class="card-info_number">15 </span><span class="card-info_title">Zonas geográficas</span>
-                  <ul class="card-info_list">
-                    <li>
-                      <p>Chile continental</p>
-                    </li>
-                    <li>
-                      <p>Chile insular</p>
-                    </li>
-                    <li>
-                      <p>Territorio Chileno Antártico</p>
-                    </li>
-                  </ul>
+          <div class="sub-section">
+            <article>
+              <h2 class="heading-medium">Superficie</h2>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-7">
+                  <p>Chile se describe constituido por tres zonas geográficas. La primera de ellas, Chile continental, comprende una franja en la costa occidental del Cono Sur que se extiende entre los paralelos <span class="type">17°29'57"</span> S y <span class="type">56°32'12"</span> S, mayormente desde la ribera sudoriental del océano Pacífico hasta las cumbres más altas de la cordillera de los Andes. Alcanza un largo de 4270 km,​ un ancho máximo de 445 km en los 52°21' S y un ancho mínimo de 90 km en los 31°37' S. Limita con Perú al norte, Bolivia al nordeste y Argentina al este, totalizando 7801 km de fronteras terrestres, y el paso Drake al sur. La segunda, Chile insular, corresponde a un conjunto de islas de origen volcánico en el océano Pacífico Sur: el archipiélago de Juan Fernández y las islas Desventuradas, pertenecientes a Sudamérica, la isla Salas y Gómez y la isla de Pascua, ubicadas en Oceanía. La tercera, el Territorio Chileno Antártico,​ es una zona de la Antártica​ de 1 250 257,6 km² entre los meridianos 53° O y 90° O sobre la cual Chile reclama soberanía, prolongando su límite meridional hasta el Polo Sur. Esta reclamación está suspendida según lo estipulado por el Tratado Antártico​ del que Chile es signatario. Debido a lo anterior, Chile se define como un país tricontinental.​</p>
+                  <p>Chile tiene una costa de 6435 km de longitud​ y ejerce derechos exclusivos, reclamaciones de diverso grado y soberanía sobre su espacio marítimo, llamado Mar chileno.​ Este comprende cuatro zonas el mar territorial (120 827 km²) la zona contigua (131 669 km²),la zona económica exclusiva (3 681 989 km²)​ y la correspondiente plataforma continental (161 338 km²)​</p>
+                  <p>Es considerado un país de ingreso alto y en vías de desarrollo Sus más de 18 millones de habitantes​ promedian índices de alfabetización​ calidad de vida​ crecimiento económico desarrollo humano esperanza de vida globalización y PIB per cápita que se encuentran entre los más altos de América Latina.</p><a class="text-dark" href="#">Descargar archivo original<i class="ic-download"></i></a>
                 </div>
-                <div class="card-info"><span class="card-info_number">15 </span><span class="card-info_title">Regiones y sus Municipios</span>
-                  <ul class="card-info_list">
-                    <li>
-                      <p>XV Región de Arica y Parinacota</p>
-                    </li>
-                    <li>
-                      <p>I Región de Tarapacá</p>
-                    </li>
-                    <li>
-                      <p>II Región de Antofagasta</p>
-                    </li>
-                    <li>
-                      <p>III Región de Atacama</p>
-                    </li>
-                    <li>
-                      <p>IV Región de Coquimbo</p>
-                    </li>
-                    <li>
-                      <p>V Región de Valparaíso</p>
-                    </li>
-                    <li>
-                      <p>Región Metropolitana de Santiago</p>
-                    </li>
-                    <li>
-                      <p>VI Región del Libertador General VII Región del Maule</p>
-                    </li>
-                    <li>
-                      <p>VIII Región del Biobío</p>
-                    </li>
-                    <li>
-                      <p>IX Región de la Araucanía</p>
-                    </li>
-                    <li>
-                      <p>XIV Región de Los Ríos</p>
-                    </li>
-                    <li>
-                      <p>X Región de Los Lagos</p>
-                    </li>
-                    <li>
-                      <p>XI Región Aisén del General Carlos Ibáñez del Campo</p>
-                    </li>
-                    <li>
-                      <p>XII Región de Magallanes y de la Antártica Chilena</p>
-                    </li>
-                  </ul>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                  <div class="card-info"><span class="card-info_number">3 </span><span class="card-info_title">Zonas geográficas</span>
+                    <ul class="card-info_list">
+                      <li>
+                        <p>Chile continental</p>
+                      </li>
+                      <li>
+                        <p>Chile insular</p>
+                      </li>
+                      <li>
+                        <p>Territorio Chileno Antártico</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-info"><span class="card-info_number">15 </span><span class="card-info_title">Regiones y sus Municipios</span>
+                    <ul class="card-info_list">
+                      <li>
+                        <p>XV Región de Arica y Parinacota</p>
+                      </li>
+                      <li>
+                        <p>I Región de Tarapacá</p>
+                      </li>
+                      <li>
+                        <p>II Región de Antofagasta</p>
+                      </li>
+                      <li>
+                        <p>III Región de Atacama</p>
+                      </li>
+                      <li>
+                        <p>IV Región de Coquimbo</p>
+                      </li>
+                      <li>
+                        <p>V Región de Valparaíso</p>
+                      </li>
+                      <li>
+                        <p>Región Metropolitana de Santiago</p>
+                      </li>
+                      <li>
+                        <p>VI Región del Libertador General VII Región del Maule</p>
+                      </li>
+                      <li>
+                        <p>VIII Región del Biobío</p>
+                      </li>
+                      <li>
+                        <p>IX Región de la Araucanía</p>
+                      </li>
+                      <li>
+                        <p>XIV Región de Los Ríos</p>
+                      </li>
+                      <li>
+                        <p>X Región de Los Lagos</p>
+                      </li>
+                      <li>
+                        <p>XI Región Aisén del General Carlos Ibáñez del Campo</p>
+                      </li>
+                      <li>
+                        <p>XII Región de Magallanes y de la Antártica Chilena</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <hr>
-          </article>
-          <article>
-            <h2 class="heading-medium">Población</h2>
-            <p>Según el censo realizado el añ 2002, Chile tiene una población de <span class="type">16.000.000</span> de habitantes aproximadamente.</p>
-            <hr>
-          </article>
-          <article>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-7">
-                <h2 class="heading-medium">Clima</h2>
-                <p>La inusitada extensión norte-sur de Chile, equivalente a cruzar Europa desde el extremo norte de Noruega hasta más allá del extremo sur de España, da origen a una gran variedad de climas, donde sólo están ausentes los tropicales húmedos. En el Norte, regiones I, II y III, hay lugares donde jamás se han registrado lluvias, como en el Desierto de Atacama, y otros donde las esporádicas lluvias que caen en el invierno dan origen a una explosión de flores en primavera, fenómeno conocido como "Desierto Florido". En toda esta vasta porción del país, la costa tiene clima moderado, con la nubosidad matinal y tardes soleadas. A medida que aumenta la altura, la temperatura diurna sube y la nocturna disminuye. En el altiplano, la temperatura cae por debajo de los 0ºC de noche incluso en verano. En esa época, además, ocurre un fenómeno denominado "Invierno Boliviano", con ocasionales tormentas de lluvia y granizo. </p>
-                <p>Más al sur, entre las IV y VIII regiones, encontramos paisajes mediterráneos, con valles y costas favorecidos por un clima templado, estaciones bien diferenciadas, veranos secos e inviernos relativamente lluviosos. </p>
-                <p>Entre las regiones VIII y X predomina un clima templado lluvioso que sustenta vastos bosques nativos y una floreciente industria agropecuaria. En las regiones XI y XII el clima es lluvioso y moderadamente frio, con mucho viento en costa y en la pampa patagónica. Hacia el extremo del continente disminuyen la temperatura y las precipitaciones. </p>
-                <p>Isla de Pascua y el Archipiélago Juan Fernández poseen un clima subtropical de agradables temperaturas, humedad moderada y relativamente poca variación durante el año. </p><a class="link link--clean text-dark" href="#">Descargar archivo original</a>
+            </article>
+          </div>
+          <div class="sub-section">
+            <article>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-7">
+                  <h2 class="heading-medium">Población</h2>
+                  <p>Según el censo realizado el añ 2002, Chile tiene una población de <span class="type">16.000.000</span> de habitantes aproximadamente.</p>
+                </div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-5 hidden-xs"><img src="images/temp/clima.jpg" alt="" width="459"></div>
-            </div>
-            <hr>
-          </article>
-          <article>
+            </article>
+          </div>
+          <div class="sub-section">
+            <article>
+              <h2 class="heading-medium">Clima</h2>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-7">
+                  <p>La inusitada extensión norte-sur de Chile, equivalente a cruzar Europa desde el extremo norte de Noruega hasta más allá del extremo sur de España, da origen a una gran variedad de climas, donde sólo están ausentes los tropicales húmedos. En el Norte, regiones I, II y III, hay lugares donde jamás se han registrado lluvias, como en el Desierto de Atacama, y otros donde las esporádicas lluvias que caen en el invierno dan origen a una explosión de flores en primavera, fenómeno conocido como "Desierto Florido". En toda esta vasta porción del país, la costa tiene clima moderado, con la nubosidad matinal y tardes soleadas. A medida que aumenta la altura, la temperatura diurna sube y la nocturna disminuye. En el altiplano, la temperatura cae por debajo de los 0ºC de noche incluso en verano. En esa época, además, ocurre un fenómeno denominado "Invierno Boliviano", con ocasionales tormentas de lluvia y granizo. </p>
+                  <p>Más al sur, entre las IV y VIII regiones, encontramos paisajes mediterráneos, con valles y costas favorecidos por un clima templado, estaciones bien diferenciadas, veranos secos e inviernos relativamente lluviosos. </p>
+                  <p>Entre las regiones VIII y X predomina un clima templado lluvioso que sustenta vastos bosques nativos y una floreciente industria agropecuaria. En las regiones XI y XII el clima es lluvioso y moderadamente frio, con mucho viento en costa y en la pampa patagónica. Hacia el extremo del continente disminuyen la temperatura y las precipitaciones. </p>
+                  <p>Isla de Pascua y el Archipiélago Juan Fernández poseen un clima subtropical de agradables temperaturas, humedad moderada y relativamente poca variación durante el año. </p><a href="#">Descargar archivo original<i class="ic-download"></i></a><br><br>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5"><img class="img-adaptive" src="images/temp/clima.jpg" alt="" width="459"></div>
+              </div>
+            </article>
+          </div>
+          <div><br><br>
             <h2 class="heading-medium">Símbolos patrios</h2>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-7">
-                <h3 class="heading-sub">Bandera Nacional</h3>
-                <p>La bandera nacional de la República de Chile, conocida como la Estrella Solitaria,1​ fue oficialmente adoptada hace 199 años, el 18 de octubre de 1817.2​ Está dividida en dos franjas horizontales: la superior es azul y blanca mientras que la inferior es roja; en el cantón azul se ubica una estrella de cinco puntas en color blanco.3​</p>
-                <p>Las principales interpretaciones del uso de los colores de la bandera atribuirían al azul la representación de los cielos y el océano Pacífico, al blanco las cumbres nevadas de la cordillera de los Andes, y al rojo la sangre vertida por los héroes nacionales en la lucha por la independencia.4​ A su vez, la estrella simbolizaría los tres poderes del Estado chileno (Ejecutivo, Legislativo y Judicial) que velan por la integridad de la nación —otras interpretaciones indicarían que la estrella única es una referencia al Estado unitario, a diferencia de, por ejemplo, las múltiples estrellas de la bandera de los Estados Unidos que representan el Estado federal—. Sin embargo, considerando los versos del Canto XXI del poema épico La Araucana (1569),5​ los colores de la actual bandera chilena se remontarían a las bandas tricolores utilizadas por los toquis mapuches durante la Guerra de Arauco contra la Conquista española,4​ mientras que la estrella representaría la «estrella de Arauco» según Bernardo O'Higgins.6​</p><a class="link link--clean text-dark" href="#">Descargar archivo original</a>
+            <article>
+              <h3 class="heading-sub">Bandera Nacional</h3>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-7">
+                  <div class="sub-section first">
+                    <p>La bandera nacional de la República de Chile, conocida como la Estrella Solitaria,1​ fue oficialmente adoptada hace 199 años, el 18 de octubre de 1817.2​ Está dividida en dos franjas horizontales: la superior es azul y blanca mientras que la inferior es roja; en el cantón azul se ubica una estrella de cinco puntas en color blanco.3​</p>
+                    <p>Las principales interpretaciones del uso de los colores de la bandera atribuirían al azul la representación de los cielos y el océano Pacífico, al blanco las cumbres nevadas de la cordillera de los Andes, y al rojo la sangre vertida por los héroes nacionales en la lucha por la independencia.4​ A su vez, la estrella simbolizaría los tres poderes del Estado chileno (Ejecutivo, Legislativo y Judicial) que velan por la integridad de la nación —otras interpretaciones indicarían que la estrella única es una referencia al Estado unitario, a diferencia de, por ejemplo, las múltiples estrellas de la bandera de los Estados Unidos que representan el Estado federal—. Sin embargo, considerando los versos del Canto XXI del poema épico La Araucana (1569),5​ los colores de la actual bandera chilena se remontarían a las bandas tricolores utilizadas por los toquis mapuches durante la Guerra de Arauco contra la Conquista española,4​ mientras que la estrella representaría la «estrella de Arauco» según Bernardo O'Higgins.6​</p><a href="#">Descargar archivo original<i class="ic-download"></i></a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5"><img class="img-adaptive" src="images/temp/bandera-chile.jpg" alt="" width="459"></div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-5 hidden-xs"><img src="images/temp/bandera-chile.jpg" alt="" width="459"></div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-7">
-                <h3 class="heading-sub">Escudo</h3>
-                <p>El Escudo de Armas presenta una estrella de plata de cinco picos al centro de un campo cortado, azul turquí el superior y rojo el inferior y su forma es la fijada por el modelo oficial aprobado por decreto de Guerra N° 2.271 de 4 de septiembre de 1920, conforme a la ley, y el cual, además, tiene por timbre un plumaje tricolor de azul turquí, blanco y rojo; por soportes un huemul rampante a su derecha y un cóndor a su izquierda en la posición que fija ese modelo, coronado cada uno de estos animales con una corona naval de oro; y por base un encaracolado cruzado por una cinta con el lema "Por la razón o la fuerza", todo en conformidad al referido modelo.</p><a class="link link--clean text-dark" href="#">Descargar archivo original</a>
+            </article>
+            <article class="sub-article">
+              <h3 class="heading-sub">Escudo</h3>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-7">
+                  <div class="sub-section nopadding-top">
+                    <p>El Escudo de Armas presenta una estrella de plata de cinco picos al centro de un campo cortado, azul turquí el superior y rojo el inferior y su forma es la fijada por el modelo oficial aprobado por decreto de Guerra N° 2.271 de 4 de septiembre de 1920, conforme a la ley, y el cual, además, tiene por timbre un plumaje tricolor de azul turquí, blanco y rojo; por soportes un huemul rampante a su derecha y un cóndor a su izquierda en la posición que fija ese modelo, coronado cada uno de estos animales con una corona naval de oro; y por base un encaracolado cruzado por una cinta con el lema "Por la razón o la fuerza", todo en conformidad al referido modelo.</p><a href="#">Descargar archivo original<i class="ic-download"></i></a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3 col-lg-offset-1"><img class="img-adaptive" src="images/temp/escudo.jpg" alt="" width="459"></div>
               </div>
-              <div class="col-xs-12 col-sm-6 col-md-5 hidden-xs"><img src="images/temp/escudo.jpg" alt="" width="459"></div>
-            </div>
-            <h3 class="heading-sub">Himno nacional</h3>
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-md-7">
-                <p>El himno nacional de la República de Chile, también conocido como Canción Nacional de Chile, es la composición musical patriótica que representa oficialmente a dicho país. Fue escrito por el poeta chileno Eusebio Lillo Robles (1847), con estribillo del poeta argentino-chileno Bernardo de Vera y Pintado (1819), vestigio del primer himno; y compuesto por el maestro español Ramón Carnicer i Batlle (1828). Fue adoptado hace 170 años, el 17 de septiembre de 1847.</p><a class="link link--clean text-dark" href="#">Descargar archivo original</a>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-5 hidden-xs">
-                <div class="audio"><a class="audio_button" href="#"><i class="icon-volume audio_icon"></i></a>
-                  <p class="audio_title">Himno nacional de Chile</p>
-                  <div class="audio_time">02:11</div>
+            </article>
+            <article class="sub-article">
+              <h3 class="heading-sub">Himno nacional</h3>
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-7">
+                  <div class="sub-section nopadding-top no-line">
+                    <p>El himno nacional de la República de Chile, también conocido como Canción Nacional de Chile, es la composición musical patriótica que representa oficialmente a dicho país. Fue escrito por el poeta chileno Eusebio Lillo Robles (1847), con estribillo del poeta argentino-chileno Bernardo de Vera y Pintado (1819), vestigio del primer himno; y compuesto por el maestro español Ramón Carnicer i Batlle (1828). Fue adoptado hace 170 años, el 17 de septiembre de 1847.</p><a href="#">Descargar archivo original<i class="ic-download"></i></a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                  <div class="post-audio"><a class="post-audio_button" href="#"><i class="ic-volume post-audio_icon"></i></a>
+                    <p class="post-audio_title">Himno nacional de Chile</p>
+                    <div class="post-audio_time">02:11</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
       </section>
       <section>
         <div class="container">
-          <div class="row section-social">
-            <div class="table-md-row">
-              <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 middle">
-                <p class="section-social_label">Síguenos a través de redes sociales:</p>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8 middle">
-                <div class="row">
-                  <div class="table-md-row">
-                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
-                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-facebook"></i></span><span class="social_name">Facebook</span><span class="social_url">/gobiernodechile</span></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
-                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-twitter"></i></span><span class="social_name">Twitter</span><span class="social_url">@Gobiernodechile</span></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
-                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-instagram"></i></span><span class="social_name">Instagram</span><span class="social_url">/gobiernodechile</span></div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3 col-md-3 middle">
-                      <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="icon-youtube"></i></span><span class="social_name">Youtube</span><span class="social_url">Lamoneda</span></div>
+          <div class="section-social">
+            <div class="row">
+              <div class="table-md-row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 middle">
+                  <p class="section-social_label">Síguenos a través de redes sociales:</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8 middle">
+                  <div class="row">
+                    <div class="table-md-row">
+                      <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                        <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="ic-facebook"></i></span><span class="social_name">Facebook</span><span class="social_url">/gobiernodechile</span></div>
+                      </div>
+                      <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                        <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="ic-twitter"></i></span><span class="social_name">Twitter</span><span class="social_url">@Gobiernodechile</span></div>
+                      </div>
+                      <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                        <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="ic-instagram"></i></span><span class="social_name">Instagram</span><span class="social_url">/gobiernodechile</span></div>
+                      </div>
+                      <div class="col-xs-12 col-sm-3 col-md-3 middle">
+                        <div class="social"><a class="social_link" href="#"></a><span class="social_icon"><i class="ic-youtube"></i></span><span class="social_name">Youtube</span><span class="social_url">Lamoneda</span></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -270,18 +295,36 @@
     <div class="site-search bg-bluedark">
       <section>
         <div class="container">
+          <p><a class="text-white toggle-search" href="#"><i class="ic-arrow-left icon--left"></i>Volver</a></p>
           <div class="row">
-            <div class="col-sm-12 col-md-8 col-lg-7">
-              <div class="search-form search-form--large">
-                <form action="resultados.html">
-                  <input class="search-form_input" type="search" placeholder="Escribe aquí lo que deseas buscar" id="input-search">
-                  <button class="search-form_button search-form_button--submit" type="submit"><i class="icon-search"></i></button>
-                  <button class="search-form_button search-form_button--cancel" type="button"><i class="icon-delete"></i></button>
-                </form>
+            <div class="col-xs-12 col-sm-12 col-md-5 pull-md-right col-lg-4 col-lg-offset-1">
+              <div class="site-search_toolbar">
+                <div class="toolbar">
+                  <div class="toolbar_content"><a class="toolbar-button toolbar-button--contrast" href="#"><span class="toolbar-button_content"><i class="ic-contrast toolbar-button_icon"></i></span></a><a class="toolbar-button toolbar-button--less" href="#"><span class="toolbar-button_content"><i class="ic-font-size-less toolbar-button_icon"></i></span></a><a class="toolbar-button toolbar-button--plus" href="#"><span class="toolbar-button_content"><i class="ic-font-size-plus toolbar-button_icon"></i></span></a>
+                    <div class="toolbar_player"><a class="toolbar-button toolbar-button--listen" href="#track" id="listen"><span class="toolbar-button_content"><i class="toolbar-button_icon ic-volume"></i><span class="toolbar-button_text">Escuchar</span></span></a>
+                      <div class="toolbar-player hide"><a class="toolbar-player_toggle" href="#"><span class="toolbar-button_content"><i class="ic-pause toolbar-button_icon-pause"></i><i class="ic-play toolbar-button_icon-play"></i></span></a>
+                        <div class="toolbar-player_timeline"><span></span></div><a class="toolbar-player_download" href="media/National_Anthem_of_Chile.ogg" download><span class="toolbar-button_content"><i class="ic-download"></i></span></a>
+                      </div>
+                    </div>
+                  </div><a class="toolbar-button toolbar-button--toggle" href="#"><span class="toolbar-button_content"><i class="ic-accessibility toolbar-button_icon"></i><i class="ic-close toolbar-button_icon"></i></span></a>
+                </div>
               </div>
             </div>
+            <div class="col-sm-12 col-md-7 col-lg-7">
+              <div class="search-form site-search_form nomargin-bottom" id="search">
+                <div class="search-form_content">
+                  <form action="resultados.html">
+                    <input class="search-form_input" type="search" placeholder="Escribe aquí lo que deseas buscar" id="input-search">
+                    <button class="search-form_button search-form_button--submit" type="submit"><i class="ic-search"></i></button>
+                    <button class="search-form_button search-form_button--cancel" type="button"><i class="ic-delete"></i></button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-sm-12 col-sm-12">
-              <h2 class="heading-label heading-label--light">Filtrar por Temas</h2>
+              <h2 class="heading-label heading-label--light heading-label--wrapped">Filtrar por Temas</h2>
               <div class="tags overflowed-xs">
                 <div class="tags_content">
                   <div class="tags_item"><a class="ctag ctag--clarity" href="#">Educación</a></div>
@@ -296,20 +339,20 @@
           <div class="row">
             <div class="col-sm-12 col-md-4 col-lg-4">
               <h2 class="heading-label heading-label--light">Tramites</h2>
-              <div class="search_section overflowed-xs"><a class="link link--text-light link--has-dot-red" href="#">Bono trabajo mujer</a><a class="link link--text-light" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a>
+              <div class="search_section overflowed-xs"><a class="link link--text-light link--has-dot" href="#">Bono trabajo mujer</a><a class="link link--text-light" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a><a class="link link--text-light hidden-xs" href="#">Programa Mujer Jefa de Hogar</a>
                 <div class="clearfix"><a class="more more--right" href="#">Ver más</a></div>
               </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4">
               <h2 class="heading-label heading-label--light">Noticias</h2>
               <div class="search_section overflowed-xs">
-                <article class="new new--small"><span class="new_category new_category--light">Economia y empleo</span>
+                <article class="new new--search"><span class="new_category new_category--light">Economia y empleo</span>
                   <h2 class="new_title"><a class="link link--text-light" href="#">Mandataria celebró el noveno aniversario de la Reforma Previsional</a></h2>
                 </article>
-                <article class="new new--small"><span class="new_category new_category--light">Economia y empleo</span>
+                <article class="new new--search"><span class="new_category new_category--light">Economia y empleo</span>
                   <h2 class="new_title"><a class="link link--text-light" href="#">Presidenta promulgó la Ley de Tenencia Responsable de Mascotas y Animales de Compañía</a></h2>
                 </article>
-                <article class="new new--small"><span class="new_category new_category--light">Economia y empleo</span>
+                <article class="new new--search"><span class="new_category new_category--light">Economia y empleo</span>
                   <h2 class="new_title"><a class="link link--text-light" href="#">Yo Apoyo Tres Causales: El sitio con lo que necesitas saber del histórico proyecto de ley</a></h2>
                 </article>
                 <div class="clearfix"><a class="more more--right" href="#">Ver más</a></div>
@@ -329,34 +372,30 @@
       </section>
     </div>
     <footer class="site-footer">
-      <div class="container"><a class="site-footer_logo" href="#"><i class="icon-gob"></i></a>
+      <div class="container"><a class="site-footer_logo" href="#"><i class="icon-gob-footer"></i></a>
         <div class="row hidden-xs">
-          <div class="table-lg-row">
-            <div class="col-lg-2"></div>
-            <div class="col-sm-6 col-lg-3">
-              <ul class="menu">
-                <li><a class="link link--clean link--text-light" href="#">Programa de Gobierno 2014 - 2018</a></li>
-                <li><a class="link link--clean link--text-light" href="#">Ley de transparencia</a></li>
-                <li><a class="link link--clean link--text-light" href="#">Gobierno transparente</a></li>
-              </ul>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-              <ul class="menu">
-                <li><a class="link link--clean link--text-light" href="#">Política de privacidad</a></li>
-                <li><a class="link link--clean link--text-light" href="#">Términos de uso</a></li>
-                <li><a class="link link--clean link--text-light" href="#">Creative Commons</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-1"></div>
-            <div class="col-sm-12 col-lg-3"><a class="link" href="#">Visitas a La Moneda</a>
-            </div>
+          <div class="col-sm-6 col-lg-3">
+            <ul class="menu">
+              <li><a class="link link--clean text-white" href="#">Programa de Gobierno 2014 - 2018</a></li>
+              <li><a class="link link--clean text-white" href="#">Ley de transparencia</a></li>
+              <li><a class="link link--clean text-white" href="#">Gobierno transparente</a></li>
+            </ul>
           </div>
+          <div class="col-sm-6 col-md-3 col-lg-4 col-lg-offset-1">
+            <ul class="menu">
+              <li><a class="link link--clean text-white" href="#">Política de privacidad</a></li>
+              <li><a class="link link--clean text-white" href="#">Términos de uso</a></li>
+              <li><a class="link link--clean text-white" href="#">Creative Commons</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-lg-4"><a class="button button--block site-footer_button" href="#">Visitas a La Moneda</a></div>
         </div>
       </div>
     </footer>
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/jquery.easing.js"></script>
     <script src="js/lib/slick.js"></script>
+    <script src="js/lib/collapsible.js"></script>
     <script src="js/app-min.js"></script>
   </body>
 </html>
