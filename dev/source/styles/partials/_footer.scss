@@ -1,0 +1,62 @@
+/*
+  FOOTER
+*/
+.site-footer{
+  background-color: get-color(bluedark);
+  border-top: 1px solid rgba(get-color(gray), .2);
+  // padding: 60px 0 60px;
+  height: 64px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  @include mq($from: tablet ) {
+    padding: 40px 0 50px;
+    height: auto;
+  }
+  @include mq($from: desktop ) {
+    padding: 40px 0 50px;
+  }
+  &--hasbutton{
+    @include mq($until: tablet ) {
+      margin-bottom: 90px;
+    }
+  }
+  &_logo{
+    // margin: 0 0 20px;
+    // display: block;
+    position: absolute;
+    bottom: 0;
+    // top: 0;
+    // margin-top: -1px;
+  }
+  &_button{
+    margin-top: 34px;
+  }
+  .social{
+    text-align: center;
+    @include mq($from: tablet ) {
+      margin: 20px 0;
+    }
+    @include mq($from: desktop ) {
+      text-align: right;
+      margin: 0 0 15px;
+    }
+    li{
+      display: inline-block;
+      &:not(:last-child){
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+  .menu{
+    li{
+      &:not(:last-child){
+        // margin: 0 0 10px 0;
+      }
+      a{
+        padding: 10px 0;
+      }
+    }
+  }
+}

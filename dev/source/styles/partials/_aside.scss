@@ -1,0 +1,11 @@
+.aside{
+	background-color:rgba( get-color(light) , 1);
+	box-shadow: 0 20px 40px 0 rgba( get-color(bluedark) , .15);
+	z-index: 20;
+	margin-top: 30px;
+	&_header{
+		border-bottom: 1px solid get-color(lightgray);		
+		padding: 0 15px;
+		overflow: hidden;
+	}
+}

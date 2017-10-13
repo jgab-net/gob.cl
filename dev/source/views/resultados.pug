@@ -1,0 +1,82 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Resultados | #{projectName}
+block body
+	body
+		include partials/header
+		main.site-main
+			section.section.bg-bluedark.text-light
+				.container
+					.row
+						.col-xs-12.col-sm-12.col-md-5.pull-md-right.col-lg-4.col-lg-offset-1
+							include partials/toolbar
+						.col-xs-12.col-sm-12.col-md-7.col-lg-7
+							.search-form.search-form.nomargin-top.search-form--large
+								.search-form_content
+									input(type="search" placeholder="Escribe aquí lo que deseas buscar" value="Becas").search-form_input
+									button(type="submit").search-form_button.search-form_button--submit: i.ic-search
+									button(type="button").search-form_button.search-form_button--cancel: i.ic-delete
+							.tags.overflowed-xs
+								label(for="").heading-label Filtrar por Temas
+								.tags_content
+									.tags_item: a(href="#").ctag.ctag--clarity Habitacional
+									.tags_item: a(href="#").ctag.ctag--clarity Al empleo
+									.tags_item: a(href="#").ctag.ctag--clarity Para la familia
+									.tags_item: a(href="#").ctag.ctag--clarity Calidad de vida y ciudad
+							.filters
+								.row
+									.col-xs-6
+										div
+											label(for="").heading-label Tema
+											.select.select--dark
+												select(name="")
+													option Todos
+									.col-xs-6
+										div
+											label(for="").heading-label Institución
+											.select.select--dark
+												select(name="")
+													option Todos
+
+			section.section
+				.container
+					h3.heading-medium 231 Resultados
+					.results
+						.row
+							.col-xs-12.col-sm-10.col-md-7
+								.result
+									a(href="#").link--has-dot.result_link Beca Indígena para estudiantes de educación básica y media (postulación y renovación)
+									p.result_excerpt ..de educación media. Obtenga más información sobre la beca para enseñanza básica o enseñanza...
+									span.result_date 2017-11-10  Junta Nacional de Auxilio Escolar y Becas (JUNAEB)
+								
+								.result
+									a(href="#").result_link Beca Patagonia Aysén (postulación ó renovación)
+									p.result_excerpt ..Esta subvención contempla tres asignaciones: Beca de mantención: asignación
+									span.result_date 2017-11-10  Junta Nacional de Auxilio Escolar y Becas (JUNAEB)
+
+								.result
+									a(href="#").result_link Beca de Integración Territorial (BIT)
+									p.result_excerpt ...haga clic en postular. Seleccione postular o renovar la Beca de Integración Territorial (BIT).
+									span.result_date 2017-11-10  Junta Nacional de Auxilio Escolar y Becas (JUNAEB)
+								
+								.result
+									a(href="#").result_link Beca Presidente de la República para estudiantes de educación superior (renovación)
+									p.result_excerpt .Importante: en esta categoría no se postula a la beca, ya que los beneficiarios que egresan de …
+									span.result_date 2017-11-10  Junta Nacional de Auxilio Escolar y Becas (JUNAEB)
+								
+								.result
+									a(href="#").result_link Beca Indígena para estudiantes de educación superior (postulación y renovación)
+									p.result_excerpt ...educativo. Los estudiantes de enseñanza media beneficiados con la beca Indígena que ingresan…
+									span.result_date 2017-11-10  Junta Nacional de Auxilio Escolar y Becas (JUNAEB)
+								
+						
+			
+			section
+				.container
+					include partials/social
+
+		include partials/search
+		include partials/footer
+		include partials/scripts

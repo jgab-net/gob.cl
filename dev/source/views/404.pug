@@ -1,0 +1,46 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| 404 | #{projectName}
+block body
+	body
+		-var hasLogin = true;
+		include partials/header
+		main.site-main
+			section.section.bg-white.elem-bg
+				.container
+						.row
+							.col-xs-12.col-sm-12.col-md-7
+								article.article.article--dark.text-dark
+									h2.article_title.title--light Página no encontrada
+									p
+										| Lo sentimos pero hubo un error al intentar cargar la página solicitada. 
+										br
+										| Puedes 
+										a(href='#') recargar 
+										| o buscar nuevamente acá abajo.
+									.search-form.search-form--large
+										input.search-form_input.active-search(type='search', placeholder='Escribe aquí lo que quieres buscar')
+										button.search-form_button.search-form_button--submit(type='submit'): i.ic-search
+										button.search-form_button.search-form_button--cancel(type='button'): i.ic-delete
+
+			section.section.section--medium.bg-white.hidden-xs
+				.container
+					.row
+						.col-sm-8
+							ul.list-ib
+								li Te sugerimos:
+								li
+									a(href='resultados.html') Ir al inicio
+								li
+									a(href='resultados.html') Revisar el centro de ayuda
+								li
+									a(href='resultados.html') Contactarnos
+    
+			section
+				.container
+					include partials/social
+		include partials/search
+		include partials/footer
+		include partials/scripts

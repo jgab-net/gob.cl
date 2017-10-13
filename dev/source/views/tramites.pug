@@ -1,0 +1,230 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Trámites #{projectName}
+block body
+	body
+		include partials/header
+		main.site-main
+			section.section.bg-bluedark
+				.container
+					.row
+						.col-xs-12.col-sm-12.col-md-7
+							article.article.article--dark.text-light
+								span.heading-label trámites y beneficios
+								h2.heading-large Trámites
+								p Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+								.search-form.search-form--large
+									input(type="search" placeholder="Escribe aquí lo que deseas buscar").search-form_input.active-search
+									button(type="submit").search-form_button.search-form_button--submit: i.ic-search
+									button(type="button").search-form_button.search-form_button--cancel: i.ic-delete
+			
+			section.section--medium
+				.container
+					.visible-xs-block
+						article.card-new
+							h2.card-new_title Lo más buscado
+							a(href="#").link.overflowed-xs Cambio de domicilio electoral
+							a(href="#").link.overflowed-xs Certificado de antecedentes
+							a(href="#").link.overflowed-xs Buscador de farmacias de turno
+							a(href="#").link.overflowed-xs Precio de un bono FONASA (segun prestación)
+
+						article.card-new
+
+							h2.card-new_title Tipos de Trámite
+							a(href="#").link.link--text-dark.overflowed-xs Certificados
+							a(href="#").link.link--text-dark.overflowed-xs Bonos
+							a(href="#").link.link--text-dark.overflowed-xs Becas
+							a(href="#").link.link--text-dark.overflowed-xs Discapacidad
+							a(href="#").link.link--text-dark.overflowed-xs Subsidios
+							a(href="#").link.link--text-dark.overflowed-xs Pensiones
+							a(href="#").link.link--text-dark.overflowed-xs Chilenos en el extranjero
+
+							a(href="#").link.hover.link--text-dark.overflowed-xs Ver más tipos de Trámites
+
+
+					.hidden-xs
+						h2.heading-large Tipos de Trámite
+						.row
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Certificados
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Certificado de afiliación al sistema de ISAPRES
+										a(href="#").link.link--medium.link--text-dark Certificado de antecedentes
+										a(href="#").link.link--medium.link--text-dark Certificado de profesionales
+										.clearfix
+											a(href="#").more Ver más
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Becas y Capacitaciones
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Certificado de afiliación al sistema de ISAPRES
+										a(href="#").link.link--medium.link--text-dark Certificado de antecedentes
+										a(href="#").link.link--medium.link--text-dark Certificado de profesionales
+										.clearfix
+											a(href="#").more Ver más
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Subsidios
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Certificado de afiliación al sistema de ISAPRES
+										a(href="#").link.link--medium.link--text-dark Certificado de antecedentes
+										a(href="#").link.link--medium.link--text-dark Certificado de profesionales
+										.clearfix
+											a(href="#").more Ver más
+							
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Bonos
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Bono por Logro Escolar
+										a(href="#").link.link--medium.link--text-dark Bono al Trabajo de la Mujer
+										a(href="#").link.link--medium.link--text-dark Bono de capacitación Empresa y Negocio
+										.clearfix
+											a(href="#").more Ver más
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Pensiones
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Pensión de invalidez del nuevo sistema de pensiones (AFP)
+										a(href="#").link.link--medium.link--text-dark Pensión de viudez del ex Servicio de Seguro Social
+										a(href="#").link.link--medium.link--text-dark Pensión de orfandad por accidente del trabajo o enfermedad profesional
+										.clearfix
+											a(href="#").more Ver más
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Mujer
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Bono al Trabajo de la Mujer
+										a(href="#").link.link--medium.link--text-dark Programa Mujer Jefa de Hogar
+										a(href="#").link.link--medium.link--text-dark Capital Abeja Emprende
+										.clearfix
+											a(href="#").more Ver más
+							
+
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Chilenos en el extranjero
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Cambio de domicilio electoral de chilenos en el extranjero
+										a(href="#").link.link--medium.link--text-dark Cuenta de ahorro para chilenos en el extranjero
+										a(href="#").link.link--medium.link--text-dark Bloqueo de pasaporte para chilenos en el extranjero
+										.clearfix
+											a(href="#").more Ver más
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Salud
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Programa de salud oral
+										a(href="#").link.link--medium.link--text-dark Examen de salud mental (Psiquiatría y Psicología)
+										a(href="#").link.link--medium.link--text-dark Acreditación para prestadores institucionales de salud
+										.clearfix
+											a(href="#").more Ver más
+							.col-sm-12.col-md-4
+								div.card-kind
+									.card-kind_header
+										h2.heading-medium.card-kind_title Extranjeros
+									.card-kind_body
+										a(href="#").link.link--medium.link--text-dark Cédula de identidad para extranjeros
+										a(href="#").link.link--medium.link--text-dark Certificado de residencia y domicilio para extranjeros
+										a(href="#").link.link--medium.link--text-dark Visa de residencia temporaria para extranjero
+										.clearfix
+											a(href="#").more Ver más
+							
+							.col-sm-12.col-md-4.col-md-offset-8
+								a(href="#").button.button--block.button--clean Ver más tipos de tramite  ▾
+
+
+			section.section--medium.bg-red.visible-xs-block
+				.container
+					article.text-light
+						.row
+							.table-xs-row
+								.col-xs-9
+									h1.heading-medium Haz tu trámite en línea con la CLAVE ÚNICA
+									
+								.col-xs-3.middle
+									i.icon-key
+						.row
+							.col-xs-12
+								p
+									a(href="#").link.link--clean.text-white Bajada ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				
+			section.section--medium.hidden-xs
+				.container.bg-bluedark.section--medium
+					.row
+						.table-sm-row
+							.col-xs-12.col-sm-1.col-lg-1
+								.text-xs-center.text-sm-right
+									i.icon-key
+							.col-xs-12.col-sm-5.col-lg-5
+								.text-light
+									h3.heading-medium Trámites por internet con tu Clave Única
+									h4.heading-sub Con la Clave Única podrás obtener documentos y hacer 82 trámites del Estado en internet
+							.col-xs-12.col-sm-1.col-lg-2
+							.col-xs-12.col-sm-5.col-lg-4.middle
+								a(href="#").button.button--lightgray.button--block Obtener mi Clave Única
+			
+			section.section--medium
+				.container
+					h2.heading-large Aprende más sobre
+					//- br
+					br
+					.row
+						.col-sm-12.col-md-6
+							article.new.new--mobile
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="#").link Cómo escoger o cambiarse de AFP
+								p.hidden-xs Bajada loreim ipsum cuales son las instrucciones relacionadas con ras finibus ligula ac mi.
+						.col-sm-12.col-md-6
+							article.new.new--mobile
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="#").link Vacuna contra el Virus del Papiloma Humano (VPH)
+								p.hidden-xs Bajada loreim ipsum cuales son las instrucciones relacionadas con ras finibus ligula ac mi.
+						.col-sm-12.col-md-6
+							article.new.new--mobile
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="#").link Permiso Postnatal
+								p.hidden-xs Bajada loreim ipsum cuales son las instrucciones relacionadas con ras finibus ligula ac mi.
+						.col-sm-12.col-md-6
+							article.new.new--mobile
+								figure.new_figure-mobile
+									img(src=`${temp}new-1.jpg` alt="").img-responsive
+								h2.new_title: a(href="#").link Cómo funciona el Registro Social de Hogares
+								p.hidden-xs Bajada loreim ipsum cuales son las instrucciones relacionadas con ras finibus ligula ac mi.
+					
+			section.hidden-xs
+				.container
+					h3.heading-label Loreim ipsum
+					.row.section--medium.bg-bluedarkgray
+						.col-xs-12.col-md-4
+							.overflowed-xs.overflowed-sm
+								a(href="#").link.link--medium.link--text-dark ¿Qué es ChileAtiende?
+								a(href="#").link.link--medium.link--text-dark Centro de Ayuda
+								a(href="#").link.link--medium.link--text-dark Trámites disponibles en sucursales
+								
+						.col-xs-12.col-md-4
+							.overflowed-xs.overflowed-sm
+								a(href="#").link.link--medium.link--text-dark Instituciones asociadas
+								a(href="#").link.link--medium.link--text-dark Política de privacidad
+								a(href="#").link.link--medium.link--text-dark Mapa de sitio
+						.col-xs-12.col-md-4
+							.overflowed-xs.overflowed-sm
+								a(href="#").link.link--medium.link--text-dark API para desarrolladores
+					
+		include partials/search
+		include partials/footer
+		include partials/scripts

@@ -1,0 +1,77 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Eje | #{projectName}
+block body
+	body
+		include partials/header
+		main.site-main
+			section.section.bg-bluedark
+				.container
+					.row
+						.col-xs-12.col-sm-12.col-md-7
+							article.text-light
+								h1.heading-large Educación
+								p Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+
+			section.section
+				.container
+					.row
+						.col-xs-12.col-sm-12
+							h2.heading-medium Trámites
+							p Conoce cuales son las instrucciones relacionadas con ras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--medium Beca de doctorado en extranjero (Becas Chile)
+								a(href="#").link.link--medium Rebaja de impuestos por gastos en educacion
+								a(href="#").link.link--medium Beca indigena para estudiantes de educación superior
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--medium Beca de doctorado en extranjero (Becas Chile)
+								a(href="#").link.link--medium Rebaja de impuestos por gastos en educacion
+								a(href="#").link.link--medium Beca indigena para estudiantes de educación superior
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--medium Beca de doctorado en extranjero (Becas Chile)
+								a(href="#").link.link--medium Rebaja de impuestos por gastos en educacion
+								a(href="#").link.link--medium Beca indigena para estudiantes de educación superior
+						.col-xs-12.col-sm-12
+							.clearfix
+								a(href="#").more.more--dark.more--right Ver más
+					
+						.col-xs-12.col-md-12
+							h2.heading-medium Noticias
+							p Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--medium Beca Indígena para estudiantes de educación básica y media (postulación y renovación)
+								a(href="#").link.link--medium Beca Presidente de la República para estudiantes de educación superior (renovación)
+								
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--medium Beca Patagonia Aysén (postulación o renovación)
+								a(href="#").link.link--medium Beca Indígena para estudiantes de educación básica y media (postulación y renovación)
+								
+						.col-xs-12.col-sm-12.col-md-4
+							.overflowed-xs
+								a(href="#").link.link--medium Beca Presidente de la República para estudiantes de educación superior (renovación)
+								a(href="#").link.link--medium Beca Patagonia Aysén (postulación o renovación)
+						.col-xs-12.col-sm-12
+							.clearfix
+								a(href="#").more.more--dark.more--right Ver más
+						
+						.col-xs-12.col-md-12
+							h2.heading-medium Instituciones
+							p Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula.
+							.overflowed-xs
+								a(href="#").link.link--medium Secretarias Regionales Ministeriales (SEREMI)
+								a(href="#").link.link--medium Subsecretaria de Educación
+								a(href="#").link.link--medium Departamentos Provinciales
+						.col-xs-12.col-sm-12
+							.clearfix
+								a(href="#").more.more--dark.more--right Ver más
+
+		include partials/search
+		include partials/footer
+		include partials/scripts

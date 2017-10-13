@@ -1,0 +1,188 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| #{projectName}
+block body
+	body
+		-var hasLogin = true;
+		include partials/header
+		main.site-main
+			section.section.bg-bluedark.elem-bg
+				img(data-src=`${temp}hero-home.jpg`, alt="").img-desktop.img-to-bg
+				.container
+					.row
+						.col-xs-12.col-sm-12.col-md-5.pull-md-right.col-lg-4.col-lg-offset-1
+							include partials/toolbar
+						.col-xs-12.col-sm-12.col-md-7
+							article.article.article--dark.text-light
+								h2.article_title.title--light Estás en Gob.cl
+								p Tu portal para acceder de manera simple y rápida a información del Gobierno de Chile.
+								.search-form.search-form--large#searchHero
+									.search-form_content
+										input(type="search" placeholder="Escribe aquí lo que quieres buscar").search-form_input.toggle-search
+										button(type="submit").search-form_button.search-form_button--submit: i.ic-search
+										button(type="button").search-form_button.search-form_button--cancel: i.ic-delete
+						
+			section.section.section--medium.bg-bluedark.hidden-xs
+				.container
+					.row
+						.col-sm-8
+							ul.list-ib
+								li Lo más buscado:
+								li: a(href="resultados.html").link.link--clean.text-white Subsidio habitacional
+								li: a(href="resultados.html").link.link--clean.text-white Bono por hijo
+								li: a(href="resultados.html").link.link--clean.text-white Gratuidad
+								li: a(href="resultados.html").link.link--clean.text-white Cuenta pública
+						.col-sm-2.pull-right
+							a(href="#") Visita Chile Mejor
+
+			section
+				.container
+					
+					include partials/social
+
+					section.sub-section
+						.row
+							.col-xs-12.col-sm-12.col-md-8.col-lg-6
+								article.card-new
+									h2.heading-medium Trámites y beneficios
+									p Infórmate sobre los principales beneficios del Estado, además de los trámites que se realizan en ChileAtiende.
+									a(href="tramites.html").card-new_more.hidden-lg Ver más
+								article.card-new.visible-xs-block
+									h2.heading-medium Noticias
+									p Entérate de nuestras propuestas para mejorar el país y revisa como avanzan.
+									a(href="noticias.html").card-new_more.hidden-lg Ver más
+								article.card-new.visible-xs-block
+									h2.heading-medium Instituciones
+									p Conoce las principales entidades de Gobierno y sus representantes.
+									a(href="instituciones.html").card-new_more.hidden-lg Ver más
+						.row.hidden-xs
+							.col-xs-12.col-sm-12.col-md-4
+								.overflowed-xs
+									a(href="#").link.link--text-dark.link--has-dot.visited Certificación de convertidores catalíticos de reposición
+							.col-xs-12.col-sm-12.col-md-4
+								.overflowed-xs
+									a(href="#").link.link--text-dark.visited Concurso para inscribir nuevos taxis
+							.col-xs-12.col-sm-12.col-md-4
+								.overflowed-xs
+									a(href="#").link.visited Certificación de vehículos a gas
+						.row
+							.col-md-4.col-md-offset-4.hidden-xs
+								a(href="#").button.button--block.button--light.button--clean.button--space Ver más				
+
+					section.sub-section.hidden-xs
+						h2.heading-medium Noticias
+						.row
+							.col-xs-12.col-sm-12.col-md-6
+								article.new.new--has-thumbnail-sm
+									figure.new_figure
+										img(data-src=`${temp}new-3.jpg` alt="").img-desktop.img-responsive
+									//- span.new_category Seguridad
+									time.new_date 25 de Septiembre de 2017
+									h2.new_title: a(href="noticia.html").text-dark.visited Chile Crece Contigo tiene nuevo ajuar para todo recién nacido en el sistema público de salud
+							.col-xs-12.col-sm-12.col-md-6
+								article.new.new--has-thumbnail-sm
+									figure.new_figure
+										img(data-src=`${temp}new-4.jpg` alt="").img-desktop.img-responsive
+									//- span.new_category Seguridad
+									time.new_date 25 de Septiembre de 2017
+									h2.new_title: a(href="noticia.html").text-dark.visited Nuevo Sistema de Ahorro Colectivo mejorará las pensiones de los chilenos
+							.col-xs-12.col-sm-12.col-md-6
+								article.new.new--has-thumbnail-sm
+									figure.new_figure
+										img(data-src=`${temp}new-5.jpg` alt="").img-desktop.img-responsive
+									//- span.new_category Seguridad
+									time.new_date 25 de Septiembre de 2017
+									h2.new_title: a(href="noticia.html").text-dark.visited Las 10 plantas solares más grandes de Chile
+							.col-xs-12.col-sm-12.col-md-6
+								article.new.new--has-thumbnail-sm
+									figure.new_figure
+										img(data-src=`${temp}new-6.jpg` alt="").img-desktop.img-responsive
+									//- span.new_category Seguridad
+									time.new_date 25 de Septiembre de 2017
+									h2.new_title: a(href="noticia.html").visited Hasta el 19 de noviembre estará disponible el formulario FUAS para acceder a la Gratuidad y a los Beneficios Estudiantiles 2018
+
+							.col-xs-12.col-md-4.col-md-offset-4.hidden-xs
+								a(href="#").button.button--block.button--light.button--clean.button--space Ver más
+			
+					section.sub-section.hidden-xs
+						.row
+							.col-xs-12.col-sm-12.col-md-7
+								h2.heading-medium Gobierno
+								p Conoce las principales entidades de Gobierno y sus autoridades.
+								br
+							.col-xs-12.col-sm-12.col-md-12
+								.row
+									.col-sm-6.col-md-3
+										a(href="instituciones.html").card-data
+											h2.card-data_title: span Presidencia de la República
+									.col-sm-6.col-md-3
+										a(href="instituciones.html").card-data
+											h3.card-data_title
+												span.card-data_number 23 
+												span.card-data_title-text Ministerios
+									.col-sm-6.col-md-3
+										a(href="instituciones.html").card-data
+											h3.card-data_title
+												span.card-data_number 244 
+												span.card-data_title-text
+													| Servicios
+													br
+													| Públicos
+									.col-sm-6.col-md-3
+										a(href="instituciones.html").card-data
+											h3.card-data_title
+												span.card-data_number 15 
+												span.card-data_title-text Regiones y sus Municipios
+
+					section.sub-section
+						h2.heading-medium Campañas
+						.row
+							.col-sm-3
+								a(href="#").featured-card.has-icon
+									.featured-card_figure.elem-bg
+										img(src=`${temp}chilemejor.jpg`, alt="").card_image.img-to-bg
+									.featured-card_body
+										h2.featured-card_title Visita Chile mejor
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							.col-sm-4
+								a(href="#").featured-card.has-icon
+									.featured-card_figure.elem-bg
+										img(src=`${temp}banner.jpg`, alt="").card_image.img-to-bg
+									.featured-card_body
+										h2.featured-card_title Medidas que mejoran el acceso a la energía en Chile
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							.col-sm-5
+								a(href="#").featured-card.has-icon
+									.featured-card_figure.elem-bg
+										img(src=`${temp}banner2.jpg`, alt="").card_image.img-to-bg
+									.featured-card_body
+										h2.featured-card_title Ley de Unión Civil
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus inventore aperiam dolor vitae culpa.
+	
+					section.sub-section.hidden-sm
+						.card-small.visible-xs-block
+							h5.card-small_title
+								a(href="acerca-de.html").card-small_link
+									| Acerca de Chile
+									i.ic-arrow-right.icon--right
+							.card-small_body
+								p Información para turistas, migrantes y quienes quieran estudiar o hacer negocios en Chile. 
+						
+						.row.hidden-xs.hidden-sm
+							.table-sm-row
+								.col-sm-5.middle
+										//- .article-section
+										h5.heading-medium Acerca de Chile
+										p Información para turistas, migrantes y quienes quieran estudiar o hacer negocios en Chile.
+										.row
+											.col-md-10
+												a(href="acerca-de.html").button.button--block.button--light.button--clean.button--space Ver más
+								.col-sm-1
+								.col-sm-6.middle
+									img(src=`${temp}acerca-de.jpg`, alt="" width="556")
+			
+		include partials/search
+		include partials/footer
+		include partials/scripts

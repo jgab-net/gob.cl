@@ -1,0 +1,122 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Contingencia | #{projectName}
+block body
+	body
+		include partials/header
+		main.site-main
+			//- .container
+				.row
+			a(href="#").button.nomargin.button--bluedark.button--block.visible-xs-block Salir del modo contingencia
+			a(href="#").button.nomargin.button--block.hidden-xs Continúa navegando en Gob.cl
+
+			section
+				.container
+					.row
+						.table-sm-row.table-md-row.table-lg-row
+							.col-xs-12.col-sm-7.col-lg-6.top.bg-yellow.expand-yellow-left
+								//- .expand-yellow-left
+								article.article-contingency
+									//- span.article_category trámites y beneficios
+									.row
+										.col-xs-12.col-md-10
+											-var toolbarDark = true
+											include partials/toolbar
+											h2.heading-large Terremoto en Arica
+											h3.heading-sub Ministro del Interior y Seguridad Pública informa que Alarma de Tsunami se mantiene durante las próximas 6 horas.
+											p l pasado 1 de abril, a las 20:46 horas, se percibió un sismo de mayor intensidad (VIII Mercalli) entre las regiones de Arica y Parinacota, Tarapacá y Antofagasta. De acuerdo a la información proporcionada por el Centro Sismológico Nacional, el sismo alcanzó una magnitud de 8,2 Richter, solicitándose evacuación preventiva por parte de ONEMI, y estableciéndose Alerta de Tsunami  para todo el borde costero nacional, según indicación del SHOA.
+							.col-xs-12.col-sm-5.col-lg-6.top.bg-bluedark.article--dark.expand-bluedark-right
+								//- .expand-bluedark-right
+								.article-schedule
+									.row
+										.col-xs-12.col-md-10.col-lg-10
+											.schedule
+												.schedule_left
+													time.schedule_time.schedule_time--has-dot 12:50
+												.schedule_right
+													a(href="#").schedule_link Ministro del Interior y Seguridad Pública informa que Alarma de Tsunami se mantiene durante las próximas 6 horas
+											.schedule
+												.schedule_left
+													time.schedule_time 11:35
+												.schedule_right
+													a(href="#").schedule_link Autoridades entregan información actualizada por sismo de mayor intensidad
+											.schedule
+												.schedule_left
+													time.schedule_time 12:50
+												.schedule_right
+													a(href="#").schedule_link Monitoreo actualizado por sismo de mayor intensidad en las regiones de Arica y Parinacota, Tarapacá y Antofagasta
+											.schedule.hidden-xs
+												.schedule_left
+													time.schedule_time 12:50
+												.schedule_right
+													a(href="#").schedule_link Más de 900 mil personas se movilizaron a zonas de seguridad ante alarma de tsunami
+											.schedule.hidden-xs
+												.schedule_left
+													time.schedule_time 12:50
+												.schedule_right
+													a(href="#").schedule_link Actualización Alarma de Tsunami en territorio nacional
+											.schedule.hidden-xs
+												.schedule_left
+													time.schedule_time 12:50
+												.schedule_right
+													a(href="#").schedule_link Director Nacional entrega reporte actualizado por sismo de mayor intensidad
+
+			//- section.section.bg-yellow
+				.container
+					article.article.article--dark
+						//- span.article_category trámites y beneficios
+						h2.heading-large Terremoto en Arica
+						h3.heading-sub The quick brown fox jumps over the lazy dog.
+						p Sketch symbols are great because they provide one central place to manage components. Buttons are some of the easiest components to create, but like text fields, they have a lot of different states, colors, and styles. So it usually means creating a bunch of different symbols.
+
+			//- section.section--medium.bg-bluedark
+				.container
+					.row
+						.col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+							.schedule
+								.schedule_left
+									time.schedule_time.schedule_time--has-dot 12:50
+								.schedule_right
+									a(href="#").schedule_link Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							.schedule
+								.schedule_left
+									time.schedule_time.schedule_time--has-dot 11:35
+								.schedule_right
+									a(href="#").schedule_link Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+							.schedule
+								.schedule_left
+									time.schedule_time 12:50
+								.schedule_right
+									a(href="#").schedule_link Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+			section.section
+				.container
+					h3.heading-medium Encuentra más información en:
+					.row
+						.col-md-6
+							.card-small
+								h5.card-small_title
+									a(href="#").card-small_link
+										| Onemi
+										i.ic-arrow-right.icon--right
+								.card-small_body
+									.row
+										.col-xs-12.col-md-7
+											p.card-small_text Bajada ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						.col-md-6
+							.card-small
+								h5.card-small_title
+									a(href="#").card-small_link
+										| Shoa
+										i.ic-arrow-right.icon--right
+								.card-small_body
+									.row
+										.col-xs-12.col-md-7
+											p.card-small_text Bajada ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			section
+				.container
+					include partials/social
+		include partials/search
+		include partials/footer
+		include partials/scripts

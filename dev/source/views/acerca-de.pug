@@ -1,0 +1,83 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Acerca de | #{projectName}
+block body
+	body
+		include partials/header
+		main.site-main
+			section.bg-light
+				.container
+					ol.breadcrumb
+						li: a(href="#") Home
+						li: a(href="#") Acerca de Chile
+			section.section--medium.bg-bluedark
+				.container
+					.row
+						.col-xs-12.visible-xs-block.visible-sm-block
+							include partials/toolbar
+						.col-xs-12.col-sm-12.col-md-7.col-lg-7
+							article.text-light
+								h1.heading-large Acerca de Chile
+								p Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis.
+								p Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. 
+						
+						.col-xs-12.col-sm-12.col-md-5.col-lg-4.col-lg-offset-1
+							.hidden-xs.hidden-sm
+								include partials/toolbar
+							.clearfix
+							a(href="acerca-de-interior.html").button.button--block.button--side Ver más sobre nuestro país
+
+			section
+				.container
+					section.sub-section
+						article
+							h2.heading-medium Turismo
+							.row
+								.col-xs-12.col-sm-6.col-md-6
+									p Planea tu próximo viaje por Chile. Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									h3.heading-label.heading-label--small Si eres extranjero
+									p: a(href="#") Chile Travel
+									br
+									h3.heading-label.heading-label--small Si eres chileno
+									p: a(href="#") Conoce Chile
+								.col-xs-12.col-sm-6.col-md-6.hidden-xs
+									img(src=`${temp}acerca-de.jpg`, alt="" width="556")
+
+					section.sub-section
+						article
+							h2.heading-medium Negocio
+							.row
+								.col-xs-12.col-sm-6.col-md-6
+									p Planea tu próximo viaje por Chile. Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									p: a(href="#") This is Chile
+									p: a(href="#") Startup Chile
+									p: a(href="#") Invest Chile
+									p: a(href="#") Pro Chile
+								.col-xs-12.col-sm-6.col-md-6.hidden-xs
+									img(src=`${temp}negocio.jpg`, alt="" width="556")
+					section.sub-section
+						article
+							h2.heading-medium Migración
+							.row
+								.col-xs-12.col-sm-6.col-md-6
+									p Planea tu próximo viaje por Chile. Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									a(href="#") Extranjería
+								.col-xs-12.col-sm-6.col-md-6.hidden-xs
+									img(src=`${temp}migracion.jpg`, alt="" width="556")
+					section.sub-section
+						article
+							h2.heading-medium Estudios
+							.row
+								.col-xs-12.col-sm-6.col-md-6
+									p Planea tu próximo viaje por Chile. Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment facilisis. Cras finibus ligula ac condimentum facilisis. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									p: a(href="#") Learn Chile
+								.col-xs-12.col-sm-6.col-md-6.hidden-xs
+									img(src=`${temp}estudio.jpg`, alt="" width="556")
+			section
+				.container
+					include partials/social	
+		include partials/search
+		include partials/footer
+		include partials/scripts

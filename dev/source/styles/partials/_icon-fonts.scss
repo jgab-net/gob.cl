@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "gobcl";
+  src:url("../fonts/gobcl.eot");
+  src:url("../fonts/gobcl.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/gobcl.woff") format("woff"),
+    url("../fonts/gobcl.ttf") format("truetype"),
+    url("../fonts/gobcl.svg#gobcl") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "gobcl" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="ic-"]:before,
+[class*=" ic-"]:before {
+  font-family: "gobcl" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-arrow-breadcrumb:before {
+  content: "\61";
+}
+.ic-arrow-down:before {
+  content: "\62";
+}
+.ic-arrow-left:before {
+  content: "\63";
+}
+.ic-facebook:before {
+  content: "\64";
+}
+.ic-featured:before {
+  content: "\65";
+}
+.ic-font-size-less:before {
+  content: "\66";
+}
+.ic-volume:before {
+  content: "\67";
+}
+.ic-youtube:before {
+  content: "\68";
+}
+.ic-arrow-right:before {
+  content: "\69";
+}
+.ic-burguer:before {
+  content: "\6a";
+}
+.ic-clock:before {
+  content: "\6b";
+}
+.ic-close:before {
+  content: "\6c";
+}
+.ic-contrast:before {
+  content: "\6d";
+}
+.ic-cursor:before {
+  content: "\6e";
+}
+.ic-delete:before {
+  content: "\6f";
+}
+.ic-dot:before {
+  content: "\70";
+}
+.ic-download:before {
+  content: "\71";
+}
+.ic-email:before {
+  content: "\72";
+}
+.ic-font-size-plus:before {
+  content: "\73";
+}
+.ic-instagram:before {
+  content: "\74";
+}
+.ic-key:before {
+  content: "\75";
+}
+.ic-messenger:before {
+  content: "\76";
+}
+.ic-pause:before {
+  content: "\77";
+}
+.ic-play:before {
+  content: "\78";
+}
+.ic-points:before {
+  content: "\79";
+}
+.ic-search:before {
+  content: "\7a";
+}
+.ic-store:before {
+  content: "\41";
+}
+.ic-twitter:before {
+  content: "\42";
+}
+.ic-accessibility:before {
+  content: "\43";
+}

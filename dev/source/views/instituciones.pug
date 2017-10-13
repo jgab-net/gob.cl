@@ -1,0 +1,101 @@
+extends partials/docwrapper
+block langPage
+	meta(name="language", content="es")
+block titlePage 
+	| Instituciones | #{projectName}
+block body
+	body
+		include partials/header
+		main.site-main
+			section.section.bg-bluedark
+				.container
+					.row
+						.col-xs-12.col-sm-12.col-md-5.pull-md-right.col-lg-4.col-lg-offset-1
+							include partials/toolbar
+						.col-xs-12.col-sm-12.col-md-7
+							article.text-light
+								h2.heading-large Instituciones
+								p Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+
+			section.section
+				.container
+					.row
+						.table-md-row
+							.col-xs-12.col-sm-12.col-md-6.col-lg-3.bg-lightgray.top
+								.card-data-small
+									h1.card-data-small_title
+										span &nbsp;
+										small Presidencia
+									p.card-data-small_text Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+									.clearfix
+										a.pull-right(href='#') Ver más							
+							.col-xs-12.col-sm-12.col-md-6.col-lg-3.bg-light
+								.card-data-small
+									h1.card-data-small_title
+										span 23 
+										small Ministerios
+									p.card-data-small_text Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+							.col-xs-12.col-sm-12.col-md-6.col-lg-3.bg-light
+								.card-data-small
+									h1.card-data-small_title
+										span 244 
+										small Servicios Públicos
+									p.card-data-small_text
+										| Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+							.col-xs-12.col-sm-12.col-md-6.col-lg-3.bg-light
+								.card-data-small
+									h1.card-data-small_title
+										span 15 
+										small Regiones y sus Municipios
+									p.card-data-small_text Tu guía ciudadana para acceder simple y rápido a servicios e información del Gobierno de Chile.
+
+			section.section--medium.nopadding-top
+				.container
+					
+
+					h2.heading-medium Ministerios
+					- var ministerios = [["Ministerio del Interior y Seguridad Pública", "Ministerio de Relaciones Exteriores", "Ministerio de Defensa Nacional"], ["Ministerio de Hacienda", "Ministerio Secretaría General de la Presidencia", "Ministerio Secretaría General de Gobierno"], ["Ministerio de Economía, Fomento y Turismo", "Ministerio de Desarrollo Social", "Ministerio de Educación"], ["Ministerio de Justicia y Derechos Humanos", "Ministerio del Trabajo y Previsión Social", "Ministerio de Obras Públicas"], ["Ministerio de Salud", "Ministerio de Vivienda y Urbanismo", "Ministerio de Bienes Nacionales"], ["Ministerio de Minería", "Ministerio de Transportes y Telecomunicaciones", "Ministerio del Deporte"], ["Ministerio de Energía", "Ministerio del Medio Ambiente", "Ministerio de la Mujer y la Equidad de Género"], ["Ministerio de Agricultura"]]
+					each item in ministerios
+						.row
+							each text in item
+								.col-xs-12.col-sm-4
+									p: a(href="#")=text
+					br
+
+					h2.heading-medium Servicios Públicos
+					.row
+						.col-xs-12.col-md-8.col-lg-7
+							.search-form.search-form--large.nomargin-top
+								input(type="search" placeholder="Escribe aquí lo que quieres buscar").search-form_input
+								button(type="submit").search-form_button.search-form_button--submit: i.ic-search
+								button(type="button").search-form_button.search-form_button--cancel: i.ic-delete
+
+					
+					-var serviciosPublicos = [["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"], ["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"], ["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"], ["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"], ["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"], ["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"], ["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"], ["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"]]
+					each item in serviciosPublicos
+						.row
+							each text in item
+								.col-xs-12.col-sm-4
+									p: a(href="#")=text
+					br
+					h2.heading-medium Regiones
+					- var regiones = [["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"]]
+					each item in regiones
+						.row
+							each text in item
+								.col-xs-12.col-sm-4
+									p: a(href="#")=text
+
+		
+					//- h2.heading-medium Servicios
+					//- - var servicios = [["Región de Arica y Parinacota", "Región de Tarapacá", "Región de Antofagasta"], ["Región de Atacama", "Región de Coquimbo", "Región de Valparaíso"], ["Región Metropolitano de Santiago", "Región de O'Higgins", "Región del Maule"], ["Región del Bío-Bío", "Región de la Araucanía", "Región de Los Ríos"], ["Región de Los Lagos", "Región de Aysén", "Región de Magallanes y Antártica Chilena"]]
+					//- each item in servicios
+					//- 	.row
+					//- 		each text in item
+					//- 			.col-xs-12.col-sm-4
+					//- 				p: a(href="#").overflowed-xs=text
+			
+					
+		include partials/search
+		include partials/footer
+		include partials/scripts
