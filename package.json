@@ -19,7 +19,8 @@
   },
   "scripts": {
     "build": "./node_modules/.bin/gulp",
-    "serve": "./node_modules/.bin/gulp serve"
+    "serve": "./node_modules/.bin/gulp serve",
+    "serve:documentation": "./node_modules/.bin/gulp serve:documentation"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",

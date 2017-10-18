@@ -72,6 +72,19 @@ gulp.task('serve', ['default'], function() {
 
 });
 
+gulp.task('serve:documentation', function () {
+  browserSync.init({
+    server: {
+      baseDir: ['./dist', './', './documentation'],
+      index: 'index.html',
+      routes: {
+        './node_modules': 'node_modules',
+        '../css': 'css'
+      }
+    }
+  });
+});
+
 gulp.task('clean', function () {
   return gulp.src('./dist')
     .pipe(clean())
