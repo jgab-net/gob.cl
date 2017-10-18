@@ -1,4 +1,6 @@
-
 sitio/gob.zip
 gob-cl.zip
 gob.zip
+.DS_Store
+.idea/
+node_modules/
