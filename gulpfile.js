@@ -10,6 +10,7 @@ const changed = require('gulp-changed');
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 const gulpSequence = require('gulp-sequence');
+const concat = require('gulp-concat');
 
 gulp.task('sass', function () {
   return gulp.src('./src/scss/*.scss')
@@ -48,6 +49,7 @@ gulp.task('js', function () {
       extension: '.js'
     }))
     .pipe(uglify())
+    .pipe(concat('gob.cl.js'))
     .pipe(gulp.dest('./dist/js'));
 });
 
