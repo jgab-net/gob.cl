@@ -11,15 +11,17 @@ const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
 const gulpSequence = require('gulp-sequence');
 const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('sass', function () {
   return gulp.src('./src/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
-      outputStyle: 'compressed',
+      outputStyle: 'nested',
       precision: 10
     }).on('error', sass.logError))
     .pipe(autoprefixer())
+    .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
