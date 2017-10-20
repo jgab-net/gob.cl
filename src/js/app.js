@@ -196,7 +196,7 @@ App = {
     $('.ctag').each(function (index, elem) {
       $(elem).on('click', function (e) {
         e.preventDefault();
-        $('.ctag').toggleClass('hide');
+        $('.ctag').toggleClass('invisible');
         $(this).toggleClass('active');
       });
     });
@@ -385,8 +385,8 @@ App = {
 
     //Play simulation
     $listen.on('click', function (e) {
-      $(this).addClass('hide');
-      $toolbarPlayer.removeClass('hide')
+      $(this).addClass('invisible');
+      $toolbarPlayer.removeClass('invisible')
     });
     // Play / Pause
     $playPause.on('click', function (e) {
