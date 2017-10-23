@@ -1,5 +1,9 @@
-.breadcrumb{
-	li{
+.breadcrumb,
+ol.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+	li {
 		display: inline-block;
 		padding: 9px 0;
 		vertical-align: middle;
@@ -16,10 +20,10 @@
 				margin-left: 9px;
 			}
 		}
-		span{
+		span {
 			color: rgba( get-color(dark) , .6);
 		}
-		a{
+		a {
 
 		}
 	}
