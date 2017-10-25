@@ -118,6 +118,28 @@ input[type="search"]::-webkit-search-results-decoration {
 			color: get-color(white);
 		}
 	}
+  .select2-selection{
+    background-color: #f5f6f7;
+    height: $inputHeight;
+    border-radius: $inputBorderRadius;
+    border: $inputBorder;
+
+    .select2-selection__rendered {
+      height:  $inputHeight;
+      line-height: 38px;
+      font-size: 14px;
+      padding: 5px 20px;
+    }
+
+    .select2-selection__arrow{
+      background: url("../images/icons/arrow-select.svg") 0 23px no-repeat;
+      height: $inputHeight;
+
+      b {
+        display: none;
+      }
+    }
+  }
 }
 .radio{
 	cursor: pointer;
