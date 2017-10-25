@@ -526,6 +526,11 @@ div[class^="form_col"]{
 		top: 0;
 		bottom: 0;
 		width: 54px;
+
+    &:focus {
+      outline: none;
+    }
+
 		&--submit{
 			color: get-color(red);
 			font-size: 23px;

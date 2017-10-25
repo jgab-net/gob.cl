@@ -111,25 +111,24 @@ App = {
       $cancel = $('.search-form_button--cancel'),
       $submit = $('.search-form_button--submit');
 
-    $cancel.hide();
+    $cancel.addClass('d-none');
 
     if ($input.val()) {
-      $submit.hide();
-      $cancel.show();
+      $submit.addClass('d-none');
+      $cancel.removeClass('d-none');
     }
 
-    // $input.on('keypress',function(){
-    // 	if($input.val()){
-    // 		$submit.hide();
-    // 		$cancel.show();
-    // 	}
-    // });
+    $input.on('input', function () {
+      if ($input.val()) {
+        $submit.addClass('d-none');
+        $cancel.removeClass('d-none');
+      }
+    });
 
-    $cancel.on('click', function (e) {
-      e.preventDefault();
-      $input.val("");
-      $submit.show();
-      $cancel.hide();
+    $cancel.on('click', function () {
+      $input.val('');
+      $submit.removeClass('d-none');
+      $cancel.addClass('d-none');
     });
   },
   menu: function () {
