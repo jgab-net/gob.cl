@@ -555,3 +555,15 @@ div[class^="form_col"]{
 .filters{
 	margin: 15px 0;
 }
+.select2-dropdown {
+  border-radius: 0;
+
+  .select2-results__option {
+    height: $inputHeight;
+    line-height: 40px;
+
+    &.select2-results__option--highlighted {
+      background-color: get-color(gray);
+    }
+  }
+}
