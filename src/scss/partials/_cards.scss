@@ -306,7 +306,11 @@
 }
 
 .card-data-small{
-	padding: 25px 0;
+	padding: 20px 0;
+
+  @include mq($from: desktop) {
+    padding: 25px 0;
+  }
 
 	&_title{
 		span{
