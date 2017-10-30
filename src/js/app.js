@@ -122,6 +122,9 @@ App = {
       if ($input.val()) {
         $submit.addClass('d-none');
         $cancel.removeClass('d-none');
+      } else {
+        $submit.removeClass('d-none');
+        $cancel.addClass('d-none');
       }
     });
 
