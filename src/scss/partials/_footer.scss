@@ -31,7 +31,11 @@
     // margin-top: -1px;
   }
   &_button{
-    margin-top: 34px;
+    margin-top: 0;
+    @include mq($from: tablet ) {
+      margin-top: 34px;
+    }
+
   }
   .social{
     text-align: center;
