@@ -32,8 +32,10 @@
   }
   &_button{
     margin-top: 0;
-    @include mq($from: tablet ) {
+    margin-bottom: 44px;
+    @include mq($from: tablet) {
       margin-top: 34px;
+      margin-bottom: 0;
     }
 
   }
@@ -54,6 +56,18 @@
     }
   }
   .menu{
+    a {
+      padding: 10px 40px 10px 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+
+      @include mq($from: tablet)  {
+        padding: 10px 0;
+      }
+
+    }
     li{
       &:not(:last-child){
         // margin: 0 0 10px 0;
