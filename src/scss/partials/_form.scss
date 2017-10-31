@@ -117,26 +117,46 @@ input[type="search"]::-webkit-search-results-decoration {
 			background: get-color(bluedark) url("../images/icons/arrow-select-white.svg") 95% 23px no-repeat;
 			color: get-color(white);
 		}
-	}
-  .select2-selection{
-    background-color: #f5f6f7;
-    height: $inputHeight;
-    border-radius: $inputBorderRadius;
-    border: $inputBorder;
 
-    .select2-selection__rendered {
-      height:  $inputHeight;
-      line-height: 38px;
-      font-size: 14px;
-      padding: 5px 20px;
+    .select2 {
+
+      &.select2-container {
+        .select2-selection{
+          background: get-color(bluedark);
+
+          .select2-selection__rendered {
+            color: get-color(white);
+          }
+
+          .select2-selection__arrow {
+            background: url("../images/icons/arrow-select-white.svg") 0 23px no-repeat;
+          }
+        }
+      }
     }
+	}
 
-    .select2-selection__arrow{
-      background: url("../images/icons/arrow-select.svg") 0 23px no-repeat;
+  .select2 {
+    .select2-selection{
+      background-color: #f5f6f7;
       height: $inputHeight;
+      border-radius: $inputBorderRadius;
+      border: $inputBorder;
 
-      b {
-        display: none;
+      .select2-selection__rendered {
+        height:  $inputHeight;
+        line-height: 38px;
+        font-size: 14px;
+        padding: 5px 20px;
+      }
+
+      .select2-selection__arrow{
+        background: url("../images/icons/arrow-select.svg") 0 23px no-repeat;
+        height: $inputHeight;
+
+        b {
+          display: none;
+        }
       }
     }
   }
