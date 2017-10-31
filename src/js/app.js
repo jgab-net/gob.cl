@@ -230,11 +230,13 @@ App = {
           }, 700);
         }
       } else {
-        var posSearchHero = $(searchHeroContent).offset().top - $(searchContent).offset().top;
-        $(searchContent).css('margin-top', posSearchHero);
-        setTimeout(function () {
-          $(searchContent).css('margin-top', 0);
-        }, 700);
+        if ($searchHero.length > 0) {
+          var posSearchHero = $(searchHeroContent).offset().top - $(searchContent).offset().top;
+          $(searchContent).css('margin-top', posSearchHero);
+          setTimeout(function () {
+            $(searchContent).css('margin-top', 0);
+          }, 700);
+        }
       }
     });
 
