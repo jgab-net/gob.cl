@@ -34,24 +34,21 @@
     margin-top: 0;
     margin-bottom: 44px;
     @include mq($from: tablet) {
-      margin-top: 34px;
       margin-bottom: 0;
     }
-
   }
+
   .social{
     text-align: center;
-    @include mq($from: tablet ) {
-      margin: 20px 0;
-    }
-    @include mq($from: desktop ) {
-      text-align: right;
-      margin: 0 0 15px;
-    }
     li{
       display: inline-block;
-      &:not(:last-child){
-        margin: 0 20px 0 0;
+      margin-bottom: 10px;
+      &:not(:first-child){
+        margin-left: 10px;
+      }
+      a{
+        font-size: 32px;
+        color: get-color(gray);
       }
     }
   }
