@@ -135,10 +135,11 @@
 	cursor: pointer;
 	position: relative;
 	display: block;
-	margin: 25px 0;
+	margin: 25px 0 0;
 	text-decoration: none;
 	@include mq($from: tablet ) {
 		height: 362px;
+    margin: 25px 0;
 	}
 	@include mq($from: desktop ) {
 		height: 434px;
