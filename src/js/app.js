@@ -21,8 +21,12 @@ App = {
     this.lightboxGallery();
     this.login();
     this.toolbar();
+    this.a11y();
     // this.goTo();
     // this.postMenu();
+  },
+  a11y: function () {
+    $('.toolbar').toolbar();
   },
   goToMobile: function () {
     var pos = $('#article-content').offset().top - 64;

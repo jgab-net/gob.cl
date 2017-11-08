@@ -46,7 +46,7 @@
 	z-index: -1;
   animation: fadeOut 0.6s;
 	padding: 32px 0 110px;
-	@include mq($from: tablet ) {
+	@include mq($from: tablet) {
 		padding: 32px 0 0;
 		margin-top: 71px;
 	}
@@ -89,7 +89,7 @@
 	color: get-color(red);
 	cursor: pointer;
 	display: inline-block;
-	font-size: 23px;
+	font-size: 1.4375rem;;
 	vertical-align: middle;
 	position: relative;
 	width: 30px;
@@ -97,11 +97,11 @@
 	padding: 5px;
 	margin-left: 10px;
 	transition: all .6s ease-in-out;
-	@include mq($from: tablet ) {
+	@include mq($from: tablet) {
 		width: 54px;
 		height: 71px;
 	}
-	@include mq($from: desktop ) {
+	@include mq($from: desktop) {
 		margin-left: 40px;
 		width: 68px;
 		height: 71px;
@@ -110,7 +110,7 @@
 	&--mobile{
 		float: right;
 		margin: 17px 15px;
-		@include mq($from: tablet ) {
+		@include mq($from: tablet) {
 			display: none;
 		}
 	}
@@ -133,13 +133,13 @@ body{
 	&.search-active{
 		.site-header{
 			&_fixed{
-				@include mq($until: tablet ) {
+				@include mq($until: tablet) {
 					background-color: get-color(bluedark);
 					border-bottom: get-color(bluedark);
 				}
 			}
 			.logo_text{
-				@include mq($until: tablet ) {
+				@include mq($until: tablet) {
 					color: rgba(get-color(white),.8);
 				}
 			}
@@ -147,7 +147,7 @@ body{
 				display: none !important;
 			}
 			.goto{
-				@include mq($until: tablet ) {
+				@include mq($until: tablet) {
 					display: block;
 				}
 			}
@@ -182,7 +182,7 @@ body{
 		#searchHero{
 			
 			// margin-top: -147px;
-			@include mq($from: tablet ) {
+			@include mq($from: tablet) {
 				// margin-top: -77px;
 			}
 		}
@@ -204,10 +204,10 @@ body{
 	&_section{
 		background-color: rgba(get-color(white),.05);
 		// margin: 0 0 25px;
-		@include mq($from: tablet ) {
+		@include mq($from: tablet) {
 			// margin: 0 0 25px;
 		}
-    @include mq($from: desktop ) {
+    @include mq($from: desktop) {
 			margin: 0 0 100px;
 			height: 385px;
 			overflow: hidden;
@@ -225,7 +225,7 @@ body{
 	&_body{
 		padding-left: 25px;
 		p{
-			font-size: 14px;
+			font-size: 0.875rem;
 			margin: 0;
 			small{
 				color: rgba(get-color(dark), .4);

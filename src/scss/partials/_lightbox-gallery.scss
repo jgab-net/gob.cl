@@ -41,7 +41,7 @@
 	&_link{
 		color: get-color(black);
 		font-family: $roboto;
-		font-size: 16px;
+		font-size: 1rem;
 		margin-bottom: 10px;
 		&:after,
 		&:before{
@@ -89,7 +89,7 @@
 		left: 0;
 		p{
 			color: rgba(get-color(dark), .6);
-			font-size: 14px;
+			font-size: 0.875rem;
 			margin: 0;
 		}
 	}

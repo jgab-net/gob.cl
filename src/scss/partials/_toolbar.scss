@@ -91,6 +91,12 @@
 	margin-right: 5px;
 	text-align: center;
 	text-decoration: none;
+
+  &.disabled {
+    color: get-color(gray);
+    border: 2px solid get-color(gray);
+  }
+
 	&:hover{
 		background-color: #222B42;
 		border-color: #222B42;
@@ -126,17 +132,17 @@
 		}
 	}
 	&--contrast{
-		font-size: 18px;
+		font-size: 1.12500rem;
 		margin-right: 15px;
 		@include mq($from: tablet ) {
 			margin-right: 22px;
 		}
 	}
 	&--less{
-		font-size: 14px;
+		font-size: 0.875rem;
 	}
 	&--plus{
-		font-size: 19px;
+		font-size: 1.1875rem;
 		margin-right: 14px;
 		@include mq($from: tablet ) {
 			margin-right: 25px;
@@ -155,7 +161,7 @@
 	&_icon-pause{
 	}
 	&_icon-play{
-		font-size: 11px;
+		font-size: 0.6875rem;
 		opacity: 0;
 		position: absolute;
 	}
@@ -177,7 +183,7 @@
 		text-align: center;
 		text-decoration: none;
 		display: table;
-		font-size: 10px;
+		font-size: 0.625rem;
 	}
 	
 	&_timeline{

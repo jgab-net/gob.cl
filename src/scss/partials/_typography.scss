@@ -36,7 +36,7 @@
 // font styling and sizing
 p, h1, h2, h3, h4, h5, h6 {
 	// color: inherit;
-	margin: 0 0 ms(0);
+	margin: 0 0 1rem;
 }
 
 // p {
@@ -48,15 +48,15 @@ p, h1, h2, h3, h4, h5, h6 {
 //     color: inherit;
 // }
 
-p  { font-size: ms(0); line-height: ms(3);}
-h1, .title-s1 { font-size: ms(5); font-weight: 400;}
-h2, .title-s2 { font-size: ms(4); font-weight: 400;}
-h3, .title-s3 { font-size: ms(3); font-weight: 400;}
-h4, .title-s4 { font-size: ms(2); font-weight: 400;}
-h5, .title-s5 { font-size: ms(1); font-weight: 400;}
-h6, .title-s6 { font-size: ms(0); font-weight: 400;}
+p  { font-size: 1rem; line-height: 1.37500rem;}
+h1, .title-s1 { font-size: 1.75rem; font-weight: 400;}
+h2, .title-s2 { font-size: 1.5625rem; font-weight: 400;}
+h3, .title-s3 { font-size: 1.37500rem; font-weight: 400;}
+h4, .title-s4 { font-size: 1.25rem; font-weight: 400;}
+h5, .title-s5 { font-size: 1.12500rem; font-weight: 400;}
+h6, .title-s6 { font-size: 1rem; font-weight: 400;}
 
-ul li  { font-size: ms(0); }
+ul li  { font-size: 1rem; }
 // positional helper classes
 .text{
 	&-center { text-align: center; }

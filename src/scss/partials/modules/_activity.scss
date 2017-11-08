@@ -61,11 +61,11 @@
     text-align: center;
     margin: 0 auto;
     .day{
-      font-size: ms(0);
+      font-size: 1rem;
       font-weight: 700;
     }
     .month{
-      font-size: ms(1);
+      font-size: 1.12500rem;
       font-weight: 700;
       top: 100%;
       margin-top: 10px;
@@ -79,12 +79,12 @@
       width: 66px;
       
       .day{
-        font-size: ms(5);
+        font-size: 1.75rem;
       }
     }
   }
   &_title{
-    font-size: ms(-1);
+    font-size: 0.857rem;
     font-weight: 400;
     transform: translate(0, 50%);
     margin: 0;

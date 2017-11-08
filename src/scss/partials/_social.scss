@@ -28,20 +28,20 @@
 		color: rgba(get-color(dark), .8);
 		display: block;
 		font-family: $roboto;
-		font-size: ms(0);
+		font-size: 1rem;
 		// line-height: 24px;
 	}
 	&_url{
 		color: rgba(get-color(dark), .6);
 		display: block;
 		font-family: $roboto;
-		font-size: ms(-1);
+		font-size: 0.857rem;
 		// line-height: 21px;
 		@include mq($from: tablet ) {
-			font-size: ms(-2);
+			font-size: 0.75rem;
 		}
 		@include mq($from: wide ) {
-			font-size: ms(-1);
+			font-size: 0.857rem;
 		}
 	}
 }

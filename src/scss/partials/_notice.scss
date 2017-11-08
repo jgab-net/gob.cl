@@ -18,7 +18,7 @@
 	&_title{
 		font-family: $roboto;
     font-weight: 300;
-    font-size: ms(-3);
+    font-size: 0.6875rem;
     line-height: 13px;
     letter-spacing: 1.5px;
     padding: 5px 0;
@@ -29,11 +29,11 @@
 		color: rgba(get-color(white),.8);		
 		font-family: $roboto;
     font-weight: 300;
-    font-size: ms(2);
+    font-size: 1.25rem;
     line-height: 24px;
 	}
 	p{
 		color: get-color(white);
-    font-size: ms(-1);
+    font-size: 0.857rem;
 	}
 }

@@ -15,17 +15,17 @@
 		font-family: $robotoSlab;
 	}
 	& &_title{
-		font-size: ms(3)
+		font-size: 1.37500rem
 	}
 	& &_subtitle{
 		color: rgba(get-color(dark),.6);
 		font-family: $roboto;
-		font-size: ms(2);
-		margin-bottom: ms(2);
+		font-size: 1.25rem;
+		margin-bottom: 1.25rem;
 	}
 	&_date{
 		color: rgba(get-color(dark),.6);
-		font-size: ms(-3);
+		font-size: 0.6875rem;
 		display: inline-block;
 		margin: 0 0 12px;
 	}
@@ -48,7 +48,7 @@
 	small{
 		color: rgba( get-color(dark) , .8);
 		font-family: $roboto;
-		font-size: ms(-1);
+		font-size: 0.857rem;
 	}
 	blockquote{
 		padding-left: 59px;
@@ -111,7 +111,7 @@
 	}
 	&_text{
 		color: rgba(get-color(bluedark),.4);
-		font-size: ms(-3);
+		font-size: 0.6875rem;
 		margin: 0;
 	}
 }
@@ -127,7 +127,7 @@
 		span{
 			color: get-color(white);
 			font-family: $robotoSlab;
-			font-size: 32px;
+			font-size: 2rem;
 			z-index: 1;
 			@include center();
 		}
@@ -174,7 +174,7 @@
 	}
 	&_icon{
 		@include center();
-		font-size: 12px;
+		font-size: 0.75rem;
 	}
 	&_title{
 		margin: 0;

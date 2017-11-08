@@ -45,14 +45,14 @@ label.success{
   padding: 6px 12px;
   margin-top: 10px;
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .alert.on-input{
   border-radius: 0;
   padding: 6px 12px;
   margin-top: 0;
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .alert.error{
   background: #BB0000;
@@ -71,7 +71,7 @@ label.success{
 
 .form-check-label{
   text-transform: none;
-  font-size: 16px;
+  font-size: 1rem;
   margin-top: 16px;
 }
 

@@ -1,7 +1,7 @@
 .card{
 	&_title{
 		font-family: $robotoSlab;
-		font-size: ms(2);
+		font-size: 1.25rem;
 		line-height: 24px;
 	}
 	&_text{
@@ -23,7 +23,7 @@
 	&_title{
 		font-family: $robotoSlab;
 		font-weight: normal;
-		font-size: ms(3);
+		font-size: 1.37500rem;
 		line-height: 24px;
 	}
 	&_text{
@@ -50,19 +50,19 @@
 	&_title{
 		color: get-color(dark);
 		font-family: $roboto;
-		font-size: ms(0);
+		font-size: 1rem;
 		font-weight: 400;
 		line-height: 24px;
 	}
 	&_text{
 		color:rgba( get-color(dark) , .6);
-		font-size: ms(-1);
+		font-size: 0.857rem;
 		font-family: $roboto;
 	}
 	&_link{
 		color: get-color(dark);
 		.ic-arrow-right{
-			font-size: 12px;
+			font-size: 0.75rem;
 		}
 	}
 	&_more{
@@ -90,7 +90,7 @@
 	}
 	&_title{
 		color: rgba( get-color(dark), .6);
-		font-size: 21px;
+		font-size: 1.3125rem;
 		margin: 0;
 		@include center(v);
 		display: table;
@@ -101,13 +101,13 @@
 	}
 	&_text{
 		color: rgba(get-color(dark), .6);
-		font-size: ms(-1);
+		font-size: 0.857rem;
 		font-family: $roboto;
 		
 	}
 	&_title-text{
 		font-family: $roboto;
-		font-size: 21px;
+		font-size: 1.3125rem;
 		font-weight: 400;
 		vertical-align: middle;
 		display: table-cell;
@@ -117,7 +117,7 @@
 	&_number{
 		color: rgba( get-color(dark),1);
 		font-family: $robotoSlab;
-		font-size: 32px;		
+		font-size: 2rem;
 		font-weight: 400;
 		line-height: 24px;
 		display: block;
@@ -184,7 +184,7 @@
 	&_title{
 		color: get-color(dark);		
 		font-family: $robotoSlab;
-		font-size: 23px;		
+		font-size: 1.4375rem;
 		font-weight: 400;
 		line-height: 26px;
 		margin: 0 0 15px;
@@ -193,7 +193,7 @@
 		color: rgba( get-color(dark),.6);		
 		display: block;
 		font-family: $roboto;
-		font-size: 11px;
+		font-size: 0.6875rem;
 		font-weight: 400;
 		margin: 0 0 10px;
 		&:before{
@@ -268,14 +268,14 @@
 	&_number{
 		display: block;
 		font-family: $robotoSlab;
-		font-size: 32px;
+		font-size: 2rem;
 		margin: 0 0 9px;
 	}
 	&_title{
 		color: rgba(get-color(dark),.6);
 		display: block;
 		font-family: $roboto;
-		font-size: 21px;
+		font-size: 1.3125rem;
 		margin: 0 0 30px;		
 	}
 	&_list{
@@ -324,14 +324,14 @@
 		small{
 			display: block;
 			font-family: $robotoSlab;
-			font-size: 21px;
+			font-size: 1.3125rem;
 			font-weight: 400;
 			line-height: 24px;
 		}
 	} 
 	&_text{
 		color: rgba(17, 17, 17, 0.6);
-    font-size: 0.8888888889em;
+    font-size: 0.875rem;
     font-family: "Roboto", sans-serif;
 	}
 }

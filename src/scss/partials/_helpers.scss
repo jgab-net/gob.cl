@@ -112,7 +112,7 @@ ul{
 		display: inline-block;
 		vertical-align: middle;
 		&:not(:last-child){
-			margin-right: ms(-1);
+			margin-right: 0.875rem;
 		}
 	}
 }

@@ -13,14 +13,14 @@
 		text-align: center;
 		color: white;
 		@include centerChild(span){
-			font-size: ms(6);
+			font-size: 2rem;
 			font-weight: 700;
 		}
 	}
 	&_text{
-		font-size: ms(1);
+		font-size: 1.12500rem;
 		font-weight: 700;
-		line-height: ms(4);
+		line-height: 1.5625rem;
 		text-align: center;
 	}
 }

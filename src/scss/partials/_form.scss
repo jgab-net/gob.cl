@@ -3,7 +3,7 @@
 $colorTitle : #fff;
 // Label
 $labelColor : rgba( get-color(dark) , .6);
-$labelSize  : ms(-3);
+$labelSize  : 0.6875rem;;
 $labelMarginBottom : 8px;
 $labelMarginTop: 0;
 $labelWeight : 400;
@@ -23,7 +23,7 @@ $buttonBgColor : #fff;
 $buttonBorder : none;
 $buttonBorderRadius : $buttonHeight/2;
 $buttonColor : get-color(red);
-$buttonSize : ms(-1);
+$buttonSize : 0.875rem;
 $buttonWeight : 700;
 
 // .form-container{
@@ -55,7 +55,7 @@ textarea{
 	border-radius: $inputBorderRadius;
 	border: $inputBorder;
 	text-indent: 5px;
-	font-size: 14px;
+	font-size: 0.875rem;
 	padding: 5px 16px;
 	height: auto;
 	height: $inputHeight;
@@ -146,7 +146,7 @@ input[type="search"]::-webkit-search-results-decoration {
       .select2-selection__rendered {
         height:  $inputHeight;
         line-height: 38px;
-        font-size: 14px;
+        font-size: 0.875rem;
         padding: 5px 20px;
       }
 
@@ -235,10 +235,10 @@ label{
 	
 	&_title{
 		color: $colorTitle;
-		font-size: ms(4);
+		font-size: 1.5625rem;
 		font-weight: 700;
 		margin: 0 0 19px;
-		line-height: ms(6);
+		line-height: 2rem;
 	}
 	
 	label,
@@ -258,7 +258,7 @@ label{
 		color: get-color(white) !important;
 		cursor: pointer;
 		display: inline-block !important;
-		font-size: 24px;
+		font-size: 1.5rem;
 		padding: 15px 20px;
 		input[type=file]{
 			display: none;
@@ -375,7 +375,7 @@ label{
 			&:after{
 				content: "*";
 				color: #fff;
-				font-size: 24px;
+				font-size: 1.5rem;
 				position: absolute;
 				left: 100%;
 				top: 0;
@@ -444,7 +444,7 @@ label{
 			background-color: transparent;
 			border: solid #AAAAAA 1px;
 			border-radius: 3px;
-			font-size: 14px;
+			font-size: 0.875rem;
 			color: #414141;
 			// height: 42px;
 			height: $inputHeight;
@@ -498,7 +498,7 @@ label{
 	}
 	&_note{
 		color: #000000;
-		font-size: 14px;
+		font-size: 0.875rem;
 		margin: 0 0 10px;
 		text-align: left;
 		&:before{
@@ -553,11 +553,11 @@ div[class^="form_col"]{
 
 		&--submit{
 			color: get-color(red);
-			font-size: 23px;
+			font-size: 1.4375rem;
 		}
 		&--cancel{
 			color: get-color(gray);
-			font-size: 17px;
+			font-size: 1.0625rem;
 		}
 	}
 	&--large{
@@ -565,7 +565,7 @@ div[class^="form_col"]{
 	}
 	&_note{
 		color: rgba(get-color(white), .4);
-		font-size: ms(-3);
+		font-size: 0.6875rem;
 		line-height: 13px;
 		// margin: 0 0 10px;
 		margin-top: -15px;

@@ -35,14 +35,14 @@
 		}
 	}
 	&_title{
-		font-size: ms(1);
+		font-size: 1.12500rem;
 	}
 	&_title,
 	&_subtitle{
 		margin: 0;
 	}
 	&_subtitle{
-		font-size: ms(0);
+		font-size: 1rem;
 		font-weight: 400;
 	}
 	&_icon{
@@ -82,7 +82,7 @@
 			height: 268px;
 		}
 		p{
-			line-height: ms(3);
+			line-height: 1.37500rem;
 		}
 	}
 	&_content{

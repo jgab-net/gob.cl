@@ -30,20 +30,20 @@
   &_type{
     display: block;
     font-weight: 600;
-    font-size:  ms(-2);
-    margin: 0 0 ms(0);
+    font-size: 0.75rem;
+    margin: 0 0 1rem;
   }
   &_title{
-    font-size: 18px;
+    font-size: 1.12500rem;
   }
   &_date{
     color: get-color("bluelightdark");
-    font-size: ms(-1);
+    font-size: 0.857rem;
     font-weight: 400;
     margin-left: 10px;
   }
   &_body{
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   &_img{
     @include img-responsive();
@@ -120,19 +120,19 @@
   h2,
   &_title{
     color: get-color("white");
-    font-size: ms(2);
-    // font-size: 25px;
-    margin: 0 0 ms(2);
+    font-size: 1.25rem;
+    // font-size: 1.5625rem;
+    margin: 0 0 1.25rem;
   }
    p{
-    font-size: ms(0);
+    font-size: 1rem;
     &:last-of-type{
       margin: 0 0 65px;
     }
   }
   a{
     color: get-color("bluelight");
-    font-size: ms(-1);
+    font-size: 0.857rem;
     font-weight: 700;
   }
 }
@@ -157,11 +157,11 @@
   h2,
   
   p{
-    font-size: ms(0);
+    font-size: 1rem;
   }
   a{
     color: get-color("bluelight");
-    font-size: ms(-1);
+    font-size: 0.857rem;
   }
   .new{
     &_content{
@@ -175,7 +175,7 @@
     }
     &_title{
       color: get-color("white");
-      font-size: ms(1);
+      font-size: 1.12500rem;
     }
   }
 }
@@ -187,21 +187,21 @@
   }
   &_title{
     color: get-color(blue);
-    font-size: ms(0);
+    font-size: 1rem;
     font-weight: 600;
-    line-height: ms(2);
+    line-height: 1.25rem;
     margin: 0;
     time{
       color: get-color("bluelightdark");
-      font-size: ms(0);
+      font-size: 1rem;
       font-weight: 400;
     }
   }
   &_type{
     color: get-color("bluelightdark");
-    font-size: ms(-1);
+    font-size: 0.857rem;
     font-weight: 600;
-    line-height: ms(1);
+    line-height: 1.12500rem;
   }
   &_header{
     padding: 16px 0;

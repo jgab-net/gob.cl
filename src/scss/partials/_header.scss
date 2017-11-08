@@ -1,6 +1,48 @@
 /*
 	HEADER
 */
+
+.a11y-font-1,
+.a11y-font-2 {
+
+  .site-header {
+    &_right {
+      @include mq($from: tablet) {
+        display: none;
+      }
+
+      @include mq($from: wide) {
+        display: block;
+      }
+    }
+
+    .menu-trigger {
+      @include mq($from: tablet) {
+        display: block;
+      }
+
+      @include mq($from: wide) {
+        display: none;
+      }
+    }
+
+    .btn-search {
+      &--mobile {
+        @include mq($from: tablet) {
+          display: block;
+          width: 54px;
+          height: 71px;
+          margin-top: 0;
+        }
+
+        @include mq($from: wide) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 .site-header{
 	background-color: get-color(white);
 	position: relative;
@@ -23,7 +65,7 @@
 			color: rgba(get-color(dark),.6);
 			display: block;
 			font-family: $roboto;
-			font-size: ms(0);
+			font-size: 1rem;
 			line-height: 24px;
 			margin: 10px 0 0;
 		}
@@ -38,14 +80,19 @@
 		right: 0;
 		z-index: 112;
 		transition: background-color .3s;
-		@include mq($from: tablet ) {
+		@include mq($from: tablet) {
 			height: 71px;
 		}
 	}
 	&_right{
 		float: right;
 		margin-top: 1px;
+    display: none;
 		@include clearfix();
+
+    @include mq($from: tablet) {
+      display: block;
+    }
 	}
 	.menu-trigger{
 		float: right;

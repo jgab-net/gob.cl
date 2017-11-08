@@ -16,14 +16,14 @@
 		color: rgba(get-color(white),.6);
 		display: block;
 		font-family: $roboto;
-		font-size: ms(-1);
+		font-size: 0.857rem;
 		text-transform: uppercase;
 		letter-spacing: 0.92px;
 		margin: 0 0 12px;
 	}
 	&_title{
 		font-family: $robotoSlab;
-		font-size: ms(6);
+		font-size: 2rem;
 		font-weight: 400;
 		line-height: 38px;
 	}
@@ -42,7 +42,7 @@
 	&_title{
 		color: rgba(get-color(dark),.6);
 		font-family: $roboto;
-		font-size: ms(0);
+		font-size: 1rem;
 		line-height: 24px;
 		margin: 0 0 11px;
 	}
@@ -50,7 +50,7 @@
 		color: rgba(get-color(dark),.5);
 		font-family: $roboto;
 		font-style: italic;
-		font-size: ms(0);
+		font-size: 1rem;
 		line-height: 19px;
 	}
 }
@@ -67,20 +67,20 @@
 		color: rgba(get-color(white),.6);
 		display: block;
 		font-family: $roboto;
-		font-size: ms(-1);
+		font-size: 0.857rem;
 		text-transform: uppercase;
 		letter-spacing: 0.92px;
 		margin: 0 0 12px;
 	}
 	&_date{
 		color: rgba(get-color(white),.6);
-		font-size: ms(-3);
+		font-size: 0.6875rem;
 		display: inline-block;
 		margin: 0 0 12px;
 	}
 	&_title{
 		font-family: $robotoSlab;
-		font-size: ms(6);
+		font-size: 2rem;
 		font-weight: 400;
 		line-height: 38px;
 		margin: 0 0 16px;
@@ -88,7 +88,7 @@
 	&_main-title{
 		color: rgba(get-color(white),1);
 		font-family: $robotoSlab;
-		font-size: ms(2);
+		font-size: 1.25rem;
 		a{
 			color: rgba(get-color(white),1);
 			line-height: 24px;
@@ -148,7 +148,7 @@
 		}
 	}
 	&_date{
-		font-size: ms(-3);
+		font-size: 0.6875rem;
 		color: rgba(get-color(dark),.4);
 		position: absolute;
 		top: 6px;
@@ -160,7 +160,7 @@
 	}
 	&_title{
 		// color: rgba(get-color(dark),.6);
-		font-size: ms(0);
+		font-size: 1rem;
 		font-weight: normal;
 		line-height: 24px;
 		margin: 0;
@@ -188,7 +188,7 @@
 		}
 	}
 	&_text{
-		font-size: ms(-1);
+		font-size: 0.857rem;
 		line-height: 21px;
 	}
 	&_figure{
@@ -211,7 +211,7 @@
   }
 	&_category{
 		color: rgba(get-color(dark),.4);
-		font-size: ms(-3);
+		font-size: 0.6875rem;
 		&--light{
 			color: rgba(get-color(white), .4);
 		}
@@ -249,7 +249,7 @@
 	&_title{
 		font-family: $robotoSlab;
 		font-weight: normal;
-		font-size: ms(2);
+		font-size: 1.25rem;
 		line-height: 24px;
 		padding: 20px 0;
 		margin: 0;

@@ -47,7 +47,7 @@
 	&_title{
 		color: rgba(get-color(dark),1);
 		font-family: $robotoSlab;		
-		font-size: ms(3);
+		font-size: 1.37500rem;
 		font-weight: normal;
 		line-height: 24px;
 		margin: 0 0 16px;
@@ -55,7 +55,7 @@
 	&_job{
 		color: rgba(get-color(dark),.4);
 		display: block;
-		font-size: ms(-3);
+		font-size: 0.6875rem;
 		text-transform: uppercase;
 	}
 	&_image{

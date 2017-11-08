@@ -5,9 +5,13 @@
 *, *:after, *::before{
 	box-sizing: border-box;
 }
+
+html {
+  font-size: 16px; // 62.5% = 10px | 100% = 16px
+}
+
 body {
 	font-family: font(Roboto);
-	font-size: 16px;
 	line-height: 1.2;
 	font-weight: 400;
 	overflow-x: hidden;
@@ -45,7 +49,7 @@ blockquote{
 p{
 	color: rgba(get-color(dark),.8);	
 	font-family: $roboto;
-	font-size: ms(0);
+	font-size: 1rem;
 }
 hr{
 	border: 0;
