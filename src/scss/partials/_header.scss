@@ -19,6 +19,7 @@
     .menu-trigger {
       @include mq($from: tablet) {
         display: block;
+        padding: 15px 10px;
       }
 
       @include mq($from: wide) {

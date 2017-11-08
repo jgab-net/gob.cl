@@ -121,11 +121,11 @@
 	@include mq($from: desktop ) {
 		// height: 92px;
 		// height: 102px;
-		height: 116px;
+		height: 7.25rem;
 	}
 	@include mq($from: wide ) {
 		// height: 92px;
-		height: 106px;
+		height: 6.62500px;
 	}
 	&--search{
 		padding: 10px 15px;

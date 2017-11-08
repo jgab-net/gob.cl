@@ -7,7 +7,7 @@
 		// font-size: ms(2);
 		font-weight: 400;
 		// line-height: 24px;
-		line-height: 38px;
+		line-height: 2.37500rem;
 		
 		// padding: 21px 0;
 		// margin: 0;
@@ -17,7 +17,7 @@
 		}
 		@include mq($from: tablet ) {
 			font-size: 2rem;
-			line-height: 38px;
+			line-height: 2.37500rem;
 			// font-size: 2rem;
 			margin: 0 0 21px 0;
 		}
@@ -28,7 +28,7 @@
 		font-size: 1.37500rem;
 		// font-size: 1.4375rem;
 		font-weight: 400;
-		line-height: 24px;
+		line-height: 1.5rem;
 		// padding: 21px 0;
 		// margin: 0;
 		margin: 0 0 21px 0;
@@ -45,7 +45,7 @@
 		font-size: 1.25rem;
 		// font-size: 1.3125rem;
 		font-weight: 400;
-		line-height: 24px;
+		line-height: 1.5rem;
 		// padding: 21px 0;
 		// margin: 0;
 		margin: 21px 0;
@@ -64,7 +64,7 @@
 		display: block;
 		// font-size: 0.6875rem;
 		letter-spacing: 1.5px;
-		line-height: 13px;
+		line-height: 0.8125rem;
 		// padding: 18px 0;
 		// margin: 0;
 		margin: 18px 0;		
@@ -88,7 +88,7 @@
 		font-family: $roboto;		
 		font-size: 1rem;
 		// font-size: 16px;
-		line-height: 24px;	
+		line-height: 1.5rem;
 		// padding: 21px 0;
 		// margin: 0;
 		margin: 21px 0;
@@ -124,7 +124,7 @@
 	display: block;
 	font-weight: 300;
 	font-size: 0.6875rem;
-	line-height: 24px;
+	line-height: 1.5rem;
 	margin: 0 0 10px;
 }
 .type{
@@ -134,7 +134,7 @@
 	font-weight: 600;
 	// font-size: ms(-1);
 	font-size: 0.875rem;
-	line-height: 16px;
+	line-height: 1rem;
 	border-bottom: 1px solid get-color(green);
 	border-top: 1px solid get-color(green);
 	// margin: 0 0 10px;

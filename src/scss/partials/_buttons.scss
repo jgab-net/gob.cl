@@ -1,3 +1,10 @@
+.a11y-font-1,
+.a11y-font-2 {
+  .button {
+    height: auto;
+  }
+}
+
 .button{
   background-color: get-color(red);
   appearance: none;

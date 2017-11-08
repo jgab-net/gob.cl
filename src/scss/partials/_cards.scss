@@ -71,6 +71,28 @@
 	}
 }
 
+.a11y-font-1,
+.a11y-font-2 {
+  .card-data {
+    height: 8rem;
+    padding: 10px;
+
+    &_title {
+      padding: 0 10px;
+    }
+
+    &_number {
+      text-align: center;
+      display: table-row;
+    }
+
+    &_title-text {
+      text-align: center;
+      display: table-row;
+    }
+  }
+}
+
 .card-data{
 	background-color: get-color(white);
 	border: 2px solid get-color(light);
@@ -78,7 +100,7 @@
 	position: relative;
 	margin: 15px 0;
 	@include mq($from: tablet ) {
-		height: 100px;
+		height: 6.25rem;
 		margin: 15px 0 50px;
 		display: block;
 	}
@@ -142,7 +164,7 @@
     margin: 25px 0;
 	}
 	@include mq($from: desktop ) {
-		height: 434px;
+		height: 27.12500rem;
 		margin: 0;
 	}
 	@include mq($from: wide ) {
@@ -186,7 +208,7 @@
 		font-family: $robotoSlab;
 		font-size: 1.4375rem;
 		font-weight: 400;
-		line-height: 26px;
+		line-height: 1.62500rem;
 		margin: 0 0 15px;
 	}
 	&_date{
