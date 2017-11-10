@@ -25,6 +25,19 @@
   @include mq($until: tablet ) {
     padding-right: 45px;  
   }
+
+  i {
+    padding: 0 6px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
   &:after{
     // background: url($iconsPath + 'arrow-right-white.svg');
     @include mq($until: tablet ) {
@@ -42,6 +55,7 @@
   }
   &:hover{
     background-color: darken(get-color(red),5%);
+    color: #000000;
   }
   &--clean{
     padding-right: 25px;  
