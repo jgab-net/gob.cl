@@ -185,9 +185,8 @@
   position: relative;
   // margin: 10px 0;
   text-decoration: underline;
-  @include mq($from: tablet ) {
-    padding: 8px 15px;
-    padding-right: 15px;
+  @include mq($from: tablet) {
+    padding: 8px 10px;
   }
   &:hover,
   &.hover{
