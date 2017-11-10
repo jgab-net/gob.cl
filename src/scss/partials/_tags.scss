@@ -18,7 +18,9 @@
 	white-space: nowrap;
 	&:hover,
 	&.hover{
+    text-decoration: none;
 		background-color: get-color(red);
+    color: rgba(get-color(dark), .6);
 		// color: get-color(white); 
 	}
 	&--clarity{
@@ -49,6 +51,7 @@
 		}
 		&:hover,
 		&.hover{
+      text-decoration: none;
 			color: get-color(white);
 		}
 	}
