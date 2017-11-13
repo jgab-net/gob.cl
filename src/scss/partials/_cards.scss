@@ -172,6 +172,7 @@
 	}
 	&:hover{
 		background-color: get-color(light);
+    text-decoration: none;
 	}
 	&.has-icon{
 		&:after{
