@@ -80,17 +80,13 @@
 
 
 .tags{
-	padding: 0 15px;
+	padding: 0;
 	// width: 100%;
 	margin-bottom: 15px;
 	overflow-x: auto;
 	overflow-y: hidden;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: -ms-autohiding-scrollbar;
-	@include mq($from: tablet ) {
-		// padding: 20px 0 0;
-		padding: 0;
-	}
 	&_content{
 		display: table;
 		padding-bottom: 8px;
