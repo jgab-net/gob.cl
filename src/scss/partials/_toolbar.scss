@@ -1,3 +1,29 @@
+
+.a11y-font-1,
+.a11y-font-2 {
+
+  @include mq($until: tablet) {
+    .toolbar-button {
+      &_text {
+        display: none;
+      }
+
+      &--listen {
+        text-align: center;
+        padding: 0;
+        width: 42px;
+      }
+    }
+
+    .toolbar {
+
+      &_player {
+        width: 42px;
+      }
+    }
+  }
+}
+
 .toolbar{
 	// float: right;
 	overflow: hidden;
