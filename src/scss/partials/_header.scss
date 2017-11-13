@@ -147,7 +147,7 @@
 		vertical-align: middle;
 		margin-left: 25px;
 		@include mq($from: tablet ) {
-			margin-left: 10px;
+			margin-left: 0;
 		}
 		@include mq($from: desktop ) {
 			margin-left: 25px;

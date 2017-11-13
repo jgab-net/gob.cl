@@ -200,6 +200,9 @@
   // margin: 10px 0;
   text-decoration: underline;
   @include mq($from: tablet) {
+    padding: 8px;
+  }
+  @include mq($from: desktop) {
     padding: 8px 10px;
   }
   &:hover,

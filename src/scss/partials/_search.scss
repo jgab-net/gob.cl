@@ -100,6 +100,7 @@
 	@include mq($from: tablet) {
 		width: 54px;
 		height: 71px;
+    margin-left: 0;
 	}
 	@include mq($from: desktop) {
 		margin-left: 40px;
