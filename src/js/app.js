@@ -199,13 +199,7 @@ App = {
     });
   },
   tags: function () {
-    $('.ctag').each(function (index, elem) {
-      $(elem).on('click', function (e) {
-        e.preventDefault();
-        $('.ctag').toggleClass('d-none');
-        $(this).removeClass('d-none').toggleClass('active');
-      });
-    });
+    $('.tags').tags();
   },
   filters: function () {
     $('.filter').each(function (index, elem) {

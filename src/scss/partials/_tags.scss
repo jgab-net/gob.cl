@@ -101,5 +101,10 @@
 		@include mq($from: tablet ) {
 			display: inline-block;
 		}
+
+    label {
+      text-transform: none;
+    }
 	}
+
 }

@@ -12,6 +12,8 @@
   var pluginName = 'toolbar';
   var pluginDataKey = 'gl.toolbar';
 
+  var changeEvent = 'change.gl.toolbar';
+
   var Plugin = (function () {
 
     var instance;
@@ -49,10 +51,7 @@
           that.options.value = that.options.values[that.options.index];
 
           that._update();
-          that.$element.trigger(
-            'change.gl.toolbar',
-            that.options.value
-          );
+          that.$element.trigger(changeEvent, that.options.value);
         }
       });
 
@@ -62,10 +61,7 @@
           that.options.value = that.options.values[that.options.index];
 
           that._update();
-          that.$element.trigger(
-            'change.gl.toolbar',
-            that.options.value
-          );
+          that.$element.trigger(changeEvent, that.options.value);
         }
       });
     };
