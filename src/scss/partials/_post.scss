@@ -64,19 +64,27 @@
 		}
 	}
 	
-	&_social{
+	&_social {
 		padding: 20px 0;
 		text-align: center;
-		li{
+		li {
+
+      @include mq($until: mobile) {
+        &:first-child {
+          margin: 0;
+          display: block;
+        }
+      }
+
 			display: inline-block;
 			margin: 0 16px 0 0;
 			vertical-align: middle;
-			p{
+			p {
 				color: rgba(get-color(dark),.4);
 				font-style: italic;
 				margin: 0;
 			}
-			a{
+			a {
 				color: get-color(gray);
 				font-size: 22px;
 				
