@@ -6,6 +6,7 @@
 	&:after{
 		position: absolute;
 		bottom: 0;
+    display: block;
 		left: 50%;
 		@include getIcon("\79");
 		font-size: 35px;
