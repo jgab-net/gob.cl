@@ -66,32 +66,65 @@
 	}
 	
 	&_social {
-		padding: 20px 0;
-		text-align: center;
-		li {
+    text-align: left;
+    padding: 20px 0;
 
-      @include mq($until: mobile) {
-        &:first-child {
-          margin: 0;
-          display: block;
+    > div {
+      float: right;
+    }
+
+    &:after {
+      display: table;
+      content: ' ';
+      clear: both;
+    }
+
+    @include mq($from: tablet) {
+      text-align: right;
+    }
+
+    .social-text {
+      display: inline-block;
+      width: 54%;
+
+      p {
+        color: rgba(get-color(dark),.4);
+        font-style: italic;
+        margin: 0;
+        line-height: 1.6rem;
+      }
+
+      @include mq($from: tablet) {
+        width: auto;
+        margin-right: 16px;
+      }
+    }
+
+    .social-links {
+      display: inline-block;
+      width: 46%;
+      text-align: right;
+
+      li {
+        display: inline-block;
+        margin: 0 8px 0 0;
+        vertical-align: middle;
+
+        a {
+          color: get-color(gray);
+          font-size: 22px;
+
+        }
+
+        @include mq($from: tablet) {
+          margin: 0 16px 0 0;
         }
       }
 
-			display: inline-block;
-			margin: 0 16px 0 0;
-			vertical-align: middle;
-			p {
-				color: rgba(get-color(dark),.4);
-				font-style: italic;
-				margin: 0;
-			}
-			a {
-				color: get-color(gray);
-				font-size: 22px;
-				
-			}
-		}
-		
+      @include mq($from: tablet) {
+        width: auto;
+      }
+    }
 	}
 }
 

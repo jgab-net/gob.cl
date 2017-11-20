@@ -101,6 +101,24 @@
 	&.first{
 		padding-top: 0;
 	}
+
+  &_compact {
+    border-bottom: 1px solid get-color(lightgray);
+    padding: 0;
+    margin: 0;
+
+    @include mq($from: tablet) {
+      border-bottom: none;
+    }
+
+    .container {
+      border-bottom: none;
+
+      @include mq($from: tablet) {
+        border-bottom: 1px solid get-color(lightgray);
+      }
+    }
+  }
 }
 .sub-article{
 	padding-top: 25px;
