@@ -182,3 +182,15 @@
 		border-color: get-color(white);
 	}
 }
+
+.section {
+  &-header {
+    .heading-large {
+      margin-top: 0;
+
+      @include mq($from: tablet) {
+        margin: 21px 0;
+      }
+    }
+  }
+}

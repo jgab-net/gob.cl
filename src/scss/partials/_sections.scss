@@ -1,106 +1,107 @@
-
 /* Sections */
 
-.section{
-	// padding: 10px 0;
-	padding-bottom: 25px;
-	padding-top: 25px;
-	// padding-left: 0;
-	// padding-right: 0;
-	@include mq($from: tablet ) {
-		// padding: 50px 0;
-		padding-bottom: 40px;
-		padding-top: 40px;
-	}
-	&--nopadding{
-		// padding: 0;
-		padding-left: 0;
-		padding-right: 0;
-		padding-bottom: 0;
-		padding-top: 0;
-	}
-	&--medium{
-		// padding: 25px 0;
-		padding-bottom: 25px;
-		padding-top: 25px;
-		// padding-left: 0;
-		// padding-right: 0;
-		overflow-x: hidden;
-	}
-	&--big{
-		// padding: 70px 0;
-		padding-bottom: 70px;
-		padding-top: 70px;
-		// padding-left: 0;
-		// padding-right: 0;
-	}
-	&--component-dark{
-		background-color: #f3f3f3;
-	}
-	&-hero{
-		padding-bottom: 20px;
-		padding-top: 20px;
-		// padding-left: 0;
-		// padding-right: 0;
-		@include mq($from: tablet ) {
-			// padding: 50px 0;
-			padding-bottom: 50px;
-			padding-top: 50px;
-		}
-	}
-	&-uniquekey{
-		background-color: get-color(bluedark);
-		// height: 225px;
-		padding: 45px 0;
-	}
-	&-social{
-		border-top: 1px solid get-color(lightgray);
-		border-bottom: 1px solid get-color(lightgray);
-		padding-bottom: 20px;
-		padding-top: 20px;
-		display: none;
-		@include mq($from: tablet ) {
-			display: block;
-		}
-		@include mq($from: desktop ) {
-			padding-bottom: 30px;
-			padding-top: 30px;
-		}
-		&_label{
-			color: get-color(dark);
-			font-family: $robotoSlab;
-			font-size: 1.25rem;
-			font-size: 1.4375rem;
-			margin: 0;
-		}
-	}
-}
-@each $colorName, $color in $colors {
-	.expand-#{$colorName}-left {
-		@include expand($color, left);
-	}
-	.expand-#{$colorName}-right {
-		@include expand($color, right);
-	}
-	.expand-#{$colorName} {
-		@include expand($color);
-	}
+.section {
+  // padding: 10px 0;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  // padding-left: 0;
+  // padding-right: 0;
+  @include mq($from: tablet) {
+    // padding: 50px 0;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  &--nopadding {
+    // padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  &--medium {
+    // padding: 25px 0;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    // padding-left: 0;
+    // padding-right: 0;
+    overflow-x: hidden;
+  }
+  &--big {
+    // padding: 70px 0;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    // padding-left: 0;
+    // padding-right: 0;
+  }
+  &--component-dark {
+    background-color: #f3f3f3;
+  }
+  &-hero {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    // padding-left: 0;
+    // padding-right: 0;
+    @include mq($from: tablet) {
+      // padding: 50px 0;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+  }
+  &-uniquekey {
+    background-color: get-color(bluedark);
+    // height: 225px;
+    padding: 45px 0;
+  }
+  &-social {
+    border-top: 1px solid get-color(lightgray);
+    border-bottom: 1px solid get-color(lightgray);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: none;
+    @include mq($from: tablet) {
+      display: block;
+    }
+    @include mq($from: desktop) {
+      padding-bottom: 30px;
+      padding-top: 30px;
+    }
+    &_label {
+      color: get-color(dark);
+      font-family: $robotoSlab;
+      font-size: 1.25rem;
+      font-size: 1.4375rem;
+      margin: 0;
+    }
+  }
 }
 
-.sub-section{
-	padding-bottom: 25px;
-	padding-top: 25px;
-	@include mq($from: tablet ) {
-		border-bottom: 1px solid get-color(lightgray);
-		padding-bottom: 38px;
-		padding-top: 38px;
-	}
-	&.no-line{
-		border-bottom: 0 !important;
-	}
-	&.first{
-		padding-top: 0;
-	}
+@each $colorName, $color in $colors {
+  .expand-#{$colorName}-left {
+    @include expand($color, left);
+  }
+  .expand-#{$colorName}-right {
+    @include expand($color, right);
+  }
+  .expand-#{$colorName} {
+    @include expand($color);
+  }
+}
+
+.sub-section {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  @include mq($from: tablet) {
+    border-bottom: 1px solid get-color(lightgray);
+    padding-bottom: 38px;
+    padding-top: 38px;
+  }
+  &.no-line {
+    border-bottom: 0 !important;
+  }
+  &.first {
+    padding-top: 0;
+  }
 
   &_compact {
     border-bottom: 1px solid get-color(lightgray);
@@ -120,10 +121,11 @@
     }
   }
 }
-.sub-article{
-	padding-top: 25px;
-	@include mq($from: tablet ) {
-		padding-top: 38px;
-	}
+
+.sub-article {
+  padding-top: 25px;
+  @include mq($from: tablet) {
+    padding-top: 38px;
+  }
 }
 

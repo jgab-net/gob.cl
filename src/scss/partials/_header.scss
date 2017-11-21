@@ -29,6 +29,10 @@
 
     .menu-mobile {
 
+      @include mq($from: mobile) {
+        padding: 18px 6px;
+      }
+
       @include mq($from: tablet) {
         display: block;
 
