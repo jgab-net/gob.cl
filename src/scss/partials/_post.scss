@@ -64,6 +64,34 @@
 			
 		}
 	}
+
+  &_social-share {
+    padding: 20px 0;
+    text-align: center;
+    li {
+
+      @include mq($until: mobile) {
+        &:first-child {
+          margin: 0;
+          display: block;
+        }
+      }
+
+      display: inline-block;
+      margin: 0 16px 0 0;
+      vertical-align: middle;
+      p {
+        color: rgba(get-color(dark),.4);
+        font-style: italic;
+        margin: 0;
+      }
+      a {
+        color: get-color(gray);
+        font-size: 22px;
+
+      }
+    }
+  }
 	
 	&_social {
     text-align: left;
