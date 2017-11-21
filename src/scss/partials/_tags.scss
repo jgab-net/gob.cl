@@ -7,8 +7,6 @@
   color: rgba(get-color(dark), .6);
   font-size: 0.857rem;
   line-height: 1rem;
-  display: inline-block;
-  margin: 0.875rem 0;
   padding: 13px 18px;
   margin: 0 8px 0.875rem 0;
   height: 42px;
@@ -28,6 +26,10 @@
     color: rgba(get-color(white), .8);
   }
 
+  display: block;
+  @include mq($from: tablet) {
+    display: inline-block;
+  }
 }
 
 .ctag {
@@ -100,14 +102,11 @@ label.ctag{
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   &_content {
-    display: table;
+    display: block;
     padding-bottom: 8px;
-    @include mq($from: tablet) {
-      display: block;
-    }
   }
   &_item {
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     table-layout: fixed;
     @include mq($from: tablet) {
@@ -115,7 +114,14 @@ label.ctag{
     }
 
     label {
+      display: block;
       text-transform: none;
+      margin: 0.875rem 0;
+
+      @include mq($from: tablet) {
+        display: inline-block;
+        margin: 0 8px 0.875rem 0;
+      }
     }
   }
 
