@@ -113,3 +113,9 @@ ul.steps li a {
 .filterable {
   height: 4rem;
 }
+
+img {
+  &.img-frame {
+    border: 1px solid get-color(gray);
+  }
+}
