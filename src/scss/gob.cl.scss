@@ -1,38 +1,38 @@
-@import 'partials/mixins',
-'partials/settings',
-'partials/libraries',
-'partials/icon-fonts',
-'partials/google-fonts',
-'partials/colors',
-'partials/plugins',
-'partials/base',
-'partials/typography',
-'partials/table-grid',
-'partials/icons',
-'partials/helpers',
-'partials/buttons',
-'partials/tags',
-'partials/headings',
-'partials/collapsible',
-'partials/tabs',
-'partials/search',
-'partials/result',
-'partials/breadcrumb',
-'partials/aside',
-'partials/post',
-'partials/profile',
-'partials/article',
-'partials/cards',
-'partials/category',
-'partials/sections',
-'partials/form',
-'partials/social',
-'partials/audio',
-'partials/login',
-'partials/schedule',
-'partials/toolbar',
-'partials/lightbox-gallery',
-'partials/header',
-'partials/navigation',
-'partials/footer',
-'partials/medible';
+@import 'vairables';
+@import 'partials/functions';
+@import 'partials/libraries';
+@import 'partials/mixins';
+@import 'partials/icon-fonts';
+@import 'partials/google-fonts';
+  //'partials/plugins';
+@import 'partials/base';
+@import 'partials/typography';
+@import 'partials/table-grid';
+@import 'partials/icons';
+@import 'partials/helpers';
+@import 'partials/buttons';
+@import 'partials/tags';
+@import 'partials/headings';
+@import 'partials/collapsible';
+@import 'partials/tabs';
+@import 'partials/search';
+@import 'partials/result';
+@import 'partials/breadcrumb';
+@import 'partials/aside';
+@import 'partials/post';
+@import 'partials/profile';
+@import 'partials/article';
+@import 'partials/cards';
+@import 'partials/category';
+@import 'partials/sections';
+@import 'partials/form';
+@import 'partials/social';
+@import 'partials/audio';
+@import 'partials/login';
+@import 'partials/schedule';
+@import 'partials/toolbar';
+  //'partials/lightbox-gallery';
+@import 'partials/header';
+@import 'partials/navigation';
+@import 'partials/footer';
+@import 'partials/medible';

@@ -1,12 +1,10 @@
 /* =Modules
 ----------------------------------------------- */
-@import "modules/collapsible",
-"modules/new",
-"modules/activity",
-"modules/banner",
-"modules/round-info",
-"modules/panel",
-"modules/documents",
-"modules/files",
-"modules/tabs",
-"modules/program";
+@import 'modules/new';
+@import 'modules/activity';
+@import 'modules/banner';
+@import 'modules/round-info';
+@import 'modules/panel';
+@import 'modules/documents';
+@import 'modules/files';
+@import 'modules/program';

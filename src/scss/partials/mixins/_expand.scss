@@ -1,0 +1,27 @@
+@mixin expand($backgroundColor, $dir:both) {
+  position: relative;
+  &:before {
+    background-color: $backgroundColor;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 500%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: -100%;
+    // z-index: -1; //check
+    @include mq($from: tablet) {
+      content: "";
+      @if ($dir == left) {
+        left: initial;
+        right: 100%;
+      }
+      @if ($dir == right) {
+        right: initial;
+        left: 100%;
+      }
+    }
+  }
+}

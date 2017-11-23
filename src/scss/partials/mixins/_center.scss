@@ -1,0 +1,14 @@
+@mixin center($type:default) {
+  position: absolute;
+  @if $type == v {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if $type == h {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

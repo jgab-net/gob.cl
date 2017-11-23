@@ -1,28 +1,30 @@
-@each $bpName, $bp in $bootstrapBreakpoints {
-  .table-#{$bpName}-row {
-    @include mq($from: $bp) {
-      display: table;
-      table-layout: fixed;
-      width: 100%;
-    }
-    > [class*="col-#{$bpName}-"] {
+@each $bpName, $bp in $grid-breakpoints {
+  @if $bp != 0 {
+    .table-#{$bpName}-row {
       @include mq($from: $bp) {
-        display: table-cell;
-        float: none;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
       }
-      &.top {
+      > [class*="col-#{$bpName}-"] {
         @include mq($from: $bp) {
-          vertical-align: top;
+          display: table-cell;
+          float: none;
         }
-      }
-      &.bottom {
-        @include mq($from: $bp) {
-          vertical-align: bottom;
+        &.top {
+          @include mq($from: $bp) {
+            vertical-align: top;
+          }
         }
-      }
-      &.middle {
-        @include mq($from: $bp) {
-          vertical-align: middle;
+        &.bottom {
+          @include mq($from: $bp) {
+            vertical-align: bottom;
+          }
+        }
+        &.middle {
+          @include mq($from: $bp) {
+            vertical-align: middle;
+          }
         }
       }
     }

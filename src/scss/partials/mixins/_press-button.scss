@@ -1,0 +1,6 @@
+@mixin press-button($scale : .98) {
+  transition: .2s;
+  &:active {
+    transform: scale($scale);
+  }
+}

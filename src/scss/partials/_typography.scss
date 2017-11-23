@@ -98,20 +98,22 @@ ul li {
   &-right {
     text-align: right;
   }
-  @each $bpName, $bp in $bootstrapBreakpoints {
-    &-#{$bpName}-center {
-      @include mq($from: $bp) {
-        text-align: center;
+  @each $bpName, $bp in $grid-breakpoints {
+    @if $bp != 0 {
+      &-#{$bpName}-center {
+        @include mq($from: $bp) {
+          text-align: center;
+        }
       }
-    }
-    &-#{$bpName}-left {
-      @include mq($from: $bp) {
-        text-align: left;
+      &-#{$bpName}-left {
+        @include mq($from: $bp) {
+          text-align: left;
+        }
       }
-    }
-    &-#{$bpName}-right {
-      @include mq($from: $bp) {
-        text-align: right;
+      &-#{$bpName}-right {
+        @include mq($from: $bp) {
+          text-align: right;
+        }
       }
     }
   }

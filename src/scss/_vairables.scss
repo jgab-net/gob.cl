@@ -1,0 +1,37 @@
+/* =Colors
+----------------------------------------------- */
+
+// Color Map
+$colors: (
+  red : #FE6565,
+  darkred : #BB0000,
+  green : #2FAE7D,
+  blue : #0021FF,
+  lightblue : #85B1F5,
+  yellow : #F2C728,
+  dark : #111111,
+  bluedark : #0A132D,
+  white: #FFFFFF,
+  light : #F5F6F7,
+  gray: #A8B7C7,
+  lightgray : #E3E5EF
+);
+
+
+/* =Settings
+----------------------------------------------- */
+
+// Assets
+$imagesPath: "../images/";
+$iconsPath: "../images/icons/";
+$fontsPath: "../fonts/";
+
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+
+$mq-breakpoints: (
+  mobile: map-get($grid-breakpoints, sm),
+  tablet: map-get($grid-breakpoints, md),
+  desktop: map-get($grid-breakpoints, lg),
+  wide: map-get($grid-breakpoints, xl)
+);

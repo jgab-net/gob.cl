@@ -1,0 +1,7 @@
+@mixin center-child($tagChild) {
+  position: relative;
+  #{$tagChild} {
+    @include center();
+    @content;
+  }
+}

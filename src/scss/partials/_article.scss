@@ -226,17 +226,19 @@
       padding-left: 195px;
     }
   }
-  @each $bpName, $bp in $bootstrapBreakpoints {
-    &--has-thumbnail-#{$bpName} {
-      @if ($bpName == xs) {
-        @include mq($until: 768px) {
-          position: relative;
-          padding-left: 195px;
-        }
-      } @else {
-        @include mq($from: $bp) {
-          position: relative;
-          padding-left: 195px;
+  @each $bpName, $bp in $grid-breakpoints {
+    @if $bp != 0 {
+      &--has-thumbnail-#{$bpName} {
+        @if ($bpName == xs) {
+          @include mq($until: 768px) {
+            position: relative;
+            padding-left: 195px;
+          }
+        } @else {
+          @include mq($from: $bp) {
+            position: relative;
+            padding-left: 195px;
+          }
         }
       }
     }

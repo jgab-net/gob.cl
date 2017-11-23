@@ -1,0 +1,4 @@
+@mixin inline-block($val) {
+  display: inline-block;
+  vertical-align: $val;
+}
