@@ -1,7 +1,7 @@
 /*
   FOOTER
 */
-.site-footer{
+.site-footer {
   background-color: get-color(bluedark);
   border-top: 1px solid rgba(get-color(gray), .2);
   // padding: 60px 0 60px;
@@ -10,19 +10,19 @@
   overflow: hidden;
   width: 100%;
   position: relative;
-  @include mq($from: tablet ) {
+  @include mq($from: tablet) {
     padding: 40px 0 50px;
     height: auto;
   }
-  @include mq($from: desktop ) {
+  @include mq($from: desktop) {
     padding: 40px 0 50px;
   }
-  &--hasbutton{
-    @include mq($until: tablet ) {
+  &--hasbutton {
+    @include mq($until: tablet) {
       margin-bottom: 90px;
     }
   }
-  &_logo{
+  &_logo {
     // margin: 0 0 20px;
     // display: block;
     position: absolute;
@@ -30,7 +30,7 @@
     // top: 0;
     // margin-top: -1px;
   }
-  &_button{
+  &_button {
     margin-top: 0;
     margin-bottom: 44px;
     @include mq($from: tablet) {
@@ -38,21 +38,21 @@
     }
   }
 
-  .social{
+  .social {
     text-align: center;
-    li{
+    li {
       display: inline-block;
       margin-bottom: 10px;
-      &:not(:first-child){
+      &:not(:first-child) {
         margin-left: 10px;
       }
-      a{
+      a {
         font-size: 32px;
         color: get-color(gray);
       }
     }
   }
-  .menu{
+  .menu {
     a {
       padding: 10px 40px 10px 0;
       white-space: nowrap;
@@ -60,16 +60,16 @@
       overflow: hidden;
       width: 100%;
 
-      @include mq($from: tablet)  {
+      @include mq($from: tablet) {
         padding: 10px 0;
       }
 
     }
-    li{
-      &:not(:last-child){
+    li {
+      &:not(:last-child) {
         // margin: 0 0 10px 0;
       }
-      a{
+      a {
         padding: 10px 0;
       }
     }

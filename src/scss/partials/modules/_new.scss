@@ -1,11 +1,11 @@
-.new{
+.new {
   height: 158px;
   position: relative;
   color: get-color("white");
-  &.new-medium{
+  &.new-medium {
     height: 309px;
-    .new{
-      &_content{
+    .new {
+      &_content {
         z-index: 11;
         position: absolute;
         left: 0;
@@ -16,9 +16,9 @@
       }
     }
   }
-  &.color{
-    &:after{
-      background-image: linear-gradient(0deg, rgba(42,36,62,0.91) 9%, rgba(42,36,62,0.00) 100%); 
+  &.color {
+    &:after {
+      background-image: linear-gradient(0deg, rgba(42, 36, 62, 0.91) 9%, rgba(42, 36, 62, 0.00) 100%);
       content: "";
       position: absolute;
       bottom: 0;
@@ -27,44 +27,45 @@
       right: 0;
     }
   }
-  &_type{
+  &_type {
     display: block;
     font-weight: 600;
     font-size: 0.75rem;
     margin: 0 0 1rem;
   }
-  &_title{
+  &_title {
     font-size: 1.12500rem;
   }
-  &_date{
+  &_date {
     color: get-color("bluelightdark");
     font-size: 0.857rem;
     font-weight: 400;
     margin-left: 10px;
   }
-  &_body{
+  &_body {
     font-size: 0.875rem;
   }
-  &_img{
+  &_img {
     @include img-responsive();
   }
-  &_figure{
+  &_figure {
     width: 100%;
     display: block;
-    @include mq($from: tablet ) {
+    @include mq($from: tablet) {
       width: 165px;
     }
   }
 }
-.new-hero{
+
+.new-hero {
   color: get-color("white");
   position: relative;
   // height: 400px;
   // @include clearfix();
-  @include mq($from: tablet ) {
+  @include mq($from: tablet) {
     height: 472px;
   }
-  &:before{
+  &:before {
     content: "";
     background-color: rgba(#48525D, .78);
     position: absolute;
@@ -73,11 +74,11 @@
     right: 0;
     height: 100%;
     width: 100%;
-    @include mq($from: tablet ) {
+    @include mq($from: tablet) {
       width: 50%;
-    }    
+    }
   }
-  &:after{
+  &:after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -102,69 +103,69 @@
   .blur-svg {
     display: none;
   }
-  &_content{
-    
+  &_content {
+
     // height: 100%;
     // width: 50%;
     // float: right;
-    padding: 40px 0 ;
+    padding: 40px 0;
     position: relative;
     z-index: 20;
-    @include mq($from: tablet ) {
+    @include mq($from: tablet) {
       padding: 44px 15px 44px;
     }
-    @include mq($from: desktop ) {
-      padding: 74px 74px 74px 32px ;
+    @include mq($from: desktop) {
+      padding: 74px 74px 74px 32px;
     }
   }
   h2,
-  &_title{
+  &_title {
     color: get-color("white");
     font-size: 1.25rem;
     // font-size: 1.5625rem;
     margin: 0 0 1.25rem;
   }
-   p{
+  p {
     font-size: 1rem;
-    &:last-of-type{
+    &:last-of-type {
       margin: 0 0 65px;
     }
   }
-  a{
+  a {
     color: get-color("bluelight");
     font-size: 0.857rem;
     font-weight: 700;
   }
 }
-.new-large{
+
+.new-large {
   color: get-color("white");
   height: 374px;
   position: relative;
   // width: 100%;
   // @include clearfix();
-  @include mq($from: tablet ) {
+  @include mq($from: tablet) {
     height: 474px;
   }
-  &_content{
+  &_content {
     background-color: rgba(#48525D, .78);
     height: 100%;
-    padding: 74px 74px 74px 32px ;
-    @include mq($from: tablet ) {
-      width: 50%; 
+    padding: 74px 74px 74px 32px;
+    @include mq($from: tablet) {
+      width: 50%;
       float: right;
     }
   }
   h2,
-  
-  p{
+  p {
     font-size: 1rem;
   }
-  a{
+  a {
     color: get-color("bluelight");
     font-size: 0.857rem;
   }
-  .new{
-    &_content{
+  .new {
+    &_content {
       z-index: 11;
       position: absolute;
       left: 0;
@@ -173,37 +174,37 @@
       padding: 30px 25px 30px;
       // top: 0;
     }
-    &_title{
+    &_title {
       color: get-color("white");
       font-size: 1.12500rem;
     }
   }
 }
 
-.card{
+.card {
   padding: 30px 0;
-  &_figure{
+  &_figure {
     height: 214px;
   }
-  &_title{
+  &_title {
     color: get-color(blue);
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.25rem;
     margin: 0;
-    time{
+    time {
       color: get-color("bluelightdark");
       font-size: 1rem;
       font-weight: 400;
     }
   }
-  &_type{
+  &_type {
     color: get-color("bluelightdark");
     font-size: 0.857rem;
     font-weight: 600;
     line-height: 1.12500rem;
   }
-  &_header{
+  &_header {
     padding: 16px 0;
   }
 }

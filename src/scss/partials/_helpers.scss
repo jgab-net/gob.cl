@@ -1,257 +1,264 @@
 /* =Helpers
 ----------------------------------------------- */
-.has-division{
-	border-bottom: 1px solid get-color(lightgray);
+.has-division {
+  border-bottom: 1px solid get-color(lightgray);
 }
 
 // color classes
 @each $colorName, $color in $colors {
-	.text-#{$colorName} {
-		color: $color !important;
-	}
-	.bg-#{$colorName} {
-		background-color: $color !important;
-	}
+  .text-#{$colorName} {
+    color: $color !important;
+  }
+  .bg-#{$colorName} {
+    background-color: $color !important;
+  }
 
-	@each $bpName, $bp in $bootstrapBreakpoints {
-		.text-#{$bpName}-#{$colorName} {
-			@if( $bpName == xs ){
-				@include mq($until: 768px ) {
-					color: $color !important;
-				}
-			}
-			@else{
-				@include mq($from: $bp ) {
-					color: $color !important;
-				}
-			}
-		}
-		.bg-#{$bpName}-#{$colorName} {
-			@if( $bpName == xs ){
-				@include mq($until: 768px ) {
-					background-color: $color !important;
-				}
-			}
-			@else{
-				@include mq($from: $bp ) {
-					background-color: $color !important;
-				}
-			}
-		}
-	}
+  @each $bpName, $bp in $bootstrapBreakpoints {
+    .text-#{$bpName}-#{$colorName} {
+      @if ($bpName == xs) {
+        @include mq($until: 768px) {
+          color: $color !important;
+        }
+      } @else {
+        @include mq($from: $bp) {
+          color: $color !important;
+        }
+      }
+    }
+    .bg-#{$bpName}-#{$colorName} {
+      @if ($bpName == xs) {
+        @include mq($until: 768px) {
+          background-color: $color !important;
+        }
+      } @else {
+        @include mq($from: $bp) {
+          background-color: $color !important;
+        }
+      }
+    }
+  }
 }
-.bg-bluedarkgray{
-	background-color: rgba(get-color(bluedark), .05);
+
+.bg-bluedarkgray {
+  background-color: rgba(get-color(bluedark), .05);
 }
-.bg-bluedark{
-	color: rgba(get-color(white),.8);
+
+.bg-bluedark {
+  color: rgba(get-color(white), .8);
 }
-.bg-red{
-	// color: rgba(get-color(white),1);
+
+.bg-red {
+  // color: rgba(get-color(white),1);
 }
 
 ul.circle {
-	list-style-type: circle;
-	li{
-		list-style-type: circle;
-	}
+  list-style-type: circle;
+  li {
+    list-style-type: circle;
+  }
 }
+
 ul.square {
-	list-style-type: square;
-	li{
-		list-style-type: square;
-	}
+  list-style-type: square;
+  li {
+    list-style-type: square;
+  }
 }
+
 ol.upper-roman {
-	list-style-type: upper-roman;
-	li{
-		list-style-type: upper-roman;
-	}
+  list-style-type: upper-roman;
+  li {
+    list-style-type: upper-roman;
+  }
 }
+
 ol.lower-alpha {
-	list-style-type: lower-alpha;
-	li{
-		list-style-type: lower-alpha;
-	}
-}
-ul{
-	ul{
-		padding-left: 2em;
-	}
+  list-style-type: lower-alpha;
+  li {
+    list-style-type: lower-alpha;
+  }
 }
 
+ul {
+  ul {
+    padding-left: 2em;
+  }
+}
 
-
-
-.container{
-	&--height-full{
-		height: 100%;
-	}
+.container {
+  &--height-full {
+    height: 100%;
+  }
 }
 
 @each $bpName, $bp in $bootstrapBreakpoints {
-	.overflowed-#{$bpName} {
-		@if( $bpName == xs ){
-			@include mq($until: 768px ) {
-				margin-left: -15px !important;
-				margin-right: -15px !important;
-			}
-		}
-		@else{
-			@include mq($from: $bp ) {
-				margin-left: -15px !important;
-				margin-right: -15px !important;
-			}
-		}
-	}
+  .overflowed-#{$bpName} {
+    @if ($bpName == xs) {
+      @include mq($until: 768px) {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+      }
+    } @else {
+      @include mq($from: $bp) {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+      }
+    }
+  }
 }
 
-
-.list-ib{
-	li{
-		display: inline-block;
-		vertical-align: middle;
-		&:not(:last-child){
-			margin-right: 0.875rem;
-		}
-	}
+.list-ib {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    &:not(:last-child) {
+      margin-right: 0.875rem;
+    }
+  }
 }
 
-.nopadding{
-	padding: 0 !important;
-	&-bottom{
-		padding-bottom: 0 !important;
-	}
-	&-left{
-		padding-left: 0 !important;
-	}
-	&-right{
-		padding-right: 0 !important;
-	}
-	&-top{
-		padding-top: 0 !important;
-	}
-}
-.nomargin{
-	margin: 0 !important;
-	&-bottom{
-		margin-bottom: 0 !important;
-	}
-	&-left{
-		margin-left: 0 !important;
-	}
-	&-right{
-		margin-right: 0 !important;
-	}
-	&-top{
-		margin-top: 0 !important;
-	}
+.nopadding {
+  padding: 0 !important;
+  &-bottom {
+    padding-bottom: 0 !important;
+  }
+  &-left {
+    padding-left: 0 !important;
+  }
+  &-right {
+    padding-right: 0 !important;
+  }
+  &-top {
+    padding-top: 0 !important;
+  }
 }
 
-.pull{
-	&-sm-right{
-		@include mq($from: tablet ) {
-			float: right;
-		}
-	}
-	&-md-right{
-		@include mq($from: desktop ) {
-			float: right;
-		}
-	}
-	&-lg-right{
-		@include mq($from: wide ) {
-			float: right;
-		}
-	}
+.nomargin {
+  margin: 0 !important;
+  &-bottom {
+    margin-bottom: 0 !important;
+  }
+  &-left {
+    margin-left: 0 !important;
+  }
+  &-right {
+    margin-right: 0 !important;
+  }
+  &-top {
+    margin-top: 0 !important;
+  }
 }
 
+.pull {
+  &-sm-right {
+    @include mq($from: tablet) {
+      float: right;
+    }
+  }
+  &-md-right {
+    @include mq($from: desktop) {
+      float: right;
+    }
+  }
+  &-lg-right {
+    @include mq($from: wide) {
+      float: right;
+    }
+  }
+}
 
 @for $i from 1 through 50 {
-	@if($i%5 == 0){
-		$m : pixels($i) ;
-		.mb-#{$i}{
-			@include margin($i,bottom);
-		}
-	}
+  @if ($i%5 == 0) {
+    $m: pixels($i);
+    .mb-#{$i} {
+      @include margin($i, bottom);
+    }
+  }
 }
 
-.elem-bg{
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-.img-to-bg{
-	display: none !important;
+.elem-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.background-image-expand{
-	@include mq($until: tablet ) {
-		min-height: 300px;
-	}
-	&_bg{
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-		position: absolute;
-		height: 100%;
-		z-index: -1;
-		&--left{
-			right: 0;
-		}
-		&--right{
-			left: 0;
-		}
-	}
+.img-to-bg {
+  display: none !important;
 }
 
-.img-responsive{
-	// @include img-responsive();
-	display: block;
-	height: auto;
+.background-image-expand {
+  @include mq($until: tablet) {
+    min-height: 300px;
+  }
+  &_bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    &--left {
+      right: 0;
+    }
+    &--right {
+      left: 0;
+    }
+  }
+}
+
+.img-responsive {
+  // @include img-responsive();
+  display: block;
+  height: auto;
   width: 100%;
 }
-.img-adaptive{
-	@include img-adaptive();
+
+.img-adaptive {
+  @include img-adaptive();
 }
-.img-adaptive-overflowed{
-	@include img-adaptive();	
-	@include mq($from: tablet ) {
-		max-width: none;
-	}
+
+.img-adaptive-overflowed {
+  @include img-adaptive();
+  @include mq($from: tablet) {
+    max-width: none;
+  }
 }
-.img-center{
-	@include center-block()
+
+.img-center {
+  @include center-block()
 }
+
 .img-circle {
   border-radius: 50%;
 }
-.block-center{
-	@include mq($from: tablet) {
-		display: table;
-		height: 100%;
-		width: 100%;
-		& &_content{
-			display: table-cell;
-			vertical-align: middle;
-		}
-	}
+
+.block-center {
+  @include mq($from: tablet) {
+    display: table;
+    height: 100%;
+    width: 100%;
+    & &_content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
 }
-.block-bottom{
-	display: table;
-	height: 100%;
-	width: 100%;
-	& &_content{
-		display: table-cell;
-		vertical-align: bottom;
-	}
+
+.block-bottom {
+  display: table;
+  height: 100%;
+  width: 100%;
+  & &_content {
+    display: table-cell;
+    vertical-align: bottom;
+  }
 }
 
 /* 
  * height Full
  */
-.height-full{
-		height: 100%;
+.height-full {
+  height: 100%;
 }
 
 /* 
@@ -259,25 +266,26 @@ ul{
  */
 
 .video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
 }
+
 .video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
  * Element center
  */
 
-.elem-center{
-	@include center-block()
+.elem-center {
+  @include center-block()
 }
 
 /*
@@ -285,18 +293,18 @@ ul{
  */
 
 .ir {
-	background-color: transparent;
-	border: 0;
-	overflow: hidden;
-	/* IE 6/7 fallback */
-	*text-indent: -9999px;
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
 }
 
 .ir:before {
-	content: "";
-	display: block;
-	width: 0;
-	height: 150%;
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
 }
 
 /*
@@ -304,8 +312,8 @@ ul{
  */
 
 .hidden {
-	// display: none !important;
-	// visibility: hidden;
+  // display: none !important;
+  // visibility: hidden;
 }
 
 /*
@@ -313,14 +321,14 @@ ul{
  */
 
 .visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /*
@@ -330,12 +338,12 @@ ul{
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-	clip: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	position: static;
-	width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 /*
@@ -343,7 +351,7 @@ ul{
  */
 
 .invisible {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 /*
@@ -360,12 +368,12 @@ ul{
 
 .clearfix:before,
 .clearfix:after {
-	content: " "; /* 1 */
-	display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-	clear: both;
+  clear: both;
 }
 
 /*
@@ -374,5 +382,5 @@ ul{
  */
 
 .clearfix {
-	*zoom: 1;
+  *zoom: 1;
 }

@@ -1,4 +1,4 @@
-.activity{
+.activity {
   background-color: #868686;
   color: get-color("white");
   height: 158px;
@@ -11,48 +11,48 @@
   // &:nth-child(3){
   //   background-color: #565656;
   // }
-  &--deg-1{
+  &--deg-1 {
     background-color: #EBEBEB;
     color: get-color(blue);
-    .activity{
-       &_date{
+    .activity {
+      &_date {
         background-image: url('../images/icons/calendar-dark.svg');
       }
     }
-    &.activity{
-      &--expand-left{
+    &.activity {
+      &--expand-left {
         @include expand(#EBEBEB, left);
       }
     }
   }
-  &--deg-2{
+  &--deg-2 {
     background-color: #868686;
-    &.activity{
-      &--expand-left{
+    &.activity {
+      &--expand-left {
         @include expand(#868686, left);
       }
     }
   }
-  &--deg-3{
+  &--deg-3 {
     background-color: #717171;
-    &.activity{
-      &--expand-left{
+    &.activity {
+      &--expand-left {
         @include expand(#717171, left);
       }
     }
   }
-  &--deg-4{
+  &--deg-4 {
     background-color: #565656;
-    &.activity{
-      &--expand-left{
+    &.activity {
+      &--expand-left {
         @include expand(#565656, left);
       }
     }
   }
-  &--small{
+  &--small {
     padding: 40px 0 0 15px;
   }
-  &_date{
+  &_date {
     background: transparent url('../images/icons/calendar.svg') no-repeat center center;
     height: 45px;
     width: 39px;
@@ -60,11 +60,11 @@
     position: relative;
     text-align: center;
     margin: 0 auto;
-    .day{
+    .day {
       font-size: 1rem;
       font-weight: 700;
     }
-    .month{
+    .month {
       font-size: 1.12500rem;
       font-weight: 700;
       top: 100%;
@@ -72,18 +72,18 @@
       text-align: center;
       @include center(h);
     }
-    &--big{
+    &--big {
       background-size: cover;
       height: 78px;
-      padding: 32px 0 0;      
+      padding: 32px 0 0;
       width: 66px;
-      
-      .day{
+
+      .day {
         font-size: 1.75rem;
       }
     }
   }
-  &_title{
+  &_title {
     font-size: 0.857rem;
     font-weight: 400;
     transform: translate(0, 50%);

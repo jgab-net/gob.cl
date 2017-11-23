@@ -5,7 +5,7 @@
   }
 }
 
-.button{
+.button {
   background-color: get-color(red);
   appearance: none;
   border: 0;
@@ -22,8 +22,8 @@
   text-align: center;
   text-decoration: underline;
   @include press-button();
-  @include mq($until: tablet ) {
-    padding-right: 45px;  
+  @include mq($until: tablet) {
+    padding-right: 45px;
   }
 
   i {
@@ -38,9 +38,9 @@
     }
   }
 
-  &:after{
+  &:after {
     // background: url($iconsPath + 'arrow-right-white.svg');
-    @include mq($until: tablet ) {
+    @include mq($until: tablet) {
       @include getIcon("\69");
       font-size: 13px;
       display: block;
@@ -53,139 +53,140 @@
       width: 13px;
     }
   }
-  &:hover{
-    background-color: darken(get-color(red),5%);
+  &:hover {
+    background-color: darken(get-color(red), 5%);
     color: #000000;
   }
-  &--clean{
-    padding-right: 25px;  
-    &:after{
+  &--clean {
+    padding-right: 25px;
+    &:after {
       display: none;
     }
   }
-  &--block{
+  &--block {
     display: block;
   }
-  &--floating{
+  &--floating {
     margin-bottom: -35px;
     z-index: 1;
   }
-  &--rounded{
+  &--rounded {
     border-radius: 20px;
   }
-  &--more{
+  &--more {
     min-width: 266px;
     margin: 0 auto;
   }
-  &--space{
+  &--space {
     margin: 32px 0;
   }
-  &--side{
+  &--side {
     margin-top: 20px;
-    @include mq($from: desktop ) {
-      margin-top: 130px;  
+    @include mq($from: desktop) {
+      margin-top: 130px;
     }
   }
-  &--red{
+  &--red {
     background-color: get-color(red);
     color: get-color(white);
-    &:hover{
-      background-color: darken(get-color(red),5%);
+    &:hover {
+      background-color: darken(get-color(red), 5%);
     }
   }
-  &--bluedark{
+  &--bluedark {
     background-color: get-color(bluedark);
     color: get-color(red);
-    &:hover{
-      background-color: darken(get-color(bluedark),5%);
+    &:hover {
+      background-color: darken(get-color(bluedark), 5%);
     }
   }
-  &--dark{
+  &--dark {
     background-color: get-color(dark);
     color: get-color(red);
-    &:hover{
-      background-color: darken(get-color(dark),5%);
+    &:hover {
+      background-color: darken(get-color(dark), 5%);
     }
   }
-  &--blue{
+  &--blue {
     background-color: get-color(blue);
     color: get-color(white);
-    &:hover{
-      background-color: darken(get-color(blue),5%);
+    &:hover {
+      background-color: darken(get-color(blue), 5%);
     }
   }
-  &--green{
+  &--green {
     background-color: get-color(green);
     color: get-color(white);
-    &:hover{
-      background-color: darken(get-color(green),5%);
+    &:hover {
+      background-color: darken(get-color(green), 5%);
     }
   }
-  &--yellow{
+  &--yellow {
     background-color: get-color(yellow);
     color: get-color(dark);
-    &:hover{
-      background-color: darken(get-color(yellow),5%);
+    &:hover {
+      background-color: darken(get-color(yellow), 5%);
     }
   }
-  &--gray{
+  &--gray {
     background-color: get-color(gray);
     color: get-color(white);
-    &:hover{
-      background-color: darken(get-color(gray),5%);
+    &:hover {
+      background-color: darken(get-color(gray), 5%);
     }
   }
-  &--light{
+  &--light {
     background-color: get-color(light);
     color: get-color(dark);
-    &:hover{
-      background-color: darken(get-color(light),5%);
+    &:hover {
+      background-color: darken(get-color(light), 5%);
     }
   }
-  &--lightred{
+  &--lightred {
     background-color: get-color(light);
     color: get-color(red);
-    &:hover{
-      background-color: darken(get-color(light),5%);
+    &:hover {
+      background-color: darken(get-color(light), 5%);
     }
   }
-  &--lightgray{
+  &--lightgray {
     background-color: get-color(lightgray);
     color: get-color(red);
-    &:hover{
-      background-color: darken(get-color(lightgray),5%);
+    &:hover {
+      background-color: darken(get-color(lightgray), 5%);
     }
   }
-  &--white{
+  &--white {
     background-color: get-color(white);
     color: get-color(red);
-    &:hover{
-      background-color: darken(get-color(white),5%);
+    &:hover {
+      background-color: darken(get-color(white), 5%);
     }
   }
-  &--lightblue{
+  &--lightblue {
     background-color: get-color(lightblue);
     color: get-color(dark);
-    &:hover{
-      background-color: darken(get-color(lightblue),5%);
+    &:hover {
+      background-color: darken(get-color(lightblue), 5%);
     }
   }
-  &--gray-dark{
+  &--gray-dark {
     background-color: get-color(gray);
     color: get-color(dark);
-    &:hover{
-      background-color: darken(get-color(gray),5%);
+    &:hover {
+      background-color: darken(get-color(gray), 5%);
     }
   }
-  &--darkred{
+  &--darkred {
     background-color: get-color(darkred);
     color: get-color(white);
-    &:hover{
-      background-color: darken(get-color(darkred),5%);
+    &:hover {
+      background-color: darken(get-color(darkred), 5%);
     }
   }
 }
-.link{
+
+.link {
   // color: get-color(red);
   color: get-color(dark);
   display: block;
@@ -206,16 +207,16 @@
     padding: 8px 10px;
   }
   &:hover,
-  &.hover{
-    color: rgba(get-color(dark),.6);
-    @include mq($until: tablet ) {
-      background-color: rgba(#0A132D, .05);  
+  &.hover {
+    color: rgba(get-color(dark), .6);
+    @include mq($until: tablet) {
+      background-color: rgba(#0A132D, .05);
     }
   }
-  &.active{
+  &.active {
     color: get-color(dark);
   }
-  &:after{
+  &:after {
     // background: url($iconsPath + 'arrow-right-red.svg');
     @include getIcon("\69");
     font-size: 13px;
@@ -227,38 +228,38 @@
     top: 50%;
     height: 7px;
     width: 13px;
-    @include mq($from: tablet ) {
+    @include mq($from: tablet) {
       display: none;
     }
   }
-  &--clean{
+  &--clean {
     // color: get-color(white);
     display: inline-block;
     padding: 0;
-    &:after{
+    &:after {
       display: none;
     }
   }
-  &--dib{
+  &--dib {
     display: inline-block;
     // padding: 0;
   }
-  &--gray{
-    background:rgba( get-color(bluedark) , .05);
+  &--gray {
+    background: rgba(get-color(bluedark), .05);
     color: get-color(dark);
   }
-  &--dark{
+  &--dark {
     background-color: get-color(dark);
     color: get-color(white);
     &:hover,
-    &.hover{
-      background-color: get-color(dark);    
+    &.hover {
+      background-color: get-color(dark);
     }
   }
   // &--transparent{
   //   background-color: rgba(#fff,.05);
   // }
-  &--medium{
+  &--medium {
     // min-height: 40px;
     // padding: 8px 15px;
     // padding-bottom: 8px;
@@ -266,19 +267,19 @@
     padding-bottom: 10px;
     padding-top: 10px;
   }
-  &--text-dark{
+  &--text-dark {
     color: get-color(dark);
   }
-  &--text-light{
+  &--text-light {
     color: get-color(white);
-    &:hover{
-      color: rgba(get-color(white),.8) !important;
+    &:hover {
+      color: rgba(get-color(white), .8) !important;
     }
   }
-  &--has-dot{
+  &--has-dot {
     padding-left: 25px;
     position: relative;
-    &:before{
+    &:before {
       // content: "";
       // @include circle(7px, get-color(red));
       @include getIcon("\70");
@@ -291,26 +292,27 @@
     }
   }
 }
-.visited{
-  &:visited{
+
+.visited {
+  &:visited {
     color: get-color(gray) !important;
   }
 }
 
-.more{
+.more {
   color: get-color(red);
   display: inline-block;
   padding: 10px 15px;
   text-decoration: underline;
-  &--dark{
+  &--dark {
     color: get-color(dark);
   }
-  &--right{
+  &--right {
     float: right;
   }
 }
 
-.info-prodecure{
+.info-prodecure {
   background-color: get-color(light);
   padding: 19px 15px;
   font-family: $roboto;
@@ -321,19 +323,19 @@
   margin-right: -15px;
   overflow: hidden;
   text-transform: uppercase;
-  &_code{
+  &_code {
     float: right;
     width: 50%;
     text-align: right;
   }
-  &_label{
+  &_label {
     float: left;
     width: 50%;
   }
 }
 
-.button-fixed{
-  @include mq($until: tablet ) {
+.button-fixed {
+  @include mq($until: tablet) {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -344,29 +346,30 @@
 }
 
 .button-next,
-.button-prev{
+.button-prev {
   background: get-color(light);
   padding: 10px 10px;
   min-height: 100px;
   width: 184px;
-  
-  &_title{
+
+  &_title {
     color: rgba(get-color(dark), .4);
     font-size: 0.857rem;
     line-height: 21px;
 
   }
-  &_link{
+  &_link {
     display: block;
     margin: 0 0 8px;
     text-align: right;
     position: relative;
   }
 }
-.button-next{
+
+.button-next {
   float: right;
-  &_link{
-    &:after{
+  &_link {
+    &:after {
       background: url($iconsPath + 'arrow-right-red.svg');
       content: "";
       display: inline-block;
@@ -377,11 +380,12 @@
     }
   }
 }
-.button-prev{
+
+.button-prev {
   float: left;
-  &_link{
+  &_link {
     text-align: left;
-    &:before{
+    &:before {
       transform: rotate(-180deg);
       background: url($iconsPath + 'arrow-right-red.svg');
       content: "";
@@ -393,27 +397,28 @@
     }
   }
 }
-.list-links{
-  li{
+
+.list-links {
+  li {
     display: block;
     margin: 0 0 15px;
-    .link{
+    .link {
       display: block;
       padding: 0;
     }
   }
 }
 
-.similars{
+.similars {
   // padding-top: 20px;
   display: inline-block;
   padding: 20px 15px;
   opacity: .6;
-  p{
+  p {
     margin: 0;
-    
+
   }
-  .link{
+  .link {
     padding-left: 0;
     padding-right: 0;
   }

@@ -2,8 +2,8 @@
 
 /* =Base
 ----------------------------------------------- */
-*, *:after, *::before{
-	box-sizing: border-box;
+*, *:after, *::before {
+  box-sizing: border-box;
 }
 
 html {
@@ -11,60 +11,68 @@ html {
 }
 
 body {
-	font-family: font(Roboto);
-	line-height: 1.2;
-	font-weight: 400;
-	overflow-x: hidden;
-	/* WP */
-	&.admin-bar{
-		.site-header{
-			&_fixed{
-				margin-top: 32px;
-			}
-		}
-		.mfp-wrap,
-		.site-nav{
-			margin-top: 32px;
-		}
-	}
-/* End WP */
+  font-family: font(Roboto);
+  line-height: 1.2;
+  font-weight: 400;
+  overflow-x: hidden;
+  /* WP */
+  &.admin-bar {
+    .site-header {
+      &_fixed {
+        margin-top: 32px;
+      }
+    }
+    .mfp-wrap,
+    .site-nav {
+      margin-top: 32px;
+    }
+  }
+  /* End WP */
 }
-a{
-	color: get-color(dark);
-	text-decoration: underline;
-	// &:hover{
-	// 	color: rgba(get-color(dark),.6);
-	// }
+
+a {
+  color: get-color(dark);
+  text-decoration: underline;
+  // &:hover{
+  // 	color: rgba(get-color(dark),.6);
+  // }
 }
+
 b,
 strong {
   font-weight: bold;
 }
-figure{
-	margin: 0;
+
+figure {
+  margin: 0;
 }
-blockquote{
-	margin: 0;
+
+blockquote {
+  margin: 0;
 }
-p{
-	color: rgba(get-color(dark),.8);	
-	font-family: $roboto;
-	font-size: 1rem;
+
+p {
+  color: rgba(get-color(dark), .8);
+  font-family: $roboto;
+  font-size: 1rem;
 }
-hr{
-	border: 0;
-	height: 1px;
-	background: get-color(lightgray);
+
+hr {
+  border: 0;
+  height: 1px;
+  background: get-color(lightgray);
 }
-.site-main{
-	overflow-x: hidden;
+
+.site-main {
+  overflow-x: hidden;
 }
-.list-inlineblock{
-	li{
-		display: inline-block;
-		vertical-align: middle;
-		&:not(:last-child){
-			margin-right: 25px;
-		}
-	}
+
+.list-inlineblock {
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
 }
