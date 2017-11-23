@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "gobcl";
-  src: url("../fonts/gobcl.eot");
-  src: url("../fonts/gobcl.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/gobcl.woff") format("woff"),
-  url("../fonts/gobcl.ttf") format("truetype"),
-  url("../fonts/gobcl.svg#gobcl") format("svg");
+  src: url($fontsPath + "gobcl.eot");
+  src: url($fontsPath + "gobcl.eot?#iefix") format("embedded-opentype"),
+  url($fontsPath + "gobcl.woff") format("woff"),
+  url($fontsPath + "gobcl.ttf") format("truetype"),
+  url($fontsPath + "gobcl.svg#gobcl") format("svg");
   font-weight: normal;
   font-style: normal;
 

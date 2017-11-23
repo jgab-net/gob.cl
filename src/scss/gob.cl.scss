@@ -1,5 +1,5 @@
 @import 'vairables';
-@import 'partials/functions';
+@import 'functions';
 @import 'partials/libraries';
 @import 'partials/mixins';
 @import 'partials/icon-fonts';
@@ -32,7 +32,8 @@
 @import 'partials/schedule';
 @import 'partials/toolbar';
   //'partials/lightbox-gallery';
-@import 'partials/header';
+// @import 'partials/header';
+@import 'partials/navbar';
 @import 'partials/navigation';
 @import 'partials/footer';
 @import 'partials/medible';

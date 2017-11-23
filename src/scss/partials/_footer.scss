@@ -75,3 +75,52 @@
     }
   }
 }
+
+
+body {
+  @for $i from 0 through $footer-links-max {
+    &.footer-links-#{$i} {
+
+      main.site-main {
+        min-height: calc(100vh - #{get-not-main-height($i)});
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+          min-height: calc(100vh - #{get-not-main-height($i, md)});
+        }
+
+        @media (min-width: map-get($grid-breakpoints, xl)) {
+          min-height: calc(100vh - #{get-not-main-height($i, xl)});
+        }
+      }
+
+      footer.site-footer {
+        height: get-footer-height($i);
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+          height: get-footer-height($i, md);
+        }
+
+        @media (min-width: map-get($grid-breakpoints, xl)) {
+          height: get-footer-height($i, xl);
+        }
+
+        .menu {
+          height: $i * $footer-link-height;
+
+          @media (min-width: map-get($grid-breakpoints, md)) {
+            height: round($i / 2) * $footer-link-height;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+footer.site-footer {
+  .menu {
+    a {
+      height: $footer-link-height;
+    }
+  }
+}

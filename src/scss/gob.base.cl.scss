@@ -1,5 +1,5 @@
 @import 'vairables';
-@import 'partials/functions';
+@import 'functions';
 @import 'partials/libraries';
 @import 'partials/mixins';
 @import 'partials/icon-fonts';
@@ -23,6 +23,7 @@
 @import 'partials/form';
 @import 'partials/social';
 @import 'partials/audio';
-@import 'partials/header';
+// @import 'partials/header';
+@import 'partials/navbar';
 @import 'partials/footer';
 @import 'partials/medible';
