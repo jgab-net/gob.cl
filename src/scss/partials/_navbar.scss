@@ -12,19 +12,25 @@ body {
       }
 
       .navbar-toggler {
-        margin-top: $original-navbar-xs-padding-y;
-        margin-bottom: $original-navbar-xs-padding-y;
-
-        @media (min-width: map-get($grid-breakpoints, md)) {
-          margin-top: $original-navbar-md-padding-y;
-          margin-bottom: $original-navbar-md-padding-y;
-        }
+        margin-top: $navbar-toggler-margin-y;
+        margin-bottom: $navbar-toggler-margin-y;
       }
 
       .navbar-collapse {
         @media (min-width: map-get($grid-breakpoints, md)) {
           margin-top: $original-navbar-md-padding-y;
           margin-bottom: $original-navbar-md-padding-y;
+        }
+
+        .navbar-nav {
+          .nav-item {
+            height: $static-nav-link-height;
+
+            .nav-link {
+              padding-top: 8px;
+              padding-bottom: 8px;
+            }
+          }
         }
       }
     }

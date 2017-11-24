@@ -4,6 +4,9 @@
 
 $line-height-base: 1.42858 !default;
 
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
 $container-max-widths: (
   lg: 960px,
   xl: 1140px
@@ -11,13 +14,19 @@ $container-max-widths: (
 
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
+$navbar-toggler-margin-y: 12px;
 
 $border-radius: 0;
 $border-radius-lg: 0;
 $border-radius-sm: 0;
 
+
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
+
+
+$font-size-base-in-px: 16px;
+$static-nav-link-height: 35px;
 
 /* =Colors
 ----------------------------------------------- */
@@ -54,12 +63,14 @@ $mq-breakpoints: (
   wide: map-get($grid-breakpoints, xl)
 );
 
-$original-navbar-xs-padding-y: 11px;
-$original-navbar-md-padding-y: 16px;
+
+// Footer links variables.
+$original-navbar-xs-padding-y: 14.5px;
+$original-navbar-md-padding-y: 18px;
 
 $navbar-height: (
-  xs: rem-to-px($nav-link-height) + $original-navbar-xs-padding-y * 2,
-  md: rem-to-px($nav-link-height) + $original-navbar-md-padding-y * 2
+  xs: $static-nav-link-height + $original-navbar-xs-padding-y * 2,
+  md: $static-nav-link-height + $original-navbar-md-padding-y * 2
 );
 
 $footer-base-height: (
@@ -71,3 +82,7 @@ $footer-base-height: (
 $footer-link-height: 44px;
 $footer-links-max: 20;
 $footer-links-container-offset: 100px;
+
+// Django cms toolbar variables.
+$django-cms-toolbar: 5px;
+$django-cms-toolbar-expanded: 49px;

@@ -1,0 +1,89 @@
+html {
+  @for $i from 0 through $footer-links-max {
+    &.cms-ready {
+
+      body.footer-links-#{$i} {
+        main.site-main {
+          min-height: calc(100vh - #{get-not-main-height($i) + $django-cms-toolbar});
+
+          @media (min-width: map-get($grid-breakpoints, md)) {
+            min-height: calc(100vh - #{get-not-main-height($i, md) + $django-cms-toolbar});
+          }
+
+          @media (min-width: map-get($grid-breakpoints, xl)) {
+            min-height: calc(100vh - #{get-not-main-height($i, xl) + $django-cms-toolbar});
+          }
+        }
+      }
+
+      &.cms-toolbar-expanded {
+        body.footer-links-#{$i} {
+          main.site-main {
+            min-height: calc(100vh - #{get-not-main-height($i) + $django-cms-toolbar-expanded});
+
+            @media (min-width: map-get($grid-breakpoints, md)) {
+              min-height: calc(100vh - #{get-not-main-height($i, md) + $django-cms-toolbar-expanded});
+            }
+
+            @media (min-width: map-get($grid-breakpoints, xl)) {
+              min-height: calc(100vh - #{get-not-main-height($i, xl) + $django-cms-toolbar-expanded});
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+html {
+  &.cms-ready {
+    .navbar {
+      top: $django-cms-toolbar;
+    }
+    &.cms-toolbar-expanded {
+      .navbar {
+        top: $django-cms-toolbar-expanded;
+      }
+    }
+  }
+}
+
+.cmd-ready {
+  .site-search {
+    margin-top: map-get($navbar-height, xs) + $django-cms-toolbar;
+  }
+
+  body {
+    &.search-active {
+      .site-main {
+        margin-top: map-get($navbar-height, md) + $django-cms-toolbar;
+        top: $django-cms-toolbar;
+      }
+    }
+  }
+
+  @include mq($from: tablet) {
+    .site-search {
+      margin-top: map-get($navbar-height, md) + $django-cms-toolbar;
+    }
+  }
+
+  &.cms-toolbarl-expanded {
+    .site-search {
+      margin-top: map-get($navbar-height, xs) + $django-cms-toolbar-expanded;
+    }
+
+    body {
+      &.search-active {
+        .site-main {
+          margin-top: map-get($navbar-height, md) + $django-cms-toolbar-expanded;
+          top: $django-cms-toolbar-expanded;
+        }
+      }
+    }
+
+    @include mq($from: tablet) {
+      margin-top: map-get($navbar-height, md) + $django-cms-toolbar-expanded;
+    }
+  }
+}

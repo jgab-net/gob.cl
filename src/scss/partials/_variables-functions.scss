@@ -3,6 +3,9 @@
 }
 
 @function rem-to-px($size) {
-  $value: parse-int($size) * 16px;
-  @return round($value);
+  @return parse-int($size) * 16px;
+}
+
+@function px-to-rem($size) {
+  @return (parse-int($size) / 16) + rem;
 }
