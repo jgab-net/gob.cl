@@ -1,15 +1,3 @@
-@function get-color($color) {
-  @if map-has-key($colors, $color) {
-    $color: map-get($colors, $color);
-  } @else {
-    @if type-of($color) != color {
-      @error "Color name: `#{$color}` not found."
-    }
-  }
-
-  @return $color;
-}
-
 @function get-footer-height($i, $type: xs) {
   @if $type == xs {
     @return map-get($footer-base-height, $type) + $i * $footer-link-height;

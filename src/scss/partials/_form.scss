@@ -96,7 +96,7 @@ input[type="search"]::-webkit-search-results-decoration {
     height: $inputHeight;
     width: 59px;
     &:after {
-      background: transparent url($iconsPath+ 'search.svg') center center no-repeat;
+      background: transparent url($iconsPath + 'search.svg') center center no-repeat;
       content: "";
       position: absolute;
       right: 0;

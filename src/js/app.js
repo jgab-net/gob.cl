@@ -138,15 +138,6 @@ App = {
       $cancel.addClass('d-none');
     });
   },
-  menu: function () {
-    var $menuButtons = $(".menu-trigger"),
-      $siteNav = $(".site-nav"),
-      $body = $("body");
-    $menuButtons.on("click", function () {
-      $siteNav.toggleClass("active");
-      $body.toggleClass("menu-open-mobile");
-    });
-  },
   imgDesktop: function () {
     if (this.isDesktop()) {
       $('.img-desktop').each(function (index, el) {

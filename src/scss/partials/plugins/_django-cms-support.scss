@@ -48,42 +48,26 @@ html {
   }
 }
 
-.cmd-ready {
-  .site-search {
-    margin-top: map-get($navbar-height, xs) + $django-cms-toolbar;
-  }
+.cms-ready {
 
   body {
+
     &.search-active {
       .site-main {
-        margin-top: map-get($navbar-height, md) + $django-cms-toolbar;
         top: $django-cms-toolbar;
       }
     }
   }
 
-  @include mq($from: tablet) {
-    .site-search {
-      margin-top: map-get($navbar-height, md) + $django-cms-toolbar;
-    }
-  }
-
-  &.cms-toolbarl-expanded {
-    .site-search {
-      margin-top: map-get($navbar-height, xs) + $django-cms-toolbar-expanded;
-    }
+  &.cms-toolbar-expanded {
 
     body {
+
       &.search-active {
         .site-main {
-          margin-top: map-get($navbar-height, md) + $django-cms-toolbar-expanded;
           top: $django-cms-toolbar-expanded;
         }
       }
-    }
-
-    @include mq($from: tablet) {
-      margin-top: map-get($navbar-height, md) + $django-cms-toolbar-expanded;
     }
   }
 }
