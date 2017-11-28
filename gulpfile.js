@@ -24,25 +24,17 @@ gulp.task('sass', function () {
     .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./site/css'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('copy', function () {
   gulp.src('./src/fonts/*')
-    .pipe(gulp.dest('./dist/fonts'));
+    .pipe(gulp.dest('./dist/fonts'))
+    .pipe(gulp.dest('./site/fonts'));
   gulp.src('./src/images/**/*')
-    .pipe(gulp.dest('./dist/images'));
-});
-
-gulp.task('views', function () {
-  return gulp.src('./src/site/*.pug')
-    .pipe(changed('./site', {
-      extension: '.html'
-    }))
-    .pipe(pug({
-      pretty: true
-    }))
-    .pipe(gulp.dest('./site'));
+    .pipe(gulp.dest('./dist/images'))
+    .pipe(gulp.dest('./site/images'))
 });
 
 gulp.task('js', function () {
@@ -52,7 +44,8 @@ gulp.task('js', function () {
     }))
     .pipe(uglify())
     .pipe(concat('gob.cl.js'))
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('./site/js'));
 });
 
 gulp.task('serve', ['default'], function() {
@@ -68,10 +61,9 @@ gulp.task('serve', ['default'], function() {
   });
 
   gulp.watch('./src/scss/**/*.scss', ['sass']);
-  gulp.watch('./src/views/**/*.pug', ['views']);
   gulp.watch('./src/js/**/*.js', ['js']);
 
-  gulp.watch('./dist/views/*.html').on('change', browserSync.reload);
+  gulp.watch('./site/**/*.html').on('change', browserSync.reload);
   gulp.watch('./dist/js/**/*.js').on('change', browserSync.reload);
 
 });
@@ -91,6 +83,7 @@ gulp.task('serve:documentation', function () {
   gulp.watch('./src/scss/**/*.scss', ['sass']);
   gulp.watch('./src/js/**/*.js', ['js']);
 
+  gulp.watch('./documentation/**/*.html').on('change', browserSync.reload);
   gulp.watch('./dist/js/**/*.js').on('change', browserSync.reload);
 });
 
@@ -98,10 +91,10 @@ gulp.task('clean', function () {
   return gulp.src('./dist')
     .pipe(clean());
 });
-
+/*
 gulp.task('clean:site', function () {
   return gulp.src('./site')
     .pipe(clean());
 });
-
-gulp.task('default', gulpSequence(['clean', 'clean:site'], ['sass', 'copy', 'views', 'js']));
+*/
+gulp.task('default', gulpSequence(['clean'], ['sass', 'copy', 'js']));
