@@ -4,18 +4,15 @@
     color: map-get($colors, gray);
   }
 
-  .slick-slide {
-    .gallery-slide {
-      .img-box {
-        border: 2px solid map-get($colors, gray);
-        margin: 8px 4px;
-        .gallery-image {
-          height: 200px;
-          background-position: center;
-          background-size: cover;
-        }
+  .gallery-slide {
+    .img-box {
+      border: 2px solid map-get($colors, gray);
+      margin: 8px 4px;
+      .gallery-image {
+        height: 200px;
+        background-position: center;
+        background-size: cover;
       }
-
     }
   }
 
