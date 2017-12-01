@@ -8,7 +8,12 @@
     margin: 0 0 18px;
   }
   &_body {
+    padding-left: 0;
     overflow: hidden;
+
+    li {
+      list-style: none;
+    }
   }
   &--half {
     // padding-left: 134px;
@@ -88,7 +93,9 @@
   }
   &_info {
     margin: 0 0 15px;
+    padding-left: 0;
     li {
+      list-style: none;
       margin: 0 0 5px;
       span {
         color: rgba(get-color(dark), .8);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="a11y-font-0" style="font-size: 16px;">
+<html lang="es">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -13,10 +13,10 @@
   <meta name="fb:admins" content="572738868">
   <meta name="fb:app_id" content="114405611929952">
   <meta itemprop="description" content="Gobierno de Chile">
-  <meta itemprop="image" content="images/favicon/ms-icon-310x310.png">
+  <meta itemprop="image" content="http://localhost:5000/static/favicon/ms-icon-310x310.png">
   <meta itemprop="name" content="Gob.cl: ">
   <meta name="keywords" content="">
-  <meta name="description" content="None">
+  <meta name="description" content="">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
@@ -59,23 +59,21 @@
 
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
   <div class="container">
-    <a href="#" class="navbar-brand align-self-start">
+    <a href="/" class="navbar-brand align-self-start">
       <i class="icon-gob"></i>
     </a>
     <div class="nav-content">
       <div class="dropdown lang">
-        <a id="ropdownMenuLang" href="#" data-toggle="dropdown"
-            role="button" aira-haspopup="true" aria-expanded="false"
-            class="btn btn-seconday dropdown-toggle">
+        <a id="ropdownMenuLang" href="#"
+           data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false"
+           class="btn btn-seconday dropdown-toggle">
           <i aria-hidden="true" class="fa fa-language mr-1"></i>es
       </a>
         <div aria-labelledby="ropdownMenuLang" class="dropdown-menu">
-          <a href="#" title="Change to language: Español"
-             class="dropdown-item">
+          <a href="#" title="Change to language: Español" class="dropdown-item">
             Español
           </a>
-          <a href="#" title="Change to language: Inglés"
-             class="dropdown-item">
+          <a href="#" title="Change to language: Inglés" class="dropdown-item">
             Inglés
           </a>
         </div>
@@ -93,32 +91,20 @@
       <ul class="navbar-nav">
         <li class="nav-item dropdown nav-item-desktop">
           <a id="navbarDropdownMenuLang" href="#"
-             data-toggle="dropdown" aira-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
-            <i aria-hidden="true" class="fa fa-language mr-1"></i>
-            Español
-          </a>
+             data-toggle="dropdown" aira-haspopup="true"
+             aria-expanded="false" class="nav-link dropdown-toggle">
+            <i aria-hidden="true" class="fa fa-language mr-1"></i>Español
+        </a>
           <div aria-labelledby="navbarDropdownMenuLang" class="dropdown-menu">
-            <a href="#" title="Change to language: Español"
-               class="dropdown-item">
-              Español
-            </a>
-            <a href="#" title="Change to language: Inglés" class="dropdown-item">
-              Inglés
-            </a>
+            <a href="#" title="Change to language: Español" class="dropdown-item">Español</a>
+            <a href="#" title="Change to language: Inglés" class="dropdown-item">Inglés</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Trámites y beneficios</a>
-        </li>
-        <li class="nav-item">
-          <a href="noticias.html" class="nav-link">Noticias</a>
-        </li>
-        <li class="nav-item">
-          <a href="acerca-de-chile.html" class="nav-link">Acerca de Chile</a>
-        </li>
-        <li class="nav-item">
-          <a href="instituciones.html" class="nav-link">Instituciones</a>
-        </li>
+        <li class="nav-item"><a href="#" class="nav-link">Trámites y beneficios</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Noticias</a></li>
+        <li class="nav-item"><a href="acerca-de.html" class="nav-link">Acerca de Chile</a></li>
+
+        <li class="nav-item"><a href="instituciones.html" class="nav-link">Instituciones</a></li>
         <li class="nav-item nav-item-action nav-item-desktop">
           <a href="#" class="btn btn-search toggle-search">
             <i class="ic-search btn-search_icon"></i>
@@ -131,336 +117,29 @@
 </nav>
 
 <main class="site-main">
-  <section class="section bg-bluedark elem-bg">
-    <img data-src="images/hero-home.jpg" alt="" class="img-desktop img-to-bg">
+  <section class="section nopadding bg-bluedark">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-5 order-lg-12 col-xl-5">
-          <div class="pull-md-right">
-            <div data-value="16px" class="toolbar">
-              <div class="toolbar_content">
-                <a href="#" class="toolbar-button toolbar-button--contrast d-none">
-                  <span class="toolbar-button_content"><i class="ic-contrast toolbar-button_icon"></i></span>
-                </a>
-                <a href="#" class="toolbar-button toolbar-button--less disabled">
-                  <span class="toolbar-button_content"><i class="ic-font-size-less toolbar-button_icon"></i></span>
-                </a>
-                <a href="#" class="toolbar-button toolbar-button--plus">
-                  <span class="toolbar-button_content"><i class="ic-font-size-plus toolbar-button_icon"></i></span>
-                </a>
-                <div class="toolbar_player d-none">
-                  <a href="#track" id="listen" class="toolbar-button toolbar-button--listen">
-                    <span class="toolbar-button_content"><i class="toolbar-button_icon ic-volume"></i>
-                    <span class="toolbar-button_text">Escuchar</span></span>
-                  </a>
-                  <div class="toolbar-player invisible">
-                    <a href="#" class="toolbar-player_toggle">
-                      <span class="toolbar-button_content">
-                        <i class="ic-pause toolbar-button_icon-pause"></i>
-                        <i class="ic-play toolbar-button_icon-play"></i>
-                      </span>
-                    </a>
-                    <div class="toolbar-player_timeline">
-                      <span></span>
-                    </div>
-                    <a href="#" class="toolbar-player_download">
-                      <span class="toolbar-button_content">
-                        <i class="ic-download"></i>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <a href="#" class="toolbar-button toolbar-button--toggle">
-                <span class="toolbar-button_content">
-                  <i class="ic-accessibility toolbar-button_icon"></i>
-                  <i class="ic-close toolbar-button_icon"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-7">
-          <article class="article article--dark text-light">
-            <h2 class="article_title title--light">Estás en Gob.cl</h2>
-            <p>Tu portal para acceder de manera simple y rápida a información del Gobierno de Chile.</p>
-            <div id="searchHero" class="search-form search-form--large">
-              <div class="search-form_content">
-                <input type="search" placeholder="Escribe aquí lo que deseas buscar"
-                       class="search-form_input toggle-search">
-                <button type="submit" class="search-form_button search-form_button--submit">
-                  <i class="ic-search"></i>
-                </button>
-                <button type="button" class="search-form_button search-form_button--cancel d-none">
-                  <i class="ic-delete"></i>
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section section--medium bg-bluedark d-none d-sm-block">
-    <div class="container">
-      <ul class="list-ib">
-        <li>Lo más buscado:</li>
-        <li>
-          <a href="resultados.html" class="link link--clean text-white">
-            Economía y empleo
-        </a>
-        </li>
-        <li>
-          <a href="resultados.html" class="link link--clean text-white">
-            Educación
-          </a>
-        </li>
-        <li>
-          <a href="resultados.html" class="link link--clean text-white">
-            Salud
-          </a>
-        </li>
-        <li>
-          <a href="resultados.html" class="link link--clean text-white">
-            Seguridad
-          </a>
-        </li>
-        <li>
-          <a href="resultados.html"
-             class="link link--clean text-white">
-            Calidad de vida y ciudad
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <section class="sub-section_compact">
-    <div class="container">
-      <div class="main-post_social">
-        <div class="social-links">
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/gobiernodechile" target="blank">
-                <i class="ic-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/gobiernodechile" target="blank">
-                <i class="ic-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/gobiernodechile/" target="blank">
-                <i class="ic-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/user/LAMONEDA" target="blank">
-                <i class="ic-youtube"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="social-text">
-          <p>Síguenos a través de redes sociales:</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <section class="sub-section d-none d-md-block">
-        <h2 class="heading-medium">Noticias</h2>
+      <article class="article-hero article--dark text-light">
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <article class="new new--mobile">
-              <time class="new_date">
-                16 de Noviembre de 2017
-              </time>
-              <figure class="new_figure-mobile">
-                <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
-              </figure>
-              <h2 class="new_title">
-                <a
-                  href="noticia.html"
-                  class="link link--text-dark visited">
-                  Pdta: “Creemos que es posible crear condiciones que garanticen el acceso a una
-                  educación de calidad como piso común"
-                </a>
-              </h2>
-            </article>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <article class="new new--mobile">
-              <time class="new_date">
-                15 de Noviembre de 2017
-              </time>
-              <figure class="new_figure-mobile">
-                <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
-              </figure>
-              <h2 class="new_title">
-                <a
-                  href="noticia.html"
-                  class="link link--text-dark visited">
-                  El nuevo Hospital de Chimbarongo es el séptimo inaugurado en los últimos dos
-                  meses por la Presidenta Bachelet
-                </a>
-              </h2>
-            </article>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <article class="new new--mobile">
-              <time class="new_date">
-                15 de Noviembre de 2017
-              </time>
-              <figure class="new_figure-mobile">
-                <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
-              </figure>
-              <h2 class="new_title">
-                <a
-                  href="noticia.html"
-                  class="link link--text-dark visited">
-                  Ministra Alejandra Krauss llamó a empleadores a dar facilidades a
-                  los trabajadores que desean sufragar este domingo
-                </a>
-              </h2>
-            </article>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <article class="new new--mobile">
-              <time class="new_date">
-                15 de Noviembre de 2017
-              </time>
-              <figure class="new_figure-mobile">
-                <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
-              </figure>
-              <h2 class="new_title">
-                <a
-                  href="noticia.html"
-                  class="link link--text-dark visited">
-                  Presidenta inauguró el Hospital Dr. Exequiel González Cortés en la
-                  comuna de San Miguel
-                </a>
-              </h2>
-            </article>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-4 offset-lg-4 d-none d-sm-block">
-          <a href="noticias.html" class="button button--block button--light button--clean button--space">
-            Ver más
-          </a>
-        </div>
-      </section>
-      <section class="sub-section d-none d-md-block">
-        <div class="row">
-          <div class="col-12 col-lg-7">
-            <h2 class="heading-medium">Gobierno</h2>
-            <p>Conoce las principales entidades de Gobierno y sus autoridades.</p><br>
-          </div>
-          <div class="col-12">
-            <div class="row">
-              <div class="col-md-6 col-lg-3">
-                <a href="instituciones.html" class="card-data">
-                  <h2 class="card-data_title">
-                    <span>Presidencia de la República</span>
-                  </h2>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <a href="instituciones.html" class="card-data">
-                  <h3 class="card-data_title">
-                    <span class="card-data_number">22</span><span class="card-data_title-text">Ministerios</span>
-                  </h3>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <a href="instituciones.html" class="card-data">
-                  <h3 class="card-data_title">
-                    <span class="card-data_number">97</span><span class="card-data_title-text">Servicios Públicos</span>
-                  </h3>
-                </a>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <a href="instituciones.html" class="card-data">
-                  <h3 class="card-data_title">
-                    <span class="card-data_number">15</span><span class="card-data_title-text">Regiones y sus Municipios</span>
-                  </h3>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="sub-section d-md-none d-lg-block">
-        <div class="card-small d-md-none">
-          <h5 class="card-small_title">
-            <a href="acerca-de.html" class="card-small_link">
-              Acerca de Chile<i class="ic-arrow-right icon--right"></i>
-            </a>
-          </h5>
-          <div class="card-small_body">
-            <p>Información para turistas, migrantes y quienes quieran estudiar o hacer negocios en Chile.</p>
-          </div>
-        </div>
-        <div class="row d-none d-lg-flex">
-          <div class="col-md-5 align-self-center">
-            <h5 class="heading-medium">Acerca de Chile</h5>
-            <p>Información para turistas, migrantes y quienes quieran estudiar o hacer negocios en Chile.</p>
-            <div class="row">
-              <div class="col-lg-10">
-                <a href="acerca-de.html"
-                   class="button button--block button--light button--clean button--space">
-                  Ver más
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-6 align-self-center">
-            <img src="images/about-of.jpg" alt=""
-                 class="img-fluid w-100 img-frame">
-          </div>
-        </div>
-      </section>
-    </div>
-  </section>
-</main>
-
-<div class="site-search bg-bluedark">
-  <section>
-    <div class="container">
-      <p>
-        <a href="#" class="text-white toggle-search d-none d-sm-inline">
-          <i class="ic-arrow-left icon--left"></i>Volver
-        </a>
-      </p>
-
-      <form action="resultados.html">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-5 order-lg-12 col-xl-5">
-            <div class="site-search_toolbar pull-md-right">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5 order-md-12">
+            <div class="pull-md-right">
               <div data-value="16px" class="toolbar">
                 <div class="toolbar_content">
                   <a href="#" class="toolbar-button toolbar-button--contrast d-none">
                     <span class="toolbar-button_content">
-                      <i class="ic-contrast toolbar-button_icon"></i>
-                    </span>
+                      <i class="ic-contrast toolbar-button_icon"></i></span>
                   </a>
-                  <a href="#" class="toolbar-button toolbar-button--less disabled">
+                  <a href="#" class="toolbar-button toolbar-button--less">
                     <span class="toolbar-button_content">
-                      <i class="ic-font-size-less toolbar-button_icon"></i>
-                    </span>
+                      <i class="ic-font-size-less toolbar-button_icon"></i></span>
                   </a>
-                  <a href="h#" class="toolbar-button toolbar-button--plus">
+                  <a href="#" class="toolbar-button toolbar-button--plus">
                     <span class="toolbar-button_content">
                       <i class="ic-font-size-plus toolbar-button_icon"></i>
                     </span>
                   </a>
                   <div class="toolbar_player d-none">
-                    <a href="#track" id="listen"
-                       class="toolbar-button toolbar-button--listen">
+                    <a href="#track" id="listen" class="toolbar-button toolbar-button--listen">
                       <span class="toolbar-button_content">
                         <i class="toolbar-button_icon ic-volume"></i>
                         <span class="toolbar-button_text">Escuchar</span>
@@ -494,15 +173,280 @@
 
             </div>
           </div>
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-7">
+            <h1 class="heading-large">Noticias</h1>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="heading-label">Filtrar por Temas:</h2>
+      <div class="tags">
+        <div class="tags_content">
+          <div class="tags_item">
+            <a href="#" class="ctag ctag--light">
+              Todo
+            </a>
+          </div>
+          <div class="tags_item">
+            <a href="#" class="ctag ctag--light">
+              Economía y empleo
+            </a>
+          </div>
+          <div class="tags_item">
+            <a href="#" class="ctag ctag--light">
+              Educación
+            </a>
+          </div>
+          <div class="tags_item">
+            <a href="#"class="ctag ctag--light">
+              Salud
+            </a>
+          </div>
+          <div class="tags_item">
+            <a href="#" class="ctag ctag--light">
+              Seguridad
+            </a>
+          </div>
+          <div class="tags_item">
+            <a href="#" class="ctag ctag--light">
+              Calidad de vida y ciudad
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <article class="new new--mobile">
+            <time class="new_date">
+              16 de Noviembre de 2017
+            </time>
+            <figure class="new_figure-mobile">
+              <img
+                src="images/default-news.png"
+                alt="" class="img-fluid w-100 img-frame">
+            </figure>
+            <h2 class="new_title">
+              <a
+                href="noticia.html"
+                class="link link--text-dark visited">
+                  Pdta: “Creemos que es posible crear condiciones que garanticen el
+                  acceso a una educación de calidad como piso común"
+              </a>
+            </h2>
+          </article>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <article class="new new--mobile">
+            <time class="new_date">
+              15 de Noviembre de 2017
+            </time>
+            <figure class="new_figure-mobile">
+              <img
+                src="images/default-news.png"
+                alt="" class="img-fluid w-100 img-frame">
+            </figure>
+            <h2 class="new_title">
+              <a
+                href="noticia.html"
+                class="link link--text-dark visited">
+                  El nuevo Hospital de Chimbarongo es el séptimo inaugurado en los
+                  últimos dos meses por la Presidenta Bachelet
+              </a>
+            </h2>
+          </article>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <article class="new new--mobile">
+            <time class="new_date">
+              15 de Noviembre de 2017
+            </time>
+            <figure class="new_figure-mobile">
+              <img
+                src="images/default-news.png"
+                alt="" class="img-fluid w-100 img-frame">
+            </figure>
+            <h2 class="new_title">
+              <a
+                href="noticia.html"
+                class="link link--text-dark visited">
+                  Ministra Alejandra Krauss llamó a empleadores a dar facilidades a los
+                  trabajadores que desean sufragar este domingo
+              </a>
+            </h2>
+          </article>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <article class="new new--mobile">
+            <time class="new_date">
+              15 de Noviembre de 2017
+            </time>
+            <figure class="new_figure-mobile">
+              <img
+                src="images/default-news.png"
+                alt="" class="img-fluid w-100 img-frame">
+            </figure>
+            <h2 class="new_title">
+              <a
+                href="noticia.html"
+                class="link link--text-dark visited">
+                  Presidenta inauguró el Hospital Dr. Exequiel González Cortés en la
+                  comuna de San Miguel
+              </a>
+            </h2>
+          </article>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <article class="new new--mobile">
+            <time class="new_date">
+              15 de Noviembre de 2017
+            </time>
+            <figure class="new_figure-mobile">
+              <img
+                src="images/default-news.png"
+                alt="" class="img-fluid w-100 img-frame">
+            </figure>
+            <h2 class="new_title">
+              <a
+                href="noticia.html"
+                class="link link--text-dark visited">
+                  Plan de Embalses: Gobierno desarrolla proyectos que beneficiarán a 25
+                  mil chilenos en zonas con escasez de agua
+              </a>
+            </h2>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="section-social">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4">
+            <p class="section-social_label">Síguenos a través de redes sociales:</p>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-9 col-xl-8">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="social">
+                  <a href="https://www.facebook.com/gobiernodechile" target="blank" class="social_link"></a>
+                  <span class="social_icon">
+                    <i class="ic-facebook"></i>
+                  </span>
+                  <span class="social_name">Facebook</span>
+                  <span class="social_url">/gobiernodechile</span>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="social">
+                  <a href="https://twitter.com/gobiernodechile" target="blank" class="social_link"></a>
+                  <span class="social_icon"><i class="ic-twitter"></i></span>
+                  <span class="social_name">Twitter</span>
+                  <span class="social_url">@Gobiernodechile</span>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="social">
+                  <a href="https://www.instagram.com/gobiernodechile/" target="blank" class="social_link"></a>
+                  <span class="social_icon"><i class="ic-instagram"></i></span>
+                  <span class="social_name">Instagram</span>
+                  <span class="social_url">/gobiernodechile</span>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="social">
+                  <a href="https://www.youtube.com/user/LAMONEDA" target="blank" class="social_link"></a>
+                  <span class="social_icon"><i class="ic-youtube"></i></span>
+                  <span class="social_name">Youtube</span>
+                  <span class="social_url">Lamoneda</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+
+<div class="site-search bg-bluedark">
+  <section>
+    <div class="container">
+      <p>
+        <a href="#" class="text-white toggle-search d-none d-sm-inline">
+          <i class="ic-arrow-left icon--left"></i>Volver
+        </a>
+      </p>
+      <form action="resultados.html">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-5 order-lg-12 col-xl-5">
+            <div class="site-search_toolbar pull-md-right">
+              <div data-value="16px" class="toolbar">
+                <div class="toolbar_content">
+                  <a href="#" class="toolbar-button toolbar-button--contrast d-none">
+                    <span class="toolbar-button_content">
+                      <i class="ic-contrast toolbar-button_icon"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="toolbar-button toolbar-button--less">
+                    <span class="toolbar-button_content">
+                      <i class="ic-font-size-less toolbar-button_icon"></i>
+                    </span>
+                  </a>
+                  <a href="#" class="toolbar-button toolbar-button--plus">
+                    <span class="toolbar-button_content">
+                      <i class="ic-font-size-plus toolbar-button_icon"></i>
+                    </span>
+                  </a>
+                  <div class="toolbar_player d-none">
+                    <a href="#track" id="listen" class="toolbar-button toolbar-button--listen">
+                      <span class="toolbar-button_content">
+                        <i class="toolbar-button_icon ic-volume"></i>
+                        <span class="toolbar-button_text">Escuchar</span>
+                      </span>
+                    </a>
+                    <div class="toolbar-player invisible">
+                      <a href="#" class="toolbar-player_toggle">
+                        <span class="toolbar-button_content">
+                          <i class="ic-pause toolbar-button_icon-pause"></i>ç
+                          <i class="ic-play toolbar-button_icon-play"></i>
+                        </span>
+                      </a>
+                      <div class="toolbar-player_timeline">
+                        <span></span>
+                      </div>
+                      <a href="#" class="toolbar-player_download">
+                        <span class="toolbar-button_content">
+                          <i class="ic-download"></i>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="toolbar-button toolbar-button--toggle">
+                  <span class="toolbar-button_content">
+                    <i class="ic-accessibility toolbar-button_icon"></i>
+                    <i class="ic-close toolbar-button_icon"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
           <div class="col-md-12 col-lg-7 col-xl-7">
             <div id="search" class="search-form site-search_form nomargin-bottom">
               <div class="search-form_content">
-                <input type="search" placeholder="Escribe aquí lo que deseas buscar"
-                       name="q" value="" id="input-search" class="search-form_input">
+                <input type="search" placeholder="Escribe aquí lo que deseas buscar" name="q" value="" id="input-search"
+                       class="search-form_input">
                 <button type="submit" class="search-form_button search-form_button--submit">
                   <i class="ic-search"></i>
                 </button>
-                <button type="button" class="search-form_button search-form_button--cancel d-none">
+                <button type="button" class="search-form_button search-form_button--cancel">
                   <i class="ic-delete"></i>
                 </button>
               </div>
@@ -559,8 +503,7 @@
           <h2 class="heading-label heading-label--light">Trámites</h2>
           <div class="search_section overflowed-xs">
             <a href="#" class="link link--text-light link--has-dot">
-              Bono trabajo mujer
-            </a>
+              Bono trabajo mujer</a>
             <a href="#" class="link link--text-light">
               Programa Mujer Jefa de Hogar
             </a>
@@ -568,14 +511,11 @@
               Programa Mujer Jefa de Hogar
             </a>
             <a href="#" class="link link--text-light hidden-xs">
-              Programa Mujer Jefa de Hogar
-            </a>
+              Programa Mujer Jefa de Hogar</a>
             <a href="#" class="link link--text-light hidden-xs">
-              Programa Mujer Jefa de Hogar
-            </a>
+              Programa Mujer Jefa de Hogar</a>
             <a href="#" class="link link--text-light hidden-xs">
-              Programa Mujer Jefa de Hogar
-            </a>
+              Programa Mujer Jefa de Hogar</a>
             <div class="clearfix">
               <a href="#" class="more more--right">Ver más</a>
             </div>
@@ -589,47 +529,26 @@
                 Calidad de vida y ciudad
               </span>
               <h2 class="new_title">
-                <a href="noticia.html"
-                  class="link link--text-light">
-                  Plan de Embalses: Gobierno desarrolla proyectos que beneficiarán a 25 mil chilenos en
-                  zonas con escasez de agua
+                <a href="noticias.html" class="link link--text-light">
+                  Plan de Embalses: Gobierno desarrolla proyectos que beneficiarán a 25 mil
+                  chilenos en zonas con escasez de agua
                 </a>
               </h2>
             </article>
             <div class="clearfix">
-              <a href="noticias.html" class="more more--right">
-                Ver más
-              </a>
+              <a href="noticias.html" class="more more--right">Ver más</a>
             </div>
           </div>
         </div>
         <div class="col-md-12 col-lg-6 col-xl-6">
           <h2 class="heading-label heading-label--light">Instituciones</h2>
           <div class="search_section overflowed-xs">
-            <a href="institucion.html"
-              class="link link--text-light">
-              Ministerio Secretaría General de la Presidencia
-            </a>
-            <a href="institucion.html"
-              class="link link--text-light">
-              Región Metropolitana de Santiago
-            </a>
-            <a href="institucion.html"
-              class="link link--text-light">
-              Ministerio de Transportes y Telecomunicaciones
-            </a>
-            <a href="institucion.html"
-               class="link link--text-light">
-              Región de Tarapacá
-            </a>
-            <a href="institucion.html"
-               class="link link--text-light">
-              Ministerio de Justicia
-            </a>
-            <a href="institucion.html"
-              class="link link--text-light">
-              Región de Aysén del General Carlos Ibáñez del Campo
-            </a>
+            <a href="institucion.html" class="link link--text-light">Ministerio Secretaría General de la Presidencia</a>
+            <a href="institucion.html" class="link link--text-light">Región Metropolitana de Santiago</a>
+            <a href="institucion.html" class="link link--text-light">Ministerio de Transportes y Telecomunicaciones</a>
+            <a href="institucion.html" class="link link--text-light">Región de Tarapacá</a>
+            <a href="institucion.html" class="link link--text-light">Ministerio de Justicia</a>
+            <a href="institucion.html" class="link link--text-light">Región de Aysén del General Carlos Ibáñez del Campo</a>
             <div class="clearfix">
               <a href="instituciones.html" class="more more--right">Ver más</a>
             </div>
@@ -637,10 +556,8 @@
         </div>
         <div class="col-sm-12 col-md-12 text-xs-center text-sm-center">
           <div class="site-search_button-results">
-            <a href="resultados.html"
-               class="button button--clean button--more">
-              Ver todos los resultados
-            </a>
+            <a href="resultados.html" class="button button--clean button--more">
+              Ver todos los resultados</a>
           </div>
         </div>
       </div>
@@ -651,8 +568,7 @@
 <footer class="site-footer">
   <div class="container">
     <a href="/" class="site-footer_logo">
-      <i class="icon-gob-footer"></i>
-    </a>
+      <i class="icon-gob-footer"></i></a>
     <div class="row">
       <div class="col-md-12 col-xl-8">
         <div class="row menu">
@@ -674,12 +590,12 @@
           </li>
         </ul>
         <a href="http://visitasguiadas.presidencia.cl/" target="_blank" class="button button--block site-footer_button">
-          Visitas a La Moneda
-        </a>
+          Visitas a La Moneda</a>
       </div>
     </div>
   </div>
 </footer>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

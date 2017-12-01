@@ -160,7 +160,7 @@
   margin: 25px 0 0;
   text-decoration: none;
   @include mq($from: tablet) {
-    height: 362px;
+    height: 22.62500rem;
     margin: 25px 0;
   }
   @include mq($from: desktop) {
@@ -168,7 +168,7 @@
     margin: 0;
   }
   @include mq($from: wide) {
-    height: 292px;
+    height: 18.25rem;
   }
   &:hover {
     background-color: get-color(light);
