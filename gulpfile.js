@@ -25,16 +25,19 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(gulp.dest('./site/css'))
+    .pipe(gulp.dest('./documentation/css'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('copy', function () {
   gulp.src('./src/fonts/*')
     .pipe(gulp.dest('./dist/fonts'))
-    .pipe(gulp.dest('./site/fonts'));
+    .pipe(gulp.dest('./site/fonts'))
+    .pipe(gulp.dest('./documentation/fonts'));
   gulp.src('./src/images/**/*')
     .pipe(gulp.dest('./dist/images'))
     .pipe(gulp.dest('./site/images'))
+    .pipe(gulp.dest('./documentation/images'));
 });
 
 gulp.task('js', function () {
@@ -45,7 +48,8 @@ gulp.task('js', function () {
     .pipe(uglify())
     .pipe(concat('gob.cl.js'))
     .pipe(gulp.dest('./dist/js'))
-    .pipe(gulp.dest('./site/js'));
+    .pipe(gulp.dest('./site/js'))
+    .pipe(gulp.dest('./documentation/js'));
 });
 
 gulp.task('serve', ['default'], function() {
@@ -91,10 +95,5 @@ gulp.task('clean', function () {
   return gulp.src('./dist')
     .pipe(clean());
 });
-/*
-gulp.task('clean:site', function () {
-  return gulp.src('./site')
-    .pipe(clean());
-});
-*/
+
 gulp.task('default', gulpSequence(['clean'], ['sass', 'copy', 'js']));
