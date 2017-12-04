@@ -165,7 +165,7 @@
   }
   @include mq($from: desktop) {
     height: 27.12500rem;
-    margin: 0;
+    margin: 0 0 25px 0;
   }
   @include mq($from: wide) {
     height: 18.25rem;
