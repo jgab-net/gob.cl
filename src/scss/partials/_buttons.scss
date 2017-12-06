@@ -253,6 +253,7 @@
     color: get-color(white);
     &:hover,
     &.hover {
+      color: darken(get-color(white), 5%);
       background-color: get-color(dark);
     }
   }

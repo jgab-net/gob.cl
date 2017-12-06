@@ -60,7 +60,8 @@ gulp.task('serve', ['default'], function() {
       routes: {
         './node_modules': 'node_modules',
         '../css': 'css'
-      }
+      },
+      port: 5000
     }
   });
 
@@ -81,7 +82,8 @@ gulp.task('serve:documentation', function () {
         './node_modules': 'node_modules',
         '../css': 'css'
       }
-    }
+    },
+    port: 5000
   });
 
   gulp.watch('./src/scss/**/*.scss', ['sass']);

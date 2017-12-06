@@ -46,8 +46,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/themes/prism.min.css"
         integrity="sha256-DJJDQyzflMYiUb2jX3gilm9m3gAkHPC4WLv9BAk4rTE=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/themes/prism-solarizedlight.min.css"
-        integrity="sha256-VIKBgRYfj1O8WR61XPQYXm5k+JOe9FxerqTo8SiN89I=" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="css/gob.cl.bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/documentation.css" type="text/css">
@@ -59,27 +57,6 @@
       <i class="icon-gob"></i>
     </a>
     <div class="nav-content">
-      <div class="dropdown lang">
-        <a id="ropdownMenuLang" href="#" data-toggle="dropdown"
-           role="button" aira-haspopup="true" aria-expanded="false"
-           class="btn btn-seconday dropdown-toggle">
-          <i aria-hidden="true" class="fa fa-language mr-1"></i>es
-        </a>
-        <div aria-labelledby="ropdownMenuLang" class="dropdown-menu">
-          <a href="#" title="Change to language: Español"
-             class="dropdown-item">
-            Español
-          </a>
-          <a href="#" title="Change to language: Inglés"
-             class="dropdown-item">
-            Inglés
-          </a>
-        </div>
-      </div>
-      <a href="#" class="btn btn-search btn-search--mobile toggle-search">
-        <i class="ic-search btn-search_icon"></i>
-        <i class="ic-close btn-search_icon"></i>
-      </a>
       <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
@@ -114,26 +91,63 @@
           <aside class="aside" id="sidebar">
             <div class="">
               <div class=" nopadding bg-light">
-                <a class="link link--medium goTo" href="#tipografia">1. Tipografía</a>
-                <a class="link link--medium goTo" href="#colores">2. Colores</a>
-                <a class="link link--medium goTo" href="#botones">3. Botones</a>
-                <a class="link link--medium goTo" href="#iconos">4. Iconos</a>
-                <a class="link link--medium goTo" href="#acordeones">5. Acordeones</a>
-                <a class="link link--medium goTo" href="#formularios">6. Formularios</a>
-                <a class="link link--medium goTo" href="#sidebars">7. Sidebars</a>
-                <a class="link link--medium goTo" href="#bloques">8. Bloques</a>
+                <a class="link link--medium goTo" href="#comenzando">1. Comenzando</a>
+                <a class="link link--medium goTo" href="#tipografia">2. Tipografía</a>
+                <a class="link link--medium goTo" href="#colores">3. Colores</a>
+                <a class="link link--medium goTo" href="#botones">4. Botones</a>
+                <a class="link link--medium goTo" href="#iconos">5. Iconos</a>
+                <a class="link link--medium goTo" href="#acordeones">6. Acordeones</a>
+                <a class="link link--medium goTo" href="#formularios">7. Formularios</a>
+                <a class="link link--medium goTo" href="#componentes">8. Componentes Visuales</a>
+                <a class="link link--medium goTo" href="#bloques">9. Bloques</a>
               </div>
             </div>
           </aside>
         </div>
         <div class="col-12 col-lg-9">
+          <section class="post-section" id="comenzando">
+            <h2 class="heading-large">1. Comenzando</h2>
+            <article class="c-box">
+              <p class="box_text">
+                Para utilizar este framework, es necesario incluir el css en cualquiera de sus variantes
+                y el js, la tipografía Roboto y bootstrap 4.
+                Un layout de ejemplo podría ser el siguiente:
+              </p>
+              <pre data-src="examples/layout.html">
+                <code class="language-markup"></code>
+              </pre>
+
+              <p class="box_text">
+                El framework viene con 3 variantes:
+              </p>
+              <ul class="circle">
+                <li><code>gob.cl.css:</code> framework completo</li>
+                <li><code>gob.base.cl.css:</code> un subset solo con los componentes base del framework</li>
+                <li><code>gob.cl.bootstrap.css:</code> incluye su propia versión de bootstrap 4</li>
+              </ul>
+              <br />
+              <p>
+                También puede ser usado desde sass importando el .scss de la variante necesaria. Un ejemplo 
+                de integración con sass y boostrap sería el siguiente:
+              </p>
+              <p>Variables: </p>
+              <pre data-src="examples/_variables.scss">
+                <code class="language-scss"></code>
+              </pre>
+              <p>Estilo: </p>
+              <pre data-src="examples/style.scss">
+                <code class="language-scss"></code>
+              </pre>
+              <br />
+            </article>
+          </section>
           <section class="post-section" id="tipografia">
-            <h2 class="heading-large">1. Tipografía</h2><br>
+            <h2 class="heading-large">2. Tipografía</h2><br>
             <article class="c-box">
               <p class="box_text">
                 La tipografía elegida para ser utilizada en este kit es Roboto, en sus familias Roboto
-                y Roboto Slab. Esta tipografía fue seleccionada por ser una familia diseñada para facilitar la lectura
-                en dispositivos con pantallas, sobre todo móviles, ya que es la tipografía por defecto en dispositivos
+                y Roboto Slab. Esta tipografía fue seleccionada por ser una familia diseñada para facilitar la lectura,
+                sobre todo móviles, ya que es la tipografía por defecto en dispositivos
                 con sistema operativo Android.
               </p>
             </article>
@@ -190,8 +204,9 @@
                   <p class="heading-large">Heading Large dark</p>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: RobotoSlab;</p>
+                  <p class="aux-box_side-text">font-size: 2rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
                 </div>
               </div>
             </article>
@@ -201,19 +216,9 @@
                   <p class="heading-medium">Heading Medium</p>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
-                </div>
-              </div>
-            </article>
-            <article class="aux-box">
-              <div class="row">
-                <div class="col-12 col-md-8">
-                  <p class="heading-medium">Sub Heading Medium</p>
-                </div>
-                <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 21px;</p>
+                  <p class="aux-box_side-text">font-family: RobotoSlab;</p>
+                  <p class="aux-box_side-text">font-size: 1.375rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
                 </div>
               </div>
             </article>
@@ -223,8 +228,9 @@
                   <p class="heading-link">Heading Link Small</p>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: RobotoSlab;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
                 </div>
               </div>
             </article>
@@ -234,8 +240,10 @@
                   <p class="heading-label">HEADING5</p>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: .6875rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">text-transform: uppercase;</p>
                 </div>
               </div>
             </article>
@@ -245,41 +253,35 @@
                   <p>Body Default</p>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
                 </div>
               </div>
             </article>
             <article class="aux-box">
               <div class="row">
                 <div class="col-12 col-md-8">
-                  <p>Body Small</p>
+                  <p class="error">Body error</p>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">color: rgba(254,101,101,.6);</p>
                 </div>
               </div>
             </article>
             <article class="aux-box">
               <div class="row">
                 <div class="col-12 col-md-8">
-                  <p class="error">Body Small error</p>
+                  <p class="disable">Body Disabled</p>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
-                </div>
-              </div>
-            </article>
-            <article class="aux-box">
-              <div class="row">
-                <div class="col-12 col-md-8">
-                  <p class="disable">Body Small Disabled</p>
-                </div>
-                <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">color: #bdbdbd;</p>
                 </div>
               </div>
             </article>
@@ -293,28 +295,23 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
-                </div>
-              </div>
-            </article>
-            <article class="aux-box">
-              <div class="row">
-                <div class="col-12 col-md-8"><a>Link Base</a></div>
-                <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-style: italic;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">color: rgba(17,17,17,.5);</p>
                 </div>
               </div>
             </article>
             <article class="aux-box">
               <div class="row">
                 <div class="col-12 col-md-8">
-                  <p>Filter</p>
+                  <a>Link Base</a>
                 </div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
                 </div>
               </div>
             </article>
@@ -322,8 +319,10 @@
               <div class="row">
                 <div class="col-12 col-md-8"><span class="type">Type</span></div>
                 <div class="col-12 col-md-4">
-                  <p class="aux-box_side-text">font-family: RobotoSlab-Regular;</p>
-                  <p class="aux-box_side-text">font-size: 32px;</p>
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: .875rem;</p>
+                  <p class="aux-box_side-text">font-weight: 600;</p>
+                  <p class="aux-box_side-text">color: #2fae7d;</p>
                 </div>
               </div>
             </article>
@@ -335,7 +334,7 @@
                       <h4 class="collapsible_title">Módulo código</h4>
                     </div>
                     <div class="collapsible_body">
-                      <pre data-src="htmls/tipografia.html">
+                      <pre data-src="examples/typography.html">
                         <code class="language-markup"></code>
                       </pre>
                     </div>
@@ -348,7 +347,7 @@
                 <div class="col-12">
                   <h2 class="heading-medium">Ejemplos de bloques de texto</h2>
                 </div>
-                <div class="col-12 col-md-8">
+                <div class="col-12">
                   <h2 class="heading-medium">Roboto</h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -431,7 +430,7 @@
                             <h4 class="collapsible_title">Módulo de código</h4>
                           </div>
                           <div class="collapsible_body">
-                            <pre data-src="htmls/listas.html">
+                            <pre data-src="examples/list.html">
                               <code class="language-markup"></code>
                             </pre>
                           </div>
@@ -444,7 +443,7 @@
             </article>
           </section>
           <section class="section post-section" id="colores">
-            <h2 class="heading-large">2. Colores</h2>
+            <h2 class="heading-large">3. Colores</h2>
             <article>
               <p>
                 La paleta de colores que se eligió para el kit responde a la necesidad de mantener la identidad de los
@@ -462,7 +461,7 @@
                 <div class="col-6 col-md-4">
                   <div class="c-color">
                     <div class="c-color_circle bg-bluedark"></div>
-                    <div class="c-color_text">FE6565</div>
+                    <div class="c-color_text">0A132D</div>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -537,7 +536,7 @@
             </article>
           </section>
           <section class="section post-section" id="botones">
-            <h2 class="heading-large">3. Botones</h2>
+            <h2 class="heading-large">4. Botones</h2>
             <article>
               <p class="box_text">
                 Los botones de este kit abarcan todas las necesidades que deberían cubrir este tipo de
@@ -619,7 +618,7 @@
                         <h4 class="collapsible_title">Módulo de código</h4>
                       </div>
                       <div class="collapsible_body">
-                        <pre data-src="htmls/botones.html">
+                        <pre data-src="examples/buttons.html">
                           <code class="language-markup"></code>
                         </pre>
                       </div>
@@ -671,7 +670,7 @@
                         <h4 class="collapsible_title">Módulo de código</h4>
                       </div>
                       <div class="collapsible_body">
-                        <pre data-src="htmls/links.html">
+                        <pre data-src="examples/links.html">
                           <code class="language-markup"></code>
                         </pre>
                       </div>
@@ -682,36 +681,84 @@
             </article>
             <article>
               <h2 class="heading-medium">Tags</h2>
+              <p>
+                Los tags pueden ser usados de dos formas, como enlaces o con el comportamiento de un checkbox.
+              </p>
+              <h5>Links: </h5>
               <div class="row">
-                <div class="col-12 col-md-3">
-                  <p><a class="ctag">Tag</a></p>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-12 col-md-4">
-                  <p><a class="ctag">Tag</a></p>
-                </div>
-                <div class="col-12 col-md-4">
-                  <p><a class="ctag">Tag</a></p>
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#/" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12 col-md-4">
-                  <p><a class="ctag">Tag</a></p>
-                </div>
-                <div class="col-12 col-md-4">
-                  <p><a class="ctag">Tag</a></p>
-                </div>
-                <div class="col-12 col-md-4">
-                  <p><a class="ctag">Tag</a></p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-md-4"></div>
-                <div class="col-12 col-md-4">
-                  <p><a class="ctag">Tag</a></p>
-                </div>
-                <div class="col-12 col-md-4">
-                  <p><a class="ctag">Tag</a></p>
+              <div class="row bg-bluedark">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#/" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="c-collapsible">
@@ -722,7 +769,7 @@
                         <h4 class="collapsible_title">Módulo de código</h4>
                       </div>
                       <div class="collapsible_body">
-                        <pre data-src="htmls/tags.html">
+                        <pre data-src="examples/tags-link.html">
                           <code class="language-markup"></code>
                         </pre>
                       </div>
@@ -730,10 +777,166 @@
                   </ul>
                 </div>
               </div>
+              <h5>Checkbox:</h5>
+              <div class="row">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <label for="1tag1" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag1" name="input" value="tag1" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag2" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag2" name="input" value="tag2" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag3" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag3" name="input" value="tag3" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag4" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag4" name="input" value="tag4" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag5" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag5" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag5" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag6" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row bg-bluedark">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <label for="2tag1" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag1" name="input" value="tag1" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag2" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag2" name="input" value="tag2" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag3" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag3" name="input" value="tag3" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag4" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag4" name="input" value="tag4" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag5" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag6" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row bg-bluedark">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <label for="3tag1" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag1" checked name="input" value="tag1" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag2" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag2" name="input" value="tag2" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag3" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag3" name="input" value="tag3" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag4" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag4" name="input" value="tag4" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag5" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag6" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                        <pre data-src="examples/tags-checkbox.html">
+                          <code class="language-markup"></code>
+                        </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Los tags de tipo checkbox pueden tener programado callbacks en javascript que se ejecutan
+                cuando se selecciona un elemento o se cancela la selección de la siguiente forma:
+              </p>
+              <pre data-src="examples/tags.js">
+                <code class="language-javascript"></code>
+              </pre>
             </article>
           </section>
           <section class="section post-section" id="iconos">
-            <h2 class="heading-large">4. Iconos</h2>
+            <h2 class="heading-large">5. Iconos</h2>
             <div class="row">
               <div class="col-12">
                 <div class="text-xs-center text-sm-center">
@@ -795,15 +998,16 @@
                   <p>icon-arrow</p>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <i class="icon-play icon--top"></i>
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-play icon--top"></i>
+                  <p>icon-play</p>
+                </div>
               </div>
             </div>
           </section>
           <section class="section post-section" id="acordeones">
-            <h2 class="heading-large">5. Acordeones</h2>
+            <h2 class="heading-large">6. Acordeones</h2>
             <article>
               <div class="row c-buttons">
                 <div class="col">
@@ -937,7 +1141,7 @@
                             <h4 class="collapsible_title">Módulo de código</h4>
                           </div>
                           <div class="collapsible_body">
-                          <pre data-src="htmls/acordeones.html">
+                          <pre data-src="examples/collapsible.html">
                             <code class="language-markup"></code>
                           </pre>
                           </div>
@@ -950,7 +1154,7 @@
             </article>
           </section>
           <section class="section post-section" id="formularios">
-            <h2 class="heading-large">6. Formularios</h2>
+            <h2 class="heading-large">7. Formularios</h2>
             <article>
               <div class="row c-buttons">
                 <div class="col-12">
@@ -1040,11 +1244,11 @@
                             Option one is this and that&mdash;be sure to include why it's great
                           </label>
                           <label class="form-check-label">
-                            <input type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                            <input type="radio" name="gridRadios" id="gridRadios2" value="option1">
                             Option one is this and that&mdash;be sure to include why it's great
                           </label>
                           <label class="form-check-label">
-                            <input type="radio" name="gridRadios" id="gridRadios1" value="option1" disabled>
+                            <input type="radio" name="gridRadios" id="gridRadios3" value="option1" disabled>
                             Option one is this and that&mdash;be sure to include why it's great
                           </label>
                         </div>
@@ -1180,7 +1384,7 @@
                             <h4 class="collapsible_title">Módulo de código</h4>
                           </div>
                           <div class="collapsible_body">
-                            <pre data-src="htmls/formularios.html">
+                            <pre data-src="examples/formularios.html">
                               <code class="language-markup"></code>
                             </pre>
                           </div>
@@ -1192,22 +1396,43 @@
               </div>
             </article>
           </section>
-          <section class="section post-section" id="sidebars">
-            <h2 class="heading-large">7. Sidebars</h2>
-            <aside class="aside">
-              <div class="aside_header">
-                <h2 class="aside_title heading-medium">Titulo</h2>
+          <section class="section post-section" id="componentes">
+            <h2 class="heading-large">8. Componentes Visuales</h2>
+            <article>
+              <h2 class="heading-medium">New list</h2>
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <article class="new new--mobile">
+                    <time class="new_date">
+                      16 de Noviembre de 2017
+                    </time>
+                    <figure class="new_figure-mobile">
+                      <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
+                    </figure>
+                    <h2 class="new_title">
+                      <a href="#" class="link link--text-dark visited">
+                        Lorem ipsum dolor sit
+                      </a>
+                    </h2>
+                  </article>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <article class="new new--mobile">
+                    <time class="new_date">
+                      16 de Noviembre de 2017
+                    </time>
+                    <figure class="new_figure-mobile">
+                      <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
+                    </figure>
+                    <h2 class="new_title">
+                      <a href="#" class="link link--text-dark visited">
+                        Lorem ipsum dolor sit
+                      </a>
+                    </h2>
+                  </article>
+                </div>
               </div>
-              <div class="collapsible-block">
-                <a class="link link--medium" href="#">1. Tipografía</a>
-                <a class="link link--medium" href="#">2. Colores</a>
-                <a class="link link--medium" href="#">3. Botones</a>
-                <a class="link link--medium" href="#">4. Iconos</a>
-                <a class="link link--medium" href="#">5.Acordeones</a>
-                <a class="link link--medium" href="#">6. Formularios</a>
-                <a class="link link--medium" href="#">7. Sidebars</a>
-                <a class="link link--medium" href="#">8. Bloques</a></div>
-            </aside>
+            </article>
             <div class="c-collapsible">
               <div class="collapsible-block">
                 <ul class="collapsible">
@@ -1216,7 +1441,265 @@
                       <h4 class="collapsible_title">Módulo de código</h4>
                     </div>
                     <div class="collapsible_body">
-                      <pre data-src="htmls/sidebars.html">
+                      <pre data-src="examples/list-new.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading-medium">Small Card</h2>
+              <div class="row">
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card-small">
+                    <h5 class="card-small_title">
+                      <a href="#" target="blank" class="card-small_link">
+                        Link title
+                        <i class="icon-arrow-right-black icon--right"></i>
+                      </a>
+                    </h5>
+                    <div class="card-small_body">
+                      <p class="card-small_text">
+                        Bajada ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card-small">
+                    <h5 class="card-small_title">
+                      <a href="#" target="blank" class="card-small_link">
+                        Link title
+                        <i class="icon-arrow-right-black icon--right"></i>
+                      </a>
+                    </h5>
+                    <div class="card-small_body">
+                      <p class="card-small_text">
+                        Bajada ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card-small">
+                    <h5 class="card-small_title">
+                      <a href="#" target="blank" class="card-small_link">
+                        Link title
+                        <i class="icon-arrow-right-black icon--right"></i>
+                      </a>
+                    </h5>
+                    <div class="card-small_body">
+                      <p class="card-small_text">
+                        Bajada ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/card-small.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading-medium">Featured Card</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#" class="featured-card has-icon d-none d-lg-block">
+                    <div class="featured-card_figure elem-bg">
+                      <img src="images/chilemejor.jpg" alt="" class="card_image img-to-bg">
+                    </div>
+                    <div class="featured-card_body">
+                      <h2 class="featured-card_title">Este es el título</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="featured-card has-icon d-none d-lg-block">
+                    <div class="featured-card_figure elem-bg">
+                      <img src="images/chilemejor.jpg" alt="" class="card_image img-to-bg">
+                    </div>
+                    <div class="featured-card_body">
+                      <h2 class="featured-card_title">Este es el título</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/featured-card.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading.medium">Data Card</h2>
+              <div class="row">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h2 class="card-data_title">
+                          <span>Card w/o value</span>
+                        </h2>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h3 class="card-data_title">
+                          <span class="card-data_number">00</span>
+                          <span class="card-data_title-text">Card value</span>
+                        </h3>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h3 class="card-data_title">
+                          <span class="card-data_number">00</span>
+                          <span class="card-data_title-text">Card value</span>
+                        </h3>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h3 class="card-data_title">
+                          <span class="card-data_number">00</span>
+                          <span class="card-data_title-text">Card value</span>
+                        </h3>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/card-data.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading.medium">Data Small Card</h2>
+              <div class="row">
+                <div class="col-12 col-lg-3 bg-lightgray top">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span class="d-none d-md-block">&nbsp;</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix">
+                      <a href="#" class="pull-right">Link.</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 bg-light">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span>00</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix d-md-none">
+                      <a href="#" class="pull-right">Link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 bg-light">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span>00</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix d-md-none">
+                      <a href="#" class="pull-right">Link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 bg-light">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span>00</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix d-md-none">
+                      <a href="#" class="pull-right">Link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/card-data-small.html">
                         <code class="language-markup"></code>
                       </pre>
                     </div>
@@ -1226,65 +1709,32 @@
             </div>
           </section>
           <section class="section post-section" id="bloques">
-            <h2 class="heading-large">8. Bloques</h2>
-            <div class="row">
-              <div class="col-12">
-                <h1>Noticias</h1>
-              </div>
-              <div class="col-12 col-md-4">
-                <article class="card">
-                  <h2 class="card_title">Titulo Noticias</h2>
-                  <p class="card_text">
-                    Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras
-                    finibus ligula ac mi condiment facilisis. Cras finibus ligula.
-                  </p>
-                  <a class="card_more" href="#">Más información</a>
-                </article>
-              </div>
-              <div class="col-12 col-md-4">
-                <article class="card">
-                  <h2 class="card_title">Titulo Noticias</h2>
-                  <p class="card_text">
-                    Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras
-                    finibus ligula ac mi condiment facilisis. Cras finibus ligula.
-                  </p>
-                  <a class="card_more" href="#">Más información</a>
-                </article>
-              </div>
-              <div class="col-12 col-md-4">
-                <article class="card">
-                  <h2 class="card_title">Titulo Noticias</h2>
-                  <p class="card_text">
-                    Bajada noticias Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras
-                    finibus ligula ac mi condiment facilisis. Cras finibus ligula.
-                  </p>
-                  <a class="card_more" href="#">Más información</a>
-                </article>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <h1 class="heading-large">Persona</h1><br>
-                <article class="profile">
-                  <div class="profile_header">
-                    <h3 class="profile_title">Paola Tapia Salas</h3>
-                    <span class="profile_job">Ministra de Transportes y Telecomunicaciones</span>
+            <h2 class="heading-large">9. Bloques</h2>
+            <article>
+              <h2 class="heading-medium">Sub sección</h2>
+              <section class="sub-section">
+                <div class="row">
+                  <div class="col-md-5 align-self-center">
+                    <h5 class="heading-medium">Title</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-10">
+                        <a href="#" class="button button--block button--light button--clean button--space">
+                          Link
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="profile_image">
-                    <img class="img-responsive" src="images/paola-tapia.png" alt="">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-6 align-self-center">
+                    <img src="images/about-of.jpg" alt="" class="img-fluid w-100 img-frame">
                   </div>
-                  <p>
-                    Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment
-                    facilisis. Cras finibus ligula ac condimentum facilisis.
-                  </p>
-                  <ul class="profile_info">
-                    <li><a class="profile_twitter" href="#">@paolatapiasalas</a></li>
-                    <li><span>Teléfono: (56-6) 1234-5678 </span></li>
-                    <li><span>Correo electrónico: info@gob.cl</span></li>
-                  </ul>
-                </article>
-              </div>
-            </div>
+                </div>
+              </section>
+            </article>
             <div class="c-collapsible">
               <div class="collapsible-block">
                 <ul class="collapsible">
@@ -1293,14 +1743,147 @@
                       <h4 class="collapsible_title">Módulo de código</h4>
                     </div>
                     <div class="collapsible_body">
-                      <pre data-src="htmls/bloques.html">
-                        <code class="language-markup"></code>
-                      </pre>
+                        <pre data-src="examples/sub-section.html">
+                          <code class="language-markup"></code>
+                        </pre>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
+            <article>
+              <h2 class="heading-medium">Perfil</h2>
+              <div class="row">
+                <div class="col-12">
+                  <div class="profile profile--half">
+                    <div class="profile_image">
+                      <img src="images/paola-tapia.png" alt="" class="img-fluid w-100 img-frame">
+                    </div>
+                    <div class="profile_header">
+                      <h3 class="profile_title">
+                        Paola Tapia Salas
+                      </h3>
+                      <span class="profile_job">
+                        Charge
+                      </span>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p>
+                      <a href="https://twitter.com/" target="blank" class="profile_twitter">
+                        @twitter
+                      </a>
+                    </p>
+                    <ul class="profile_info">
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="profile">
+                    <div class="profile_header">
+                      <h2 class="heading-large">Michelle Bachelet Jeria</h2>
+                      <span class="profile_job">Charge</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="images/president.jpg" alt="" class="img-fluid w-100 img-frame">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="mt-1 mt-md-0">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                        </div>
+                        <ul class="profile_body">
+                          <li>
+                            <a href="https://twitter.com/" class="profile_twitter">
+                              @twitter
+                            </a>
+                          </li>
+                          <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                          <li><span>Correo electrónico: info@gob.cl</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <article class="profile">
+                    <div class="profile_header">
+                      <h3 class="profile_title">Paola Tapia Salas</h3>
+                      <span class="profile_job">Ministra de Transportes y Telecomunicaciones</span>
+                    </div>
+                    <div class="profile_image">
+                      <img class="img-responsive" src="images/paola-tapia.png" alt="">
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment
+                      facilisis. Cras finibus ligula ac condimentum facilisis.
+                    </p>
+                    <ul class="profile_info">
+                      <li><a class="profile_twitter" href="#">@paolatapiasalas</a></li>
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </article>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                  <div class="profile profile--half-small">
+                    <div class="profile_image profile_image--small">
+                      <img src="images/paola-tapia.png" alt="" class="img-fluid w-100 img-frame">
+                    </div>
+                    <div class="profile_header">
+                      <h3 class="profile_title">name</h3>
+                      <span class="profile_job">charge</span>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment
+                      facilisis. Cras finibus ligula ac condimentum facilisis.
+                    </p>
+                    <p>
+                      <a href="https://twitter.com/" target="blank" class="profile_twitter">
+                      @twitter
+                      </a>
+                    </p>
+                    <ul class="profile_info">
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                  <div class="profile profile--half-small">
+                    <div class="profile_image profile_image--small">
+                      <img src="images/paola-tapia.png" alt="" class="img-fluid w-100 img-frame">
+                    </div>
+                    <div class="profile_header">
+                      <h3 class="profile_title">name</h3>
+                      <span class="profile_job">charge</span>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment
+                      facilisis. Cras finibus ligula ac condimentum facilisis.
+                    </p>
+                    <p>
+                      <a href="https://twitter.com/" target="blank" class="profile_twitter">
+                        @twitter
+                      </a>
+                    </p>
+                    <ul class="profile_info">
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
           </section>
         </div>
       </div>
@@ -1383,6 +1966,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"
         integrity="sha256-MOdZTZaHYcbubI1ggZrOK+am0uoo4tNJkvcvOzTDKAk="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-scss.min.js"
+        integrity="sha256-1lVYQdPYmeuVDB/iXGqZBZvOPt5fwnRmM0Q2+aoGY7c="
         crossorigin="anonymous"></script>
 
 <script src="js/gob.cl.js"></script>

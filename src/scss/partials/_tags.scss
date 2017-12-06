@@ -43,6 +43,17 @@
 }
 
 label.ctag {
+
+  &.ctag--light {
+    &.active {
+      border: 2px solid get-color(gray);
+
+      &:hover {
+        color: get-color(red);
+      }
+    }
+  }
+
   &.active {
     background-color: transparent;
     border: 2px solid rgba(get-color(light), .3);
@@ -66,18 +77,8 @@ label.ctag {
       text-decoration: none;
       color: get-color(white);
     }
-  }
 
-  &--light {
 
-    border: 2px solid get-color(gray);
-    border-radius: 3px;
-    color: get-color(white);
-
-    &:hover,
-    &.hover {
-      color: get-color(dark);
-    }
   }
 }
 
