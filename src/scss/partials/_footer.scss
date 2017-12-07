@@ -1,0 +1,126 @@
+/*
+  FOOTER
+*/
+.site-footer {
+  background-color: get-color(bluedark);
+  border-top: 1px solid rgba(get-color(gray), .2);
+  // padding: 60px 0 60px;
+  height: 64px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  @include mq($from: tablet) {
+    padding: 40px 0 50px;
+    height: auto;
+  }
+  @include mq($from: desktop) {
+    padding: 40px 0 50px;
+  }
+  &--hasbutton {
+    @include mq($until: tablet) {
+      margin-bottom: 90px;
+    }
+  }
+  &_logo {
+    // margin: 0 0 20px;
+    // display: block;
+    position: absolute;
+    bottom: 0;
+    // top: 0;
+    // margin-top: -1px;
+  }
+  &_button {
+    margin-top: 0;
+    margin-bottom: 44px;
+    @include mq($from: tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  .social {
+    text-align: center;
+    li {
+      display: inline-block;
+      margin-bottom: 10px;
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+      a {
+        font-size: 32px;
+        color: get-color(gray);
+      }
+    }
+  }
+  .menu {
+    a {
+      padding: 10px 40px 10px 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+
+      @include mq($from: tablet) {
+        padding: 10px 0;
+      }
+
+    }
+    li {
+      &:not(:last-child) {
+        // margin: 0 0 10px 0;
+      }
+      a {
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+
+body {
+  @for $i from 0 through $footer-links-max {
+    &.footer-links-#{$i} {
+
+      main.site-main {
+        min-height: calc(100vh - #{get-not-main-height($i)});
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+          min-height: calc(100vh - #{get-not-main-height($i, md)});
+        }
+
+        @media (min-width: map-get($grid-breakpoints, xl)) {
+          min-height: calc(100vh - #{get-not-main-height($i, xl)});
+        }
+      }
+
+      footer.site-footer {
+        height: get-footer-height($i);
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+          height: get-footer-height($i, md);
+        }
+
+        @media (min-width: map-get($grid-breakpoints, xl)) {
+          height: get-footer-height($i, xl);
+        }
+
+        .menu {
+          height: $i * $footer-link-height;
+
+          @media (min-width: map-get($grid-breakpoints, md)) {
+            height: round($i / 2) * $footer-link-height;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+footer.site-footer {
+  .menu {
+    a {
+      height: $footer-link-height;
+    }
+  }
+}

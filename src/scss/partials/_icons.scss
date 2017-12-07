@@ -1,0 +1,94 @@
+/* =Icons
+----------------------------------------------- */
+@mixin svgIcon($name, $width, $height) {
+  background-image: url($iconsPath + $name + ".svg");
+  width: $width + px;
+  height: $height + px;
+}
+
+@mixin getIcon($icon) {
+  content: $icon;
+  font-family: "gobcl" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*="icon-"] {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+[class^="ic-"],
+[class*=" ic-"] {
+  display: inline-block;
+  vertical-align: middle;
+  &:before {
+    display: block;
+  }
+}
+
+.icon {
+  &--top {
+    margin-bottom: .6em;
+  }
+  &--bottom {
+    margin-top: .6em;
+  }
+  &--left {
+    margin-right: .6em;
+  }
+  &--right {
+    margin-left: .6em;
+  }
+}
+
+// Icons Map
+$icons: (
+  search: (width : 23, height : 23),
+  close: (width : 20, height : 20),
+  close-white: (width : 20, height : 20),
+  burguer: (width : 24, height : 14),
+  dot-red: (width : 7, height : 7),
+  dot-green: (width : 7, height : 7),
+  dot-blue: (width : 7, height : 7),
+  delete: (width : 17, height : 17),
+  arrow-select: (width : 9, height : 6),
+  arrow-right-black: (width : 13, height : 7),
+  gob: (width : 110, height : 32),
+  gob-footer : (width : 110, height : 31),
+  key: (width : 36, height : 39),
+  facebook: (width : 32, height : 32),
+  twitter: (width : 33, height : 26),
+  instagram: (width : 32, height : 32),
+  youtube: (width : 32, height : 24),
+  cursor: (width : 13, height : 13),
+  store: (width : 14, height : 14),
+  email: (width : 14, height : 11),
+  cursor-white: (width : 13, height : 13),
+  store-white: (width : 14, height : 14),
+  email-white: (width : 14, height : 11),
+  volume: (width : 12, height : 10),
+  play: (width : 8, height : 11),
+  play-video: (width : 116, height : 116),
+  pause: (width : 10, height : 10),
+  download: (width : 10, height : 16),
+  messenger: (width : 32, height : 32),
+);
+
+@each $iconName, $icon in $icons {
+  .icon {
+    &-#{$iconName} {
+      @include svgIcon($iconName, map-get($icon, width), map-get($icon, height));
+    }
+  }
+}
+

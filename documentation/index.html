@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="language" content="es">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Framework UI</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href=images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
+  <!--[if lte IE 7]>
+  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"
+          integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE="
+          crossorigin="anonymous"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+        integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css"
+        integrity="sha256-xJOZHfpxLR/uhh1BwYFS5fhmOAdIRQaiOul5F/b7v3s=" crossorigin="anonymous"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/themes/prism.min.css"
+        integrity="sha256-DJJDQyzflMYiUb2jX3gilm9m3gAkHPC4WLv9BAk4rTE=" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/gob.cl.bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/documentation.css" type="text/css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light fixed-top">
+  <div class="container">
+    <a href="#" class="navbar-brand align-self-start">
+      <i class="icon-gob"></i>
+    </a>
+    <div class="nav-content">
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div id="navbarSupportedContent" class="navbar-collapse collapse justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Link</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main class="site-main">
+  <section class="section bg-bluedark">
+    <div class="container">
+      <article class="text-light">
+        <h1 class="heading-large">Librería Framework kit Gobierno</h1>
+        <p>
+          Este framework de UI fue construido con el fin de generar un estándar para utilizarse en el diseño de sitios
+          de gobierno. A continuación se presentan los elementos construidos y su forma de utilizarlos al momento de
+          desarrollar front-end.
+        </p>
+      </article>
+    </div>
+  </section>
+  <section class="section section--medium">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-3">
+          <aside class="aside" id="sidebar">
+            <div class="">
+              <div class=" nopadding bg-light">
+                <a class="link link--medium goTo" href="#comenzando">1. Comenzando</a>
+                <a class="link link--medium goTo" href="#tipografia">2. Tipografía</a>
+                <a class="link link--medium goTo" href="#colores">3. Colores</a>
+                <a class="link link--medium goTo" href="#botones">4. Botones</a>
+                <a class="link link--medium goTo" href="#iconos">5. Iconos</a>
+                <a class="link link--medium goTo" href="#acordeones">6. Acordeones</a>
+                <a class="link link--medium goTo" href="#formularios">7. Formularios</a>
+                <a class="link link--medium goTo" href="#componentes">8. Componentes Visuales</a>
+                <a class="link link--medium goTo" href="#bloques">9. Bloques</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-12 col-lg-9">
+          <section class="post-section" id="comenzando">
+            <h2 class="heading-large">1. Comenzando</h2>
+            <article class="c-box">
+              <p class="box_text">
+                Para utilizar este framework, es necesario incluir el css en cualquiera de sus variantes
+                y el js, la tipografía Roboto y bootstrap 4.
+                Un layout de ejemplo podría ser el siguiente:
+              </p>
+              <pre data-src="examples/layout.html">
+                <code class="language-markup"></code>
+              </pre>
+
+              <p class="box_text">
+                El framework viene con 3 variantes:
+              </p>
+              <ul class="circle">
+                <li><code>gob.cl.css:</code> framework completo</li>
+                <li><code>gob.base.cl.css:</code> un subset solo con los componentes base del framework</li>
+                <li><code>gob.cl.bootstrap.css:</code> incluye su propia versión de bootstrap 4</li>
+              </ul>
+              <br />
+              <p>
+                También puede ser usado desde sass importando el .scss de la variante necesaria. Un ejemplo 
+                de integración con sass y boostrap sería el siguiente:
+              </p>
+              <p>Variables: </p>
+              <pre data-src="examples/_variables.scss">
+                <code class="language-scss"></code>
+              </pre>
+              <p>Estilo: </p>
+              <pre data-src="examples/style.scss">
+                <code class="language-scss"></code>
+              </pre>
+              <br />
+            </article>
+          </section>
+          <section class="post-section" id="tipografia">
+            <h2 class="heading-large">2. Tipografía</h2><br>
+            <article class="c-box">
+              <p class="box_text">
+                La tipografía elegida para ser utilizada en este kit es Roboto, en sus familias Roboto
+                y Roboto Slab. Esta tipografía fue seleccionada por ser una familia diseñada para facilitar la lectura,
+                sobre todo móviles, ya que es la tipografía por defecto en dispositivos
+                con sistema operativo Android.
+              </p>
+            </article>
+            <article class="c-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <h2 class="heading-medium">Roboto</h2>
+                  <p>
+                    Es la tipografía base del kit. Debe ser utilizada por defecto en todos los textos del sitio que no
+                    sean títulos. Los tamaños y jerarquías están indicados más abajo.
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <h2 class="heading-medium" style="font-size: 130px; margin: 57px 0 ; font-family:Roboto;">Aa</h2>
+                  <p style="font-size: 12px; color: #111111; font-family:Roboto;">
+                    abcdefghijklmnñopqrstuvwxyz.  
+                     1234567890 -=[];',./!@#$%^&*()_+.
+                  </p>
+                  <p style="font-size: 12px; color: #111111; font-family:Roboto;">
+                    ABCDEFGHIJKLMNÑOPQRSTUVWXYZ.
+                     1234567890 -=[];',./!@#$%^&*()_+.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="c-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <h2 class="heading-medium">Roboto Slab</h2>
+                  <p>
+                    Es la tipografía para destacar los títulos de las secciones del sitio. Sólo debe ser ocupada en
+                    títulos, ya que es una tipografía con un peso visual importante en comparación a Roboto regular.
+                  </p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <h2 class="heading-medium" style="font-size: 130px; margin: 57px 0 ; ;">Aa</h2>
+                  <p style="font-size: 12px; color: #111111;">
+                    abcdefghijklmnñopqrstuvwxyz.  1234567890
+                    -=[];',./!@#$%^&*()_+.
+                  </p>
+                  <p style="font-size: 12px; color: #111111;">
+                    ABCDEFGHIJKLMNÑOPQRSTUVWXYZ.  1234567890
+                    -=[];',./!@#$%^&*()_+.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="heading-medium">Estilos tipográficos</h2>
+                </div>
+                <div class="col-12 col-md-8">
+                  <p class="heading-large">Heading Large dark</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: RobotoSlab;</p>
+                  <p class="aux-box_side-text">font-size: 2rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <p class="heading-medium">Heading Medium</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: RobotoSlab;</p>
+                  <p class="aux-box_side-text">font-size: 1.375rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <p class="heading-link">Heading Link Small</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: RobotoSlab;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <p class="heading-label">HEADING5</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: .6875rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">text-transform: uppercase;</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <p>Body Default</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <p class="error">Body error</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">color: rgba(254,101,101,.6);</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <p class="disable">Body Disabled</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">color: #bdbdbd;</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <div class="main-post">
+                    <blockquote>
+                      <p>Quotes</p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-style: italic;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                  <p class="aux-box_side-text">color: rgba(17,17,17,.5);</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <a>Link Base</a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: 1rem;</p>
+                  <p class="aux-box_side-text">font-weight: 400;</p>
+                </div>
+              </div>
+            </article>
+            <article class="aux-box">
+              <div class="row">
+                <div class="col-12 col-md-8"><span class="type">Type</span></div>
+                <div class="col-12 col-md-4">
+                  <p class="aux-box_side-text">font-family: Roboto;</p>
+                  <p class="aux-box_side-text">font-size: .875rem;</p>
+                  <p class="aux-box_side-text">font-weight: 600;</p>
+                  <p class="aux-box_side-text">color: #2fae7d;</p>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/typography.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article class="c-box">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="heading-medium">Ejemplos de bloques de texto</h2>
+                </div>
+                <div class="col-12">
+                  <h2 class="heading-medium">Roboto</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                  <p class="heading-label">The quick brown fox jumps over the lazy dog.</p>
+                  <p class="heading-large">The quick brown fox jumps over the lazy.</p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                  <p>The quick brown fox jumps over the lazy dog.</p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.
+                  </p>
+                  <article class="main-post">
+                    <h1>The quick brown fox jumps over the lazy dog.</h1>
+                    <h4>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat.
+                    </h4>
+                    <small>Juan Pablo Segwell</small>
+                    <a href="#">Link fox jumps over the lazy dog.</a>
+                  </article>
+                </div>
+              </div>
+            </article>
+            <article class="c-box">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="heading-medium">Listas</h2>
+                  <ul class="circle">
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetua</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetua</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetua</p>
+                      <ul class="square">
+                        <li>
+                          <p>Lorem ipsum dolor sit amet, consectetua</p>
+                        </li>
+                        <li>
+                          <p>Lorem ipsum dolor sit amet, consectetua</p>
+                        </li>
+                        <li>
+                          <p>Lorem ipsum dolor sit amet, consectetua</p>
+                          <ul>
+                            <li>
+                              <p>Lorem ipsum dolor sit amet, consectetua</p>
+                            </li>
+                            <li>
+                              <p>Lorem ipsum dolor sit amet, consectetua</p>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <h2 class="heading-medium">Listas</h2>
+                  <ul>
+                    <li><a class="link">1. Lorem ipsum dolor sit amet, consectetua</a></li>
+                    <li><a class="link">2. Lorem ipsum dolor sit amet, consectetua</a></li>
+                    <li><a class="link">3. Lorem ipsum dolor sit amet, consectetua</a></li>
+                  </ul>
+                  <div class="c-collapsible">
+                    <div class="collapsible-block">
+                      <ul class="collapsible">
+                        <li class="collapsible_item">
+                          <div class="collapsible_header active">
+                            <h4 class="collapsible_title">Módulo de código</h4>
+                          </div>
+                          <div class="collapsible_body">
+                            <pre data-src="examples/list.html">
+                              <code class="language-markup"></code>
+                            </pre>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="section post-section" id="colores">
+            <h2 class="heading-large">3. Colores</h2>
+            <article>
+              <p>
+                La paleta de colores que se eligió para el kit responde a la necesidad de mantener la identidad de los
+                colores que componen el sistema de marcas del gobierno pero llevados a un plano más digital.
+              </p>
+              <h2 class="heading-medium">Colores Principales</h2>
+              <p>Estos son los colores que siempre se ocupan por defecto en las vistas del kit.</p>
+              <div class="row">
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-red"></div>
+                    <div class="c-color_text">FE6565</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-bluedark"></div>
+                    <div class="c-color_text">0A132D</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-dark"></div>
+                    <div class="c-color_text">111111</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-gray"></div>
+                    <div class="c-color_text">A8B7C7</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-lightgray"></div>
+                    <div class="c-color_text">E3E5EF</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-light"></div>
+                    <div class="c-color_text">F5F6F7</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-12">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-white"></div>
+                    <div class="c-color_text">FFFFFF</div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="heading-medium">Colores Secundarios</h2>
+              <p>
+                Estos colores se utilizarán sólo en caso de que se necesario mostrar información secundaria y en el
+                caso que ésta no pueda ser visualizada utilizando los colores principales. Ejemplos: botones que sean
+                acciones especiales, modos de contingencia del sitio.
+              </p>
+              <div class="row">
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-blue"></div>
+                    <div class="c-color_text">0021FF</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-darkred"></div>
+                    <div class="c-color_text">BB0000</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-yellow"></div>
+                    <div class="c-color_text">F2C728</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-lightblue"></div>
+                    <div class="c-color_text">85B1F5</div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4">
+                  <div class="c-color">
+                    <div class="c-color_circle bg-green"></div>
+                    <div class="c-color_text">2FAE7D</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="section post-section" id="botones">
+            <h2 class="heading-large">4. Botones</h2>
+            <article>
+              <p class="box_text">
+                Los botones de este kit abarcan todas las necesidades que deberían cubrir este tipo de
+                elementos, por lo que no se deben ocupar otros botones.
+              </p>
+              <h2 class="heading-medium">Botón principal</h2>
+              <p>
+                El botón principal de este kit siempre es este. El resto de botones se debe usar a criterio de quien
+                esté poniendo en práctica el kit siempre priorizando los botones que corresponden a la paleta de colores
+                principales.
+              </p>
+              <div class="row c-buttons">
+                <div class="col-3">
+                  <a class="button button--block" href="#">Texto botón</a>
+                </div>
+              </div>
+              <h2 class="heading-medium">Botones secundarios</h2>
+              <div class="row c-buttons">
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--dark" href="#">
+                    Texto botón</a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--blue" href="#">
+                    Texto botón
+                  </a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--bluedark" href="#">
+                    Texto botón</a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--darkred" href="#">
+                    Texto botón</a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--lightgray" href="#">
+                    Texto botón</a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block" href="#">
+                    Texto botón
+                  </a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--white" href="#">
+                    Texto botón</a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--green" href="#">
+                    Texto botón
+                  </a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--lightblue" href="#">
+                    Texto botón</a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--gray" href="#">
+                    Texto botón
+                  </a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--gray-dark" href="#">
+                    Texto botón
+                  </a>
+                </div>
+                <div class="col-12 col-md-4">
+                  <a class="button button--block button--yellow" href="#">
+                    Texto botón
+                  </a>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                        <pre data-src="examples/buttons.html">
+                          <code class="language-markup"></code>
+                        </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h2 class="heading-medium">Links</h2>
+              <p>
+                Los links de texto deben ser utilizados como se muestran acá, según el color del fondo en donde están
+                siendo aplicados. En caso de que que exista una lista de links, estos deben ser en color negro #111111
+                (si es que el fondo es claro) o en blanco #FFFFFF (si es que el fondo es oscuro) y el último item (Ver
+                más o similar) siempre debe ser aplicado en color rojo #FE6565.
+              </p>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <a class="link" href="#">Texto boton link buscador</a>
+                </div>
+                <div class="col-12 col-md-6">
+                  <a class="link hover" href="#">Texto boton link buscador hover</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <a class="link link--has-dot-green" href="#">Texto boton link buscador</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <a class="link link--text-dark" href="#">Texto boton link buscador</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <a class="link link--text-dark hover" href="#">Texto boton link buscador hover</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <a class="link link--text-dark link--has-dot-red" href="#">
+                    Texto boton link buscador</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <a class="link link--dark" href="#">Texto boton link buscador</a>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <a class="link link--dark hover" href="#">Texto boton link buscador hover</a>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                        <pre data-src="examples/links.html">
+                          <code class="language-markup"></code>
+                        </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h2 class="heading-medium">Tags</h2>
+              <p>
+                Los tags pueden ser usados de dos formas, como enlaces o con el comportamiento de un checkbox.
+              </p>
+              <h5>Links: </h5>
+              <div class="row">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#/" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--light">
+                          Tag
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row bg-bluedark">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#/" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                        <pre data-src="examples/tags-link.html">
+                          <code class="language-markup"></code>
+                        </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h5>Checkbox:</h5>
+              <div class="row">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <label for="1tag1" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag1" name="input" value="tag1" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag2" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag2" name="input" value="tag2" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag3" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag3" name="input" value="tag3" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag4" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag4" name="input" value="tag4" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag5" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag5" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="1tag5" class="ctag ctag--light">
+                          Tag
+                          <input type="radio" id="1tag6" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row bg-bluedark">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <label for="2tag1" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag1" name="input" value="tag1" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag2" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag2" name="input" value="tag2" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag3" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag3" name="input" value="tag3" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag4" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag4" name="input" value="tag4" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag5" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="2tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="2tag6" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row bg-bluedark">
+                <div class="col-12 pt-2">
+                  <div class="tags">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <label for="3tag1" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag1" checked name="input" value="tag1" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag2" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag2" name="input" value="tag2" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag3" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag3" name="input" value="tag3" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag4" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag4" name="input" value="tag4" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag5" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                      <div class="tags_item">
+                        <label for="3tag5" class="ctag ctag--clarity">
+                          Tag
+                          <input type="radio" id="3tag6" name="input" value="tag5" class="d-none">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                        <pre data-src="examples/tags-checkbox.html">
+                          <code class="language-markup"></code>
+                        </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Los tags de tipo checkbox pueden tener programado callbacks en javascript que se ejecutan
+                cuando se selecciona un elemento o se cancela la selección de la siguiente forma:
+              </p>
+              <pre data-src="examples/tags.js">
+                <code class="language-javascript"></code>
+              </pre>
+            </article>
+          </section>
+          <section class="section post-section" id="iconos">
+            <h2 class="heading-large">5. Iconos</h2>
+            <div class="row">
+              <div class="col-12">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-gob icon--top"></i>
+                  <p>icon-gob</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-search icon--top"></i>
+                  <p>icon-search</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-close icon--top"></i>
+                  <p>icon-close</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-burguer icon--top"></i>
+                  <p>icon-burguer</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-dot-red icon--top"></i>
+                  <p>icon-dot-red</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-dot-green icon--top"></i>
+                  <p>icon-dot-green</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-dot-blue icon--top"></i>
+                  <p>icon-dot-blue</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-delete icon--top"></i>
+                  <p>icon-delete</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-arrow-select icon--top"></i>
+                  <p>icon-arrow</p>
+                </div>
+              </div>
+              <div class="col-6 col-lg-4">
+                <div class="text-xs-center text-sm-center">
+                  <i class="icon-play icon--top"></i>
+                  <p>icon-play</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section post-section" id="acordeones">
+            <h2 class="heading-large">6. Acordeones</h2>
+            <article>
+              <div class="row c-buttons">
+                <div class="col">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">En linea</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <h1>Palette</h1>
+                      <p>
+                        This palette is designed to support a range of distinct visual styles that continue to feel
+                        connected. The intent of the palette is to convey a warm and open American spirit, with bright
+                        saturated tints of blue and red, grounded in sophisticated deeper shades of cool blues and
+                        grays. These colors — combined with clear hierarchy, good information design, and ample white
+                        space — should leave users feeling welcomed and in good hands.
+                      </p>
+                      <p>
+                        This is a simple, minimalist color palette. Shades of blue dominate, providing a neutral
+                        backdrop on which brighter shades, clean type treatment, and bright white content areas “pop” on
+                        the page.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collapsible_item">
+                    <div class="collapsible_header">
+                      <h4 class="collapsible_title">En linea</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <h1>Palette</h1>
+                      <p>
+                        This palette is designed to support a range of distinct visual styles that continue to feel
+                        connected. The intent of the palette is to convey a warm and open American spirit, with bright
+                        saturated tints of blue and red, grounded in sophisticated deeper shades of cool blues and
+                        grays. These colors — combined with clear hierarchy, good information design, and ample white
+                        space — should leave users feeling welcomed and in good hands.
+                      </p>
+                      <p>
+                        This is a simple, minimalist color palette. Shades of blue dominate, providing a neutral
+                        backdrop on which brighter shades, clean type treatment, and bright white content areas “pop” on
+                        the page.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collapsible_item">
+                    <div class="collapsible_header">
+                      <h4 class="collapsible_title">En linea</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <h1>Palette</h1>
+                      <p>
+                        This palette is designed to support a range of distinct visual styles that continue to feel
+                        connected. The intent of the palette is to convey a warm and open American spirit, with bright
+                        saturated tints of blue and red, grounded in sophisticated deeper shades of cool blues and
+                        grays. These colors — combined with clear hierarchy, good information design, and ample white
+                        space — should leave users feeling welcomed and in good hands.
+                      </p>
+                      <p>
+                        This is a simple, minimalist color palette. Shades of blue dominate, providing a neutral
+                        backdrop on which brighter shades, clean type treatment, and bright white content areas “pop” on
+                        the page.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collapsible_item">
+                    <div class="collapsible_header">
+                      <h4 class="collapsible_title">En linea</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <h1>Palette</h1>
+                      <p>
+                        This palette is designed to support a range of distinct visual styles that continue to feel
+                        connected. The intent of the palette is to convey a warm and open American spirit, with bright
+                        saturated tints of blue and red, grounded in sophisticated deeper shades of cool blues and
+                        grays. These colors — combined with clear hierarchy, good information design, and ample white
+                        space — should leave users feeling welcomed and in good hands.
+                      </p>
+                      <p>
+                        This is a simple, minimalist color palette. Shades of blue dominate, providing a neutral
+                        backdrop on which brighter shades, clean type treatment, and bright white content areas “pop” on
+                        the page.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collapsible_item">
+                    <div class="collapsible_header">
+                      <h4 class="collapsible_title">En linea</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <h1>Palette</h1>
+                      <p>
+                        This palette is designed to support a range of distinct visual styles that continue to feel
+                        connected. The intent of the palette is to convey a warm and open American spirit, with bright
+                        saturated tints of blue and red, grounded in sophisticated deeper shades of cool blues and
+                        grays. These colors — combined with clear hierarchy, good information design, and ample white
+                        space — should leave users feeling welcomed and in good hands.
+                      </p>
+                      <p>
+                        This is a simple, minimalist color palette. Shades of blue dominate, providing a neutral
+                        backdrop on which brighter shades, clean type treatment, and bright white content areas “pop” on
+                        the page.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="collapsible_item">
+                    <div class="collapsible_header">
+                      <h4 class="collapsible_title">En linea</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <h1>Palette</h1>
+                      <p>
+                        This palette is designed to support a range of distinct visual styles that continue to feel
+                        connected. The intent of the palette is to convey a warm and open American spirit, with bright
+                        saturated tints of blue and red, grounded in sophisticated deeper shades of cool blues and
+                        grays. These colors — combined with clear hierarchy, good information design, and ample white
+                        space — should leave users feeling welcomed and in good hands.
+                      </p>
+                      <p>
+                        This is a simple, minimalist color palette. Shades of blue dominate, providing a neutral
+                        backdrop on which brighter shades, clean type treatment, and bright white content areas “pop” on
+                        the page.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                  <div class="c-collapsible">
+                    <div class="collapsible-block">
+                      <ul class="collapsible">
+                        <li class="collapsible_item">
+                          <div class="collapsible_header active">
+                            <h4 class="collapsible_title">Módulo de código</h4>
+                          </div>
+                          <div class="collapsible_body">
+                          <pre data-src="examples/collapsible.html">
+                            <code class="language-markup"></code>
+                          </pre>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="section post-section" id="formularios">
+            <h2 class="heading-large">7. Formularios</h2>
+            <article>
+              <div class="row c-buttons">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Inputs</h2>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label for="">Text label</label>
+                          <input type="text" placeholder="Texto">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="" class="error">Error label</label>
+                          <input type="text" placeholder="Texto" class="error">
+                          <span class="alert error on-input">Error alert text</span>
+                        </div>
+                        <div class="col-md-3">
+                          <label for="" class="success">Success Label</label>
+                          <input type="text" placeholder="Texto" class="success">
+                          <span class="alert success on-input">Success alert text</span>
+                        </div>
+                        <div class="col-md-3">
+                          <label for="">Success Label</label>
+                          <input type="text" placeholder="Texto" class="warning">
+                          <span class="alert warning on-input">Warning alert text</span>
+                        </div>
+                        <div class="col-md-3">
+                          <label for="">Password</label>
+                          <input type="password" placeholder="Texto" value="Texto">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="">Readonly</label>
+                          <input readonly type="text" placeholder="Texto" value="Texto">
+                        </div>
+                        <div class="col-md-3">
+                          <label for="">Disabled</label>
+                          <input disabled type="text" placeholder="Texto" value="Texto">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="">Input</label>
+                          <input type="text" placeholder="Texto">
+                          <small>Help text example</small>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label for="">Date input</label>
+                          <input type="date">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row section">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Select</h2>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <label for="">Select label</label>
+                          <select>
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                          </select>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="">Select label</label>
+                          <select>
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row section">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Radio buttons</h2>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="form-check-label">
+                            <input type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                          <label class="form-check-label">
+                            <input type="radio" name="gridRadios" id="gridRadios2" value="option1">
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                          <label class="form-check-label">
+                            <input type="radio" name="gridRadios" id="gridRadios3" value="option1" disabled>
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row section">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Checkboxes</h2>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="form-check-label">
+                            <input type="checkbox" value="">
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                          <label class="form-check-label">
+                            <input type="checkbox" value="">
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                          <label class="form-check-label">
+                            <input type="checkbox" value="" disabled>
+                            Option one is this and that&mdash;be sure to include why it's great
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row section">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Buttons</h2>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <a class="button button--block" href="#">Continuar</a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="button button--lightgray button--block" href="#">Guardar</a>
+                        </div>
+                        <div class="col-md-6">
+                          <a class="link--text-dark link-v" href="#">Tercer nivel</a>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <a class="button button--block disabled-button" href="#">Continuar</a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="button button--lightgray button--block disabled-button" href="#">Guardar</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row section">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Alerts</h2>
+                      <div class="row">
+                        <div class="col-12">
+                          <span class="alert error">This is a danger alert—check it out!</span>
+                        </div>
+                        <div class="col-12">
+                          <span class="alert success">This is a success alert—check it out!</span>
+                        </div>
+                        <div class="col-12">
+                          <span class="alert warning">This is a warning alert—check it out!</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row section">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Textarea</h2>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="">Text label</label>
+                          <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row section">
+                    <div class="col-12">
+                      <h2 class="heading-medium">Steps</h2>
+                      <div class="row">
+                        <div class="col-12">
+                          <ul class="steps">
+                            <li style="width: 25%;" class="active">
+                              <a href="#">Paso 1</a>
+                            </li>
+                            <li style="width: 25%;">
+                              <a href="#" class="next">Paso 2</a>
+                            </li>
+                            <li style="width: 25%;">
+                              <a href="#" class="next">Paso 3</a>
+                            </li>
+                            <li style="width: 25%;">
+                              <a href="#" class="next">Paso 4</a>
+                            </li>
+                          </ul>
+                          <ul class="steps">
+                            <li style="width: 25%;" class="active">
+                              <a href="#" class="last">Paso 1</a>
+                            </li>
+                            <li style="width: 25%;" class="active">
+                              <a href="#" class="last">Paso 2</a>
+                            </li>
+                            <li style="width: 25%;" class="active">
+                              <a href="#">Paso 3</a>
+                            </li>
+                            <li style="width: 25%;">
+                              <a href="#" class="next">Paso 4</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="c-collapsible">
+                    <div class="collapsible-block">
+                      <ul class="collapsible">
+                        <li class="collapsible_item">
+                          <div class="collapsible_header active">
+                            <h4 class="collapsible_title">Módulo de código</h4>
+                          </div>
+                          <div class="collapsible_body">
+                            <pre data-src="examples/formularios.html">
+                              <code class="language-markup"></code>
+                            </pre>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="section post-section" id="componentes">
+            <h2 class="heading-large">8. Componentes Visuales</h2>
+            <article>
+              <h2 class="heading-medium">New list</h2>
+              <div class="row">
+                <div class="col-12 col-lg-6">
+                  <article class="new new--mobile">
+                    <time class="new_date">
+                      16 de Noviembre de 2017
+                    </time>
+                    <figure class="new_figure-mobile">
+                      <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
+                    </figure>
+                    <h2 class="new_title">
+                      <a href="#" class="link link--text-dark visited">
+                        Lorem ipsum dolor sit
+                      </a>
+                    </h2>
+                  </article>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <article class="new new--mobile">
+                    <time class="new_date">
+                      16 de Noviembre de 2017
+                    </time>
+                    <figure class="new_figure-mobile">
+                      <img src="images/default-news.png" alt="" class="img-fluid w-100 img-frame">
+                    </figure>
+                    <h2 class="new_title">
+                      <a href="#" class="link link--text-dark visited">
+                        Lorem ipsum dolor sit
+                      </a>
+                    </h2>
+                  </article>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/list-new.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading-medium">Small Card</h2>
+              <div class="row">
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card-small">
+                    <h5 class="card-small_title">
+                      <a href="#" target="blank" class="card-small_link">
+                        Link title
+                        <i class="icon-arrow-right-black icon--right"></i>
+                      </a>
+                    </h5>
+                    <div class="card-small_body">
+                      <p class="card-small_text">
+                        Bajada ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card-small">
+                    <h5 class="card-small_title">
+                      <a href="#" target="blank" class="card-small_link">
+                        Link title
+                        <i class="icon-arrow-right-black icon--right"></i>
+                      </a>
+                    </h5>
+                    <div class="card-small_body">
+                      <p class="card-small_text">
+                        Bajada ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card-small">
+                    <h5 class="card-small_title">
+                      <a href="#" target="blank" class="card-small_link">
+                        Link title
+                        <i class="icon-arrow-right-black icon--right"></i>
+                      </a>
+                    </h5>
+                    <div class="card-small_body">
+                      <p class="card-small_text">
+                        Bajada ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/card-small.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading-medium">Featured Card</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#" class="featured-card has-icon d-none d-lg-block">
+                    <div class="featured-card_figure elem-bg">
+                      <img src="images/chilemejor.jpg" alt="" class="card_image img-to-bg">
+                    </div>
+                    <div class="featured-card_body">
+                      <h2 class="featured-card_title">Este es el título</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="featured-card has-icon d-none d-lg-block">
+                    <div class="featured-card_figure elem-bg">
+                      <img src="images/chilemejor.jpg" alt="" class="card_image img-to-bg">
+                    </div>
+                    <div class="featured-card_body">
+                      <h2 class="featured-card_title">Este es el título</h2>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/featured-card.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading.medium">Data Card</h2>
+              <div class="row">
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h2 class="card-data_title">
+                          <span>Card w/o value</span>
+                        </h2>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h3 class="card-data_title">
+                          <span class="card-data_number">00</span>
+                          <span class="card-data_title-text">Card value</span>
+                        </h3>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h3 class="card-data_title">
+                          <span class="card-data_number">00</span>
+                          <span class="card-data_title-text">Card value</span>
+                        </h3>
+                      </a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                      <a href="#" class="card-data">
+                        <h3 class="card-data_title">
+                          <span class="card-data_number">00</span>
+                          <span class="card-data_title-text">Card value</span>
+                        </h3>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/card-data.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading.medium">Data Small Card</h2>
+              <div class="row">
+                <div class="col-12 col-lg-3 bg-lightgray top">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span class="d-none d-md-block">&nbsp;</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix">
+                      <a href="#" class="pull-right">Link.</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 bg-light">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span>00</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix d-md-none">
+                      <a href="#" class="pull-right">Link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 bg-light">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span>00</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix d-md-none">
+                      <a href="#" class="pull-right">Link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 bg-light">
+                  <div class="card-data-small">
+                    <h1 class="card-data-small_title">
+                      <span>00</span>
+                      <small>Title</small>
+                    </h1>
+                    <p class="card-data-small_text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut
+                    </p>
+                    <div class="clearfix d-md-none">
+                      <a href="#" class="pull-right">Link</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                      <pre data-src="examples/card-data-small.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="section post-section" id="bloques">
+            <h2 class="heading-large">9. Bloques</h2>
+            <article>
+              <h2 class="heading-medium">Sub sección</h2>
+              <section class="sub-section">
+                <div class="row">
+                  <div class="col-md-5 align-self-center">
+                    <h5 class="heading-medium">Title</h5>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-10">
+                        <a href="#" class="button button--block button--light button--clean button--space">
+                          Link
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-6 align-self-center">
+                    <img src="images/about-of.jpg" alt="" class="img-fluid w-100 img-frame">
+                  </div>
+                </div>
+              </section>
+            </article>
+            <div class="c-collapsible">
+              <div class="collapsible-block">
+                <ul class="collapsible">
+                  <li class="collapsible_item">
+                    <div class="collapsible_header active">
+                      <h4 class="collapsible_title">Módulo de código</h4>
+                    </div>
+                    <div class="collapsible_body">
+                        <pre data-src="examples/sub-section.html">
+                          <code class="language-markup"></code>
+                        </pre>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <article>
+              <h2 class="heading-medium">Perfil</h2>
+              <div class="row">
+                <div class="col-12">
+                  <div class="profile profile--half">
+                    <div class="profile_image">
+                      <img src="images/paola-tapia.png" alt="" class="img-fluid w-100 img-frame">
+                    </div>
+                    <div class="profile_header">
+                      <h3 class="profile_title">
+                        Paola Tapia Salas
+                      </h3>
+                      <span class="profile_job">
+                        Charge
+                      </span>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p>
+                      <a href="https://twitter.com/" target="blank" class="profile_twitter">
+                        @twitter
+                      </a>
+                    </p>
+                    <ul class="profile_info">
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="profile">
+                    <div class="profile_header">
+                      <h2 class="heading-large">Michelle Bachelet Jeria</h2>
+                      <span class="profile_job">Charge</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="images/president.jpg" alt="" class="img-fluid w-100 img-frame">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="mt-1 mt-md-0">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                        </div>
+                        <ul class="profile_body">
+                          <li>
+                            <a href="https://twitter.com/" class="profile_twitter">
+                              @twitter
+                            </a>
+                          </li>
+                          <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                          <li><span>Correo electrónico: info@gob.cl</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <article class="profile">
+                    <div class="profile_header">
+                      <h3 class="profile_title">Paola Tapia Salas</h3>
+                      <span class="profile_job">Ministra de Transportes y Telecomunicaciones</span>
+                    </div>
+                    <div class="profile_image">
+                      <img class="img-responsive" src="images/paola-tapia.png" alt="">
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment
+                      facilisis. Cras finibus ligula ac condimentum facilisis.
+                    </p>
+                    <ul class="profile_info">
+                      <li><a class="profile_twitter" href="#">@paolatapiasalas</a></li>
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </article>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                  <div class="profile profile--half-small">
+                    <div class="profile_image profile_image--small">
+                      <img src="images/paola-tapia.png" alt="" class="img-fluid w-100 img-frame">
+                    </div>
+                    <div class="profile_header">
+                      <h3 class="profile_title">name</h3>
+                      <span class="profile_job">charge</span>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment
+                      facilisis. Cras finibus ligula ac condimentum facilisis.
+                    </p>
+                    <p>
+                      <a href="https://twitter.com/" target="blank" class="profile_twitter">
+                      @twitter
+                      </a>
+                    </p>
+                    <ul class="profile_info">
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                  <div class="profile profile--half-small">
+                    <div class="profile_image profile_image--small">
+                      <img src="images/paola-tapia.png" alt="" class="img-fluid w-100 img-frame">
+                    </div>
+                    <div class="profile_header">
+                      <h3 class="profile_title">name</h3>
+                      <span class="profile_job">charge</span>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet, consecte adipiscing elit. Cras finibus ligula ac mi condiment
+                      facilisis. Cras finibus ligula ac condimentum facilisis.
+                    </p>
+                    <p>
+                      <a href="https://twitter.com/" target="blank" class="profile_twitter">
+                        @twitter
+                      </a>
+                    </p>
+                    <ul class="profile_info">
+                      <li><span>Teléfono: (56-6) 1234-5678 </span></li>
+                      <li><span>Correo electrónico: info@gob.cl</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a href="/" class="site-footer_logo">
+      <i class="icon-gob-footer"></i>
+    </a>
+    <div class="row">
+      <div class="col-md-12 col-xl-8">
+        <div class="row menu">
+          <div class="col-sm-12 col-md-6 col-lg-3-col-xl-4">
+            <a href="https://magnet.cl" target="_blank" class="link text-white">Link</a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3-col-xl-4">
+            <a href="https://magnet.cl" target="_blank" class="link text-white">Link</a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3-col-xl-4">
+            <a href="https://magnet.cl" target="_blank" class="link text-white">Link</a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3-col-xl-4">
+            <a href="https://magnet.cl" target="_blank" class="link text-white">Link</a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3-col-xl-4">
+            <a href="https://magnet.cl" target="_blank" class="link text-white">Link</a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3-col-xl-4">
+            <a href="https://magnet.cl" target="_blank" class="link text-white">Link</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-xl-4">
+        <ul class="social">
+          <li>
+            <a href="https://www.facebook.com/gobiernodechile" target="_blank"><i class="ic-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/gobiernodechile" target="_blank"><i class="ic-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/gobiernodechile/" target="_blank"><i class="ic-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/user/LAMONEDA" target="_blank"><i class="ic-youtube"></i></a>
+          </li>
+        </ul>
+        <a href="#" target="_blank" class="button button--block site-footer_button">
+          Link
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+        integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha256-DHF4zGyjT7GOMPBwpeehwoey18z8uiz98G4PRu2lV0A="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+        integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"
+        integrity="sha256-FcVIknBiVRk5KLQeIBb9VQdtFRMqwffXyZ+D8q0gQro="
+        crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/prism.min.js"
+        integrity="sha256-MOdZTZaHYcbubI1ggZrOK+am0uoo4tNJkvcvOzTDKAk="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.8.4/components/prism-scss.min.js"
+        integrity="sha256-1lVYQdPYmeuVDB/iXGqZBZvOPt5fwnRmM0Q2+aoGY7c="
+        crossorigin="anonymous"></script>
+
+<script src="js/gob.cl.js"></script>
+</body>
+
+</html>

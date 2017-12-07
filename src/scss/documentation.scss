@@ -1,0 +1,130 @@
+.c-header {
+  -webkit-box-shadow: 1px 2px 1px 1px #E3E5EF;
+  box-shadow: 1px 2px 1px 1px #E3E5EF;
+}
+
+.c-buttons .button {
+  margin: 1.125em 0;
+}
+
+.c-title {
+  color: #54698D;
+  font-family: "Roboto", sans-serif;
+}
+
+.c-sub-title {
+  color: #16325C;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+.c-color {
+  margin: 0 0 30px;
+}
+
+.c-color_circle {
+  background-color: transparent;
+  border-radius: 50%;
+  display: block;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  &:after {
+    content: "";
+    background: #FFFFFF;
+    -webkit-box-shadow: 0 8px 14px 0 rgba(168, 183, 199, 0.5);
+    box-shadow: 0 8px 14px 0 rgba(168, 183, 199, 0.5);
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.c-color_text {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+.c-box {
+  border-bottom: 1px solid #111111;
+
+  .c-box_title {
+    font-size: 2.0272865295em;
+    color: #111111;
+  }
+  .c-box_text {
+    font-size: 1.265625em;
+    color: rgba(17, 17, 17, 0.8);
+    padding: 30px 0;
+  }
+}
+
+.c-collapsible {
+  padding: 50px 0;
+  .collapsible-block {
+    margin-right: 0;
+    margin-left: 0;
+
+    .collapsible {
+      .collapsible_item {
+        border-bottom: 0;
+
+        .collapsible_body {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.aux-box {
+  border-bottom: 1px solid rgba(10, 19, 45, 0.1);
+  padding: 30px 0 10px;
+
+  .aux-box_side-text {
+    font-size: 0.7901234568em;
+    font-family: Roboto;
+    color: #111111;
+  }
+
+  .aux-box_font-large {
+    font-size: 2.0272865295em;
+    color: #111111;
+  }
+
+  .aux-box_font-medium {
+    font-size: 1.265625em;
+    color: #111111;
+  }
+
+  .aux-box_roboto {
+    color: #111111;
+    font-family: Roboto;
+  }
+
+  .aux-box_roboto_font--head-medium {
+    font-size: 1.3125rem;
+    color: rgba(17, 17, 17, 0.6);
+  }
+
+  .aux-box_roboto_font-medium {
+    font-size: 1em;
+  }
+
+  .aux-box_roboto_underline {
+    text-decoration: underline;
+  }
+
+  .aux-box_roboto_font-head {
+    font-size: 0.7023319616em;
+    opacity: 0.92;
+  }
+}

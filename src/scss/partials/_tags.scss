@@ -1,0 +1,129 @@
+.ctag,
+.filter {
+  // background-color: get-color(red);
+  background-color: rgba(get-color(dark), .1);
+  border: 2px solid transparent;
+  // border-radius: 3px;
+  color: rgba(get-color(dark), .6);
+  font-size: 0.857rem;
+  line-height: 1rem;
+  padding: 13px 18px;
+  margin: 0 8px 0.875rem 0;
+  height: 42px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  &:hover,
+  &.hover {
+    text-decoration: none;
+    background-color: get-color(red);
+    color: rgba(get-color(dark), .6);
+    // color: get-color(white);
+  }
+  &--clarity {
+    background-color: rgba(get-color(white), .1);
+    color: rgba(get-color(white), .8);
+  }
+
+  display: block;
+  @include mq($from: tablet) {
+    display: inline-block;
+  }
+}
+
+.ctag {
+  &--light {
+    &.active {
+      text-decoration: none;
+      background-color: get-color(red);
+      color: rgba(get-color(dark), .6);
+    }
+  }
+}
+
+label.ctag {
+
+  &.ctag--light {
+    &.active {
+      border: 2px solid get-color(gray);
+
+      &:hover {
+        color: get-color(red);
+      }
+    }
+  }
+
+  &.active {
+    background-color: transparent;
+    border: 2px solid rgba(get-color(light), .3);
+    display: block !important;
+    &:after {
+      // background: transparent url($iconsPath+ 'delete.svg') center center no-repeat;
+      // content:"";
+      @include getIcon("\6f");
+      color: get-color(gray);
+      font-size: 17px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 17px;
+      height: 17px;
+      margin-top: -2px;
+      z-index: 10;
+      margin-left: 15px;
+    }
+    &:hover,
+    &.hover {
+      text-decoration: none;
+      color: get-color(white);
+    }
+
+
+  }
+}
+
+.filter {
+  color: get-color(dark);
+  &:hover {
+    color: get-color(dark);
+    background-color: rgba(get-color(dark), .25);
+  }
+  &.active {
+    background-color: get-color(red);
+    // color: get-color(white);
+  }
+}
+
+.tags {
+  padding: 0;
+  // width: 100%;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  &_content {
+    display: block;
+    padding-bottom: 8px;
+  }
+  &_item {
+    display: block;
+    vertical-align: middle;
+    table-layout: fixed;
+    @include mq($from: tablet) {
+      display: inline-block;
+    }
+
+    label {
+      display: block;
+      text-transform: none;
+      margin: 0.875rem 0;
+
+      @include mq($from: tablet) {
+        display: inline-block;
+        margin: 0 8px 0.875rem 0;
+      }
+    }
+  }
+
+}

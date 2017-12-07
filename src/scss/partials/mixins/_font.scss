@@ -1,0 +1,13 @@
+@mixin font($fontName, $fontWeight, $size) {
+  $font-family: $fontWeight;
+  // @each $fontKey, $font in $fonts{
+  // 	@if $fontKey == $fontWeight {
+  // 		$font-family: $font;
+  // 	}
+  // }
+  font-family: $fontName, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: $fontWeight;
+  @if $size != false {
+    font-size: $size;
+  }
+}

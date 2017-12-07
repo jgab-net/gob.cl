@@ -1,0 +1,23 @@
+@function parse-int($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function rem-to-px($size) {
+  @return parse-int($size) * 16px;
+}
+
+@function px-to-rem($size) {
+  @return (parse-int($size) / 16) + rem;
+}
+
+@function get-color($color) {
+  @if map-has-key($colors, $color) {
+    $color: map-get($colors, $color);
+  } @else {
+    @if type-of($color) != color {
+      @error "Color name: `#{$color}` not found."
+    }
+  }
+
+  @return $color;
+}

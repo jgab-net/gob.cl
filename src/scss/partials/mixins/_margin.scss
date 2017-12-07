@@ -1,0 +1,8 @@
+@mixin margin($size, $dir:null) {
+  @if ($dir == null) {
+    margin: $size + px;
+  }
+  @if ($dir != null) {
+    margin-#{$dir}: $size + px;
+  }
+}

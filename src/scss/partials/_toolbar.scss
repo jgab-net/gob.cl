@@ -1,0 +1,257 @@
+
+.a11y-font-1,
+.a11y-font-2 {
+
+  @include mq($until: tablet) {
+    .toolbar-button {
+      &_text {
+        display: none;
+      }
+
+      &--listen {
+        text-align: center;
+        padding: 0;
+        width: 42px;
+      }
+    }
+
+    .toolbar {
+
+      &_player {
+        width: 42px;
+      }
+    }
+  }
+}
+
+.toolbar {
+  // float: right;
+  overflow: hidden;
+  position: relative;
+  margin: 0 0 20px;
+  @include mq($from: desktop) {
+    // margin: 0;
+  }
+  &_content {
+    margin-right: 13px;
+    overflow: hidden;
+    float: left;
+    display: none;
+    @include mq($from: tablet) {
+      margin-right: 0;
+      float: none;
+      display: block;
+    }
+  }
+  &.active {
+    .toolbar_content {
+      @include mq($until: tablet) {
+        display: block;
+      }
+    }
+    .toolbar-button--toggle {
+      .ic-close {
+        display: block;
+      }
+      .ic-accessibility {
+        display: none;
+      }
+    }
+  }
+  &_player {
+    // border: 2px solid get-color(white);
+    display: block;
+    float: left;
+    height: 42px;
+    width: 75px;
+    position: relative;
+    @include mq($from: 375px) {
+      width: 130px;
+    }
+    @include mq($from: tablet) {
+      width: 184px;
+    }
+  }
+  &.dark {
+    .toolbar-button {
+      border: 2px solid get-color(bluedark);
+      color: get-color(bluedark);
+      &:hover {
+        background-color: get-color(light);
+        border-color: get-color(light);
+      }
+    }
+    .toolbar-player {
+      border: 2px solid get-color(bluedark);
+      color: get-color(bluedark);
+      &:hover {
+        // background-color: get-color(light);
+        // border-color: get-color(light);
+      }
+    }
+    .toolbar-player_download,
+    .toolbar-player_toggle {
+      color: get-color(bluedark);
+    }
+    .toolbar-player_timeline {
+      // background-color: rgba( get-color(gray), 0.10);
+      span {
+        background-color: get-color(bluedark);
+      }
+    }
+  }
+  &.abs {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.toolbar-button {
+  border: 2px solid get-color(white);
+  color: get-color(white);
+  cursor: pointer;
+  display: table;
+  height: 42px;
+  width: 42px;
+  float: left;
+  margin-right: 5px;
+  text-align: center;
+  text-decoration: none;
+
+  &.disabled {
+    color: get-color(gray);
+    border: 2px solid get-color(gray);
+  }
+
+  &:hover {
+    background-color: #222B42;
+    border-color: #222B42;
+  }
+  &_content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &_text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 13px;
+    display: none;
+    @include mq($from: 375px) {
+      display: inline-block;
+    }
+  }
+  &_icon {
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &--listen {
+    text-align: left;
+    padding-left: 16px;
+    margin: 0;
+    width: 75px;
+    @include mq($from: 375px) {
+      width: 130px;
+    }
+    @include mq($from: tablet) {
+      width: 184px;
+    }
+  }
+  &--contrast {
+    font-size: 1.12500rem;
+    margin-right: 15px;
+    @include mq($from: tablet) {
+      margin-right: 22px;
+    }
+  }
+  &--less {
+    font-size: 0.875rem;
+  }
+  &--plus {
+    font-size: 1.1875rem;
+    margin-right: 14px;
+    @include mq($from: tablet) {
+      margin-right: 25px;
+    }
+  }
+  &--toggle {
+    float: right;
+    margin-right: 0;
+    @include mq($from: tablet) {
+      display: none;
+    }
+    .ic-close {
+      display: none;
+    }
+  }
+  &_icon-pause {
+  }
+  &_icon-play {
+    font-size: 0.6875rem;
+    opacity: 0;
+    position: absolute;
+  }
+}
+
+.toolbar-player {
+  border: 2px solid get-color(white);
+  border-radius: 6px;
+  padding-left: 38px;
+  padding-right: 38px;
+  width: 184px;
+  height: 42px;
+  &_toggle {
+    color: get-color(white);
+    position: absolute;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    display: table;
+    font-size: 0.625rem;
+  }
+
+  &_timeline {
+    background-color: rgba(get-color(gray), 0.10);
+    cursor: pointer;
+    height: 5px;
+    width: 100px;
+    position: relative;
+    top: 50%;
+    margin-top: -2.5px;
+    span {
+      background-color: #E3E5EF;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 50%;
+    }
+  }
+  &_download {
+    color: get-color(white);
+    position: absolute;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    display: table;
+    top: 0;
+    margin-top: 2px;
+  }
+  &.pause {
+    border-radius: 0;
+    .toolbar-player_toggle {
+      .toolbar-button_icon-pause {
+        opacity: 0;
+        position: absolute;
+      }
+      .toolbar-button_icon-play {
+        opacity: 1;
+        position: relative;
+      }
+    }
+  }
+}

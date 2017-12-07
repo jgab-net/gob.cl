@@ -1,0 +1,93 @@
+/* =Colors
+----------------------------------------------- */
+
+// Color Map
+$colors: (
+  red : #FE6565,
+  darkred : #BB0000,
+  green : #2FAE7D,
+  blue : #0021FF,
+  lightblue : #85B1F5,
+  yellow : #F2C728,
+  dark : #111111,
+  bluedark : #0A132D,
+  white: #FFFFFF,
+  light : #F5F6F7,
+  gray: #A8B7C7,
+  lightgray : #E3E5EF
+);
+
+$shadow: rgba(134,142,150,.5);
+
+/* =Boostrap Override Variables
+----------------------------------------------- */
+@import 'partials/variables-functions';
+
+$line-height-base: 1.42858 !default;
+
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+$container-max-widths: (
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+$navbar-toggler-margin-y: 20px;
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$navbar-light-color: get-color(dark);
+$navbar-light-hover-color: rgba(get-color(dark), .6);
+
+$enable-shadows: false;
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+
+
+$font-size-base-in-px: 16px;
+$static-nav-link-height: 35px;
+
+/* =Framework Variables
+----------------------------------------------- */
+
+// Assets
+$imagesPath: "../images/" !default;
+$iconsPath: "../images/icons/" !default;
+$fontsPath: "../fonts/" !default;
+
+$mq-breakpoints: (
+  mobile: map-get($grid-breakpoints, sm),
+  tablet: map-get($grid-breakpoints, md),
+  desktop: map-get($grid-breakpoints, lg),
+  wide: map-get($grid-breakpoints, xl)
+);
+
+
+// Footer links variables.
+$navbar-item-xs-margin-y: 14.5px;
+$navbar-item-md-margin-y: 18px;
+
+$navbar-height: (
+  xs: $static-nav-link-height + $navbar-item-xs-margin-y * 2,
+  md: $static-nav-link-height + $navbar-item-md-margin-y * 2
+);
+
+$footer-base-height: (
+  xs: 185px,
+  md: 245px,
+  xl: 223px,
+);
+
+$footer-link-height: 44px;
+$footer-links-max: 20;
+$footer-links-container-offset: 100px;
+
+// Django cms toolbar variables.
+$django-cms-toolbar: 5px;
+$django-cms-toolbar-expanded: 49px;

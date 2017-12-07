@@ -1,0 +1,31 @@
+.login {
+  background-color: get-color(light);
+  position: absolute;
+  right: 0;
+  padding: 0 20px;
+  height: 0;
+  width: 432px;
+  top: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .3s;
+  max-width: 100%;
+  overflow: hidden;
+  @include mq($from: tablet) {
+    padding: 0 50px;
+
+  }
+  &.active {
+    height: auto;
+    opacity: 1;
+    z-index: 100;
+  }
+  &_link {
+    color: get-color(dark);
+    padding: 0;
+    margin-top: 2px;
+  }
+  &_submit {
+    width: 100%;
+  }
+}

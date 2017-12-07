@@ -1,0 +1,426 @@
+.a11y-font-1,
+.a11y-font-2 {
+  .button {
+    height: auto;
+  }
+}
+
+.button {
+  background-color: get-color(red);
+  appearance: none;
+  border: 0;
+  // color: get-color(white);
+  color: #000000;
+  font-size: 1rem;
+  line-height: 24px;
+  display: inline-block;
+  // margin: ms(1) 0;
+  margin: 0;
+  padding: 18px 25px;
+  height: 60px;
+  position: relative;
+  text-align: center;
+  text-decoration: underline;
+  @include press-button();
+  @include mq($until: tablet) {
+    padding-right: 45px;
+  }
+
+  i {
+    padding: 0 6px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &:after {
+    // background: url($iconsPath + 'arrow-right-white.svg');
+    @include mq($until: tablet) {
+      @include getIcon("\69");
+      font-size: 13px;
+      display: block;
+      margin-top: -6px;
+      margin-right: 16px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      // height: 7px;
+      width: 13px;
+    }
+  }
+  &:hover {
+    background-color: darken(get-color(red), 5%);
+    color: #000000;
+  }
+  &--clean {
+    padding-right: 25px;
+    &:after {
+      display: none;
+    }
+  }
+  &--block {
+    display: block;
+  }
+  &--floating {
+    margin-bottom: -35px;
+    z-index: 1;
+  }
+  &--rounded {
+    border-radius: 20px;
+  }
+  &--more {
+    min-width: 266px;
+    margin: 0 auto;
+  }
+  &--space {
+    margin: 32px 0;
+  }
+  &--side {
+    margin-top: 20px;
+    @include mq($from: desktop) {
+      margin-top: 130px;
+    }
+  }
+  &--red {
+    background-color: get-color(red);
+    color: get-color(white);
+    &:hover {
+      background-color: darken(get-color(red), 5%);
+    }
+  }
+  &--bluedark {
+    background-color: get-color(bluedark);
+    color: get-color(red);
+    &:hover {
+      background-color: darken(get-color(bluedark), 5%);
+    }
+  }
+  &--dark {
+    background-color: get-color(dark);
+    color: get-color(red);
+    &:hover {
+      background-color: darken(get-color(dark), 5%);
+    }
+  }
+  &--blue {
+    background-color: get-color(blue);
+    color: get-color(white);
+    &:hover {
+      background-color: darken(get-color(blue), 5%);
+    }
+  }
+  &--green {
+    background-color: get-color(green);
+    color: get-color(white);
+    &:hover {
+      background-color: darken(get-color(green), 5%);
+    }
+  }
+  &--yellow {
+    background-color: get-color(yellow);
+    color: get-color(dark);
+    &:hover {
+      background-color: darken(get-color(yellow), 5%);
+    }
+  }
+  &--gray {
+    background-color: get-color(gray);
+    color: get-color(white);
+    &:hover {
+      background-color: darken(get-color(gray), 5%);
+    }
+  }
+  &--light {
+    background-color: get-color(light);
+    color: get-color(dark);
+    &:hover {
+      background-color: darken(get-color(light), 5%);
+    }
+  }
+  &--lightred {
+    background-color: get-color(light);
+    color: get-color(red);
+    &:hover {
+      background-color: darken(get-color(light), 5%);
+    }
+  }
+  &--lightgray {
+    background-color: get-color(lightgray);
+    color: get-color(red);
+    &:hover {
+      background-color: darken(get-color(lightgray), 5%);
+    }
+  }
+  &--white {
+    background-color: get-color(white);
+    color: get-color(red);
+    &:hover {
+      background-color: darken(get-color(white), 5%);
+    }
+  }
+  &--lightblue {
+    background-color: get-color(lightblue);
+    color: get-color(dark);
+    &:hover {
+      background-color: darken(get-color(lightblue), 5%);
+    }
+  }
+  &--gray-dark {
+    background-color: get-color(gray);
+    color: get-color(dark);
+    &:hover {
+      background-color: darken(get-color(gray), 5%);
+    }
+  }
+  &--darkred {
+    background-color: get-color(darkred);
+    color: get-color(white);
+    &:hover {
+      background-color: darken(get-color(darkred), 5%);
+    }
+  }
+}
+
+.link {
+  // color: get-color(red);
+  color: get-color(dark);
+  display: block;
+  font-size: 1rem;
+  line-height: 24px;
+  white-space: normal;
+  text-decoration: none;
+  // padding: 18px 25px;
+  padding: 18px 15px;
+  padding-right: 45px;
+  position: relative;
+  // margin: 10px 0;
+  text-decoration: underline;
+  @include mq($from: tablet) {
+    padding: 8px;
+  }
+  @include mq($from: desktop) {
+    padding: 8px 10px;
+  }
+  &:hover,
+  &.hover {
+    color: rgba(get-color(dark), .6);
+    @include mq($until: tablet) {
+      background-color: rgba(#0A132D, .05);
+    }
+  }
+  &.active {
+    color: get-color(dark);
+  }
+  &:after {
+    // background: url($iconsPath + 'arrow-right-red.svg');
+    @include getIcon("\69");
+    font-size: 13px;
+    display: block;
+    margin-top: -6px;
+    margin-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 7px;
+    width: 13px;
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
+  &--clean {
+    // color: get-color(white);
+    display: inline-block;
+    padding: 0;
+    &:after {
+      display: none;
+    }
+  }
+  &--dib {
+    display: inline-block;
+    // padding: 0;
+  }
+  &--gray {
+    background: rgba(get-color(bluedark), .05);
+    color: get-color(dark);
+  }
+  &--dark {
+    background-color: get-color(dark);
+    color: get-color(white);
+    &:hover,
+    &.hover {
+      color: darken(get-color(white), 5%);
+      background-color: get-color(dark);
+    }
+  }
+  // &--transparent{
+  //   background-color: rgba(#fff,.05);
+  // }
+  &--medium {
+    // min-height: 40px;
+    // padding: 8px 15px;
+    // padding-bottom: 8px;
+    // padding-top: 8px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  &--text-dark {
+    color: get-color(dark);
+  }
+  &--text-light {
+    color: get-color(white);
+    &:hover {
+      color: rgba(get-color(white), .8) !important;
+    }
+  }
+  &--has-dot {
+    padding-left: 25px;
+    position: relative;
+    &:before {
+      // content: "";
+      // @include circle(7px, get-color(red));
+      @include getIcon("\70");
+      color: get-color(red);
+      font-size: 0.4375px;
+      margin-top: 9px;
+      margin-left: 8px;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.visited {
+  &:visited {
+    color: get-color(gray) !important;
+  }
+}
+
+.more {
+  color: get-color(red);
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: underline;
+  &--dark {
+    color: get-color(dark);
+  }
+  &--right {
+    float: right;
+  }
+}
+
+.info-prodecure {
+  background-color: get-color(light);
+  padding: 19px 15px;
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 0.6875rem;
+  line-height: 13px;
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+  text-transform: uppercase;
+  &_code {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+  &_label {
+    float: left;
+    width: 50%;
+  }
+}
+
+.button-fixed {
+  @include mq($until: tablet) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 25;
+    padding: 15px;
+  }
+}
+
+.button-next,
+.button-prev {
+  background: get-color(light);
+  padding: 10px 10px;
+  min-height: 100px;
+  width: 184px;
+
+  &_title {
+    color: rgba(get-color(dark), .4);
+    font-size: 0.857rem;
+    line-height: 21px;
+
+  }
+  &_link {
+    display: block;
+    margin: 0 0 8px;
+    text-align: right;
+    position: relative;
+  }
+}
+
+.button-next {
+  float: right;
+  &_link {
+    &:after {
+      background: url($iconsPath + 'arrow-right-red.svg');
+      content: "";
+      display: inline-block;
+      margin-left: 10px;
+      height: 7px;
+      vertical-align: middle;
+      width: 13px;
+    }
+  }
+}
+
+.button-prev {
+  float: left;
+  &_link {
+    text-align: left;
+    &:before {
+      transform: rotate(-180deg);
+      background: url($iconsPath + 'arrow-right-red.svg');
+      content: "";
+      display: inline-block;
+      margin-right: 10px;
+      height: 7px;
+      vertical-align: middle;
+      width: 13px;
+    }
+  }
+}
+
+.list-links {
+  li {
+    display: block;
+    margin: 0 0 15px;
+    .link {
+      display: block;
+      padding: 0;
+    }
+  }
+}
+
+.similars {
+  // padding-top: 20px;
+  display: inline-block;
+  padding: 20px 15px;
+  opacity: .6;
+  p {
+    margin: 0;
+
+  }
+  .link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

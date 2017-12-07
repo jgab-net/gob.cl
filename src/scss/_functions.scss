@@ -1,0 +1,17 @@
+@function get-footer-height($i, $type: xs) {
+  @if $type == xs {
+    @return map-get($footer-base-height, $type) + $i * $footer-link-height;
+  } @else if $type == md {
+    @return map-get($footer-base-height, $type) + (round($i / 2) * $footer-link-height)
+  } @else if $type == xl {
+    @return max((round($i / 2) * $footer-link-height) + $footer-links-container-offset, map-get($footer-base-height, $type))
+  }
+}
+
+@function get-not-main-height($i, $type: xs) {
+  @if $type == xs or $type == md {
+    @return get-footer-height($i, $type) + map-get($navbar-height, $type);
+  } @else if($type == xl) {
+    @return get-footer-height($i, $type) + map-get($navbar-height, md);
+  }
+}

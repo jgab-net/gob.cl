@@ -1,0 +1,15 @@
+
+/*
+  Acá se pueden definir variables de bootstrap y el framework.
+ */
+
+$imagesPath: "../gob.cl/dist/images/";
+$fontsPath: "../gob.cl/dist/fonts/";
+$iconsPath: "../gob.cl/dist/images/icons/";
+
+@import "node_modules/gob.cl/src/scss/vairables";
+@import "node_modules/gob.cl/src/scss/functions";
+
+/*
+  Acá se pueden definir variables del proyecto
+ */

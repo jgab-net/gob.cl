@@ -1,0 +1,246 @@
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  99% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.site-main {
+  opacity: 1;
+  transition: opacity .6s ease-in-out;
+}
+
+.site-search {
+  position: absolute;
+  margin-top: map-get($navbar-height, xs);
+  left: 0;
+  right: 0;
+  top: 0;
+  display: none;
+  z-index: -1;
+  animation: fadeOut 0.6s;
+  padding: 32px 0 110px;
+  @include mq($from: tablet) {
+    padding: 32px 0 0;
+    margin-top: map-get($navbar-height, md);
+  }
+  &.active {
+    opacity: 1;
+    z-index: 1100;
+  }
+  &_form {
+    margin: 0 0 10px;
+  }
+  &_toolbar {
+    // margin-top: 32px;
+    overflow: hidden;
+  }
+  &_button-results {
+    padding-top: 57px;
+    @include mq($from: tablet) {
+      margin-bottom: 50px;
+    }
+    @include mq($from: desktop) {
+      margin-bottom: 182px;
+    }
+    &.fixed {
+      @include mq($until: tablet) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 25;
+        padding: 15px 15px 25px;
+        // padding: 15px 15px 90px;
+      }
+    }
+  }
+}
+
+.btn-search {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: get-color(red);
+  cursor: pointer;
+  display: none;
+  font-size: 23px;
+  vertical-align: middle;
+  position: relative;
+  width: map-get($navbar-height, xs) * 0.7;
+  height: map-get($navbar-height, xs);
+  padding: 0;
+  transition: all .6s ease-in-out;
+  outline: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  @include mq($from: mobile) {
+    width: map-get($navbar-height, xs);
+    height: map-get($navbar-height, xs);
+    margin-left: 0;
+  }
+
+  @include mq($from: tablet) {
+    width: map-get($navbar-height, md);
+    height: map-get($navbar-height, md);
+    display: inline-block;
+  }
+
+  @include mq($from: desktop) {
+    margin-left: 40px;
+  }
+  &--mobile {
+    display: inline-block;
+    @include mq($from: tablet) {
+      display: none;
+    }
+  }
+  &_icon {
+    display: block;
+    transition: opacity .3s;
+    @include center();
+  }
+  .ic-search {
+    width: 24px;
+    height: 24px;
+  }
+  .ic-close,
+  .ic-close-white {
+    opacity: 0;
+  }
+}
+
+body {
+  &.search-active {
+    nav.navbar {
+      box-shadow: none;
+      @include mq($until: tablet) {
+        background-color: get-color(bluedark);
+        border-bottom: get-color(bluedark);
+      }
+
+      .goto {
+        @include mq($until: tablet) {
+          display: block;
+        }
+      }
+      .btn-search {
+        background-color: get-color(bluedark);
+        color: get-color(white);
+      }
+
+      .nav-content {
+        > :not(a) {
+          display: none;
+        }
+      }
+    }
+    .site-main {
+      overflow: hidden;
+      opacity: 0;
+      position: absolute;
+      margin-top: map-get($navbar-height, xs);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+
+      @include mq($from: tablet) {
+        margin-top: map-get($navbar-height, md);
+      }
+    }
+
+    .site-search {
+      display: block;
+      animation: fadeIn 0.6s ease-out;
+      margin-top: map-get($navbar-height, xs);
+      opacity: 1;
+      z-index: 1100;
+      position: relative;
+
+      @include mq($from: tablet) {
+        margin-top: map-get($navbar-height, md);
+      }
+    }
+
+    #search {
+      margin-top: 0;
+    }
+    .btn-search {
+      .ic-close,
+      .ic-close-white {
+        opacity: 1;
+      }
+      .ic-search {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.search {
+  &_section {
+    background-color: rgba(get-color(white), .05);
+    // margin: 0 0 25px;
+    @include mq($from: tablet) {
+      // margin: 0 0 25px;
+    }
+    @include mq($from: desktop) {
+      margin: 0 0 100px;
+      height: 385px;
+      overflow: hidden;
+    }
+    @include mq($from: wide) {
+      height: 345px;
+    }
+    .new {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+.result {
+  padding: 10px 0;
+  &_body {
+    padding-left: 25px;
+    p {
+      font-size: 0.875rem;
+      margin: 0;
+      small {
+        color: rgba(get-color(dark), .4);
+      }
+    }
+  }
+}
