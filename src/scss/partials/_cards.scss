@@ -99,10 +99,10 @@
   padding: 20px;
   position: relative;
   margin: 15px 0;
+  display: block;
   @include mq($from: tablet) {
     height: 6.25rem;
     margin: 15px 0 50px;
-    display: block;
   }
   @include mq($from: desktop) {
     margin: 0;
