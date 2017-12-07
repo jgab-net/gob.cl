@@ -84,5 +84,6 @@
         $.data(this, pluginDataKey).setOptions(options);
       }
     });
-  }
+  };
+
 })(jQuery, window, document);

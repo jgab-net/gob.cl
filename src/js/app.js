@@ -20,7 +20,6 @@ App = {
     // this.post-gallery();
     this.lightboxGallery();
     this.login();
-    this.toolbar();
     this.a11y();
     // this.goTo();
     // this.postMenu();
@@ -347,7 +346,6 @@ App = {
   stepsDestroy: function () {
     $('.post_slider').slick('unslick');
   },
-
   sticky: function () {
     $("#sidebar").stick_in_parent({
       parent: ".section--medium",
@@ -363,27 +361,6 @@ App = {
   login: function () {
     $('#loginBtn').on('click', function () {
       $('.login').toggleClass('active');
-    });
-  },
-  toolbar: function () {
-    var $toolbar = $('.toolbar'),
-      $toggle = $('.toolbar-button--toggle'),
-      $listen = $("#listen"),
-      $toolbarPlayer = $(".toolbar-player"),
-      $playPause = $('.toolbar-player_toggle');
-    // Show / Hide - Mobile
-    $toggle.on('click', function (e) {
-      $toolbar.toggleClass('active');
-    });
-
-    //Play simulation
-    $listen.on('click', function (e) {
-      $(this).addClass('invisible');
-      $toolbarPlayer.removeClass('invisible')
-    });
-    // Play / Pause
-    $playPause.on('click', function (e) {
-      $toolbarPlayer.toggleClass('pause');
     });
   }
 };

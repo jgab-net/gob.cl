@@ -45,7 +45,32 @@
       var $prev = $('.toolbar-button--less'); // Use this.$element.find for non global behavior
       var $next = $('.toolbar-button--plus'); // Use this.$element.find for non global behavior
 
-      $prev.on('click', function () {
+      var $toolbar = $('.toolbar'); // Use this.$element for non global behavior
+      var $toolbarPlayer = $(".toolbar-player"); // Use this.$element.find for non global behavior
+      var $toggle = $('.toolbar-button--toggle'); // Use this.$element.find for non global behavior
+      var $listen = $(".toolbar-button--listen"); // Use this.$element.find for non global behavior
+      var $playPause = $('.toolbar-player_toggle'); // Use this.$element.find for non global behavior
+
+      // show / hide - mobile
+      $toggle.on('click', function (e) {
+        e.preventDefault();
+        $toolbar.toggleClass('active');
+      });
+
+      //play simulation
+      $listen.on('click', function (e) {
+        e.preventDefault()
+        $(this).addClass('invisible');
+        $toolbarPlayer.removeClass('invisible')
+      });
+      // play / pause
+      $playPause.on('click', function (e) {
+        e.preventDefault();
+        $toolbarPlayer.toggleClass('pause');
+      });
+
+      $prev.on('click', function (e) {
+        e.preventDefault();
         if (!$prev.hasClass('disabled') && that.options.index > 0) {
           that.options.index = that._getIndex() - 1;
           that.options.value = that.options.values[that.options.index];
@@ -55,7 +80,8 @@
         }
       });
 
-      $next.on('click', function () {
+      $next.on('click', function (e) {
+        e.preventDefault();
         if (!$next.hasClass('disabled') && that.options.index < that.options.values.length) {
           that.options.index = that._getIndex() + 1;
           that.options.value = that.options.values[that.options.index];

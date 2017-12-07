@@ -98,8 +98,9 @@
                 <a class="link link--medium goTo" href="#iconos">5. Iconos</a>
                 <a class="link link--medium goTo" href="#acordeones">6. Acordeones</a>
                 <a class="link link--medium goTo" href="#formularios">7. Formularios</a>
-                <a class="link link--medium goTo" href="#componentes">8. Componentes Visuales</a>
+                <a class="link link--medium goTo" href="#componentes">8. Componentes presentacionales</a>
                 <a class="link link--medium goTo" href="#bloques">9. Bloques</a>
+                <a class="link link--medium goTo" href="#dinamicos">10. Componentes dinámicos</a>
               </div>
             </div>
           </aside>
@@ -930,9 +931,22 @@
                 Los tags de tipo checkbox pueden tener programado callbacks en javascript que se ejecutan
                 cuando se selecciona un elemento o se cancela la selección de la siguiente forma:
               </p>
-              <pre data-src="examples/tags.js">
-                <code class="language-javascript"></code>
-              </pre>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                        <pre data-src="examples/tags.js">
+                          <code class="language-javascript"></code>
+                        </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </article>
           </section>
           <section class="section post-section" id="iconos">
@@ -1033,7 +1047,7 @@
                     </div>
                   </li>
                   <li class="collapsible_item">
-                    <div class="collapsible_header">
+                    <div class="collapsible_header active">
                       <h4 class="collapsible_title">En linea</h4>
                     </div>
                     <div class="collapsible_body">
@@ -1053,7 +1067,7 @@
                     </div>
                   </li>
                   <li class="collapsible_item">
-                    <div class="collapsible_header">
+                    <div class="collapsible_header active">
                       <h4 class="collapsible_title">En linea</h4>
                     </div>
                     <div class="collapsible_body">
@@ -1073,7 +1087,7 @@
                     </div>
                   </li>
                   <li class="collapsible_item">
-                    <div class="collapsible_header">
+                    <div class="collapsible_header active">
                       <h4 class="collapsible_title">En linea</h4>
                     </div>
                     <div class="collapsible_body">
@@ -1093,7 +1107,7 @@
                     </div>
                   </li>
                   <li class="collapsible_item">
-                    <div class="collapsible_header">
+                    <div class="collapsible_header active">
                       <h4 class="collapsible_title">En linea</h4>
                     </div>
                     <div class="collapsible_body">
@@ -1113,7 +1127,7 @@
                     </div>
                   </li>
                   <li class="collapsible_item">
-                    <div class="collapsible_header">
+                    <div class="collapsible_header active">
                       <h4 class="collapsible_title">En linea</h4>
                     </div>
                     <div class="collapsible_body">
@@ -1163,46 +1177,46 @@
                       <h2 class="heading-medium">Inputs</h2>
                       <div class="row">
                         <div class="col-md-3">
-                          <label for="">Text label</label>
-                          <input type="text" placeholder="Texto">
+                          <label for="input1">Text label</label>
+                          <input id="input1" type="text" placeholder="Texto">
                         </div>
                         <div class="col-md-3">
-                          <label for="" class="error">Error label</label>
-                          <input type="text" placeholder="Texto" class="error">
+                          <label for="input2" class="error">Error label</label>
+                          <input id="input2" type="text" placeholder="Texto" class="error">
                           <span class="alert error on-input">Error alert text</span>
                         </div>
                         <div class="col-md-3">
-                          <label for="" class="success">Success Label</label>
-                          <input type="text" placeholder="Texto" class="success">
+                          <label for="input3" class="success">Success Label</label>
+                          <input id="input3" type="text" placeholder="Texto" class="success">
                           <span class="alert success on-input">Success alert text</span>
                         </div>
                         <div class="col-md-3">
-                          <label for="">Success Label</label>
-                          <input type="text" placeholder="Texto" class="warning">
+                          <label for="input4">Success Label</label>
+                          <input id="input4" type="text" placeholder="Texto" class="warning">
                           <span class="alert warning on-input">Warning alert text</span>
                         </div>
                         <div class="col-md-3">
-                          <label for="">Password</label>
-                          <input type="password" placeholder="Texto" value="Texto">
+                          <label for="input5">Password</label>
+                          <input id="input5" type="password" placeholder="Texto" value="Texto">
                         </div>
                         <div class="col-md-3">
-                          <label for="">Readonly</label>
-                          <input readonly type="text" placeholder="Texto" value="Texto">
+                          <label for="input6">Readonly</label>
+                          <input id="input6" readonly type="text" placeholder="Texto" value="Texto">
                         </div>
                         <div class="col-md-3">
-                          <label for="">Disabled</label>
-                          <input disabled type="text" placeholder="Texto" value="Texto">
+                          <label for="input7">Disabled</label>
+                          <input id="input7" disabled type="text" placeholder="Texto" value="Texto">
                         </div>
                         <div class="col-md-6">
-                          <label for="">Input</label>
-                          <input type="text" placeholder="Texto">
+                          <label for="input8">Input</label>
+                          <input id="input8" type="text" placeholder="Texto">
                           <small>Help text example</small>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-3">
-                          <label for="">Date input</label>
-                          <input type="date">
+                          <label for="input9">Date input</label>
+                          <input id="input9" type="date">
                         </div>
                       </div>
                     </div>
@@ -1214,16 +1228,16 @@
                       <h2 class="heading-medium">Select</h2>
                       <div class="row">
                         <div class="col-md-3">
-                          <label for="">Select label</label>
-                          <select>
+                          <label for="select1">Select label</label>
+                          <select id="select1">
                             <option value="">Option 1</option>
                             <option value="">Option 2</option>
                             <option value="">Option 3</option>
                           </select>
                         </div>
                         <div class="col-md-6">
-                          <label for="">Select label</label>
-                          <select>
+                          <label for="selec2">Select label</label>
+                          <select id="select2">
                             <option value="">Option 1</option>
                             <option value="">Option 2</option>
                             <option value="">Option 3</option>
@@ -1329,8 +1343,8 @@
                       <h2 class="heading-medium">Textarea</h2>
                       <div class="row">
                         <div class="col-md-6">
-                          <label for="">Text label</label>
-                          <textarea></textarea>
+                          <label for="input10">Text label</label>
+                          <textarea id="input10"></textarea>
                         </div>
                       </div>
                     </div>
@@ -1397,7 +1411,7 @@
             </article>
           </section>
           <section class="section post-section" id="componentes">
-            <h2 class="heading-large">8. Componentes Visuales</h2>
+            <h2 class="heading-large">8. Componentes presentacionales</h2>
             <article>
               <h2 class="heading-medium">New list</h2>
               <div class="row">
@@ -1575,14 +1589,14 @@
               <div class="row">
                 <div class="col-12">
                   <div class="row">
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <a href="#" class="card-data">
                         <h2 class="card-data_title">
                           <span>Card w/o value</span>
                         </h2>
                       </a>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <a href="#" class="card-data">
                         <h3 class="card-data_title">
                           <span class="card-data_number">00</span>
@@ -1590,7 +1604,7 @@
                         </h3>
                       </a>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <a href="#" class="card-data">
                         <h3 class="card-data_title">
                           <span class="card-data_number">00</span>
@@ -1598,7 +1612,7 @@
                         </h3>
                       </a>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <a href="#" class="card-data">
                         <h3 class="card-data_title">
                           <span class="card-data_number">00</span>
@@ -1883,6 +1897,150 @@
                   </div>
                 </div>
               </div>
+            </article>
+          </section>
+          <section class="section post-section" id="dinamicos">
+            <h2 class="heading-large">10. Componentes dinámicos</h2>
+            <article>
+              <h2 class="heading-medium">Accesibilidad</h2>
+              <p>
+                El toolbar de accesibilidad es un plugin de jQuery que puede ser configurado
+                vía javascript o desde data-attributes.
+              </p>
+              <p>
+                Además, vía javascript se puede configurar un callback para escuchar el cambio
+                del font-size
+              </p>
+              <pre data-src="examples/toolbar-setting.js">
+                <code class="language-javascript"></code>
+              </pre>
+              <pre data-src="examples/toolbar-setting.html">
+                <code class="language-markup"></code>
+              </pre>
+              <section class="sub-section">
+                <div class="row bg-bluedark">
+                  <div class="col-12 p-2">
+                    <div data-value="16px" class="toolbar">
+                      <div class="toolbar_content">
+                        <a href="#" class="toolbar-button toolbar-button--contrast">
+                          <span class="toolbar-button_content">
+                            <i class="ic-contrast toolbar-button_icon"></i>
+                          </span>
+                        </a>
+                        <a href="#" class="toolbar-button toolbar-button--less disabled">
+                          <span class="toolbar-button_content">
+                            <i class="ic-font-size-less toolbar-button_icon"></i>
+                          </span>
+                        </a>
+                        <a href="#" class="toolbar-button toolbar-button--plus">
+                          <span class="toolbar-button_content">
+                            <i class="ic-font-size-plus toolbar-button_icon"></i>
+                          </span>
+                        </a>
+                        <div class="toolbar_player">
+                          <a href="#track" class="toolbar-button toolbar-button--listen">
+                            <span class="toolbar-button_content">
+                              <i class="toolbar-button_icon ic-volume"></i>
+                              <span class="toolbar-button_text">Escuchar</span>
+                            </span>
+                          </a>
+                          <div class="toolbar-player invisible">
+                            <a href="#" class="toolbar-player_toggle">
+                              <span class="toolbar-button_content">
+                                <i class="ic-pause toolbar-button_icon-pause"></i>
+                                <i class="ic-play toolbar-button_icon-play"></i>
+                              </span>
+                            </a>
+                            <div class="toolbar-player_timeline">
+                              <span></span>
+                            </div>
+                            <a href="#" class="toolbar-player_download">
+                              <span class="toolbar-button_content">
+                                <i class="ic-download"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="#" class="toolbar-button toolbar-button--toggle">
+                        <span class="toolbar-button_content">
+                          <i class="ic-accessibility toolbar-button_icon"></i>
+                          <i class="ic-close toolbar-button_icon"></i>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 p-2">
+                    <div data-value="16px" class="toolbar dark">
+                      <div class="toolbar_content">
+                        <a href="#" class="toolbar-button toolbar-button--contrast">
+                          <span class="toolbar-button_content">
+                            <i class="ic-contrast toolbar-button_icon"></i>
+                          </span>
+                        </a>
+                        <a href="#" class="toolbar-button toolbar-button--less disabled">
+                          <span class="toolbar-button_content">
+                            <i class="ic-font-size-less toolbar-button_icon"></i>
+                          </span>
+                        </a>
+                        <a href="#" class="toolbar-button toolbar-button--plus">
+                          <span class="toolbar-button_content">
+                            <i class="ic-font-size-plus toolbar-button_icon"></i>
+                          </span>
+                        </a>
+                        <div class="toolbar_player">
+                          <a href="#track" class="toolbar-button toolbar-button--listen">
+                            <span class="toolbar-button_content">
+                              <i class="toolbar-button_icon ic-volume"></i>
+                              <span class="toolbar-button_text">Escuchar</span>
+                            </span>
+                          </a>
+                          <div class="toolbar-player invisible">
+                            <a href="#" class="toolbar-player_toggle">
+                              <span class="toolbar-button_content">
+                                <i class="ic-pause toolbar-button_icon-pause"></i>
+                                <i class="ic-play toolbar-button_icon-play"></i>
+                              </span>
+                            </a>
+                            <div class="toolbar-player_timeline">
+                              <span></span>
+                            </div>
+                            <a href="#" class="toolbar-player_download">
+                              <span class="toolbar-button_content">
+                                <i class="ic-download"></i>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <a href="#" class="toolbar-button toolbar-button--toggle">
+                        <span class="toolbar-button_content">
+                          <i class="ic-accessibility toolbar-button_icon"></i>
+                          <i class="ic-close toolbar-button_icon"></i>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-collapsible">
+                  <div class="collapsible-block">
+                    <ul class="collapsible">
+                      <li class="collapsible_item">
+                        <div class="collapsible_header active">
+                          <h4 class="collapsible_title">Módulo de código</h4>
+                        </div>
+                        <div class="collapsible_body">
+                        <pre data-src="examples/toolbar.html">
+                          <code class="language-markup"></code>
+                        </pre>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
             </article>
           </section>
         </div>
