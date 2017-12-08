@@ -46,6 +46,7 @@
   display: none;
   z-index: -1;
   animation: fadeOut 0.6s;
+  min-height: 100vh;
   padding: 32px 0 110px;
   @include mq($from: tablet) {
     padding: 32px 0 0;

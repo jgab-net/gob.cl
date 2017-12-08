@@ -67,6 +67,12 @@
         <li class="nav-item">
           <a href="#" class="nav-link">Link</a>
         </li>
+        <li class="nav-item nav-item-action nav-item-desktop">
+          <a href="#" class="btn btn-search toggle-search">
+            <i class="ic-search btn-search_icon"></i>
+            <i class="ic-close btn-search_icon"></i>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -1398,7 +1404,7 @@
                             <h4 class="collapsible_title">Módulo de código</h4>
                           </div>
                           <div class="collapsible_body">
-                            <pre data-src="examples/formularios.html">
+                            <pre data-src="examples/forms.html">
                               <code class="language-markup"></code>
                             </pre>
                           </div>
@@ -2042,12 +2048,154 @@
                 </div>
               </section>
             </article>
+            <article>
+              <h2 class="heading-medium">Busqueda</h2>
+              <p>
+                El componente de busqueda por defecto solo tiene comportamientos visuales, configurando los
+                data-attributes <code>view-filter</code>, <code>scrapping-value (default: <i>search-value</i>)</code>
+                y <code>scrapping-class (default: <i>.searchable</i>)</code>
+                se pueden realizar busquedas sobre el DOM
+              </p>
+              <p>
+                El componente se puede configurar tanto vía data-attributes como desde la llamada del plugin en
+                javascript
+              </p>
+              <pre data-src="examples/search-setting.js">
+                <code class="language-javascript"></code>
+              </pre>
+              <pre data-src="examples/search-setting.html">
+                <code class="language-markup"></code>
+              </pre>
+              <p>
+                Ejemplo del componente simple:
+              </p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="search-form search-form--large">
+                    <input type="search" placeholder="Escribe aquí lo que quieres buscar" class="search-form_input">
+                    <button type="submit" class="search-form_button search-form_button--submit">
+                      <i class="ic-search"></i>
+                    </button>
+                    <button type="button" class="search-form_button search-form_button--cancel d-none">
+                      <i class="ic-delete"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                      <pre data-src="examples/search-simple.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Ejemplo del componente con filtrado:
+              </p>
+              <div class="row">
+                <div class="col-12">
+                  <div class="search-form search-form--large" data-view-filter="true">
+                    <input type="search" placeholder="Escribe aquí lo que quieres buscar" class="search-form_input">
+                    <button type="submit" class="search-form_button search-form_button--submit">
+                      <i class="ic-search"></i>
+                    </button>
+                    <button type="button" class="search-form_button search-form_button--cancel d-none">
+                      <i class="ic-delete"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div data-search-value="Uno" class="searchable col-12">
+                      <p>
+                        <a href="#">Uno</a>
+                      </p>
+                    </div>
+                    <div data-search-value="Dos" class="searchable col-12">
+                      <p>
+                        <a href="#">Dos</a>
+                      </p>
+                    </div>
+                    <div data-search-value="Tres" class="searchable col-12">
+                      <p>
+                        <a href="#">Tres</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                      <pre data-src="examples/search-filter.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h2 class="heading-medium">Busqueda Global</h2>
+              <p>
+                La vista de busqueda global puede ser mostrada desde cualquier componente que tenga la clase
+                <code>toggle-search</code>, solo es necesario tener el div <code>site-search</code> a nivel del
+                body de la página.
+              </p>
+              <pre data-src="examples/global-search-setting.html">
+                <code class="language-markup"></code>
+              </pre>
+              <div class="row">
+                <div class="col-12 p-2">
+                  <a class="button button--block toggle-search" href="#">Toggle search</a>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                      <pre data-src="examples/global-search.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
           </section>
         </div>
       </div>
     </div>
   </section>
 </main>
+
+<div class="site-search bg-bluedark">
+  <section>
+    <div class="container">
+      <h1>Search zone</h1>
+    </div>
+  </section>
+</div>
 
 <footer class="site-footer">
   <div class="container">

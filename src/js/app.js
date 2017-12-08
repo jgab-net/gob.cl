@@ -110,32 +110,7 @@ App = {
     return ($(window).width() >= 768) ? true : false;
   },
   searchField: function () {
-    var $input = $('.search-form_input'),
-      $cancel = $('.search-form_button--cancel'),
-      $submit = $('.search-form_button--submit');
-
-    $cancel.addClass('d-none');
-
-    if ($input.val()) {
-      $submit.addClass('d-none');
-      $cancel.removeClass('d-none');
-    }
-
-    $input.on('input', function () {
-      if ($input.val()) {
-        $submit.addClass('d-none');
-        $cancel.removeClass('d-none');
-      } else {
-        $submit.removeClass('d-none');
-        $cancel.addClass('d-none');
-      }
-    });
-
-    $cancel.on('click', function () {
-      $input.val('');
-      $submit.removeClass('d-none');
-      $cancel.addClass('d-none');
-    });
+    $('.search-form').searchField();
   },
   imgDesktop: function () {
     if (this.isDesktop()) {
