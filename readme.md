@@ -1,8 +1,8 @@
 # gob.cl framework
 
-##Table of Contents
-* [Documentation.](#markdown-header-documentation)
-* [Development.](#markdown-header-development)
+## Table of Contents
+* [Documentation.](#documentation)
+* [Development.](#development)
 
 ## Documentation.
 
