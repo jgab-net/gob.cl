@@ -12,9 +12,7 @@
   var changeEvent = 'change.gl.tags';
   var cancelEvent = 'cancel.gl.tags';
 
-  var defaults = {
-    firstEventTimeout: 50
-  };
+  var defaults = {};
 
   function Plugin(element, options) {
     this.$element = $(element);

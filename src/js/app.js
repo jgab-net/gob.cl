@@ -7,22 +7,18 @@ $(function () {
 
 App = {
   init: function () {
-    // this.slider();
     this.searchField();
     this.tabs();
     this.imgDesktop();
-    this.imgToBaground();
+    this.imgToBackground();
     this.imgToBackgroundExpand();
-    // this.sticky();
     this.search();
     this.tags();
     this.filters();
-    // this.post-gallery();
     this.lightboxGallery();
     this.login();
     this.a11y();
-    // this.goTo();
-    // this.postMenu();
+    this.contingency();
   },
   a11y: function () {
     $('.toolbar').toolbar();
@@ -55,7 +51,7 @@ App = {
         e.preventDefault();
         $('.goToMobile').each(function (index, el) {
           var anchorMenu = $(el).attr('href');
-          if (anchorMenu == anchor) {
+          if (anchorMenu === anchor) {
             $('.goToMobile').removeClass('link--text-dark');
             $(this).addClass('link--text-dark');
 
@@ -95,7 +91,7 @@ App = {
           // console.log(el);
           $('#sidebar').find('.goTo').each(function (index, el) {
 
-            if ($(el).attr('href') == id) {
+            if ($(el).attr('href') === id) {
               if (This.isDesktop()) {
                 $('.goTo').removeClass('link--text-dark');
                 $(el).addClass('link--text-dark');
@@ -107,7 +103,7 @@ App = {
     });
   },
   isDesktop: function () {
-    return ($(window).width() >= 768) ? true : false;
+    return $(window).width() >= 768;
   },
   searchField: function () {
     $('.search-form').searchField();
@@ -120,7 +116,7 @@ App = {
       });
     }
   },
-  imgToBaground: function () {
+  imgToBackground: function () {
     if (this.isDesktop()) {
       $('.elem-bg').each(function (index, el) {
         var srcImg = $(el).find('.img-to-bg').attr('src');
@@ -260,7 +256,7 @@ App = {
       $(elem).on('click', function (e) {
         e.preventDefault();
         active = index;
-        var next = ( (active + 1) == galleryLength ) ? 0 : active + 1;
+        var next = ( (active + 1) === galleryLength ) ? 0 : active + 1;
         $('.lightbox-gallery_image').attr('src', pathImg);
         $('.lightbox-gallery_image-thumbnail').attr('src', galleryItems[next].url);
         $('.lightbox-gallery').addClass("active");
@@ -271,7 +267,7 @@ App = {
       e.preventDefault();
       if (active < (galleryLength - 1)) {
         var next = active + 1;
-        var nextItem = ( (next + 1) == galleryLength ) ? 0 : next + 1;
+        var nextItem = ( (next + 1) === galleryLength ) ? 0 : next + 1;
         active = next;
         $('.lightbox-gallery_image').attr('src', galleryItems[next].url);
         $('.lightbox-gallery_image-thumbnail').attr('src', galleryItems[nextItem].url);
@@ -281,7 +277,7 @@ App = {
       e.preventDefault();
       if (active > 0) {
         var prev = active - 1;
-        var nextItem = ( (prev + 1) == galleryLength ) ? 0 : prev + 1;
+        var nextItem = ( (prev + 1) === galleryLength ) ? 0 : prev + 1;
         active = prev;
         $('.lightbox-gallery_image').attr('src', galleryItems[prev].url);
         $('.lightbox-gallery_image-thumbnail').attr('src', galleryItems[nextItem].url);
@@ -289,8 +285,8 @@ App = {
     });
     $('.lightbox-gallery_image-next').on('click', function (e) {
       e.preventDefault();
-      var next = ( (active + 1) == galleryLength ) ? 0 : active + 1;
-      var nextItem = ( (next + 1) == galleryLength ) ? 0 : next + 1;
+      var next = ( (active + 1) === galleryLength ) ? 0 : active + 1;
+      var nextItem = ( (next + 1) === galleryLength ) ? 0 : next + 1;
       active = next;
       $('.lightbox-gallery_image').attr('src', galleryItems[next].url);
       $('.lightbox-gallery_image-thumbnail').attr('src', galleryItems[nextItem].url);
@@ -337,5 +333,8 @@ App = {
     $('#loginBtn').on('click', function () {
       $('.login').toggleClass('active');
     });
+  },
+  contingency: function () {
+    $('body').contingency();
   }
 };

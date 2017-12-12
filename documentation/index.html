@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="css/gob.cl.bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/documentation.css" type="text/css">
 </head>
-<body>
+<body class="footer-links-6">
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
   <div class="container">
     <a href="#" class="navbar-brand align-self-start">
@@ -67,6 +67,9 @@
         <li class="nav-item">
           <a href="#" class="nav-link">Link</a>
         </li>
+        <li class="nav-item">
+          <a href="#" data-contingency="false" class="nav-link toggle-contingency">Contingencia</a>
+        </li>
         <li class="nav-item nav-item-action nav-item-desktop">
           <a href="#" class="btn btn-search toggle-search">
             <i class="ic-search btn-search_icon"></i>
@@ -78,6 +81,9 @@
   </div>
 </nav>
 <main class="site-main">
+  <a href="#" class="contingency contingency-continue button button--block button--yellow">
+    Seguir en contingencia
+  </a>
   <section class="section bg-bluedark">
     <div class="container">
       <article class="text-light">
@@ -2182,9 +2188,37 @@
                 </div>
               </div>
             </article>
+            <article>
+              <h2 class="heading-medium">Contingencia</h2>
+              <p>
+                Las contingencias se activan vía javascript desde un plugin de jQuery, haciendo que cualquier etiqueta
+                hija de la sección <code>section.site-main</code> que tenga la clase <code>.contingency</code> se muestre.
+              </p>
+              <p>
+                Mientras estén activas las contingencias, se puede ocultar o mostrar los tags <code>.contingency</code>
+                haciendo click sobre cualquier tag con la clase <code>.contingency-continue</code> y
+                <code>.contingency-navigate</code>
+              </p>
+              <pre data-src="examples/contingency-setting.js">
+                <code class="language-javascript"></code>
+              </pre>
+              <pre data-src="examples/contingency-setting.html">
+                <code class="language-markup"></code>
+              </pre>
+            </article>
           </section>
         </div>
       </div>
+    </div>
+  </section>
+  <a href="#" class="contingency contingency-navigate button button--block">
+    Continúa navegando
+  </a>
+  <section class="contingency bg-yellow">
+    <div class="container">
+      <p>
+        Contingencia activa
+      </p>
     </div>
   </section>
 </main>
@@ -2278,6 +2312,17 @@
         crossorigin="anonymous"></script>
 
 <script src="js/gob.cl.js"></script>
-</body>
 
+<script>
+  $(function () {
+    $('.toggle-contingency').on('click', function (e) {
+      e.preventDefault();
+      var contingency = !$(this).data('contingency');
+      $('body').contingency({ active: contingency });
+      $(this).data('contingency', contingency);
+    });
+  });
+</script>
+
+</body>
 </html>

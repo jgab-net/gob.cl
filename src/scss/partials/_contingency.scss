@@ -1,0 +1,36 @@
+body {
+  &.status-contingency {
+    &:not(.status-navigate) {
+      .site-main {
+        & > :not(.contingency) {
+          display: none !important;
+        }
+      }
+    }
+
+    &.status-navigate {
+      .site-main {
+        & > .contingency:not(.contingency-continue) {
+          display: none !important;
+        }
+
+        & > .contingency-continue {
+          display: block;
+        }
+      }
+    }
+
+    .contingency-continue {
+      display: none;
+    }
+  }
+
+
+  &.status-normal {
+    .site-main {
+      & > .contingency {
+        display: none !important;
+      }
+    }
+  }
+}
