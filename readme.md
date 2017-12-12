@@ -8,8 +8,8 @@
 
 See documentation and demo at:
 
-+ [site - demo](https://jgab-net.github.io/gob.cl/site/).
-+ [documentation](https://jgab-net.github.io/gob.cl/documentation/).
++ [site - demo](http://e-gob.github.io/gob.cl/site/).
++ [documentation](http://e-gob.github.io/gob.cl/documentation/).
 
 ## Development.
 
