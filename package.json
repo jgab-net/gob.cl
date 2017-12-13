@@ -1,9 +1,8 @@
 {
   "name": "gob.cl",
-  "version": "1.0.48",
-  "main": "",
-  "repository": "git@github.com:e-gob/gob.cl.git",
-  "author": "Abraham José González Barboza <jgab.net@gmail.com>",
+  "version": "1.1.0",
+  "repository": "https://github.com/e-gob/gob.cl",
+  "author": "Magnet S.P.A.",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.13",
@@ -20,9 +19,10 @@
     "gulp-uglify": "^3.0.0"
   },
   "scripts": {
-    "build": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp build",
     "serve": "./node_modules/.bin/gulp serve",
-    "serve:documentation": "./node_modules/.bin/gulp serve:documentation"
+    "serve:documentation": "./node_modules/.bin/gulp serve:documentation",
+    "build:watch": "./node_modules/.bin/gulp build:watch"
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.2",

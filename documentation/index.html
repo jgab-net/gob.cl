@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="css/gob.cl.bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/documentation.css" type="text/css">
 </head>
-<body>
+<body class="footer-links-6">
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
   <div class="container">
     <a href="#" class="navbar-brand align-self-start">
@@ -67,6 +67,9 @@
         <li class="nav-item">
           <a href="#" class="nav-link">Link</a>
         </li>
+        <li class="nav-item">
+          <a href="#" data-contingency="false" class="nav-link toggle-contingency">Contingencia</a>
+        </li>
         <li class="nav-item nav-item-action nav-item-desktop">
           <a href="#" class="btn btn-search toggle-search">
             <i class="ic-search btn-search_icon"></i>
@@ -77,7 +80,22 @@
     </div>
   </div>
 </nav>
+<section class="contingency">
+  <a href="#" class="contingency-navigate button button--block">
+    Continúa navegando
+  </a>
+  <section class="bg-yellow">
+    <div class="container">
+      <p>
+        Contingencia activa
+      </p>
+    </div>
+  </section>
+</section>
 <main class="site-main">
+  <a href="#" class="contingency contingency-continue button button--block button--yellow">
+    Seguir en contingencia
+  </a>
   <section class="section bg-bluedark">
     <div class="container">
       <article class="text-light">
@@ -2182,6 +2200,36 @@
                 </div>
               </div>
             </article>
+            <article>
+              <h2 class="heading-medium">Contingencia</h2>
+              <p>
+                El modo contingencia se activa vía javascript desde un plugin de jQuery, puede ser configurado desde un
+                objeto literal al activarlo o vía <code>data-attributes</code>.
+              </p>
+              <p>
+                Por defecto muestra su contenido desde la ruta <code>/</code> y un botón para regresar a el en cualquier
+                otra ruta del sitio, se puede indicar cuando el plugin inició en el root del sitio vía javascript o
+                <code>data-attributes</code>.
+              </p>
+              <p>
+                El modo contingencia al estar activo oculta el tag <code>main.site-main</code> y muestra su contenido,
+                el cual debe estar en el tag <code>section.contingency</code> al lado del main.
+              </p>
+              <p>
+                Tiene dos acciones que deben estar dentro del tag <code>section.contingency</code>,
+                <code>.contingency-navigate</code>: solo se muestra en el root y cambia el modo contingencia permitiendo
+                la visualización del contenido normal del home
+                <code>.contingency-continue</code>: se muestra en todas las rutas distintas al root y en el root solo
+                cuando <code>.contingency-navigate</code> esta activo, permite regresar a la vista root o mostrar las
+                contingencias.
+              </p>
+              <pre data-src="examples/contingency-setting.js">
+                <code class="language-javascript"></code>
+              </pre>
+              <pre data-src="examples/contingency-setting.html">
+                <code class="language-markup"></code>
+              </pre>
+            </article>
           </section>
         </div>
       </div>
@@ -2278,6 +2326,17 @@
         crossorigin="anonymous"></script>
 
 <script src="js/gob.cl.js"></script>
-</body>
 
+<script>
+  $(function () {
+    $('.toggle-contingency').on('click', function (e) {
+      e.preventDefault();
+      var contingency = !$(this).data('contingency');
+      $('body').contingency({ active: contingency });
+      $(this).data('contingency', contingency);
+    });
+  });
+</script>
+
+</body>
 </html>

@@ -1,0 +1,75 @@
+body {
+  .contingency {
+    overflow: hidden;
+    display: none;
+
+    > * {
+      display: none;
+    }
+  }
+
+  &.contingency-active {
+    .contingency {
+      display: block;
+
+      .contingency-continue {
+        display: block;
+      }
+    }
+    &.contingency-root {
+
+      .contingency > * {
+        display: block;
+      }
+
+      main.site-main {
+        display: none;
+      }
+    }
+  }
+
+  &.status-continue {
+    .contingency {
+      .contingency-continue {
+        display: none;
+      }
+    }
+  }
+
+  &.status-navigate {
+    .contingency {
+      > *:not(.contingency-continue) {
+        display: none;
+      }
+    }
+
+    &.contingency-root {
+      main.site-main {
+        display: block;
+      }
+    }
+  }
+
+  main.site-main,
+  section.contingency {
+    margin-top: map-get($navbar-height, xs);
+
+    @include mq($from: tablet) {
+      margin-top: map-get($navbar-height, md);
+    }
+
+  }
+
+  &.contingency-active {
+    section.contingency + main.site-main {
+      margin-top: 0;
+    }
+  }
+
+  &.search-active {
+    .contingency {
+      display: none;
+    }
+  }
+
+}
