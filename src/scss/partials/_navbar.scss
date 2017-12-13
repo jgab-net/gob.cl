@@ -101,7 +101,7 @@ body {
     }
   }
 
-  main {
+  main.site-main {
     margin-top: map-get($navbar-height, xs);
 
     @include mq($from: tablet) {

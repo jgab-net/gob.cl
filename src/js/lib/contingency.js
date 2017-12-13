@@ -24,42 +24,66 @@
 
   Plugin.prototype.init = function () {
     var that = this;
+    var $body = $('body');
 
     this.update();
 
-    var $continueAction =this.$element.find('.contingency-continue');
+    var $continueAction = this.$element.find('.contingency-continue');
     var $navigateAction = this.$element.find('.contingency-navigate');
 
-    if (!!localStorage.getItem(storageKey)) {
-      this.$element.addClass('status-navigate');
-    } else {
-      this.$element.removeClass('status-navigate');
-    }
-
-    $continueAction.on('click', function () {
-      that.$element.removeClass('status-navigate');
-      localStorage.removeItem(storageKey);
+    $continueAction.on('click', function (e) {
+      if (that.onRoot()) {
+        e.preventDefault();
+        $body.addClass('status-continue');
+        $body.removeClass('status-navigate');
+        localStorage.removeItem(storageKey);
+      }
     });
 
-    $navigateAction.on('click', function () {
-      that.$element.addClass('status-navigate');
-      localStorage.setItem(storageKey, true);
+    $navigateAction.on('click', function (e) {
+      if (that.onRoot()) {
+        e.preventDefault();
+        $body.removeClass('status-continue');
+        $body.addClass('status-navigate');
+        localStorage.setItem(storageKey, true);
+      }
     });
   };
 
   Plugin.prototype.update = function () {
     if (this.options.active) {
-      this.$element.addClass('status-contingency');
-      this.$element.removeClass('status-normal');
+      var root = this.onRoot();
+      var $body = $('body');
+      var stored = !!localStorage.getItem(storageKey);
+
+      $body
+        .addClass('contingency-active')
+        .toggleClass('contingency-root', root);
+
+      if (root) {
+        $body
+          .toggleClass('status-navigate', stored)
+          .toggleClass('status-continue', !stored);
+      }
+
     } else {
-      this.$element.removeClass('status-contingency');
-      this.$element.addClass('status-normal');
+      $('body')
+        .removeClass('contingency-active')
+        .removeClass('contingency-root');
     }
   };
 
   Plugin.prototype.setOptions = function (options) {
     this.options = $.extend(this.options, options);
     this.update();
+  };
+
+  Plugin.prototype.onRoot = function () {
+    if (this.options.hasOwnProperty('root')) {
+      return this.options.root;
+    } else {
+      return location.pathname === '/';
+    }
   };
 
   $.fn[pluginName] = function (options) {

@@ -335,6 +335,6 @@ App = {
     });
   },
   contingency: function () {
-    $('body').contingency();
+    $('.contingency').contingency();
   }
 };
