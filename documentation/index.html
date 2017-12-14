@@ -2121,7 +2121,11 @@
               </p>
               <div class="row">
                 <div class="col-12">
-                  <div class="search-form search-form--large" data-view-filter="true">
+                  <div
+                    class="search-form search-form--large"
+                    data-view-filter="true"
+                    data-scrapping-class=".searchable-without-group"
+                  >
                     <input type="search" placeholder="Escribe aquí lo que quieres buscar" class="search-form_input">
                     <button type="submit" class="search-form_button search-form_button--submit">
                       <i class="ic-search"></i>
@@ -2131,19 +2135,19 @@
                     </button>
                   </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 pt-2 bg-bluedarkgray">
                   <div class="row">
-                    <div data-search-value="Uno" class="searchable col-12">
+                    <div data-search-value="Uno" class="searchable-without-group col-12">
                       <p>
                         <a href="#">Uno</a>
                       </p>
                     </div>
-                    <div data-search-value="Dos" class="searchable col-12">
+                    <div data-search-value="Dos" class="searchable-without-group col-12">
                       <p>
                         <a href="#">Dos</a>
                       </p>
                     </div>
-                    <div data-search-value="Tres" class="searchable col-12">
+                    <div data-search-value="Tres" class="searchable-without-group col-12">
                       <p>
                         <a href="#">Tres</a>
                       </p>
@@ -2160,6 +2164,139 @@
                       </div>
                       <div class="collapsible_body">
                       <pre data-src="examples/search-filter.html">
+                        <code class="language-markup"></code>
+                      </pre>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Es posible hacer grupos de elementos de los listados sobre los que se realizará la busqueda,
+                de esta forma se puede mostrar un mensaje de error por grupo al no conseguir resultados.
+              </p>
+              <p>
+                Es necesario usar el data-attribute <code>data-groups</code> enviandole un JSON array válido con los
+                selectores que identifican a cada grupo, y agregarle a cada elemento <code>.searchable</code> el selector
+                del grupo al que pertence.
+              </p>
+              <p>
+                Para identificar el tag que contendrá el mensaje de error por cada grupo se usa la clase <code>.search-not-found</code>
+                y <code>.not-found-&lt;group-name&gt;</code>
+              </p>
+              <div class="row">
+                <div class="col-12">
+                  <div
+                    class="search-form search-form--large"
+                    data-view-filter="true"
+                    data-groups='[".group-a", ".group-b", ".group-c"]'
+                  >
+                    <input type="search" placeholder="Escribe aquí lo que quieres buscar" class="search-form_input">
+                    <button type="submit" class="search-form_button search-form_button--submit">
+                      <i class="ic-search"></i>
+                    </button>
+                    <button type="button" class="search-form_button search-form_button--cancel d-none">
+                      <i class="ic-delete"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-12 pt-2 bg-bluedarkgray">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4>Grupo A</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div data-search-value="GrupoA Uno" class="searchable col-12 group-a">
+                      <p>
+                        <a href="#">GrupoA Uno</a>
+                      </p>
+                    </div>
+                    <div data-search-value="GrupoA Dos" class="searchable col-12 group-a">
+                      <p>
+                        <a href="#">GrupoA Dos</a>
+                      </p>
+                    </div>
+                    <div data-search-value="GrupoA Tres" class="searchable col-12 group-a">
+                      <p>
+                        <a href="#">GrupoA Tres</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row search-not-found not-found-group-a">
+                    <div class="col-12">
+                      <small>No se encontraron resultados en el grupo a</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 pt-2">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4>Grupo B</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div data-search-value="GrupoB Cuatro" class="searchable col-12 group-b">
+                      <p>
+                        <a href="#">GrupoB Cuatro</a>
+                      </p>
+                    </div>
+                    <div data-search-value="GrupoB Cinco" class="searchable col-12 group-b">
+                      <p>
+                        <a href="#">GrupoB Cinco</a>
+                      </p>
+                    </div>
+                    <div data-search-value="GrupoB Seis" class="searchable col-12 group-b">
+                      <p>
+                        <a href="#">GrupoB Seis</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row search-not-found not-found-group-b">
+                    <div class="col-12">
+                      <small>No se encontraron resultados en el grupo b</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 pt-2 bg-bluedarkgray">
+                  <div class="row">
+                    <div class="col-12">
+                      <h4>Grupo C</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div data-search-value="GrupoC Siete" class="searchable col-12 group-c">
+                      <p>
+                        <a href="#">GrupoC Siete</a>
+                      </p>
+                    </div>
+                    <div data-search-value="GrupoC Ocho" class="searchable col-12 group-c">
+                      <p>
+                        <a href="#">GrupoC Ocho</a>
+                      </p>
+                    </div>
+                    <div data-search-value="GrupoC Nueve" class="searchable col-12 group-c">
+                      <p>
+                        <a href="#">GrupoC Nueve</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row search-not-found not-found-group-c">
+                    <div class="col-12">
+                      <small>No se encontraron resultados en el grupo c</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-collapsible">
+                <div class="collapsible-block">
+                  <ul class="collapsible">
+                    <li class="collapsible_item">
+                      <div class="collapsible_header active">
+                        <h4 class="collapsible_title">Módulo de código</h4>
+                      </div>
+                      <div class="collapsible_body">
+                      <pre data-src="examples/search-filter-groups.html">
                         <code class="language-markup"></code>
                       </pre>
                       </div>

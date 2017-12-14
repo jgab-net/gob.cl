@@ -597,3 +597,11 @@ div[class^="form_col"] {
     }
   }
 }
+
+.search-not-found {
+  display: none;
+
+  &.not-found {
+    display: block;
+  }
+}

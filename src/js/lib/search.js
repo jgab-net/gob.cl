@@ -13,7 +13,8 @@
   var defaults = {
     viewFilter: false,
     scrappingValue: 'search-value',
-    scrappingClass: '.searchable'
+    scrappingClass: '.searchable',
+    groups: []
   };
 
   function Plugin(element, options) {
@@ -25,6 +26,7 @@
   }
 
   Plugin.prototype.init = function () {
+    var that = this;
     var $input = this.$element.find('.search-form_input');
     var $cancel = this.$element.find('.search-form_button--cancel');
     var $submit = this.$element.find('.search-form_button--submit');
@@ -72,12 +74,26 @@
               $element.addClass('d-none');
             }
           });
+        that.groupBehavior();
       })
       .end()
       .find('.search-form_button--cancel').on('click', function () {
-      $(that.options.scrappingClass).each(function (index, element) {
-        $(element).removeClass('d-none');
+        $(that.options.scrappingClass).each(function (index, element) {
+          $(element).removeClass('d-none');
+          that.groupBehavior();
+        });
       });
+  };
+
+  Plugin.prototype.groupBehavior = function () {
+    var that = this;
+    this.options.groups.forEach(function (group) {
+      $('.search-not-found.not-found-' + group.substr(1))
+        .toggleClass(
+          'not-found',
+          $(that.options.scrappingClass + group).length
+            === $(that.options.scrappingClass + group + '.d-none').length
+        )
     });
   };
 
