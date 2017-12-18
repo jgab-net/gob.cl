@@ -34,23 +34,23 @@
     $cancel.addClass('d-none');
 
     if ($input.val()) {
-      $submit.addClass('d-none');
+      //$submit.addClass('d-none');
       $cancel.removeClass('d-none');
     }
 
     $input.on('input', function () {
       if ($input.val()) {
-        $submit.addClass('d-none');
+        //$submit.addClass('d-none');
         $cancel.removeClass('d-none');
       } else {
-        $submit.removeClass('d-none');
+        //$submit.removeClass('d-none');
         $cancel.addClass('d-none');
       }
     });
 
     $cancel.on('click', function () {
       $input.val('');
-      $submit.removeClass('d-none');
+      //$submit.removeClass('d-none');
       $cancel.addClass('d-none');
     });
 

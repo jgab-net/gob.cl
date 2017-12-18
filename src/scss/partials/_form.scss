@@ -564,10 +564,14 @@ div[class^="form_col"] {
       font-size: 1.4375rem;
     }
     &--cancel {
+      right: 54px;
       color: get-color(gray);
       font-size: 1.0625rem;
+      border-right: 1px solid get-color(lightgray);
     }
   }
+
+
   &--large {
     margin: 32px 0;
   }
