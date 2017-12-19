@@ -50,23 +50,41 @@
               $(this).hasClass('active') ? that.options.value : null
             );
           }
+        } else if ($(this).hasClass('active')) {
+          e.preventDefault();
+
+          window.location.href = that.options.cancelLink;
         }
       })
       // if tags have radio find the active and change UI
       .each(function () {
-        var $input = $(this).find('input:checked');
-        if ($input.length) {
-          that.$element.find('.ctag').toggleClass('d-none');
+        var $input;
+        // if tags have radio
+        if (!$(this).is('a')) {
+          $input = $(this).find('input:checked');
 
-          $(this)
-            .removeClass('d-none')
-            .toggleClass('active');
+          if ($input.length) {
+            that.$element.find('.ctag').toggleClass('d-none');
+            $(this)
+              .removeClass('d-none')
+              .toggleClass('active');
 
-          that.options.value = $input.val();
-          setTimeout(function () {
-            that.$element.trigger(changeEvent, that.options.value);
-          }, that.options.firstEventTimeout);
+            that.options.value = $input.val();
+            setTimeout(function () {
+              that.$element.trigger(changeEvent, that.options.value);
+            }, that.options.firstEventTimeout);
+          }
+        // if tags have links
+        } else {
+          $input = $(this).hasClass('active') ? $(this) : null;
+
+          if ($input && $input.length) {
+            that.$element.find('.ctag').toggleClass('d-none');
+
+            $(this).removeClass('d-none');
+          }
         }
+
       });
   };
 

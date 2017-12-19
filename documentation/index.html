@@ -57,6 +57,25 @@
       <i class="icon-gob"></i>
     </a>
     <div class="nav-content">
+      <a href="#" class="btn btn-search btn-search--mobile toggle-search">
+        <i class="ic-search btn-search_icon"></i>
+        <i class="ic-close btn-search_icon"></i>
+      </a>
+      <div class="dropdown lang">
+        <a id="ropdownMenuLang" href="#"
+           data-toggle="dropdown" role="button" aira-haspopup="true" aria-expanded="false"
+           class="btn btn-seconday dropdown-toggle">
+          ES
+        </a>
+        <div aria-labelledby="ropdownMenuLang" class="dropdown-menu">
+          <a href="#" title="Change to language: Español" class="dropdown-item">
+            ES
+          </a>
+          <a href="#" title="Change to language: Inglés" class="dropdown-item">
+            EN
+          </a>
+        </div>
+      </div>
       <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
@@ -75,6 +94,21 @@
             <i class="ic-search btn-search_icon"></i>
             <i class="ic-close btn-search_icon"></i>
           </a>
+        </li>
+        <li class="nav-item dropdown nav-item-desktop lang">
+          <a id="navbarDropdownMenuLang" href="#"
+             data-toggle="dropdown" aira-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">
+            ES
+          </a>
+          <div aria-labelledby="navbarDropdownMenuLang" class="dropdown-menu">
+            <a href="#" title="Change to language: Español"
+               class="dropdown-item">
+              ES
+            </a>
+            <a href="#" title="Change to language: Inglés" class="dropdown-item">
+              EN
+            </a>
+          </div>
         </li>
       </ul>
     </div>

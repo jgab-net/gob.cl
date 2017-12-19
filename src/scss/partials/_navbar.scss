@@ -102,6 +102,11 @@ body {
               .nav-link {
                 color: get-color(gray);
               }
+              .dropdown-menu {
+                .dropdown-item {
+                  background-color: get-color(white);
+                }
+              }
             }
 
             .nav-link {
