@@ -1,8 +1,19 @@
 # gob.cl framework
 
 ## Table of Contents
+* [Installation.](#installation)
 * [Documentation.](#documentation)
 * [Development.](#development)
+
+## Installation.
+
+For install run: 
+
+`npm install @gobdigital-cl/gob.cl`
+
+or 
+
+`yarn add @gobdigital-cl/gob.cl`
 
 ## Documentation.
 
