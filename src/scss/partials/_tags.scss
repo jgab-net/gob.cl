@@ -58,6 +58,7 @@
     background-color: transparent;
     border: 2px solid rgba(get-color(light), .3);
     display: block !important;
+    padding-right: 50px;
     &:after {
       // background: transparent url($iconsPath+ 'delete.svg') center center no-repeat;
       // content:"";

@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="css/gob.cl.bootstrap.css" type="text/css">
   <link rel="stylesheet" href="css/documentation.css" type="text/css">
 </head>
-<body class="footer-links-6">
+<body class="footer-links-6" data-main=".site-main">
 <nav class="navbar navbar-expand-md navbar-light fixed-top">
   <div class="container">
     <a href="#" class="navbar-brand align-self-start">
@@ -744,9 +744,13 @@
                 Los tags pueden ser usados de dos formas, como enlaces o con el comportamiento de un checkbox.
               </p>
               <h5>Links: </h5>
+              <p>
+                Es posible pasar el data-attribute <code>data-cancel-link</code> con el enlace al cual se va a llamar
+                al cancelar un enlace activo.
+              </p>
               <div class="row">
                 <div class="col-12 pt-2">
-                  <div class="tags">
+                  <div class="tags" data-cancel-link="/">
                     <div class="tags_content">
                       <div class="tags_item">
                         <a href="#" class="ctag ctag--light">
@@ -784,10 +788,46 @@
               </div>
               <div class="row bg-bluedark">
                 <div class="col-12 pt-2">
-                  <div class="tags">
+                  <div class="tags" data-cancel-link="/">
                     <div class="tags_content">
                       <div class="tags_item">
                         <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#/" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity">
+                          Tag
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 pt-2">
+                  <div class="tags" data-cancel-link="/">
+                    <div class="tags_content">
+                      <div class="tags_item">
+                        <a href="#" class="ctag ctag--clarity active">
                           Tag
                         </a>
                       </div>
@@ -2400,6 +2440,14 @@
               <pre data-src="examples/contingency-setting.html">
                 <code class="language-markup"></code>
               </pre>
+            </article>
+            <article>
+              <h2 class="heading-medium">Smooth Scroll</h2>
+              <p>
+                Al incluir el framework las anclas por defecto tienen smooth scroll, se tomará por defecto el
+                <code>margin-top</code> del <code>body</code> como offset, si se desea tomar como referencia otro elemento
+                se le puede pasar un selector en el data-attribute <code>data-main</code> al body.
+              </p>
             </article>
           </section>
         </div>
