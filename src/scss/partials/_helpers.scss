@@ -93,19 +93,19 @@ ul {
   }
 }
 
+.overflowed-xs {
+  @include mq($until: mobile) {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+}
+
 @each $bpName, $bp in $grid-breakpoints {
   @if $bp != 0 {
     .overflowed-#{$bpName} {
-      @if ($bpName == xs) {
-        @include mq($until: 768px) {
-          margin-left: -15px !important;
-          margin-right: -15px !important;
-        }
-      } @else {
-        @include mq($from: $bp) {
-          margin-left: -15px !important;
-          margin-right: -15px !important;
-        }
+      @include mq($from: $bp) {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
       }
     }
   }
