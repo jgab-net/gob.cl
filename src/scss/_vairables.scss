@@ -35,7 +35,6 @@ $container-max-widths: (
 
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
-$navbar-toggler-margin-y: 20px;
 
 $border-radius: 0;
 $border-radius-lg: 0;
@@ -70,6 +69,8 @@ $mq-breakpoints: (
   wide: map-get($grid-breakpoints, xl)
 );
 
+$navbar-toggler-margin-y: 20px;
+$a11y-font-1-2-navbar-toggler-margin-y: 23.5px;
 
 // Footer links variables.
 $navbar-item-xs-margin-y: 14.5px !default;

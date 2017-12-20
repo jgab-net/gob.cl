@@ -19,6 +19,22 @@
           }
         }
       }
+
+      .nav-content {
+        .dropdown {
+          &.lang {
+            > a {
+              padding: 0.12rem 0;
+            }
+          }
+
+          .dropdown-menu {
+            .dropdown-item {
+              padding: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -35,6 +51,7 @@
               @include mq($from: tablet) {
                 margin-top: $a11y-font-2-navbar-item-md-margin-y;
                 margin-bottom: $a11y-font-2-navbar-item-md-margin-y;
+                font-size: .9rem;
               }
 
               &-action {
@@ -44,9 +61,189 @@
           }
         }
       }
+
+      .nav-content {
+        .dropdown {
+          &.lang {
+            > a {
+              padding: 0;
+            }
+          }
+
+          .dropdown-menu {
+            .dropdown-item {
+              padding: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
+
+.a11y-font-0 {
+  body {
+    nav.navbar {
+      &.navbar-expand-a11y {
+
+        @include mq($from: tablet) {
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+
+          .navbar-nav {
+            flex-direction: row;
+
+            .dropdown-menu {
+              position: absolute;
+            }
+
+            .dropdown-menu-right {
+              right: 0;
+              left: auto; // Reset the default from `.dropdown-menu`
+            }
+
+            .nav-link {
+              padding-right: .5rem;
+              padding-left: .5rem;
+            }
+          }
+
+          // For nesting containers, have to redeclare for alignment purposes
+          > .container,
+          > .container-fluid {
+            flex-wrap: nowrap;
+          }
+
+          .navbar-collapse {
+            display: flex !important;  // stylelint-disable-line declaration-no-important
+
+            // Changes flex-bases to auto because of an IE10 bug
+            flex-basis: auto;
+          }
+
+          .navbar-toggler {
+            display: none;
+          }
+
+          .dropup {
+            .dropdown-menu {
+              top: auto;
+              bottom: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.a11y-font-1,
+.a11y-font-2 {
+
+  body {
+    nav.navbar {
+
+      > .container {
+        .navbar-toggler {
+          @include mq($from: tablet) {
+            margin-top: $a11y-font-1-2-navbar-toggler-margin-y;
+            margin-bottom: $a11y-font-1-2-navbar-toggler-margin-y;
+          }
+        }
+      }
+
+      .nav-content {
+        .dropdown {
+          @include mq($from: tablet) {
+            display: inline-block;
+          }
+
+          @include mq($from: desktop) {
+            display: none;
+          }
+        }
+      }
+
+      > .container {
+        .navbar-collapse {
+          .navbar-nav {
+            .nav-item {
+              &-desktop {
+                display: none;
+                @include mq($from: desktop) {
+                  display: inline-block;
+                }
+              }
+
+              &-access {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+                @include mq($from: desktop) {
+                  margin-left: 20px;
+                  padding-left: 10px;
+                  border-left: 2px solid get-color(lightgray);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.navbar-expand-a11y {
+
+        @include mq($from: desktop) {
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+
+          .navbar-nav {
+            flex-direction: row;
+
+            .dropdown-menu {
+              position: absolute;
+            }
+
+            .dropdown-menu-right {
+              right: 0;
+              left: auto; // Reset the default from `.dropdown-menu`
+            }
+
+            .nav-link {
+              padding-right: .5rem;
+              padding-left: .5rem;
+            }
+          }
+
+          // For nesting containers, have to redeclare for alignment purposes
+          > .container,
+          > .container-fluid {
+            flex-wrap: nowrap;
+          }
+
+          .navbar-collapse {
+            display: flex !important; // stylelint-disable-line declaration-no-important
+
+            // Changes flex-bases to auto because of an IE10 bug
+            flex-basis: auto;
+          }
+
+          .navbar-toggler {
+            display: none;
+          }
+
+          .dropup {
+            .dropdown-menu {
+              top: auto;
+              bottom: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 body {
   nav.navbar {
@@ -58,6 +255,10 @@ body {
         color: get-color(gray);
 
         box-shadow: none;
+
+        &:focus {
+          text-decoration: underline;
+        }
 
         &:after {
           display: none;
@@ -131,6 +332,12 @@ body {
             @include mq($from: tablet) {
               margin-top: $navbar-item-md-margin-y;
               margin-bottom: $navbar-item-md-margin-y;
+
+              &-access {
+                margin-left: 20px;
+                padding-left: 10px;
+                border-left: 2px solid get-color(lightgray);
+              }
             }
 
             &-action {
@@ -142,14 +349,6 @@ body {
 
               @include mq($from: tablet) {
                 display: inline-block;
-              }
-            }
-
-            @include mq($from: tablet) {
-              &-access {
-                margin-left: 20px;
-                padding-left: 10px;
-                border-left: 2px solid get-color(lightgray);
               }
             }
 
