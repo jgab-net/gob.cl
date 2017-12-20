@@ -49,9 +49,11 @@ $enable-shadows: false;
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
 
+$font-size-base-in-px: 16px !default;
+$static-nav-link-height: 35px !default;
 
-$font-size-base-in-px: 16px;
-$static-nav-link-height: 35px;
+$a11y-font-1-static-nav-link-height: 45px !default;
+$a11y-font-2-static-nav-link-height: 52px !default;
 
 /* =Framework Variables
 ----------------------------------------------- */
@@ -70,8 +72,11 @@ $mq-breakpoints: (
 
 
 // Footer links variables.
-$navbar-item-xs-margin-y: 14.5px;
-$navbar-item-md-margin-y: 18px;
+$navbar-item-xs-margin-y: 14.5px !default;
+$navbar-item-md-margin-y: 18px !default;
+
+$a11y-font-1-navbar-item-md-margin-y: 13px !default;
+$a11y-font-2-navbar-item-md-margin-y: 9px !default;
 
 $navbar-height: (
   xs: $static-nav-link-height + $navbar-item-xs-margin-y * 2,
@@ -82,12 +87,12 @@ $footer-base-height: (
   xs: 185px,
   md: 245px,
   xl: 223px,
-);
+) !default;
 
-$footer-link-height: 44px;
-$footer-links-max: 20;
-$footer-links-container-offset: 100px;
+$footer-link-height: 44px !default;
+$footer-links-max: 20 !default;
+$footer-links-container-offset: 100px !default;
 
 // Django cms toolbar variables.
-$django-cms-toolbar: 5px;
-$django-cms-toolbar-expanded: 49px;
+$django-cms-toolbar: 5px !default;
+$django-cms-toolbar-expanded: 49px !default;

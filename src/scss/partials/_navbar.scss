@@ -1,8 +1,55 @@
 
+.a11y-font-1 {
+  body {
+    nav.navbar {
+      > .container {
+        .navbar-collapse {
+          .navbar-nav {
+            .nav-item {
+              height: $a11y-font-1-static-nav-link-height;
+              @include mq($from: tablet) {
+                margin-top: $a11y-font-1-navbar-item-md-margin-y;
+                margin-bottom: $a11y-font-1-navbar-item-md-margin-y;
+              }
+
+              &-action {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.a11y-font-2 {
+  body {
+    nav.navbar {
+      > .container {
+        .navbar-collapse {
+          .navbar-nav {
+            .nav-item {
+              height: $a11y-font-2-static-nav-link-height;
+              @include mq($from: tablet) {
+                margin-top: $a11y-font-2-navbar-item-md-margin-y;
+                margin-bottom: $a11y-font-2-navbar-item-md-margin-y;
+              }
+
+              &-action {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 body {
   nav.navbar {
-
 
     .lang {
       > a {
@@ -68,6 +115,7 @@ body {
     > .container {
       .navbar-brand {
         padding: 0;
+        font-size: 20px;
       }
 
       .navbar-toggler {
