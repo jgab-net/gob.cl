@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="a11y-font-0">
 <head>
   <meta charset="utf-8">
   <meta name="language" content="es">
@@ -51,7 +51,7 @@
   <link rel="stylesheet" href="css/documentation.css" type="text/css">
 </head>
 <body class="footer-links-6" data-main=".site-main">
-<nav class="navbar navbar-expand-md navbar-light fixed-top">
+<nav class="navbar navbar-expand-a11y navbar-light fixed-top">
   <div class="container">
     <a href="#" class="navbar-brand align-self-start">
       <i class="icon-gob"></i>
@@ -159,6 +159,7 @@
                 <a class="link link--medium goTo" href="#componentes">8. Componentes presentacionales</a>
                 <a class="link link--medium goTo" href="#bloques">9. Bloques</a>
                 <a class="link link--medium goTo" href="#dinamicos">10. Componentes dinámicos</a>
+                <a class="link link--medium goTo" href="#bootstrap">11. Bootstrap 4</a>
               </div>
             </div>
           </aside>
@@ -2505,6 +2506,20 @@
                 Al incluir el framework las anclas por defecto tienen smooth scroll, se tomará por defecto el
                 <code>margin-top</code> del <code>body</code> como offset, si se desea tomar como referencia otro elemento
                 se le puede pasar un selector en el data-attribute <code>data-main</code> al body.
+              </p>
+            </article>
+          </section>
+          <section class="section post-section" id="bootstrap">
+            <h2 class="heading-large">11. Bootstrap</h2>
+            <article class="c-box">
+              <p class="box_text">
+                El navbar de bootstrap 4 trae la clase <code>.navbar-expand-#{$grid-breakpoint}</code> usada para
+                indicar cuando el navbar se transforma en el navbar desktop, al incluir el framework en lugar de usar
+                la clase de bootstrap es necesario usar <code>.navbar-expand-a11y</code>
+              </p>
+              <p class="box_text">
+                La clase <code>.navbar-expand-a11y</code> esta integrada con el aumento del font de los controles de
+                accesibilidad.
               </p>
             </article>
           </section>
