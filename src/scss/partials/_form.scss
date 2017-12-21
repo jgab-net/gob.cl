@@ -114,11 +114,11 @@ input[type="search"]::-webkit-search-results-decoration {
   select {
     width: 100%;
     position: relative;
-    background: url("../images/icons/arrow-select.svg") 95% 23px no-repeat;
+    background: url($iconsPath + 'arrow-select.svg') 95% 23px no-repeat;
   }
   &--dark {
     select {
-      background: get-color(bluedark) url("../images/icons/arrow-select-white.svg") 95% 23px no-repeat;
+      background: get-color(bluedark) url($iconsPath + 'arrow-select.white.svg') 95% 23px no-repeat;
       color: get-color(white);
     }
 
@@ -133,7 +133,7 @@ input[type="search"]::-webkit-search-results-decoration {
           }
 
           .select2-selection__arrow {
-            background: url("../images/icons/arrow-select-white.svg") 0 23px no-repeat;
+            background: url($iconsPath + 'arrow-select.white.svg') 0 23px no-repeat;
           }
         }
       }
@@ -155,7 +155,7 @@ input[type="search"]::-webkit-search-results-decoration {
       }
 
       .select2-selection__arrow {
-        background: url("../images/icons/arrow-select.svg") 0 23px no-repeat;
+        background: url($iconsPath + 'arrow-select.svg') 0 23px no-repeat;
         height: $inputHeight;
 
         b {
@@ -395,7 +395,7 @@ label {
       border-radius: 3px;
       position: relative;
       &:after {
-        background: transparent url(images/icon-error.png) 100% 0 no-repeat;
+        background: transparent url($imagesPath + 'icon-error.png') 100% 0 no-repeat;
         background-size: auto 100%;
         content: "";
         display: block;
@@ -418,7 +418,7 @@ label {
       border-radius: 3px;
       position: relative;
       &:after {
-        background: transparent url(images/icon-error.png) 0 0 no-repeat;
+        background: transparent url($imagesPath + 'icon-error.png') 0 0 no-repeat;
         background-size: auto 100%;
         content: "";
         display: block;
@@ -477,7 +477,7 @@ label {
       z-index: 1;
     }
     &:after {
-      background-image: url(images/arrow-down.jpg);
+      background-image: url($imagesPath + 'arrow-down.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-color: #4fb0fd;

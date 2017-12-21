@@ -16,7 +16,7 @@
 .card-new {
   padding: 20px 0;
   border-bottom: 1px solid get-color(lightgray);
-  @include mq($from: tablet) {
+  @include mq($from: desktop) {
     border-bottom: 0;
     padding: 0 0 20px;
   }
@@ -52,7 +52,7 @@
     font-family: $roboto;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
   &_text {
     color: rgba(get-color(dark), .6);
@@ -355,7 +355,7 @@
       font-family: $robotoSlab;
       font-size: 1.3125rem;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 1.5rem;
 
       @include mq($from: tablet) {
         display: block;

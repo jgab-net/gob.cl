@@ -16,7 +16,7 @@
     color: get-color(blue);
     .activity {
       &_date {
-        background-image: url('../images/icons/calendar-dark.svg');
+        background-image: url($iconsPath + 'calendar-dark.svg');
       }
     }
     &.activity {
@@ -53,7 +53,7 @@
     padding: 40px 0 0 15px;
   }
   &_date {
-    background: transparent url('../images/icons/calendar.svg') no-repeat center center;
+    background: transparent url($iconsPath + 'calendar.svg') no-repeat center center;
     height: 45px;
     width: 39px;
     padding: 19px 0 0;
