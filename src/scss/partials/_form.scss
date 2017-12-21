@@ -562,6 +562,18 @@ div[class^="form_col"] {
     &--submit {
       color: get-color(red);
       font-size: 23px;
+
+      .ic-filter {
+        &:after {
+          content: '';
+          @include svgIcon('filter', 23, 23);
+          background-size: contain;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
     }
     &--cancel {
       right: 54px;
