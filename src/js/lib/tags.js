@@ -12,7 +12,10 @@
   var changeEvent = 'change.gl.tags';
   var cancelEvent = 'cancel.gl.tags';
 
-  var defaults = {};
+  var defaults = {
+    triggerRenderCallback: false,
+    firstEventTimeout: 0
+  };
 
   function Plugin(element, options) {
     this.$element = $(element);
@@ -70,9 +73,11 @@
               .toggleClass('active');
 
             that.options.value = $input.val();
-            setTimeout(function () {
-              that.$element.trigger(changeEvent, that.options.value);
-            }, that.options.firstEventTimeout);
+            if (that.options.triggerRenderCallback) {
+              setTimeout(function () {
+                that.$element.trigger(changeEvent, that.options.value);
+              }, that.options.firstEventTimeout);
+            }
           }
         // if tags have links
         } else {
