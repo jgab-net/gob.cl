@@ -93,6 +93,36 @@ body {
         }
       }
 
+      &.contingency-active {
+        &.status-navigate {
+          main.site-main {
+            min-height: calc(100vh - #{get-not-main-height($i) + $contingency-actions-height});
+
+            @media (min-width: map-get($grid-breakpoints, md)) {
+              min-height: calc(100vh - #{get-not-main-height($i, md) + $contingency-actions-height});
+            }
+
+            @media (min-width: map-get($grid-breakpoints, xl)) {
+              min-height: calc(100vh - #{get-not-main-height($i, xl) + $contingency-actions-height});
+            }
+          }
+        }
+
+        &.status-continue {
+          section.contingency {
+            min-height: calc(100vh - #{get-not-main-height($i)});
+
+            @media (min-width: map-get($grid-breakpoints, md)) {
+              min-height: calc(100vh - #{get-not-main-height($i, md)});
+            }
+
+            @media (min-width: map-get($grid-breakpoints, xl)) {
+              min-height: calc(100vh - #{get-not-main-height($i, xl)});
+            }
+          }
+        }
+      }
+
       footer.site-footer {
         height: get-footer-height($i);
 

@@ -48,14 +48,16 @@ $enable-shadows: false;
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
 
+/* =Framework Variables
+----------------------------------------------- */
+
 $font-size-base-in-px: 16px !default;
 $static-nav-link-height: 35px !default;
 
 $a11y-font-1-static-nav-link-height: 45px !default;
 $a11y-font-2-static-nav-link-height: 52px !default;
 
-/* =Framework Variables
------------------------------------------------ */
+$contingency-actions-height: 60px;
 
 // Assets
 $imagesPath: "../images/" !default;
