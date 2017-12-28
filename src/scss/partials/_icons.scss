@@ -31,13 +31,24 @@ $icons: (
   pause: (width: 10, height: 10),
   download: (width: 10, height: 16),
   messenger: (width: 32, height: 32),
-  arrow-breadcrumb: (width: 8, height: 6)
+  arrow-breadcrumb: (width: 8, height: 6),
+  arrow: (width: 9, height: 6)
 );
 
 $contrast-icons: (
+  search: (width: 23, height: 23),
   filter: (width: 23, height: 23),
+  close: (width: 20, height: 20),
+  burguer: (width: 24, height: 14),
+  dot-red: (width: 7, height: 7),
+  dot-green: (width: 7, height: 7),
+  delete: (width: 17, height: 17),
+  dot-blue: (width: 7, height: 7),
+  close-white: (width: 20, height: 20),
   gob-footer: (width: 110, height: 31),
-  arrow-breadcrumb: (width: 8, height: 6)
+  arrow-breadcrumb: (width: 8, height: 6),
+  arrow: (width: 9, height: 6),
+  play: (width: 8, height: 11)
 );
 
 
