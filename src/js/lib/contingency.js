@@ -23,7 +23,6 @@
   }
 
   Plugin.prototype.init = function () {
-    var that = this;
     var $body = $('body');
 
     this.update();
@@ -32,58 +31,37 @@
     var $navigateAction = this.$element.find('.contingency-navigate');
 
     $continueAction.on('click', function (e) {
-      if (that.onRoot()) {
-        e.preventDefault();
-        $body.addClass('status-continue');
-        $body.removeClass('status-navigate');
-        localStorage.removeItem(storageKey);
-      }
+      e.preventDefault();
+      $body.addClass('status-continue');
+      $body.removeClass('status-navigate');
+      localStorage.removeItem(storageKey);
     });
 
     $navigateAction.on('click', function (e) {
-      if (that.onRoot()) {
-        e.preventDefault();
-        $body.removeClass('status-continue');
-        $body.addClass('status-navigate');
-        localStorage.setItem(storageKey, true);
-      }
+      e.preventDefault();
+      $body.removeClass('status-continue');
+      $body.addClass('status-navigate');
+      localStorage.setItem(storageKey, true);
     });
   };
 
   Plugin.prototype.update = function () {
+    var $body = $('body');
     if (this.options.active) {
-      var root = this.onRoot();
-      var $body = $('body');
       var stored = !!localStorage.getItem(storageKey);
 
       $body
         .addClass('contingency-active')
-        .toggleClass('contingency-root', root);
-
-      if (root) {
-        $body
-          .toggleClass('status-navigate', stored)
-          .toggleClass('status-continue', !stored);
-      }
-
+        .toggleClass('status-navigate', stored)
+        .toggleClass('status-continue', !stored);
     } else {
-      $('body')
-        .removeClass('contingency-active')
-        .removeClass('contingency-root');
+      $body.removeClass('contingency-active');
     }
   };
 
   Plugin.prototype.setOptions = function (options) {
     this.options = $.extend(this.options, options);
     this.update();
-  };
-
-  Plugin.prototype.onRoot = function () {
-    if (this.options.hasOwnProperty('root')) {
-      return this.options.root;
-    } else {
-      return location.pathname === '/';
-    }
   };
 
   $.fn[pluginName] = function (options) {

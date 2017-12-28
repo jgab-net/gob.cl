@@ -67,7 +67,7 @@
 
       //play simulation
       $listen.on('click', function (e) {
-        e.preventDefault()
+        e.preventDefault();
         $(this).addClass('invisible');
         $toolbarPlayer.removeClass('invisible')
       });

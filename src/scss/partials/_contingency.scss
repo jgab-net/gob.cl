@@ -22,15 +22,13 @@ body {
         display: block;
       }
     }
-    &.contingency-root {
 
-      .contingency > * {
-        display: block;
-      }
+    .contingency > * {
+      display: block;
+    }
 
-      main.site-main {
-        display: none;
-      }
+    main.site-main {
+      display: none;
     }
   }
 
@@ -48,11 +46,8 @@ body {
         display: none;
       }
     }
-
-    &.contingency-root {
-      main.site-main {
-        display: block;
-      }
+    main.site-main {
+      display: block;
     }
   }
 
