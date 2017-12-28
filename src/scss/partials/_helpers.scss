@@ -16,6 +16,14 @@
   // color: rgba(get-color(white),1);
 }
 
+.pv-0-until-md,
+section.pv-0-until-md {
+  @include mq($until: desktop) {
+    padding-top: 0;
+    padding-right: 0;
+  }
+}
+
 // color classes
 @each $colorName, $color in $colors {
   .text-#{$colorName} {
