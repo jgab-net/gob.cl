@@ -255,3 +255,77 @@
     }
   }
 }
+
+.a11y-contrast {
+
+  .toolbar {
+    .toolbar-button {
+      border: 2px solid get-contrast-color(bluedark);
+      color: get-contrast-color(bluedark);
+
+      &.disabled {
+        color: get-contrast-color(gray);
+        border: 2px solid get-contrast-color(gray);
+      }
+
+      &_icon {
+        color: get-contrast-color(dark);
+      }
+
+      &:hover {
+        background-color: get-contrast-color(red);
+        border-color: get-contrast-color(red);
+
+        .toolbar-button_icon {
+          color: get-contrast-color(white);
+        }
+      }
+    }
+
+    .toolbar-player {
+      border: 2px solid get-contrast-color(white);
+      &_toggle {
+        color: get-contrast-color(white);
+      }
+      &_timeline {
+        background-color: rgba(get-contrast-color(gray), 0.10);
+      }
+      &_download {
+        color: get-contrast-color(white);
+      }
+    }
+  }
+
+
+  .bg-bluedark:not(.elem-bg) {
+
+    .toolbar {
+      .toolbar-button {
+        border: 2px solid get-color(bluedark);
+        color: get-color(bluedark);
+        &:hover {
+          background-color: get-contrast-color(bluedark);
+          border-color: get-contrast-color(red);
+        }
+        &_icon {
+          color: get-color(dark);
+        }
+
+      }
+      .toolbar-player {
+        border: 2px solid get-color(bluedark);
+        color: get-color(bluedark);
+      }
+      .toolbar-player_download,
+      .toolbar-player_toggle {
+        color: get-color(bluedark);
+      }
+      .toolbar-player_timeline {
+        span {
+          background-color: get-color(bluedark);
+        }
+      }
+
+    }
+  }
+}

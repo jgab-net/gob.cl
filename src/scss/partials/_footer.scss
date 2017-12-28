@@ -23,12 +23,8 @@
     }
   }
   &_logo {
-    // margin: 0 0 20px;
-    // display: block;
     position: absolute;
     bottom: 0;
-    // top: 0;
-    // margin-top: -1px;
   }
   &_button {
     margin-top: 0;
@@ -151,6 +147,23 @@ footer.site-footer {
   .menu {
     a {
       height: $footer-link-height;
+    }
+  }
+}
+
+.a11y-contrast {
+  .site-footer {
+    background-color: get-contrast-color(bluedark);
+    border-top: 1px solid get-contrast-color(white);
+
+    &_button {
+      color: get-contrast-color(white);
+    }
+
+    .menu {
+      a {
+        color: get-contrast-color(white);
+      }
     }
   }
 }

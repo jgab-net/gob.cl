@@ -4,6 +4,18 @@
   border-bottom: 1px solid get-color(lightgray);
 }
 
+.bg-bluedarkgray {
+  background-color: rgba(get-color(bluedark), .05);
+}
+
+.bg-bluedark {
+  color: rgba(get-color(white), .8);
+}
+
+.bg-red {
+  // color: rgba(get-color(white),1);
+}
+
 // color classes
 @each $colorName, $color in $colors {
   .text-#{$colorName} {
@@ -39,18 +51,6 @@
       }
     }
   }
-}
-
-.bg-bluedarkgray {
-  background-color: rgba(get-color(bluedark), .05);
-}
-
-.bg-bluedark {
-  color: rgba(get-color(white), .8);
-}
-
-.bg-red {
-  // color: rgba(get-color(white),1);
 }
 
 ul.circle {
@@ -394,4 +394,50 @@ ul {
 
 .clearfix {
   *zoom: 1;
+}
+
+.a11y-contrast {
+  @each $colorName, $color in $contrast-colors {
+    .text-#{$colorName} {
+      color: $color !important;
+    }
+    .bg-#{$colorName} {
+      background-color: $color !important;
+    }
+
+    @each $bpName, $bp in $grid-breakpoints {
+      @if $bp != 0 {
+        .text-#{$bpName}-#{$colorName} {
+          @if ($bpName == xs) {
+            @include mq($until: 768px) {
+              color: $color; //!important
+            }
+          } @else {
+            @include mq($from: $bp) {
+              color: $color; //!important
+            }
+          }
+        }
+        .bg-#{$bpName}-#{$colorName} {
+          @if ($bpName == xs) {
+            @include mq($until: 768px) {
+              background-color: $color; //!important
+            }
+          } @else {
+            @include mq($from: $bp) {
+              background-color: $color; //!important
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bg-bluedarkgray {
+    background-color: rgba(get-contrast-color(bluedark), .05);
+  }
+
+  .bg-bluedark {
+    color: rgba(get-contrast-color(white), .8);
+  }
 }

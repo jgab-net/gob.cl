@@ -199,3 +199,52 @@
     }
   }
 }
+
+.a11y-contrast {
+  .heading {
+    &-large {
+      color: rgba(get-contrast-color(white), .8);
+      &--light {
+        color: rgba(get-contrast-color(white), .8);
+      }
+    }
+    &-medium {
+      color: get-contrast-color(dark);
+      &--light {
+        color: get-contrast-color(white);
+      }
+    }
+    &-sub {
+      color: rgba(get-contrast-color(dark), .6);
+      &--light {
+        color: rgba(get-contrast-color(white), .6);
+      }
+    }
+    &-label {
+      color: get-contrast-color(dark);
+      &--light {
+        color: rgba(get-contrast-color(white), .4);
+      }
+    }
+    &-link {
+      color: get-contrast-color(dark);
+      &--light {
+        color: get-contrast-color(white);
+      }
+    }
+  }
+
+  .section {
+    &-header {
+      p {
+        color: rgba(get-contrast-color(white), .6);
+      }
+    }
+  }
+
+  .type {
+    color: get-contrast-color(green);
+    border-bottom: 1px solid get-contrast-color(green);
+    border-top: 1px solid get-contrast-color(green);
+  }
+}

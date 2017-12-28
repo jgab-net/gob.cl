@@ -372,3 +372,93 @@
     font-family: "Roboto", sans-serif;
   }
 }
+
+.a11y-contrast {
+  .card-data {
+    background-color: get-contrast-color(white);
+    border: 2px solid get-contrast-color(light);
+    &:hover {
+      background-color: get-contrast-color(light);
+    }
+    &_title {
+      color: rgba(get-contrast-color(dark), .8);
+    }
+    &_text {
+      color: rgba(get-contrast-color(dark), .8);
+    }
+    &_number {
+      color: rgba(get-contrast-color(dark), 1);
+    }
+
+    &:hover {
+      background-color: get-contrast-color(white);
+      border-color: get-contrast-color(red);
+    }
+  }
+
+  .featured-card {
+    border: 2px solid get-contrast-color(lightgray);
+    &:hover {
+      background-color: get-contrast-color(white);
+      border-color: get-contrast-color(red);
+    }
+    &.has-icon {
+      &:after {
+        color: get-contrast-color(gray);
+      }
+    }
+    &_title {
+      color: get-contrast-color(dark);
+    }
+    &_date {
+      color: rgba(get-contrast-color(dark), .6);
+    }
+  }
+
+  .card-small {
+    background-color: get-color(white);
+
+    &_link {
+      color: get-contrast-color(white);
+    }
+
+    &_text {
+      color: rgba(get-contrast-color(white), .6)
+    }
+
+    &_body {
+      p {
+        color: rgba(get-contrast-color(white), .8);
+      }
+    }
+  }
+
+  .bg-lightgray {
+    .card-data-small {
+      &_title {
+        color: rgba(get-contrast-color(black), .8);
+      }
+      &_text {
+        color: rgba(get-contrast-color(black), .8);
+      }
+      a {
+        color: get-contrast-color(red);
+      }
+    }
+  }
+  .card-data-small {
+    &_text {
+      color: rgba(get-contrast-color(white), .8);
+    }
+
+    a {
+      color: get-contrast-color(white);
+    }
+  }
+
+  .card-new {
+    &_title {
+      color: get-contrast-color(dark);
+    }
+  }
+}

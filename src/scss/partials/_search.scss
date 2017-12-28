@@ -254,3 +254,56 @@ body {
     }
   }
 }
+
+
+.a11y-contrast {
+
+  .btn-search {
+    color: get-contrast-color(red);
+  }
+
+  .search {
+    &_section {
+      background-color: get-contrast-color(white);
+
+      .link--text-light {
+        color: get-contrast-color(dark);
+
+        &:hover {
+          color: get-contrast-color(dark);
+        }
+      }
+
+      .more {
+        color: get-contrast-color(red);
+      }
+    }
+  }
+
+  body {
+    &.search-active {
+      nav.navbar {
+        @include mq($until: tablet) {
+          background-color: get-contrast-color(bluedark);
+          border-bottom: get-contrast-color(bluedark);
+        }
+
+        .btn-search {
+          background-color: get-contrast-color(bluedark);
+          color: get-contrast-color(white);
+        }
+
+      }
+
+      .btn-search {
+        .ic-close,
+        .ic-close-white {
+          opacity: 1;
+        }
+        .ic-search {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,6 @@
+@import 'vairables';
+@import 'functions';
+
 .c-header {
   -webkit-box-shadow: 1px 2px 1px 1px #E3E5EF;
   box-shadow: 1px 2px 1px 1px #E3E5EF;
@@ -92,21 +95,21 @@
   .aux-box_side-text {
     font-size: 0.7901234568em;
     font-family: Roboto;
-    color: #111111;
+    color: get-color(dark);
   }
 
   .aux-box_font-large {
     font-size: 2.0272865295em;
-    color: #111111;
+    color: get-color(dark);
   }
 
   .aux-box_font-medium {
     font-size: 1.265625em;
-    color: #111111;
+    color: get-color(dark);
   }
 
   .aux-box_roboto {
-    color: #111111;
+    color: get-color(dark);
     font-family: Roboto;
   }
 
@@ -127,4 +130,71 @@
     font-size: 0.7023319616em;
     opacity: 0.92;
   }
+}
+
+.a11y-contrast {
+  .heading-large {
+    color: get-contrast-color(black);
+  }
+
+  .bg-bluedark {
+    .heading-large {
+      color: get-contrast-color(white);
+    }
+  }
+
+  pre {
+    background-color: get-contrast-color(lightgray);
+  }
+
+  code {
+    background-color: get-contrast-color(lightgray);
+    color: get-contrast-color(red);
+    text-shadow: none;
+  }
+
+  .aux-box {
+    border-bottom: 1px solid rgba(10, 19, 45, 0.1);
+    padding: 30px 0 10px;
+
+    .aux-box_side-text {
+      font-size: 0.7901234568em;
+      font-family: Roboto;
+      color: get-contrast-color(dark);
+    }
+
+    .aux-box_font-large {
+      font-size: 2.0272865295em;
+      color: get-contrast-color(dark);
+    }
+
+    .aux-box_font-medium {
+      font-size: 1.265625em;
+      color: get-contrast-color(dark);
+    }
+
+    .aux-box_roboto {
+      color: get-contrast-color(dark);
+      font-family: Roboto;
+    }
+
+    .aux-box_roboto_font--head-medium {
+      font-size: 1.3125rem;
+      color: rgba(17, 17, 17, 0.6);
+    }
+
+    .aux-box_roboto_font-medium {
+      font-size: 1em;
+    }
+
+    .aux-box_roboto_underline {
+      text-decoration: underline;
+    }
+
+    .aux-box_roboto_font-head {
+      font-size: 0.7023319616em;
+      opacity: 0.92;
+    }
+  }
+
 }

@@ -21,3 +21,15 @@
 
   @return $color;
 }
+
+@function get-contrast-color($color) {
+  @if map-has-key($contrast-colors, $color) {
+    $color: map-get($contrast-colors, $color);
+  } @else {
+    @if type-of($color) != color {
+      @error "Color name: `#{$color}` not found."
+    }
+  }
+
+  @return $color;
+}
