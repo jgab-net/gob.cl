@@ -2498,21 +2498,15 @@
                 objeto literal al activarlo o vía <code>data-attributes</code>.
               </p>
               <p>
-                Por defecto muestra su contenido desde la ruta <code>/</code> y un botón para regresar a el en cualquier
-                otra ruta del sitio, se puede indicar cuando el plugin inició en el root del sitio vía javascript o
-                <code>data-attributes</code>.
-              </p>
-              <p>
-                El modo contingencia al estar activo oculta el tag <code>main.site-main</code> y muestra su contenido,
-                el cual debe estar en el tag <code>section.contingency</code> al lado del main.
+                Al estar activo una contingencia se oculta el contenido del tag <code>main.site-main</code>
+                y se muestra el del tag <code>section.contingency</code> al lado del main.
               </p>
               <p>
                 Tiene dos acciones que deben estar dentro del tag <code>section.contingency</code>,
-                <code>.contingency-navigate</code>: solo se muestra en el root y cambia el modo contingencia permitiendo
-                la visualización del contenido normal del home
-                <code>.contingency-continue</code>: se muestra en todas las rutas distintas al root y en el root solo
-                cuando <code>.contingency-navigate</code> esta activo, permite regresar a la vista root o mostrar las
-                contingencias.
+                <code>.contingency-navigate</code>: cambia el modo contingencia permitiendo
+                la visualización del contenido normal
+                <code>.contingency-continue</code>: solo cuando <code>.contingency-navigate</code> esta activo,
+                permite volver a mostrar el contenido de la contingencia.
               </p>
               <pre data-src="examples/contingency-setting.js">
                 <code class="language-javascript"></code>
@@ -2645,6 +2639,7 @@
     $('.toggle-contingency').on('click', function (e) {
       e.preventDefault();
       var contingency = !$(this).data('contingency');
+      console.log(contingency);
       $('body').contingency({ active: contingency });
       $(this).data('contingency', contingency);
     });
