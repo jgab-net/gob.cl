@@ -16,7 +16,7 @@ input[type=password] {
 }
 
 input[type=text]:focus {
-  border-color: #B2BCFF;
+  border-color: get-color(lightblue);
 }
 
 input[type=text]:read-only {
@@ -24,7 +24,7 @@ input[type=text]:read-only {
 }
 
 input[type=text].error {
-  border-color: #BB0000;
+  border-color: get-color(red);
 }
 
 input[type=text].success {
@@ -38,14 +38,15 @@ input[type=text].warning {
 /* Label */
 label {
   margin-top: 30px;
+  color: get-color(dark);
 }
 
 label.error {
-  color: #BB0000;
+  color: get-color(red);
 }
 
 label.success {
-  color: #2FAE7D;
+  color: get-color(green);
 }
 
 /* Alerts */
@@ -65,18 +66,18 @@ label.success {
 }
 
 .alert.error {
-  background: #BB0000;
-  color: #fff;
+  background: get-color(darkred);
+  color: get-color(white);
 }
 
 .alert.success {
-  background: #2FAE7D;
-  color: #fff;
+  background: get-color(green);
+  color: get-color(white);
 }
 
 .alert.warning {
-  background: #F2C728;
-  color: #111;
+  background: get-color(yellow);
+  color: get-color(white);
 }
 
 /* Radio buttons */
@@ -119,7 +120,7 @@ ul.steps li.active {
 }
 
 ul.steps li a.next {
-  color: #CFCFCF;
+  color: get-color(lightgray);
 }
 
 ul.steps li a.last {
@@ -159,5 +160,50 @@ img {
 
   input[type=text]:read-only {
     background: get-contrast-color(lightgray);
+  }
+}
+
+.a11y-contrast {
+  .alert.error {
+    background: get-contrast-color(darkred);
+    color: get-contrast-color(white);
+  }
+
+  .alert.success {
+    background: get-contrast-color(green);
+    color: get-contrast-color(white);
+  }
+
+  .alert.warning {
+    background: get-contrast-color(dark);
+    color: get-contrast-color(white);
+  }
+
+  input[type=text].error {
+    border-color: get-contrast-color(red);
+  }
+
+  input[type=text].success {
+    border-color: get-contrast-color(green);
+  }
+
+  input[type=text]:focus {
+    border-color: get-contrast-color(lightblue);
+  }
+
+  input[type=text].warning {
+    border-color: get-contrast-color(yellow);
+  }
+
+  label {
+    color: get-contrast-color(dark);
+  }
+
+  label.error {
+    color: get-contrast-color(red);
+  }
+
+  label.success {
+    color: get-contrast-color(green);
   }
 }

@@ -4,43 +4,6 @@
   border-bottom: 1px solid get-color(lightgray);
 }
 
-// color classes
-@each $colorName, $color in $colors {
-  .text-#{$colorName} {
-    color: $color; //!important
-  }
-  .bg-#{$colorName} {
-    background-color: $color; //!important
-  }
-
-  @each $bpName, $bp in $grid-breakpoints {
-    @if $bp != 0 {
-      .text-#{$bpName}-#{$colorName} {
-        @if ($bpName == xs) {
-          @include mq($until: 768px) {
-            color: $color; //!important
-          }
-        } @else {
-          @include mq($from: $bp) {
-            color: $color; //!important
-          }
-        }
-      }
-      .bg-#{$bpName}-#{$colorName} {
-        @if ($bpName == xs) {
-          @include mq($until: 768px) {
-            background-color: $color; //!important
-          }
-        } @else {
-          @include mq($from: $bp) {
-            background-color: $color; //!important
-          }
-        }
-      }
-    }
-  }
-}
-
 .bg-bluedarkgray {
   background-color: rgba(get-color(bluedark), .05);
 }
@@ -51,6 +14,43 @@
 
 .bg-red {
   // color: rgba(get-color(white),1);
+}
+
+// color classes
+@each $colorName, $color in $colors {
+  .text-#{$colorName} {
+    color: $color !important;
+  }
+  .bg-#{$colorName} {
+    background-color: $color !important;
+  }
+
+  @each $bpName, $bp in $grid-breakpoints {
+    @if $bp != 0 {
+      .text-#{$bpName}-#{$colorName} {
+        @if ($bpName == xs) {
+          @include mq($until: 768px) {
+            color: $color !important;
+          }
+        } @else {
+          @include mq($from: $bp) {
+            color: $color !important;
+          }
+        }
+      }
+      .bg-#{$bpName}-#{$colorName} {
+        @if ($bpName == xs) {
+          @include mq($until: 768px) {
+            background-color: $color !important;
+          }
+        } @else {
+          @include mq($from: $bp) {
+            background-color: $color !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 ul.circle {

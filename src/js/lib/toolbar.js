@@ -14,6 +14,8 @@
 
   var changeEvent = 'change.gl.toolbar';
 
+  var storageKey = 'gob.cl:toolbar';
+
   var Plugin = (function () {
 
     var instance;
@@ -43,6 +45,7 @@
       this.options.index = this._getIndex(); // get index from the current value.
       this._update(); // and update UI.
 
+      var $html = $('html');
       var $prev = $('.toolbar-button--less'); // Use this.$element.find for non global behavior
       var $next = $('.toolbar-button--plus'); // Use this.$element.find for non global behavior
       var $contrast = $('.toolbar-button--contrast'); // Use this.$element.find for non global behavior
@@ -53,10 +56,19 @@
       var $listen = $(".toolbar-button--listen"); // Use this.$element.find for non global behavior
       var $playPause = $('.toolbar-player_toggle'); // Use this.$element.find for non global behavior
 
+      var stored = !!localStorage.getItem(storageKey);
+
+      $html.toggleClass(that.options.contrast, stored);
+
       $contrast.on('click', function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
-        $('html').toggleClass(that.options.contrast);
+        $html.toggleClass(that.options.contrast);
+        if ($html.hasClass(that.options.contrast)) {
+          localStorage.setItem(storageKey, true);
+        } else {
+          localStorage.removeItem(storageKey);
+        }
       });
 
       // show / hide - mobile

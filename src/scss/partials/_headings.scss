@@ -241,4 +241,10 @@
       }
     }
   }
+
+  .type {
+    color: get-contrast-color(green);
+    border-bottom: 1px solid get-contrast-color(green);
+    border-top: 1px solid get-contrast-color(green);
+  }
 }
