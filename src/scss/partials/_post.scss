@@ -264,3 +264,69 @@
     padding: 9px 15px;
   }
 }
+
+.a11y-contrast {
+  .main-post {
+    color: rgba(get-contrast-color(dark), .8);
+
+    &_social {
+      .social-text {
+        p {
+          color: get-contrast-color(gray);
+        }
+      }
+
+      .social-links {
+        li {
+          a {
+            color: get-contrast-color(gray);
+          }
+        }
+      }
+    }
+
+    &:after {
+      //COLOR  ?
+      @include getIcon("\79");
+    }
+
+    &_title {
+      color: get-contrast-color(black);
+    }
+
+    &_subtitle {
+      color: rgba(get-contrast-color(dark), .8);
+    }
+    &_date {
+      color: rgba(get-contrast-color(dark), .8);
+    }
+
+    p {
+      color: rgba(get-contrast-color(dark), 1);
+    }
+    small {
+      color: rgba(get-contrast-color(dark), 1);
+    }
+    blockquote {
+      p {
+        color: rgba(get-contrast-color(dark), .7);
+      }
+      span {
+        color: rgba(get-contrast-color(dark), 1);
+
+      }
+    }
+
+    &_social-share {
+      li {
+        p {
+          color: rgba(get-contrast-color(dark), .6);
+        }
+        a {
+          color: get-contrast-color(gray);
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

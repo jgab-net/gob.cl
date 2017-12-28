@@ -1,3 +1,6 @@
+@import 'vairables';
+@import 'functions';
+
 .c-header {
   -webkit-box-shadow: 1px 2px 1px 1px #E3E5EF;
   box-shadow: 1px 2px 1px 1px #E3E5EF;
@@ -127,4 +130,20 @@
     font-size: 0.7023319616em;
     opacity: 0.92;
   }
+}
+
+.a11y-contrast {
+  .heading-large {
+    color: get-contrast-color(black);
+  }
+  pre {
+    background-color: get-contrast-color(lightgray);
+  }
+
+  code {
+    background-color: get-contrast-color(lightgray);
+    color: get-contrast-color(red);
+    text-shadow: none;
+  }
+
 }

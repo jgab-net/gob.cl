@@ -3,18 +3,37 @@
 
 // Color Map
 $colors: (
-  red : #FE6565,
-  darkred : #BB0000,
-  green : #2FAE7D,
-  blue : #0021FF,
-  lightblue : #85B1F5,
-  yellow : #F2C728,
-  dark : #111111,
-  bluedark : #0A132D,
+  red: #FE6565,
+  darkred: #BB0000,
+  green: #2FAE7D,
+  blue: #0021FF,
+  lightblue: #85B1F5,
+  yellow: #F2C728,
+  dark: #111111,
+  bluedark: #0A132D,
   white: #FFFFFF,
-  light : #F5F6F7,
+  light: #F5F6F7,
+  darkgray: #313131,
   gray: #A8B7C7,
-  lightgray : #E3E5EF
+  lightgray: #E3E5EF,
+  black: #000000
+);
+
+$contrast-colors: (
+  red: #6DEDEE,
+  darkred: #BB0000, // find
+  green: #2FAE7D, // find
+  blue: #0021FF, // find
+  lightblue: #85B1F5, // find
+  yellow: #22221D,
+  dark: #CBCBCB,
+  bluedark: #FEFEFE,
+  white: #000000,
+  light: #F5F6F7,
+  darkgray: #E9E9E9,
+  gray: #E2E2E2,
+  lightgray: #22221D,
+  black: #FFFFFF
 );
 
 $shadow: rgba(134,142,150,.5);
@@ -99,3 +118,23 @@ $footer-links-container-offset: 100px !default;
 // Django cms toolbar variables.
 $django-cms-toolbar: 5px !default;
 $django-cms-toolbar-expanded: 49px !default;
+
+// Forms
+$labelSize: 0.6875rem;
+
+$labelMarginBottom: 8px;
+$labelMarginTop: 0;
+$labelWeight: 400;
+
+$formMarginBottom: 30px;
+
+$inputHeight: 50px;
+$inputBorder: 2px solid get-color(lightgray);
+$inputBorderRadius: 0;
+
+$buttonHeight: 38px;
+$buttonWidth: 102px;
+$buttonBorder: none;
+$buttonBorderRadius: $buttonHeight/2;
+$buttonSize: 0.875rem;
+$buttonWeight: 700;

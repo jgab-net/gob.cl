@@ -20,7 +20,7 @@ input[type=text]:focus {
 }
 
 input[type=text]:read-only {
-  background: #F2F3F8;
+  background: get-color(lightgray);
 }
 
 input[type=text].error {
@@ -28,11 +28,11 @@ input[type=text].error {
 }
 
 input[type=text].success {
-  border-color: #2FAE7D;
+  border-color: get-color(green);
 }
 
 input[type=text].warning {
-  border-color: #F2C728;
+  border-color: get-color(yellow);
 }
 
 /* Label */
@@ -109,13 +109,13 @@ ul.steps {
 }
 
 ul.steps li {
-  border-bottom: 8px solid #E3E5EF;
+  border-bottom: 8px solid get-color(lightgray);
   display: inline-block;
   padding-bottom: 8px;
 }
 
 ul.steps li.active {
-  border-bottom: 8px solid #FE6565;
+  border-bottom: 8px solid get-color(red);
 }
 
 ul.steps li a.next {
@@ -138,5 +138,26 @@ ul.steps li a {
 img {
   &.img-frame {
     border: 1px solid get-color(gray);
+  }
+}
+
+.hero-background {
+  background-image: url($imagesPath + 'hero-home.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.a11y-contrast {
+  ul.steps li.active {
+    border-bottom: 8px solid get-contrast-color(red);
+  }
+
+  .form-check-label {
+    color: get-contrast-color(dark);
+  }
+
+  input[type=text]:read-only {
+    background: get-contrast-color(lightgray);
   }
 }

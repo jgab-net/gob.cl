@@ -280,7 +280,7 @@
   &--text-light {
     color: get-color(white);
     &:hover {
-      color: rgba(get-color(white), .8) !important;
+      color: rgba(get-color(white), .8);
     }
   }
   &--has-dot {
@@ -428,5 +428,162 @@
   .link {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.a11y-contrast {
+  .button {
+    background-color: get-contrast-color(red);
+    color: get-contrast-color(white);
+
+    &:hover {
+      background-color: darken(get-contrast-color(red), 10%);
+      color: get-contrast-color(white);
+    }
+
+    &--red {
+      background-color: get-contrast-color(red);
+      color: get-contrast-color(white);
+      &:hover {
+        background-color: darken(get-contrast-color(red), 5%);
+        color: get-contrast-color(white);
+      }
+    }
+
+    &--bluedark {
+      background-color: get-contrast-color(bluedark);
+      color: get-contrast-color(red);
+      &:hover {
+        background-color: darken(get-contrast-color(bluedark), 5%);
+      }
+    }
+    &--dark {
+      background-color: get-contrast-color(dark);
+      color: get-contrast-color(red);
+      &:hover {
+        background-color: darken(get-contrast-color(dark), 5%);
+      }
+    }
+    &--blue {
+      background-color: get-contrast-color(blue);
+      color: get-contrast-color(white);
+      &:hover {
+        background-color: darken(get-contrast-color(blue), 5%);
+      }
+    }
+    &--green {
+      background-color: get-contrast-color(green);
+      color: get-contrast-color(white);
+      &:hover {
+        background-color: darken(get-contrast-color(green), 5%);
+      }
+    }
+    &--yellow {
+      background-color: get-contrast-color(yellow);
+      color: get-color(dark);
+      &:hover {
+        background-color: darken(get-contrast-color(yellow), 5%);
+      }
+    }
+    &--gray {
+      background-color: get-contrast-color(gray);
+      color: get-contrast-color(white);
+      &:hover {
+        background-color: darken(get-contrast-color(gray), 5%);
+      }
+    }
+    &--light {
+      background-color: get-contrast-color(red);
+      color: get-contrast-color(white);
+      &:hover {
+        background-color: darken(get-contrast-color(red), 5%);
+      }
+    }
+    &--lightred {
+      background-color: get-contrast-color(light);
+      color: get-contrast-color(red);
+      &:hover {
+        background-color: darken(get-contrast-color(light), 5%);
+      }
+    }
+    &--lightgray {
+      background-color: get-contrast-color(lightgray);
+      color: get-contrast-color(red);
+      &:hover {
+        background-color: darken(get-contrast-color(lightgray), 5%);
+        color: get-contrast-color(red);
+      }
+    }
+    &--white {
+      background-color: get-contrast-color(white);
+      color: get-contrast-color(red);
+      &:hover {
+        background-color: darken(get-contrast-color(white), 5%);
+      }
+    }
+    &--lightblue {
+      background-color: get-contrast-color(lightblue);
+      color: get-contrast-color(dark);
+      &:hover {
+        background-color: darken(get-contrast-color(lightblue), 5%);
+      }
+    }
+    &--gray-dark {
+      background-color: get-contrast-color(gray);
+      color: get-contrast-color(dark);
+      &:hover {
+        background-color: darken(get-contrast-color(gray), 5%);
+      }
+    }
+    &--darkred {
+      background-color: get-contrast-color(darkred);
+      color: get-contrast-color(white);
+      &:hover {
+        background-color: darken(get-contrast-color(darkred), 5%);
+      }
+    }
+  }
+
+  .link {
+    color: get-contrast-color(dark);
+    &:hover,
+    &.hover {
+      color: rgba(get-contrast-color(dark), .6);
+      @include mq($until: tablet) {
+        background-color: rgba(#0A132D, .05);
+      }
+    }
+    &.active {
+      color: get-contrast-color(dark);
+    }
+
+    &--gray {
+      background: rgba(get-contrast-color(bluedark), .05);
+      color: get-contrast-color(dark);
+    }
+    &--dark {
+      background-color: get-contrast-color(dark);
+      color: get-contrast-color(white);
+      &:hover,
+      &.hover {
+        color: darken(get-contrast-color(white), 5%);
+        background-color: get-contrast-color(dark);
+      }
+    }
+
+    &--text-dark {
+      color: get-contrast-color(dark);
+    }
+    &--text-light {
+      color: get-contrast-color(white);
+      &:hover {
+        color: rgba(get-contrast-color(white), .8);
+      }
+    }
+    &--has-dot {
+      &:before {
+        color: get-contrast-color(red);
+      }
+    }
   }
 }

@@ -28,3 +28,21 @@ ol.breadcrumb {
     }
   }
 }
+
+.a11y-contrast {
+  .breadcrumb,
+  ol.breadcrumb {
+    a {
+      color: rgba(get-contrast-color(black), .8)
+    }
+
+    li {
+      &:not(:last-child) {
+        &:after {
+          content: '';
+          @include svgContrastIcon('arrow-breadcrumb', 8, 6);
+        }
+      }
+    }
+  }
+}

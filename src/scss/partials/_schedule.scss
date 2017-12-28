@@ -41,3 +41,15 @@
     }
   }
 }
+
+.a11y-contrast {
+  .schedule {
+    &_time {
+      &--has-dot {
+        &:before {
+          @include circle(7px, get-contrast-color(red));
+        }
+      }
+    }
+  }
+}

@@ -133,7 +133,7 @@
     .new_title {
       a {
         &:hover {
-          color: rgba(get-color(white), .8) !important;
+          color: rgba(get-color(white), .8);
         }
       }
     }
@@ -175,7 +175,7 @@
     }
     a {
       &:hover {
-        color: rgba(get-color(dark), .6) !important;
+        color: rgba(get-color(dark), .6);
       }
       // &:visited{
       // 	color: get-color(gray) !important;
@@ -312,4 +312,12 @@
 .article-schedule {
   padding: 30px 0;
 
+}
+
+.a11y-contrast {
+  .new {
+    &_date {
+      color: rgba(get-contrast-color(dark), .8);
+    }
+  }
 }

@@ -1,7 +1,7 @@
 .new {
   height: 158px;
   position: relative;
-  color: get-color("white");
+  color: get-color(white);
   &.new-medium {
     height: 309px;
     .new {
@@ -37,7 +37,6 @@
     font-size: 1.12500rem;
   }
   &_date {
-    color: get-color("bluelightdark");
     font-size: 0.857rem;
     font-weight: 400;
     margin-left: 10px;
@@ -104,10 +103,6 @@
     display: none;
   }
   &_content {
-
-    // height: 100%;
-    // width: 50%;
-    // float: right;
     padding: 40px 0;
     position: relative;
     z-index: 20;
@@ -120,9 +115,8 @@
   }
   h2,
   &_title {
-    color: get-color("white");
+    color: get-color(white);
     font-size: 1.25rem;
-    // font-size: 1.5625rem;
     margin: 0 0 1.25rem;
   }
   p {
@@ -132,14 +126,13 @@
     }
   }
   a {
-    color: get-color("bluelight");
     font-size: 0.857rem;
     font-weight: 700;
   }
 }
 
 .new-large {
-  color: get-color("white");
+  color: get-color(white);
   height: 374px;
   position: relative;
   // width: 100%;
@@ -161,7 +154,6 @@
     font-size: 1rem;
   }
   a {
-    color: get-color("bluelight");
     font-size: 0.857rem;
   }
   .new {
@@ -175,7 +167,7 @@
       // top: 0;
     }
     &_title {
-      color: get-color("white");
+      color: get-color(white);
       font-size: 1.12500rem;
     }
   }
@@ -193,13 +185,11 @@
     line-height: 1.25rem;
     margin: 0;
     time {
-      color: get-color("bluelightdark");
       font-size: 1rem;
       font-weight: 400;
     }
   }
   &_type {
-    color: get-color("bluelightdark");
     font-size: 0.857rem;
     font-weight: 600;
     line-height: 1.12500rem;

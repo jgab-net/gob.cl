@@ -9,7 +9,8 @@ body {
 
     .contingency-continue,
     .contingency-navigate {
-      height: $contingency-actions-height;
+      min-height: $contingency-actions-height;
+      height: auto;
     }
   }
 
@@ -77,4 +78,24 @@ body {
     }
   }
 
+}
+
+.a11y-contrast {
+  .contingency {
+    &-navigate,
+    &-continue {
+      color: get-contrast-color(white);
+      background-color: get-contrast-color(red);
+
+      &:hover {
+        background-color: rgba(get-contrast-color(red), .9);
+      }
+    }
+
+    background-color: get-contrast-color(white);
+
+    .heading-large {
+      color: get-contrast-color(black);
+    }
+  }
 }

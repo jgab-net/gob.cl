@@ -9,3 +9,18 @@
     overflow: hidden;
   }
 }
+
+.a11y-contrast {
+  .aside {
+    background-color: rgba(get-contrast-color(light), 1);
+
+    .link {
+      background-color: get-contrast-color(lightgray);
+      color: get-contrast-color(red);
+    }
+
+    &_header {
+      border-bottom: 1px solid get-contrast-color(lightgray);
+    }
+  }
+}

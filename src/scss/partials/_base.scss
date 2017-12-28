@@ -76,3 +76,23 @@ hr {
     }
   }
 }
+
+.a11y-contrast {
+  a {
+    color: get-contrast-color(dark);
+  }
+
+  .site-main {
+    background-color: get-contrast-color(white);
+    color: get-contrast-color(dark);
+
+
+    .bg-light {
+      color: rgba(get-contrast-color(white), .8);
+    }
+  }
+
+  p {
+    color: rgba(get-contrast-color(dark), .8);
+  }
+}

@@ -113,3 +113,23 @@
     }
   }
 }
+
+.a11y-contrast {
+  .navbar-toggler {
+
+    &:after,
+    &:before {
+      background-color: get-contrast-color(dark);
+    }
+
+    &[aria-expanded="false"] {
+      span {
+        background-color: get-contrast-color(dark);
+        &:after,
+        &:before {
+          background-color: get-contrast-color(dark);
+        }
+      }
+    }
+  }
+}

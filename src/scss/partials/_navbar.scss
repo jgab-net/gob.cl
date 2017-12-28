@@ -406,3 +406,57 @@ body {
 
   }
 }
+
+.a11y-contrast {
+  body {
+    nav.navbar {
+
+      .lang {
+        > a {
+          border: 1px solid get-contrast-color(gray);
+          color: get-contrast-color(gray);
+        }
+
+        .dropdown-menu {
+          border: 1px solid get-contrast-color(gray);
+          background-color: get-contrast-color(white);
+
+          .dropdown-item {
+            color: get-contrast-color(gray);
+          }
+        }
+      }
+
+      background-color: get-contrast-color(white);
+
+      > .container {
+
+        .navbar-collapse {
+          .navbar-nav {
+            .nav-item {
+              @include mq($from: tablet) {
+                &-access {
+                  border-left: 2px solid get-contrast-color(gray);
+                }
+              }
+
+              .nav-link {
+                color: get-contrast-color(gray);
+              }
+              &.lang {
+                .nav-link {
+                  color: get-contrast-color(gray);
+                }
+                .dropdown-menu {
+                  .dropdown-item {
+                    background-color: get-contrast-color(white);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

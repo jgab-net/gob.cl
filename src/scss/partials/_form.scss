@@ -1,46 +1,3 @@
-/* Form */
-// Title
-$colorTitle: #fff;
-// Label
-$labelColor: rgba(get-color(dark), .6);
-$labelSize: 0.6875rem;
-;
-$labelMarginBottom: 8px;
-$labelMarginTop: 0;
-$labelWeight: 400;
-// Input
-$formMarginBottom: 30px;
-$inputBgColor: #fff;
-$inputColor: #313131;
-$inputColorFocus: get-color(white);
-$inputHeight: 50px;
-$inputBorder: 2px solid get-color(lightgray);
-$inputBorderRadius: 0;
-$inputPlaceholder: #fff;
-// Button
-$buttonHeight: 38px;
-$buttonWidth: 102px;
-$buttonBgColor: #fff;
-$buttonBorder: none;
-$buttonBorderRadius: $buttonHeight/2;
-$buttonColor: get-color(red);
-$buttonSize: 0.875rem;
-$buttonWeight: 700;
-
-// .form-container{
-// 	position: relative;
-// 	&:before{
-// 		@include mq($from: tablet ) {
-// 			content: "";
-// 			background-color: get-color(blue);
-// 			position: absolute;
-// 			left: 0;
-// 			top: 0;
-// 			bottom: 0;
-// 			width: 50%;
-// 		}
-// 	}
-// }
 
 input[type=text],
 input[type=email],
@@ -51,8 +8,8 @@ input[type="tel"],
 select,
 textarea {
   width: 100%;
-  color: $inputColor;
-  background-color: $inputBgColor;
+  color: get-color(darkgray);
+  background-color: get-color(white);
   border-radius: $inputBorderRadius;
   border: $inputBorder;
   text-indent: 5px;
@@ -62,11 +19,6 @@ textarea {
   height: $inputHeight;
   transition: background-color .4s;
   appearance: none;
-  // @include placeholder($inputPlaceholder);
-  // &:focus{
-  // 	background-color: #69B2E1;
-  // 	color: $inputColorFocus;
-  // }
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -214,7 +166,7 @@ textarea {
 }
 
 label {
-  color: $labelColor;
+  color: rgba(get-color(dark), .6);;
   font-size: $labelSize;
   font-weight: $labelWeight;
   display: block;
@@ -241,7 +193,7 @@ label {
   }
 
   &_title {
-    color: $colorTitle;
+    color: get-color(white);
     font-size: 1.5625rem;
     font-weight: 700;
     margin: 0 0 19px;
@@ -250,7 +202,7 @@ label {
 
   label,
   &_label {
-    color: $labelColor;
+    color: rgba(get-color(dark), .6);
     font-size: $labelSize;
     font-weight: $labelWeight;
     display: block;
@@ -271,31 +223,7 @@ label {
       display: none;
     }
   }
-  // button[type=submit],
-  // &_submit{
-  // 	appearance: none;
-  // 	background: $buttonBgColor;
-  // 	border: $buttonBorder;
-  // 	border-radius: $buttonBorderRadius;
-  // 	// box-shadow: 0px 1px 2px 0px rgba(50, 50, 50, 0.75);
-  // 	font-size: $buttonSize;
-  // 	font-weight: $buttonWeight;
-  // 	// font-family: "Lato";
-  // 	color: $buttonColor;
-  // 	cursor: pointer;
-  // 	height: $buttonHeight;
-  // 	width: $buttonWidth;
-  // 	// margin: 0 auto;
-  // 	outline: none;
-  // 	// padding: 10px 0;
-  // 	// padding: 15px 20px;
-  // 	display: inline-block;
-  // 	// text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.42);
-  // 	// width: 200px;
-  // 	// width: 100%;
-  // 	@include press-button();
-  // 	@include mq($from: tablet ) {}
-  // }
+
   &-75 {
     @include mq($from: tablet) {
       margin-left: 100px;
@@ -620,4 +548,94 @@ div[class^="form_col"] {
   &.not-found {
     display: block;
   }
+}
+
+.a11y-contrast {
+  .search-form {
+
+    &_content {
+      background-color: get-contrast-color(white);
+    }
+    &_button {
+      &--submit {
+        color: get-contrast-color(red);
+      }
+      &--cancel {
+        color: get-contrast-color(gray);
+        border-right: 1px solid get-contrast-color(black);
+      }
+    }
+
+    &_note {
+      color: rgba(get-contrast-color(white), .4);
+    }
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type="date"],
+  input[type="search"],
+  input[type="tel"],
+  select,
+  textarea {
+    color: get-contrast-color(darkgray);
+    background-color: get-contrast-color(white);
+  }
+
+  .search {
+    button {
+      background-color: transparent;
+      &:after {
+        background: transparent url($iconsPath + 'search.svg') center center no-repeat;
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        top: 15px;
+        z-index: 10;
+        margin-right: 22px;
+      }
+    }
+  }
+
+  .select2 {
+    .select2-selection {
+      background-color: get-contrast-color(white);
+      border-color: get-contrast-color(black);
+
+      .select2-selection__arrow {
+        background: url($iconsPath + 'contrast-arrow-select.svg') 0 23px no-repeat;
+      }
+
+      &__rendered {
+        color: get-contrast-color(black);
+      }
+    }
+  }
+
+  .select2-container {
+    &.select2-container--open {
+
+      .select2-dropdown--below {
+        background: get-contrast-color(white);
+        border: 2px solid get-contrast-color(black);
+
+        .select2-results__option {
+          &.select2-results__option--highlighted {
+            background-color: get-contrast-color(red);
+            color: get-contrast-color(white);
+          }
+          color: get-contrast-color(black);
+          background-color: get-contrast-color(white);
+        }
+
+        .select2-search.select2-search--dropdown {
+          padding: 0;
+        }
+      }
+    }
+  }
+
 }

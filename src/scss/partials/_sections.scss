@@ -134,3 +134,35 @@
   }
 }
 
+.a11y-contrast {
+  section,
+  .section {
+    &.bg-bluedark:not(.elem-bg) {
+      a {
+        color: get-contrast-color(white);
+      }
+
+      .text-light,
+      .text-light p {
+        color: rgba(get-contrast-color(white), .8) !important;
+      }
+    }
+
+    &.bg-light {
+      background-color: get-contrast-color(lightgray) !important;
+    }
+  }
+
+  @each $colorName, $color in $contrast-colors {
+    .expand-#{$colorName}-left {
+      @include expand($color, left);
+    }
+    .expand-#{$colorName}-right {
+      @include expand($color, right);
+    }
+    .expand-#{$colorName} {
+      @include expand($color);
+    }
+  }
+
+}

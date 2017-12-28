@@ -130,3 +130,49 @@
     }
   }
 }
+
+.a11y-contrast {
+  .profile {
+    &--bluedark {
+      background-color: get-contrast-color(bluedark);
+      .profile {
+        &_title {
+          color: get-contrast-color(white);
+        }
+        &_job {
+          color: rgba(get-contrast-color(white), .6);
+        }
+        &_twitter {
+          color: rgba(get-contrast-color(white), 1);
+        }
+        &_info {
+          li {
+            span {
+              color: get-contrast-color(white);
+            }
+          }
+        }
+      }
+
+      p {
+        color: get-contrast-color(white);
+      }
+    }
+
+    &_title {
+      color: rgba(get-contrast-color(dark), 1);
+    }
+
+    &_job {
+      color: rgba(get-contrast-color(dark), .8);
+    }
+
+    &_info {
+      li {
+        span {
+          color: rgba(get-contrast-color(dark), .8);
+        }
+      }
+    }
+  }
+}

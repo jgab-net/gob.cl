@@ -143,3 +143,48 @@
   }
 
 }
+
+.a11y-contrast {
+  .ctag {
+    &.ctag--clarity {
+      background-color: rgba(get-color(dark), .1);
+      color: rgba(get-color(dark), .6);
+
+      &:hover,
+      &.hover {
+        background-color: get-contrast-color(red);
+        color: get-contrast-color(white)
+      }
+
+      &.active {
+        background-color: get-contrast-color(red);
+        color: get-contrast-color(white);
+
+        &:after {
+          color: get-contrast-color(white)
+        }
+      }
+    }
+
+    &.ctag--light {
+      background-color: get-contrast-color(black);
+      color: get-contrast-color(white);
+
+      &:hover,
+      &.hover {
+        background-color: get-contrast-color(red);
+        color: get-contrast-color(white)
+      }
+
+      &.active {
+        background-color: get-contrast-color(red);
+        color: get-contrast-color(white);
+        border-color: get-contrast-color(red);
+
+        &:after {
+          color: get-contrast-color(white)
+        }
+      }
+    }
+  }
+}

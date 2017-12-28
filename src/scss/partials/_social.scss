@@ -45,3 +45,19 @@
     }
   }
 }
+
+.a11y-contrast {
+  .social {
+    &_icon {
+      color: get-contrast-color(gray);
+    }
+
+    &_name {
+      color: rgba(get-contrast-color(dark), .8);
+    }
+
+    &_url {
+      color: rgba(get-contrast-color(dark), .6);
+    }
+  }
+}
