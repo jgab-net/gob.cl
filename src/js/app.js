@@ -12,6 +12,7 @@ App = {
     this.tags();
     this.a11y();
     this.contingency();
+    this.imgToBackground();
   },
   a11y: function () {
     $('.toolbar').toolbar();
@@ -24,6 +25,12 @@ App = {
   },
   tags: function () {
     $('.tags').tags();
+  },
+  imgToBackground: function () {
+    $('.elem-bg').each(function (index, el) {
+      var srcImg = $(el).find('.img-to-bg').attr('src');
+      $(el).css('background-image', 'url(' + srcImg + ')');
+    });
   },
   search: function () {
     var $inputSearch = $('#input-search');
