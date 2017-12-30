@@ -143,10 +143,12 @@ img {
 }
 
 .hero-background {
-  background-image: url($imagesPath + 'hero-home.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  @include mq($from: mobile) {
+    background-image: url($imagesPath + 'hero-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
 }
 
 .a11y-contrast {

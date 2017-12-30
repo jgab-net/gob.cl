@@ -137,7 +137,7 @@
 .a11y-contrast {
   section,
   .section {
-    &.bg-bluedark:not(.elem-bg) {
+    &.bg-bluedark:not(.hero-background) {
       a {
         color: get-contrast-color(white);
       }
