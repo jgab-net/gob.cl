@@ -1,0 +1,370 @@
+
+.rsbtn-gobcl-skin {
+  position: relative;
+}
+
+/************************************************ GENERAL CLASSES */
+
+/**
+ * These are a couple of classes that apply to many object or redefine elements
+ */
+.rsbtn-gobcl-skin a, .rsbtn-gobcl-skin span {
+  position: relative;
+  text-decoration: none;
+}
+
+/**
+ * Use the predefined CSS sprite for all graphical elements.
+ */
+.rsbtn-gobcl-skin .rsimg {
+  //background: transparent url($imagesPath + 'read-speaker-skin.png') no-repeat scroll 0 0;
+}
+
+.rsbtn-gobcl-skin .rsdefloat {
+  clear: both;
+}
+
+.rsbtn-gobcl-skin .rspart:not(.rsbtn_left) {
+  float: left;
+}
+
+/**
+ * This goes for all buttons
+ */
+.rsbtn-gobcl-skin .rspart.rsbutton {
+  width: 18px;
+  height: 38px;
+  display: table;
+
+  i {
+    color: get-color(white);
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 12.8px;
+    line-height: 1.2;
+  }
+}
+
+/**
+ * Hide all text labels. They will still be visible to non-CSS browsers
+ */
+.rsbtn-gobcl-skin .rspart .rsbtn_btnlabel {
+  display: none;
+}
+
+/************************************************ PLAYER BOX */
+.rsbtn-gobcl-skin .rsbtn_box {
+  margin: 0;
+}
+
+/************************************************ LISTEN BUTTON + ICON */
+.rsbtn-gobcl-skin .rsbtn_play {
+  float: left;
+}
+
+.rsbtn-gobcl-skin .rsbtn_left.rspart {
+  background: none;
+
+  & > .rsbtn_status_overlay {
+    width: 75px;
+    @include mq($from: micro) {
+      width: 130px;
+    }
+    @include mq($from: tablet) {
+      width: 184px;
+    }
+  }
+}
+
+/************************************************ EXPANDING AREA */
+.rsbtn-gobcl-skin .rsbtn_exp.rsimg.rspart {
+  background: none;
+  float: left;
+  display: none;
+
+  width: 120px !important;
+  height: 42px;
+  border: 2px solid get-color(white);
+
+  @include mq($from: micro) {
+    width: 130px !important;
+  }
+  @include mq($from: tablet) {
+    width: 142px !important;
+  }
+  & > .rsbtn_box {
+    display: block;
+    height: 38px;
+
+    & > .rsbutton {
+      padding: 0 2px;
+
+      @include mq($from: tablet) {
+        padding: 0 5px;
+      }
+    }
+
+    & > .rsbtn_progress_container {
+      height: 10px;
+      margin: 13px 2px;
+    }
+  }
+
+  @include mq($from: tablet) {
+    border-left-width: 0;
+  }
+}
+
+/**
+ * We want the expanding area to be visible only when the player
+ * is expanded, hence the .rsexpanded class.
+ */
+.rsbtn-gobcl-skin.rsexpanded {
+
+  width: 120px !important;
+  .toolbar-button--listen {
+    display: none;
+  }
+
+  @include mq($from: micro) {
+    width: 130px !important;
+  }
+  @include mq($from: tablet) {
+    width: 184px !important;
+
+    .toolbar-button--listen {
+      display: table;
+    }
+  }
+
+  .rsbtn_text > span {
+    display: none;
+  }
+
+  .rsbtn_exp.rsimg {
+    display: inline-block;
+  }
+
+  .toolbar-button--listen {
+    width: 42px;
+    padding-left: 0;
+    border-right-width: 0;
+
+    .toolbar-button_content {
+      text-align: center;
+    }
+  }
+
+  &.rsplaying {
+    .ic-play {
+      display: none;
+    }
+
+    .ic-pause {
+      display: table-cell;
+    }
+  }
+
+  &.rsstopped,
+  &.rspaused {
+    .ic-pause {
+      display: none;
+    }
+
+    .ic-play {
+      display: table-cell;
+    }
+  }
+}
+
+/************************************************ PROGRESS CONTAINER */
+.rsbtn-gobcl-skin .rsbtn_progress_container {
+  border: 1px solid get-color(white);
+  width: 42px;
+  height: 10px;
+  margin-top: 3px;
+  margin-left: 4px;
+  background-image: none;
+  /*
+   * Add rounded corners to supported browsers
+   */
+
+  @include mq($from: micro) {
+    width: 50px;
+  }
+
+  border-radius: 3px;
+}
+
+/************************************************ PROGRESS DRAG HANDLE */
+.rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
+  position: absolute;
+  background-color: get-color(white);
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 16px;
+  background-image: none;
+}
+
+/************************************************ PROGRESS BAR */
+.rsbtn-gobcl-skin .rsbtn_progress_played {
+  position: absolute;
+  height: 100%;
+  background-color: get-color(lightgray);
+  background-image: none;
+}
+
+/************************************************ DOWNLOAD BUTTON */
+.rsbtn-gobcl-skin.rsexpanded {
+
+  .rsbtn_exp.rsimg.rspart {
+    .rsbtn_pause {
+      padding: 0 10px;
+    }
+  }
+}
+
+.toolbar {
+  &.dark {
+
+    .rsbtn-gobcl-skin.rsexpanded {
+      .toolbar-button {
+        &.toolbar-button--listen {
+          border-right-width: 0;
+        }
+      }
+    }
+
+    .rsbtn-gobcl-skin .rsbtn_exp.rsimg.rspart {
+      border-color: get-color(bluedark);
+    }
+
+
+    .rsbtn-gobcl-skin .rsbtn_progress_container {
+      border-color: get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS DRAG HANDLE */
+    .rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
+      background-color: get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS BAR */
+    .rsbtn-gobcl-skin .rsbtn_progress_played {
+      background-color: get-color(lightgray);
+    }
+
+    .rsbtn-gobcl-skin .rspart.rsbutton {
+      i {
+        color: get-color(bluedark);
+      }
+    }
+  }
+}
+
+.a11y-contrast {
+
+  .toolbar {
+
+    .rsbtn-gobcl-skin.rsexpanded {
+      .toolbar-button.toolbar-button--listen {
+        border-right-width: 0;
+      }
+    }
+
+    &.dark {
+      .toolbar-button--listen:hover {
+        .toolbar-button_content {
+          .rsbtn_text {
+            .toolbar-button_text {
+              color: get-contrast-color(white);
+            }
+          }
+        }
+      }
+
+      .rsbtn-gobcl-skin.rsexpanded {
+
+        .rsbtn_exp.rsimg.rspart {
+          border-color: get-contrast-color(bluedark);
+        }
+
+        .rsbtn_progress_container {
+          border: 1px solid get-contrast-color(bluedark);
+        }
+
+        .rsbtn_progress_handle.rsimg {
+          background-color: get-contrast-color(bluedark);
+        }
+
+        .rsbtn_progress_played {
+          background-color: get-contrast-color(lightgray);
+        }
+
+        .rspart.rsbutton {
+          i {
+            color: get-contrast-color(bluedark);
+          }
+        }
+      }
+    }
+  }
+
+  .hero-background {
+    @include mq($until: mobile) {
+      .rsbtn-gobcl-skin .rsbtn_exp.rsimg.rspart {
+        border-color: get-color(bluedark);
+      }
+
+
+      .rsbtn-gobcl-skin .rsbtn_progress_container {
+        border-color: get-color(bluedark);
+      }
+
+      /************************************************ PROGRESS DRAG HANDLE */
+      .rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
+        background-color: get-color(bluedark);
+      }
+
+      /************************************************ PROGRESS BAR */
+      .rsbtn-gobcl-skin .rsbtn_progress_played {
+        background-color: get-contrast-color(lightgray);
+      }
+
+      .rsbtn-gobcl-skin .rspart.rsbutton {
+        i {
+          color: get-contrast-color(white);
+        }
+      }
+    }
+  }
+
+  .bg-bluedark:not(.hero-background) {
+    .rsbtn-gobcl-skin .rsbtn_exp.rsimg.rspart {
+      border-color: get-color(bluedark);
+    }
+
+
+    .rsbtn-gobcl-skin .rsbtn_progress_container {
+      border: 1px solid get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS DRAG HANDLE */
+    .rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
+      background-color: get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS BAR */
+    .rsbtn-gobcl-skin .rsbtn_progress_played {
+      background-color: get-contrast-color(lightgray);
+    }
+
+    .rsbtn-gobcl-skin .rspart.rsbutton {
+      i {
+        color: get-contrast-color(white);
+      }
+    }
+  }
+}
