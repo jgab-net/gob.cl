@@ -83,6 +83,7 @@ body {
       background-color: get-contrast-color(red);
 
       &:hover {
+        color: get-contrast-color(white);
         background-color: rgba(get-contrast-color(red), .9);
       }
     }

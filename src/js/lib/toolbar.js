@@ -51,10 +51,10 @@
       var $contrast = $('.toolbar-button--contrast'); // Use this.$element.find for non global behavior
 
       var $toolbar = $('.toolbar'); // Use this.$element for non global behavior
-      var $toolbarPlayer = $(".toolbar-player"); // Use this.$element.find for non global behavior
+      // var $toolbarPlayer = $(".toolbar-player"); // Use this.$element.find for non global behavior
       var $toggle = $('.toolbar-button--toggle'); // Use this.$element.find for non global behavior
-      var $listen = $(".toolbar-button--listen"); // Use this.$element.find for non global behavior
-      var $playPause = $('.toolbar-player_toggle'); // Use this.$element.find for non global behavior
+      // var $listen = $('.toolbar-button--listen'); // Use this.$element.find for non global behavior
+      // var $playPause = $('.toolbar-player_toggle'); // Use this.$element.find for non global behavior
 
       var stored = !!localStorage.getItem(storageKey);
 
@@ -78,7 +78,7 @@
       });
 
       //play simulation
-      $listen.on('click', function (e) {
+      /*$listen.on('click', function (e) {
         e.preventDefault();
         $(this).addClass('invisible');
         $toolbarPlayer.removeClass('invisible')
@@ -87,7 +87,7 @@
       $playPause.on('click', function (e) {
         e.preventDefault();
         $toolbarPlayer.toggleClass('pause');
-      });
+      });*/
 
       $prev.on('click', function (e) {
         e.preventDefault();
@@ -168,27 +168,27 @@
   window.rsConf.ui.rsbtnClass = 'rsbtn-gobcl-skin';
   window.rsConf.ui.player = [
     '<span class="rsbtn_box">',
-    '	<a href="javascript:void(0);" class="rsbtn_pause rsimg rspart rsbutton" title="Pause">',
-    '		<span class="rsbtn_btnlabel">Pause</span>',
+    '	<a href="javascript:void(0);" class="rsbtn_pause rsimg rspart rsbutton">',
+    '		<span class="toolbar-button_content">',
+    '     <i class="ic-pause"></i>',
+    '     <i class="ic-play"></i>',
+    '   </span> ',
     '	</a>',
     '	<span class="rsbtn_progress_container rspart">',
     '		<span class="rsbtn_progress_played"></span>',
     '	</span>',
-    '	<a href="javascript:void(0);" class="rsbtn_dl rsimg rspart rsbutton" title="Download mp3">',
-    '		<span class="rsbtn_btnlabel">Download mp3</span>',
+    '	<a href="javascript:void(0);" class="rsbtn_dl rsimg rspart rsbutton">',
+    '		<span class="toolbar-button_content">',
+    '     <i class="ic-download"></i>',
+    '   </span> ',
     '	</a>',
-    '	<a href="javascript:void(0);" class="rsbtn_closer rsimg rspart rsbutton" title="Close player">',
-    '		<span class="rsbtn_btnlabel">Close</span>',
+    '	<a href="javascript:void(0);" class="rsbtn_closer rsimg rspart rsbutton">',
+    '		<span class="toolbar-button_content">',
+    '     <i class="ic-close"></i>',
+    '   </span> ',
     '	</a>',
     '	<span class="rsdefloat"></span>',
     '</span>'
-  ];
-
-  window.rsConf.ui.popupbutton = [
-    '<a class="rsbtn_play" accesskey="L" title="Listen with ReadSpeaker" href="">',
-    '<span class="rsbtn_left rspart"><span class="rsbtn_text"><span>Listen</span></span></span>',
-    '<span class="rsbtn_right rsimg rsplay rspart"></span>',
-    '</a>'
   ];
 
 })(jQuery, window, document);

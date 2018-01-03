@@ -33,10 +33,15 @@
     // margin: 0;
   }
   &_content {
-    margin-right: 13px;
+    margin-right: 5px;
     overflow: hidden;
     float: left;
     display: none;
+
+    @include mq($from: micro) {
+      margin-right: 13px;
+    }
+
     @include mq($from: tablet) {
       margin-right: 0;
       float: none;
@@ -63,7 +68,7 @@
     display: block;
     float: left;
     height: 42px;
-    width: 75px;
+    width: 120px;
     position: relative;
     @include mq($from: 375px) {
       width: 130px;
@@ -118,26 +123,29 @@
   text-align: center;
   text-decoration: none;
 
+  i {
+    font-size: 16px;
+  }
+
   &.disabled {
-    color: get-color(gray);
     border: 2px solid get-color(gray);
   }
 
   &:hover {
-    background-color: #222B42;
-    border-color: #222B42;
+    background-color: get-color(darkblue);
+    border-color: get-color(darkblue);
   }
   &_content {
     display: table-cell;
     vertical-align: middle;
+    line-height: 21.6px;
   }
   &_text {
-    display: inline-block;
     vertical-align: middle;
-    margin-left: 13px;
-    display: none;
-    @include mq($from: 375px) {
-      display: inline-block;
+    margin-left: 5px;
+    display: inline-block;
+    @include mq($from: micro) {
+      margin-left: 13px;
     }
   }
   &_icon {
@@ -149,8 +157,9 @@
     text-align: left;
     padding-left: 16px;
     margin: 0;
-    width: 75px;
-    @include mq($from: 375px) {
+    width: 120px;
+    transition: none !important;
+    @include mq($from: micro) {
       width: 130px;
     }
     @include mq($from: tablet) {
@@ -159,19 +168,59 @@
   }
   &--contrast {
     font-size: 1.12500rem;
-    margin-right: 15px;
+    margin-right: 5px;
+    @include mq($from: micro) {
+      margin-right: 15px;
+    }
+
     @include mq($from: tablet) {
       margin-right: 22px;
     }
   }
   &--less {
     font-size: 0.875rem;
+    border-right-width: 0;
+    margin-right: 0;
+    width: 35px;
+
+    @include mq($from: micro) {
+      border-right-width: 2px;
+      margin-right: 5px;
+      width: 42px;
+    }
+
+    &.disabled {
+      border-right-width: 0;
+
+      @include mq($from: micro) {
+        border-right-width: 2px;
+      }
+    }
   }
   &--plus {
     font-size: 1.1875rem;
-    margin-right: 14px;
+    margin-right: 5px;
+    width: 35px;
+
+    border-left-width: 0;
+
+    @include mq($from: micro) {
+      margin-right: 14px;
+      border-left-width: 2px;
+
+      width: 42px;
+    }
+
     @include mq($from: tablet) {
       margin-right: 25px;
+    }
+
+    &.disabled {
+      border-left-width: 0;
+
+      @include mq($from: micro) {
+        border-left-width: 2px;
+      }
     }
   }
   &--toggle {
@@ -198,7 +247,6 @@
   border-radius: 6px;
   padding-left: 38px;
   padding-right: 38px;
-  width: 184px;
   height: 42px;
   &_toggle {
     color: get-color(white);
@@ -264,7 +312,6 @@
       color: get-contrast-color(bluedark);
 
       &.disabled {
-        color: get-contrast-color(gray);
         border: 2px solid get-contrast-color(gray);
       }
 
@@ -278,6 +325,22 @@
 
         .toolbar-button_icon {
           color: get-contrast-color(white);
+        }
+      }
+
+      &--less {
+        border-right-width: 0;
+
+        @include mq($from: micro) {
+          border-right-width: 2px;
+        }
+      }
+
+      &--plus {
+        border-left-width: 0;
+
+        @include mq($from: micro) {
+          border-left-width: 2px;
         }
       }
     }
@@ -296,6 +359,55 @@
     }
   }
 
+  .hero-background {
+    @include mq($until: mobile) {
+      .toolbar {
+        .toolbar-button {
+          border: 2px solid get-color(bluedark);
+          color: get-color(bluedark);
+          &:hover {
+            background-color: get-contrast-color(bluedark);
+            border-color: get-contrast-color(red);
+          }
+          &_icon {
+            color: get-color(dark);
+          }
+
+          &--less {
+            border-right-width: 0;
+
+            @include mq($from: micro) {
+              border-right-width: 2px;
+            }
+          }
+
+          &--plus {
+            border-left-width: 0;
+
+            @include mq($from: micro) {
+              border-left-width: 2px;
+            }
+          }
+
+        }
+        .toolbar-player {
+          border: 2px solid get-color(bluedark);
+          color: get-color(bluedark);
+        }
+        .toolbar-player_download,
+        .toolbar-player_toggle {
+          color: get-color(bluedark);
+        }
+        .toolbar-player_timeline {
+          span {
+            background-color: get-color(bluedark);
+          }
+        }
+
+      }
+    }
+  }
+
 
   .bg-bluedark:not(.hero-background) {
 
@@ -309,6 +421,22 @@
         }
         &_icon {
           color: get-color(dark);
+        }
+
+        &--less {
+          border-right-width: 0;
+
+          @include mq($from: micro) {
+            border-right-width: 2px;
+          }
+        }
+
+        &--plus {
+          border-left-width: 0;
+
+          @include mq($from: micro) {
+            border-left-width: 2px;
+          }
         }
 
       }

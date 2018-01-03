@@ -17,41 +17,33 @@
  * Use the predefined CSS sprite for all graphical elements.
  */
 .rsbtn-gobcl-skin .rsimg {
-  background: transparent url($imagesPath + 'read-speaker-skin.png') no-repeat scroll 0 0;
+  //background: transparent url($imagesPath + 'read-speaker-skin.png') no-repeat scroll 0 0;
 }
 
 .rsbtn-gobcl-skin .rsdefloat {
   clear: both;
 }
 
+.rsbtn-gobcl-skin .rspart:not(.rsbtn_left) {
+  float: left;
+}
+
 /**
  * This goes for all buttons
  */
 .rsbtn-gobcl-skin .rspart.rsbutton {
-  background-color: #000;
   width: 18px;
-  height: 18px;
+  height: 38px;
+  display: table;
 
-  /*
-   * Add rounded corners to supported browsers
-   */
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-
-  /**
-     * This is just to make the rollover effect a little smoother.
-     */
-  -moz-transition: background-color .2s ease;
-  -webkit-transition: background-color .2s ease;
-  -o-transition: background-color .2s ease;
-  transition: background-color .2s ease;
-}
-
-/**
- * Add a subtle rollover effect to the buttons.
- */
-.rsbtn-gobcl-skin .rspart.rsbutton:hover {
-  background-color: #ccc;
+  i {
+    color: get-color(white);
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 12.8px;
+    line-height: 1.2;
+  }
 }
 
 /**
@@ -63,7 +55,7 @@
 
 /************************************************ PLAYER BOX */
 .rsbtn-gobcl-skin .rsbtn_box {
-  margin: 1px;
+  margin: 0;
 }
 
 /************************************************ LISTEN BUTTON + ICON */
@@ -73,6 +65,16 @@
 
 .rsbtn-gobcl-skin .rsbtn_left.rspart {
   background: none;
+
+  & > .rsbtn_status_overlay {
+    width: 75px;
+    @include mq($from: micro) {
+      width: 130px;
+    }
+    @include mq($from: tablet) {
+      width: 184px;
+    }
+  }
 }
 
 /************************************************ EXPANDING AREA */
@@ -80,30 +82,106 @@
   background: none;
   float: left;
   display: none;
+
+  width: 120px !important;
+  height: 42px;
+  border: 2px solid get-color(white);
+
+  @include mq($from: micro) {
+    width: 130px !important;
+  }
+  @include mq($from: tablet) {
+    width: 142px !important;
+  }
+  & > .rsbtn_box {
+    display: block;
+    height: 38px;
+
+    & > .rsbutton {
+      padding: 0 2px;
+
+      @include mq($from: tablet) {
+        padding: 0 5px;
+      }
+    }
+
+    & > .rsbtn_progress_container {
+      height: 10px;
+      margin: 13px 2px;
+    }
+  }
+
+  @include mq($from: tablet) {
+    border-left-width: 0;
+  }
 }
 
 /**
  * We want the expanding area to be visible only when the player
  * is expanded, hence the .rsexpanded class.
  */
-.rsbtn-gobcl-skin.rsexpanded .rsbtn_exp.rsimg {
-  display: block;
-}
+.rsbtn-gobcl-skin.rsexpanded {
 
-/************************************************ PLAY/PAUSE BUTTON */
-.rsbtn-gobcl-skin .rsbtn_pause {
-  background-position: -18px -18px;
-}
+  width: 120px !important;
+  .toolbar-button--listen {
+    display: none;
+  }
 
-.rsbtn-gobcl-skin.rspaused .rsbtn_pause,
-.rsbtn-gobcl-skin.rsstopped .rsbtn_pause {
-  background-position: -18px 0px;
+  @include mq($from: micro) {
+    width: 130px !important;
+  }
+  @include mq($from: tablet) {
+    width: 184px !important;
+
+    .toolbar-button--listen {
+      display: table;
+    }
+  }
+
+  .rsbtn_text > span {
+    display: none;
+  }
+
+  .rsbtn_exp.rsimg {
+    display: inline-block;
+  }
+
+  .toolbar-button--listen {
+    width: 42px;
+    padding-left: 0;
+    border-right-width: 0;
+
+    .toolbar-button_content {
+      text-align: center;
+    }
+  }
+
+  &.rsplaying {
+    .ic-play {
+      display: none;
+    }
+
+    .ic-pause {
+      display: table-cell;
+    }
+  }
+
+  &.rsstopped,
+  &.rspaused {
+    .ic-pause {
+      display: none;
+    }
+
+    .ic-play {
+      display: table-cell;
+    }
+  }
 }
 
 /************************************************ PROGRESS CONTAINER */
 .rsbtn-gobcl-skin .rsbtn_progress_container {
-  border: 1px solid #000;
-  width: 50px;
+  border: 1px solid get-color(white);
+  width: 42px;
   height: 10px;
   margin-top: 3px;
   margin-left: 4px;
@@ -111,14 +189,18 @@
   /*
    * Add rounded corners to supported browsers
    */
-  -moz-border-radius: 3px;
+
+  @include mq($from: micro) {
+    width: 50px;
+  }
+
   border-radius: 3px;
 }
 
 /************************************************ PROGRESS DRAG HANDLE */
 .rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
   position: absolute;
-  background-color: #000;
+  background-color: get-color(white);
   top: -3px;
   left: -3px;
   width: 6px;
@@ -130,49 +212,159 @@
 .rsbtn-gobcl-skin .rsbtn_progress_played {
   position: absolute;
   height: 100%;
-  background-color: #ccc;
+  background-color: get-color(lightgray);
   background-image: none;
 }
 
 /************************************************ DOWNLOAD BUTTON */
-.rsbtn-gobcl-skin .rsbtn_dl {
-  background-position: -18px -72px;
+.rsbtn-gobcl-skin.rsexpanded {
+
+  .rsbtn_exp.rsimg.rspart {
+    .rsbtn_pause {
+      padding: 0 10px;
+    }
+  }
 }
 
-/************************************************ CLOSE BUTTON */
-.rsbtn-gobcl-skin .rsbtn_closer {
-  margin-left: 2px;
-  background-position: -18px -108px;
+.toolbar {
+  &.dark {
+
+    .rsbtn-gobcl-skin.rsexpanded {
+      .toolbar-button {
+        &.toolbar-button--listen {
+          border-right-width: 0;
+        }
+      }
+    }
+
+    .rsbtn-gobcl-skin .rsbtn_exp.rsimg.rspart {
+      border-color: get-color(bluedark);
+    }
+
+
+    .rsbtn-gobcl-skin .rsbtn_progress_container {
+      border-color: get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS DRAG HANDLE */
+    .rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
+      background-color: get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS BAR */
+    .rsbtn-gobcl-skin .rsbtn_progress_played {
+      background-color: get-color(lightgray);
+    }
+
+    .rsbtn-gobcl-skin .rspart.rsbutton {
+      i {
+        color: get-color(bluedark);
+      }
+    }
+  }
 }
 
-/************************************************ POPUP BUTTON */
-/**
- * This is the style of the listen button that popups when the user
- * makes a text selection on the page.
- */
-.rsbtn-gobcl-skin.rspopup {
-  position: absolute;
-  background: #fff;
-  border: 1px solid #555;
-  box-shadow: 0 0 5px #777;
-  display: none;
-}
+.a11y-contrast {
 
-/* About-page link */
-.rsbtn-gobcl-skin a.rsbtn_abouthelp {
-  background: url($imagesPath + 'read-speaker-skin.png') no-repeat scroll -20px -128px transparent;
-  background-color: #000;
-  border-radius: 7px;
-  transition: background-color 0.2s ease 0s;
-  height: 14px;
-  width: 14px;
-  float: left;
-  margin: 3px 1px 1px;
-}
+  .toolbar {
 
-.rsbtn-gobcl-skin a.rsbtn_abouthelp:hover {
-  background-color: #ccc;
-}
-.rsbtn-gobcl-skin a.rsbtn_abouthelp span {
-  display: none;
+    .rsbtn-gobcl-skin.rsexpanded {
+      .toolbar-button.toolbar-button--listen {
+        border-right-width: 0;
+      }
+    }
+
+    &.dark {
+      .toolbar-button--listen:hover {
+        .toolbar-button_content {
+          .rsbtn_text {
+            .toolbar-button_text {
+              color: get-contrast-color(white);
+            }
+          }
+        }
+      }
+
+      .rsbtn-gobcl-skin.rsexpanded {
+
+        .rsbtn_exp.rsimg.rspart {
+          border-color: get-contrast-color(bluedark);
+        }
+
+        .rsbtn_progress_container {
+          border: 1px solid get-contrast-color(bluedark);
+        }
+
+        .rsbtn_progress_handle.rsimg {
+          background-color: get-contrast-color(bluedark);
+        }
+
+        .rsbtn_progress_played {
+          background-color: get-contrast-color(lightgray);
+        }
+
+        .rspart.rsbutton {
+          i {
+            color: get-contrast-color(bluedark);
+          }
+        }
+      }
+    }
+  }
+
+  .hero-background {
+    @include mq($until: mobile) {
+      .rsbtn-gobcl-skin .rsbtn_exp.rsimg.rspart {
+        border-color: get-color(bluedark);
+      }
+
+
+      .rsbtn-gobcl-skin .rsbtn_progress_container {
+        border-color: get-color(bluedark);
+      }
+
+      /************************************************ PROGRESS DRAG HANDLE */
+      .rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
+        background-color: get-color(bluedark);
+      }
+
+      /************************************************ PROGRESS BAR */
+      .rsbtn-gobcl-skin .rsbtn_progress_played {
+        background-color: get-contrast-color(lightgray);
+      }
+
+      .rsbtn-gobcl-skin .rspart.rsbutton {
+        i {
+          color: get-contrast-color(white);
+        }
+      }
+    }
+  }
+
+  .bg-bluedark:not(.hero-background) {
+    .rsbtn-gobcl-skin .rsbtn_exp.rsimg.rspart {
+      border-color: get-color(bluedark);
+    }
+
+
+    .rsbtn-gobcl-skin .rsbtn_progress_container {
+      border: 1px solid get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS DRAG HANDLE */
+    .rsbtn-gobcl-skin .rsbtn_progress_handle.rsimg {
+      background-color: get-color(bluedark);
+    }
+
+    /************************************************ PROGRESS BAR */
+    .rsbtn-gobcl-skin .rsbtn_progress_played {
+      background-color: get-contrast-color(lightgray);
+    }
+
+    .rsbtn-gobcl-skin .rspart.rsbutton {
+      i {
+        color: get-contrast-color(white);
+      }
+    }
+  }
 }

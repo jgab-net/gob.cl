@@ -6,6 +6,7 @@ $colors: (
   red: #FE6565,
   darkred: #BB0000,
   green: #2FAE7D,
+  darkblue: #222B42,
   blue: #0021FF,
   lightblue: #85B1F5,
   yellow: #F2C728,
@@ -23,6 +24,7 @@ $contrast-colors: (
   red: #6DEDEE,
   darkred: #6DEDEE,
   green: #6DEDEE,
+  darkblue: #6DEDEE,
   blue: #6DEDEE,
   lightblue: #6DEDEE,
   yellow: #22221D,
@@ -84,6 +86,7 @@ $iconsPath: "../images/icons/" !default;
 $fontsPath: "../fonts/" !default;
 
 $mq-breakpoints: (
+  micro: 375px,
   mobile: map-get($grid-breakpoints, sm),
   tablet: map-get($grid-breakpoints, md),
   desktop: map-get($grid-breakpoints, lg),

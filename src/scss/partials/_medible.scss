@@ -208,4 +208,16 @@ img {
   label.success {
     color: get-contrast-color(green);
   }
+
+
+  .hero-background {
+
+    .text-light,
+    .text-light p {
+      color: get-contrast-color(white) !important;
+      @include mq($from: mobile) {
+        color: get-contrast-color(black) !important;
+      }
+    }
+  }
 }
