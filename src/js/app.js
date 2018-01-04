@@ -29,7 +29,9 @@ App = {
   imgToBackground: function () {
     $('.elem-bg').each(function (index, el) {
       var srcImg = $(el).find('.img-to-bg').attr('src');
-      $(el).css('background-image', 'url(' + srcImg + ')');
+      if (srcImg) {
+        $(el).css('background-image', 'url(' + srcImg + ')');
+      }
     });
   },
   search: function () {
