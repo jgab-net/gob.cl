@@ -10,6 +10,9 @@
   .mfp-content {
     .mfp-title {
       margin-bottom: 40px;
+      p {
+        color: get-color(light);
+      }
     }
   }
 }
