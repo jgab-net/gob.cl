@@ -577,118 +577,93 @@
 <div class="site-search bg-bluedark">
   <section>
     <div class="container">
-      <p><a href="#" class="text-white toggle-search d-none d-sm-inline">
-        <i class="ic-arrow-left icon--left"></i>Volver</a>
+      <p>
+        <a href="#" class="text-white toggle-search d-none d-sm-inline">
+          <i class="ic-arrow-left icon--left">
+          </i>Volver
+        </a>
       </p>
-
-      <form action="resultados.html">
+      <form action="resultados.html" method="get">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-5 order-lg-12 col-xl-5">
             <div class="site-search_toolbar pull-md-right">
-              <div data-value="16px" class="toolbar">
+              <div data-value="16px" class="toolbar ">
                 <div class="toolbar_content">
-                  <a href="#" class="toolbar-button toolbar-button--contrast d-none">
+                  <a href="#" class="toolbar-button toolbar-button--contrast">
                     <span class="toolbar-button_content">
-                      <i class="ic-contrast toolbar-button_icon"></i>
+                      <i class="ic-contrast toolbar-button_icon">
+                      </i>
                     </span>
                   </a>
                   <a href="#" class="toolbar-button toolbar-button--less disabled">
                     <span class="toolbar-button_content">
-                      <i class="ic-font-size-less toolbar-button_icon"></i>
+                      <i class="ic-font-size-less toolbar-button_icon">
+                      </i>
                     </span>
                   </a>
                   <a href="#" class="toolbar-button toolbar-button--plus">
                     <span class="toolbar-button_content">
-                      <i class="ic-font-size-plus toolbar-button_icon"></i>
+                      <i class="ic-font-size-plus toolbar-button_icon">
+                      </i>
                     </span>
                   </a>
-                  <div class="toolbar_player d-none">
-                    <a href="#track" id="listen" class="toolbar-button toolbar-button--listen">
-                      <span class="toolbar-button_content">
-                        <i class="toolbar-button_icon ic-volume"></i>
-                        <span class="toolbar-button_text">Escuchar</span>
-                      </span>
-                    </a>
-                    <div class="toolbar-player invisible">
-                      <a href="#" class="toolbar-player_toggle">
-                        <span class="toolbar-button_content">
-                          <i class="ic-pause toolbar-button_icon-pause"></i>
-                          <i class="ic-play toolbar-button_icon-play"></i>
-                        </span>
-                      </a>
-                      <div class="toolbar-player_timeline">
-                        <span></span>
-                      </div>
-                      <a href="#" class="toolbar-player_download">
-                        <span class="toolbar-button_content">
-                          <i class="ic-download"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
                 </div>
                 <a href="#" class="toolbar-button toolbar-button--toggle">
                   <span class="toolbar-button_content">
-                    <i class="ic-accessibility toolbar-button_icon"></i>
-                    <i class="ic-close toolbar-button_icon"></i>
+                    <i class="ic-accessibility toolbar-button_icon">
+                    </i>
+                    <i class="ic-close toolbar-button_icon">
+                    </i>
                   </span>
                 </a>
               </div>
-
             </div>
           </div>
           <div class="col-md-12 col-lg-7 col-xl-7">
             <div id="search" class="search-form site-search_form nomargin-bottom">
-              <div class="search-form_content">
-                <input type="search" placeholder="Escribe aquí lo que deseas buscar" name="q" value="" id="input-search"
-                       class="search-form_input">
+              <div class="search-form_content" style="margin-top: 0;">
+                <input type="search" placeholder="Escribe aquí lo que deseas buscar" name="q" value="" id="input-search" class="search-form_input">
                 <button type="submit" class="search-form_button search-form_button--submit">
-                  <i class="ic-search"></i>
+                  <i class="ic-search">
+                  </i>
                 </button>
                 <button type="button" class="search-form_button search-form_button--cancel d-none">
-                  <i class="ic-delete"></i>
+                  <i class="ic-delete">
+                  </i>
                 </button>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
-            <h2 class="heading-label heading-label--light heading-label--wrapped">Filtrar por temas</h2>
+          <div class="col-12 a11y-tts-search">
+            <h2 class="heading-label heading-label--light heading-label--wrapped">Filtrar por temas
+            </h2>
             <div class="tags">
               <div class="tags_content">
                 <div class="tags_item">
-                  <label for="category-input-economia-y-empleo" class="ctag ctag--clarity">
-                    Economía y empleo
-                    <input type="radio" id="category-input-economia-y-empleo" name="category_slug"
-                           value="economia-y-empleo" class="d-none">
+                  <label for="category-input-economia-y-empleo" class="ctag ctag--clarity">Economía y empleo
+                    <input type="radio" id="category-input-economia-y-empleo" name="category_slug" value="economia-y-empleo" class="d-none">
                   </label>
                 </div>
                 <div class="tags_item">
-                  <label for="category-input-educacion" class="ctag ctag--clarity">
-                    Educación
-                    <input type="radio" id="category-input-educacion" name="category_slug" value="educacion"
-                           class="d-none">
+                  <label for="category-input-educacion" class="ctag ctag--clarity">Educación
+                    <input type="radio" id="category-input-educacion" name="category_slug" value="educacion" class="d-none">
                   </label>
                 </div>
                 <div class="tags_item">
-                  <label for="category-input-salud" class="ctag ctag--clarity">
-                    Salud
+                  <label for="category-input-salud" class="ctag ctag--clarity">Salud
                     <input type="radio" id="category-input-salud" name="category_slug" value="salud" class="d-none">
                   </label>
                 </div>
                 <div class="tags_item">
-                  <label for="category-input-seguridad" class="ctag ctag--clarity">
-                    Seguridad
-                    <input type="radio" id="category-input-seguridad" name="category_slug" value="seguridad"
-                           class="d-none">
+                  <label for="category-input-seguridad" class="ctag ctag--clarity">Seguridad
+                    <input type="radio" id="category-input-seguridad" name="category_slug" value="seguridad" class="d-none">
                   </label>
                 </div>
                 <div class="tags_item">
-                  <label for="category-input-calidad-de-vida-y-ciudad" class="ctag ctag--clarity">
-                    Calidad de vida y ciudad
-                    <input type="radio" id="category-input-calidad-de-vida-y-ciudad" name="category_slug"
-                           value="calidad-de-vida-y-ciudad" class="d-none">
+                  <label for="category-input-calidad-de-vida-y-ciudad" class="ctag ctag--clarity">Calidad de vida y ciudad
+                    <input type="radio" id="category-input-calidad-de-vida-y-ciudad" name="category_slug" value="calidad-de-vida-y-ciudad" class="d-none">
                   </label>
                 </div>
               </div>
@@ -696,84 +671,72 @@
           </div>
         </div>
       </form>
-
       <div class="row">
-        <div class="col-md-12 col-lg-4 col-xl-4 d-none">
-          <h2 class="heading-label heading-label--light">Trámites</h2>
+        <div class="col-12 col-lg-4 a11y-tts-search">
+          <h2 class="heading-label heading-label--light">Trámites
+          </h2>
           <div class="search_section overflowed-xs">
-            <a href="#" class="link link--text-light link--has-dot">
-              Bono trabajo mujer
+            <a href="https://www.chileatiende.gob.cl/fichas/ver/13828" class="link link--text-light link--has-dot">Certificado de nacimiento para asignación familiar
             </a>
-            <a href="#" class="link link--text-light">
-              Programa Mujer Jefa de Hogar
+            <a href="https://www.chileatiende.gob.cl/fichas/ver/5436" class="link link--text-light link--has-dot">Subsidio habitacional para familias de sectores medios. Título II (DS N°1)
             </a>
-            <a href="#" class="link link--text-light">
-              Programa Mujer Jefa de Hogar</a>
-            <a href="#" class="link link--text-light hidden-xs">
-              Programa Mujer Jefa de Hogar</a>
-            <a href=#" class="link link--text-light hidden-xs">
-              Programa Mujer Jefa de Hogar</a>
-            <a href="#" class="link link--text-light hidden-xs">
-              Programa Mujer Jefa de Hogar</a>
+            <a href="https://www.chileatiende.gob.cl/fichas/ver/42344" class="link link--text-light link--has-dot">Registro Social de Hogares
+            </a>
+            <a href="https://www.chileatiende.gob.cl/fichas/ver/11331" class="link link--text-light link--has-dot">Obtención de la clave única
+            </a>
+            <a href="https://www.chileatiende.gob.cl/fichas/ver/9380" class="link link--text-light link--has-dot">Certificado de nacimiento para todo trámite
+            </a>
+            <a href="https://www.chileatiende.gob.cl/fichas/ver/5194" class="link link--text-light link--has-dot">Bono por Hijo
+            </a>
             <div class="clearfix">
-              <a href="#" class="more more--right">
-                Ver más
+              <a href="https://chileatiende.digital.gob.cl/" class="more more--right">Ver más
               </a>
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-6 col-xl-6">
-          <h2 class="heading-label heading-label--light">Noticias</h2>
+        <div class="col-12 col-lg-4 a11y-tts-search">
+          <h2 class="heading-label heading-label--light">Noticias
+          </h2>
           <div class="search_section overflowed-xs">
             <article class="new new--search">
-              <span class="new_category new_category--light">Calidad de vida y ciudad</span>
+              <span class="new_category new_category--light">
+              </span>
               <h2 class="new_title">
-                <a href="noticia.html" class="link link--text-light">
-                  Plan de Embalses: Gobierno desarrolla proyectos que beneficiarán a 25 mil chilenos en zonas con escasez de agua
+                <a href="noticia.html" class="link link--text-light">La escasez de agua se enfrenta con medidas gubernamentales y con buenas prácticas en el hogar
                 </a>
               </h2>
             </article>
             <div class="clearfix">
-              <a href="noticias.html" class="more more--right">Ver más</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-6 col-xl-6">
-          <h2 class="heading-label heading-label--light">Instituciones</h2>
-          <div class="search_section overflowed-xs">
-            <a
-              href="institucion.html"
-              class="link link--text-light">Ministerio Secretaría General de la Presidencia</a>
-            <a
-              href="institucion.html"
-              class="link link--text-light">Región Metropolitana de Santiago</a>
-            <a
-              href=institucion.html"
-              class="link link--text-light">Ministerio de Transportes y Telecomunicaciones</a>
-            <a
-              href="institucion.html" class="link link--text-light">
-              Región de Tarapacá</a>
-            <a
-              href="institucion.html"
-              class="link link--text-light">
-              Ministerio de Justicia
-            </a>
-            <a
-              href="institucion.html"
-              class="link link--text-light">
-              Región de Aysén del General Carlos Ibáñez del Campo
-            </a>
-            <div class="clearfix">
-              <a href="instituciones.html" class="more more--right">
-                Ver más
+              <a href="noticias.html" class="more more--right">Ver más
               </a>
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-12 text-xs-center text-sm-center">
-          <div class="site-search_button-results">
-            <a href="resultados.html" class="button button--clean button--more">
-              Ver todos los resultados
+        <div class="col-12 col-lg-4 a11y-tts-search">
+          <h2 class="heading-label heading-label--light">Instituciones
+          </h2>
+          <div class="search_section overflowed-xs">
+            <a href="ministerio.html" class="link link--text-light">Ministerio del Interior y Seguridad Pública
+            </a>
+            <a href="ministerio.html" class="link link--text-light">Ministerio de Relaciones Exteriores
+            </a>
+            <a href="region.html" class="link link--text-light">Región de Los Lagos
+            </a>
+            <a href="ministerio.html" class="link link--text-light">Ministerio de Hacienda
+            </a>
+            <a href="region.html" class="link link--text-light">Región Metropolitana
+            </a>
+            <a href="ministerio.html" class="link link--text-light">Ministerio Secretaría General de Gobierno
+            </a>
+            <div class="clearfix">
+              <a href="instituciones.html" class="more more--right">Ver más
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 text-xs-center text-sm-center a11y-tts-search">
+          <div class="site-search_button-results fixed">
+            <a href="resultados.html" class="button button--clean button--more">Ver todos los resultados
             </a>
           </div>
         </div>
