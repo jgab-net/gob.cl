@@ -329,4 +329,20 @@
       }
     }
   }
+
+  .post-audio {
+    a {
+      color: get-contrast-color(white);
+    }
+    p {
+      color: get-contrast-color(white);
+    }
+    background-color: get-contrast-color(black);
+    &.active {
+      background-color: get-contrast-color(white);
+    }
+    &_time {
+      color: get-contrast-color(white);
+    }
+  }
 }

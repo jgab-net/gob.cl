@@ -472,4 +472,10 @@
       color: get-contrast-color(dark);
     }
   }
+
+  .card-info {
+    background: get-contrast-color(bluedark);
+
+    color: get-contrast-color(white);
+  }
 }
