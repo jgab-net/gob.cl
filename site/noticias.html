@@ -306,198 +306,159 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5 order-md-12">
             <div class="pull-md-right">
-              <div data-value="16px" class="toolbar">
+              <div data-value="16px" class="toolbar ">
                 <div class="toolbar_content">
-                  <a href="#" class="toolbar-button toolbar-button--contrast d-none">
+                  <a href="#" class="toolbar-button toolbar-button--contrast">
                     <span class="toolbar-button_content">
-                      <i class="ic-contrast toolbar-button_icon"></i></span>
+                      <i class="ic-contrast toolbar-button_icon">
+                      </i>
+                    </span>
                   </a>
-                  <a href="#" class="toolbar-button toolbar-button--less">
+                  <a href="#" class="toolbar-button toolbar-button--less disabled">
                     <span class="toolbar-button_content">
-                      <i class="ic-font-size-less toolbar-button_icon"></i></span>
+                      <i class="ic-font-size-less toolbar-button_icon">
+                      </i>
+                    </span>
                   </a>
                   <a href="#" class="toolbar-button toolbar-button--plus">
                     <span class="toolbar-button_content">
-                      <i class="ic-font-size-plus toolbar-button_icon"></i>
+                      <i class="ic-font-size-plus toolbar-button_icon">
+                      </i>
                     </span>
                   </a>
-                  <div class="toolbar_player d-none">
-                    <a href="#track" id="listen" class="toolbar-button toolbar-button--listen">
-                      <span class="toolbar-button_content">
-                        <i class="toolbar-button_icon ic-volume"></i>
-                        <span class="toolbar-button_text">Escuchar</span>
-                      </span>
-                    </a>
-                    <div class="toolbar-player invisible">
-                      <a href="#" class="toolbar-player_toggle">
-                        <span class="toolbar-button_content">
-                          <i class="ic-pause toolbar-button_icon-pause"></i>
-                          <i class="ic-play toolbar-button_icon-play"></i>
-                        </span>
-                      </a>
-                      <div class="toolbar-player_timeline">
-                        <span></span>
-                      </div>
-                      <a href="#" class="toolbar-player_download">
-                        <span class="toolbar-button_content">
-                          <i class="ic-download"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
                 </div>
                 <a href="#" class="toolbar-button toolbar-button--toggle">
                   <span class="toolbar-button_content">
-                    <i class="ic-accessibility toolbar-button_icon"></i>
-                    <i class="ic-close toolbar-button_icon"></i>
+                    <i class="ic-accessibility toolbar-button_icon">
+                    </i>
+                    <i class="ic-close toolbar-button_icon">
+                    </i>
                   </span>
                 </a>
               </div>
-
             </div>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-7">
-            <h1 class="heading-large">Noticias</h1>
+            <h1 class="heading-large a11y-tts">Noticias
+            </h1>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
+            <p>
+              <!-- The image is only shown on the detail view by using the condition "and detail_view"-->
+              <a href="noticia.html">
+                <img src="images/main-news.jpg" alt="" class="article-hero_img img-fluid w-100">
+              </a>
+            </p>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <time class="article-hero_date a11y-tts">10 de Noviembre de 2017
+            </time>
+            <h2 class="article-hero_main-title">
+              <a href="noticia.html" class="a11y-tts">La escasez de agua se enfrenta con medidas gubernamentales y con buenas prácticas en el hogar
+              </a>
+            </h2>
+            <p class="a11y-tts">El agua es una fuente vital para la vida y el desarrollo. Por eso el Gobierno, a través distintas campañas e iniciativas, está tomando acciones ante la sequía y el cambio climático. Uno de los temas más importantes es, eso sí, el uso y cuidado que cada uno hace de ella.
+            </p>
+            <a href="noticia.html" class="text-red a11y-tts">Ver noticia completa
+            </a>
+          </div>
+        </div>
       </article>
     </div>
   </section>
   <section class="section">
     <div class="container">
-      <h2 class="heading-label">Filtrar por Temas:</h2>
-      <div class="tags" data-cancel-link="/noticias.html">
+      <h2 class="heading-label a11y-tts">Filtrar por Temas:
+      </h2>
+      <div data-cancel-link="noticias.html" class="tags">
         <div class="tags_content">
           <div class="tags_item">
-            <a href="#" class="ctag ctag--light">
-              Economía y empleo
+            <a href="noticias.html" class="ctag ctag--light a11y-tts ">Economía y empleo
             </a>
           </div>
           <div class="tags_item">
-            <a href="#" class="ctag ctag--light">
-              Educación
+            <a href="noticias.html" class="ctag ctag--light a11y-tts ">Educación
             </a>
           </div>
           <div class="tags_item">
-            <a href="#"class="ctag ctag--light">
-              Salud
+            <a href="noticias.html" class="ctag ctag--light a11y-tts ">Salud
             </a>
           </div>
           <div class="tags_item">
-            <a href="#" class="ctag ctag--light">
-              Seguridad
+            <a href="noticias.html" class="ctag ctag--light a11y-tts ">Seguridad
             </a>
           </div>
           <div class="tags_item">
-            <a href="#" class="ctag ctag--light">
-              Calidad de vida y ciudad
+            <a href="noticias.html" class="ctag ctag--light a11y-tts ">Calidad de vida y ciudad
             </a>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <article class="new new--mobile">
-            <time class="new_date">
-              16 de Noviembre de 2017
+      <div data-default-image-url="/static/images/default-news.png" class="row article-miniature-list">
+        <div class="col-12 col-lg-6">
+          <article class="new new--mobile a11y-tts">
+            <time class="new_date">10 de Noviembre de 2017
             </time>
             <figure class="new_figure-mobile">
-              <img
-                src="images/default-news.png"
-                alt="" class="img-fluid w-100 img-frame">
+              <img src="images/news-1.jpg" alt="" class="img-fluid w-100 img-frame">
             </figure>
             <h2 class="new_title">
-              <a
-                href="noticia.html"
-                class="link link--text-dark visited">
-                  Pdta: “Creemos que es posible crear condiciones que garanticen el
-                  acceso a una educación de calidad como piso común"
+              <a href="noticia.html" class="link link--text-dark visited">La escasez de agua se enfrenta con medidas gubernamentales y con buenas prácticas en el hogar
               </a>
             </h2>
           </article>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <article class="new new--mobile">
-            <time class="new_date">
-              15 de Noviembre de 2017
+        <div class="col-12 col-lg-6">
+          <article class="new new--mobile a11y-tts">
+            <time class="new_date">30 de Octubre de 2017
             </time>
             <figure class="new_figure-mobile">
-              <img
-                src="images/default-news.png"
-                alt="" class="img-fluid w-100 img-frame">
+              <img src="images/news-2.jpg" alt="" class="img-fluid w-100 img-frame">
             </figure>
             <h2 class="new_title">
-              <a
-                href="noticia.html"
-                class="link link--text-dark visited">
-                  El nuevo Hospital de Chimbarongo es el séptimo inaugurado en los
-                  últimos dos meses por la Presidenta Bachelet
+              <a href="noticia.html" class="link link--text-dark visited">Nueva campaña gubernamental llama a la participación ciudadana en las elecciones de noviembre
               </a>
             </h2>
           </article>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <article class="new new--mobile">
-            <time class="new_date">
-              15 de Noviembre de 2017
+        <div class="col-12 col-lg-6">
+          <article class="new new--mobile a11y-tts">
+            <time class="new_date">26 de Octubre de 2017
             </time>
             <figure class="new_figure-mobile">
-              <img
-                src="images/default-news.png"
-                alt="" class="img-fluid w-100 img-frame">
+              <img src="images/news-3.jpg" alt="" class="img-fluid w-100 img-frame">
             </figure>
             <h2 class="new_title">
-              <a
-                href="noticia.html"
-                class="link link--text-dark visited">
-                  Ministra Alejandra Krauss llamó a empleadores a dar facilidades a los
-                  trabajadores que desean sufragar este domingo
+              <a href="noticia.html" class="link link--text-dark visited">Pdta. inauguró Costanera Chiguayante: “Es un ejemplo del sentido que debe tener la inversión pública para aportar al desarrollo de nuestro país”
               </a>
             </h2>
           </article>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <article class="new new--mobile">
-            <time class="new_date">
-              15 de Noviembre de 2017
+        <div class="col-12 col-lg-6">
+          <article class="new new--mobile a11y-tts">
+            <time class="new_date">26 de Octubre de 2017
             </time>
             <figure class="new_figure-mobile">
-              <img
-                src="images/default-news.png"
-                alt="" class="img-fluid w-100 img-frame">
+              <img src="images/news-4.jpg" alt="" class="img-fluid w-100 img-frame">
             </figure>
             <h2 class="new_title">
-              <a
-                href="noticia.html"
-                class="link link--text-dark visited">
-                  Presidenta inauguró el Hospital Dr. Exequiel González Cortés en la
-                  comuna de San Miguel
-              </a>
-            </h2>
-          </article>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <article class="new new--mobile">
-            <time class="new_date">
-              15 de Noviembre de 2017
-            </time>
-            <figure class="new_figure-mobile">
-              <img
-                src="images/default-news.png"
-                alt="" class="img-fluid w-100 img-frame">
-            </figure>
-            <h2 class="new_title">
-              <a
-                href="noticia.html"
-                class="link link--text-dark visited">
-                  Plan de Embalses: Gobierno desarrolla proyectos que beneficiarán a 25
-                  mil chilenos en zonas con escasez de agua
+              <a href="noticia.html" class="link link--text-dark visited">Jefa de Estado entregó 206 subsidios del “Conjunto Habitacional Manzana M1 y M2” de la Población Aurora de Chile de Concepción
               </a>
             </h2>
           </article>
         </div>
       </div>
+      <col-12 class="col-lg-4 offset-lg-4 col-xl-4 offset-xl-4 text-center">
+        <br>
+        <div class="loading-indicator" style="display: none;">
+          <i class="fa fa-spinner fa-pulse fa-3x fa-fw">
+          </i>
+          <div style="margin-top: 10px;">Cargando...
+          </div>
+        </div>
+      </col-12>
     </div>
   </section>
   <section>
@@ -505,49 +466,71 @@
       <div class="section-social">
         <div class="row align-items-center">
           <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4">
-            <p class="section-social_label">Síguenos a través de redes sociales:</p>
+            <p class="section-social_label">Síguenos a través de redes sociales:
+            </p>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-9 col-xl-8">
             <div class="row align-items-center">
               <div class="col-sm-12 col-md-3 col-lg-3">
                 <div class="social">
-                  <a href="https://www.facebook.com/gobiernodechile" target="blank" class="social_link"></a>
+                  <a href="https://www.facebook.com/gobiernodechile" target="blank" class="social_link">
+                  </a>
                   <span class="social_icon">
-                    <i class="ic-facebook"></i>
+                    <i class="ic-facebook">
+                    </i>
                   </span>
-                  <span class="social_name">Facebook</span>
-                  <span class="social_url">/gobiernodechile</span>
+                  <span class="social_name">Facebook
+                  </span>
+                  <span class="social_url">/gobiernodechile
+                  </span>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 col-lg-3">
                 <div class="social">
-                  <a href="https://twitter.com/gobiernodechile" target="blank" class="social_link"></a>
-                  <span class="social_icon"><i class="ic-twitter"></i></span>
-                  <span class="social_name">Twitter</span>
-                  <span class="social_url">@Gobiernodechile</span>
+                  <a href="https://twitter.com/gobiernodechile" target="blank" class="social_link">
+                  </a>
+                  <span class="social_icon">
+                    <i class="ic-twitter">
+                    </i>
+                  </span>
+                  <span class="social_name">Twitter
+                  </span>
+                  <span class="social_url">@Gobiernodechile
+                  </span>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 col-lg-3">
                 <div class="social">
-                  <a href="https://www.instagram.com/gobiernodechile/" target="blank" class="social_link"></a>
-                  <span class="social_icon"><i class="ic-instagram"></i></span>
-                  <span class="social_name">Instagram</span>
-                  <span class="social_url">/gobiernodechile</span>
+                  <a href="https://www.instagram.com/gobiernodechile/" target="blank" class="social_link">
+                  </a>
+                  <span class="social_icon">
+                    <i class="ic-instagram">
+                    </i>
+                  </span>
+                  <span class="social_name">Instagram
+                  </span>
+                  <span class="social_url">/gobiernodechile
+                  </span>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 col-lg-3">
                 <div class="social">
-                  <a href="https://www.youtube.com/user/LAMONEDA" target="blank" class="social_link"></a>
-                  <span class="social_icon"><i class="ic-youtube"></i></span>
-                  <span class="social_name">Youtube</span>
-                  <span class="social_url">Lamoneda</span>
+                  <a href="https://www.youtube.com/user/LAMONEDA" target="blank" class="social_link">
+                  </a>
+                  <span class="social_icon">
+                    <i class="ic-youtube">
+                    </i>
+                  </span>
+                  <span class="social_name">Youtube
+                  </span>
+                  <span class="social_url">Lamoneda
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 </main>
