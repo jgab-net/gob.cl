@@ -60,20 +60,21 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 }
+select {
+  width: 100%;
+  position: relative;
+  background: url($iconsPath + 'arrow-select.svg') 95% 21px no-repeat;
+
+  &.dark {
+    background: get-color(bluedark) url($iconsPath + 'arrow-select.white.svg') 95% 21px no-repeat;
+    color: get-color(white);
+  }
+}
 
 .select {
   position: relative;
-  select {
-    width: 100%;
-    position: relative;
-    background: url($iconsPath + 'arrow-select.svg') 95% 23px no-repeat;
-  }
-  &--dark {
-    select {
-      background: get-color(bluedark) url($iconsPath + 'arrow-select.white.svg') 95% 23px no-repeat;
-      color: get-color(white);
-    }
 
+  &--dark {
     .select2 {
 
       &.select2-container {
