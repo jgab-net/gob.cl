@@ -62,12 +62,6 @@ App = {
         }
       }
     });
-    $inputSearch.focusin(function () {
-      $('.site-search_button-results').removeClass("fixed");
-    });
-    $inputSearch.focusout(function () {
-      $('.site-search_button-results').addClass("fixed");
-    });
   },
   scroller: function () {
     $(".nano").nanoScroller({
