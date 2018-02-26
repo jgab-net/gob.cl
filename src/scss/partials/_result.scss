@@ -32,3 +32,11 @@
 
   }
 }
+
+.a11y-contrast {
+  .result {
+    &_date {
+      color: rgba(get-contrast-color(dark), .6);
+    }
+  }
+}
