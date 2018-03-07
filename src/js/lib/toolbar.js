@@ -163,7 +163,13 @@
     });
   };
 
-  if (! window.rsConf) { window.rsConf = {}; }
+  if (! window.rsConf) {
+    window.rsConf = {
+      general: {
+        usePost: true
+      }
+    };
+  }
   if (! window.rsConf.ui) { window.rsConf.ui = {}; }
   window.rsConf.ui.rsbtnClass = 'rsbtn-gobcl-skin';
   window.rsConf.ui.player = [
