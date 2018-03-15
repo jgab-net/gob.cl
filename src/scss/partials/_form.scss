@@ -66,7 +66,7 @@ select {
   background: url($iconsPath + 'arrow-select.svg') 95% 21px no-repeat;
 
   &.dark {
-    background: get-color(bluedark) url($iconsPath + 'arrow-select.white.svg') 95% 21px no-repeat;
+    background: get-color(bluedark) url($iconsPath + 'arrow-select-white.svg') 95% 21px no-repeat;
     color: get-color(white);
   }
 }
@@ -86,7 +86,7 @@ select {
           }
 
           .select2-selection__arrow {
-            background: url($iconsPath + 'arrow-select.white.svg') 0 23px no-repeat;
+            background: url($iconsPath + 'arrow-select-white.svg') 0 23px no-repeat;
           }
         }
       }
@@ -324,8 +324,9 @@ label {
       border-radius: 3px;
       position: relative;
       &:after {
-        background: transparent url($imagesPath + 'icon-error.png') 100% 0 no-repeat;
-        background-size: auto 100%;
+        // TODO: find asset for this (medible bug)
+        // background: transparent url($imagesPath + 'icon-error.png') 100% 0 no-repeat;
+        // background-size: auto 100%;
         content: "";
         display: block;
         height: 16px;
@@ -347,8 +348,9 @@ label {
       border-radius: 3px;
       position: relative;
       &:after {
-        background: transparent url($imagesPath + 'icon-error.png') 0 0 no-repeat;
-        background-size: auto 100%;
+        // TODO: find asset for this (medible bug)
+        // background: transparent url($imagesPath + 'icon-error.png') 0 0 no-repeat;
+        // background-size: auto 100%;
         content: "";
         display: block;
         height: 16px;
@@ -406,10 +408,11 @@ label {
       z-index: 1;
     }
     &:after {
-      background-image: url($imagesPath + 'arrow-down.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-color: #4fb0fd;
+      // TODO: find asset for this (medible bug)
+      // background-image: url($imagesPath + 'arrow-down.jpg');
+      // background-repeat: no-repeat;
+      // background-position: center center;
+      // background-color: #4fb0fd;
       border-radius: 1px;
       content: "";
       display: block;
