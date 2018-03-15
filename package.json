@@ -1,6 +1,6 @@
 {
   "name": "@gobdigital-cl/gob.cl",
-  "version": "1.3.10",
+  "version": "1.3.11",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/e-gob/gob.cl.git"
@@ -27,6 +27,7 @@
     "serve:documentation": "gulp serve:documentation",
     "build:watch": "gulp build:watch"
   },
+  "main": "dist/js/gob.cl.js",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.2.1",
