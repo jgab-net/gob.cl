@@ -121,8 +121,8 @@ $footer-links-max: 20 !default;
 $footer-links-container-offset: 100px !default;
 
 // Django cms toolbar variables.
-$django-cms-toolbar: 5px !default;
-$django-cms-toolbar-expanded: 49px !default;
+$django-cms-toolbar: 0 !default;
+$django-cms-toolbar-expanded: 45.99px !default;
 
 // Forms
 $labelSize: 0.6875rem;
