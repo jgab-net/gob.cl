@@ -34,6 +34,10 @@ GobCl.createInifiniteScroll = function (
         return;
       }
 
+      if (!$loadingIndicator.length) {
+        return;
+      }
+
       // Here we check if a loading indicator is inside our viewport. If it is true
       // We can call a request
       var docViewTop = $(window).scrollTop();
