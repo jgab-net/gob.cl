@@ -17,7 +17,9 @@
   function Plugin(element, options) {
     this.$element = $(element);
 
-    this.options = $.extend({}, defaults, options, this.$element.data());
+    this.options = $.extend({}, defaults, options, this.$element.data(),
+      JSON.parse(localStorage.getItem(storageKey))
+    );
 
     this.init();
   }
@@ -27,40 +29,49 @@
 
     this.update();
 
-    var $continueAction = this.$element.find('.contingency-continue');
+    var $continueAction = this.$element.find('.contingency-continue .contingency-link');
     var $navigateAction = this.$element.find('.contingency-navigate');
 
     $continueAction.on('click', function (e) {
       e.preventDefault();
+      var currentContingency = $(this).attr('href');
       $body.addClass('status-continue');
       $body.removeClass('status-navigate');
-      localStorage.removeItem(storageKey);
+      localStorage.setItem(storageKey, JSON.stringify({
+        currentContingency: currentContingency
+      }));
+      $(currentContingency).addClass('active');
     });
 
     $navigateAction.on('click', function (e) {
       e.preventDefault();
       $body.removeClass('status-continue');
       $body.addClass('status-navigate');
-      localStorage.setItem(storageKey, true);
+      localStorage.setItem(storageKey, JSON.stringify({}));
+      $('.contingency-container').removeClass('active');
     });
   };
 
   Plugin.prototype.update = function () {
     var $body = $('body');
     if (this.options.active) {
-      var stored = !!localStorage.getItem(storageKey);
-
       $body
         .addClass('contingency-active')
-        .toggleClass('status-navigate', stored)
-        .toggleClass('status-continue', !stored);
+        .toggleClass('status-navigate', !this.options.currentContingency)
+        .toggleClass('status-continue', !!this.options.currentContingency);
+
+      if (this.options.currentContingency) {
+        $(this.options.currentContingency).addClass('active');
+      }
     } else {
       $body.removeClass('contingency-active');
     }
   };
 
   Plugin.prototype.setOptions = function (options) {
-    this.options = $.extend(this.options, options);
+    this.options = $.extend(this.options, options, this.$element.data(),
+      JSON.parse(localStorage.getItem(storageKey))
+    );
     this.update();
   };
 

@@ -115,21 +115,40 @@
   </div>
 </nav>
 <section class="contingency">
+  <div class="contingency-continue bg-yellow">
+    <div class="container text-left">
+      <span class="pr-4">Último minuto:</span>
+      <a href="#contingency-1" class="px-4 contingency-link">Contingencia 1</a>
+      <a href="#contingency-2" class="px-4 contingency-link">Contingencia 2</a>
+      <a href="#contingency-3" class="px-4 contingency-link">Contingencia 3</a>
+    </div>
+  </div>
   <a href="#" class="contingency-navigate button button--block">
     Continúa navegando
   </a>
-  <section class="bg-yellow">
-    <div class="container">
-      <p>
-        Contingencia activa
-      </p>
+  <div id="contingency-1" class="container contingency-container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Contingencia 1</h1>
+      </div>
     </div>
-  </section>
+  </div>
+  <div id="contingency-2" class="container contingency-container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Contingencia 2</h1>
+      </div>
+    </div>
+  </div>
+  <div id="contingency-3" class="container contingency-container">
+    <div class="row">
+      <div class="col-12">
+        <h1>Contingencia 3</h1>
+      </div>
+    </div>
+  </div>
 </section>
 <main class="site-main">
-  <a href="#" class="contingency contingency-continue button button--block button--yellow">
-    Seguir en contingencia
-  </a>
   <section class="section bg-bluedark">
     <div class="container">
       <article class="text-light">
@@ -2631,7 +2650,6 @@
     $('.toggle-contingency').on('click', function (e) {
       e.preventDefault();
       var contingency = !$(this).data('contingency');
-      console.log(contingency);
       $('body').contingency({ active: contingency });
       $(this).data('contingency', contingency);
     });

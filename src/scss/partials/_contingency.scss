@@ -12,6 +12,26 @@ body {
       min-height: $contingency-actions-height;
       height: auto;
     }
+
+    .contingency-continue {
+      padding: 18px 25px;
+      line-height: 24px;
+      .col-12 {
+        text-align: center;
+
+        &:first-child {
+          text-align: left;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    > .contingency-container {
+      display: none;
+    }
   }
 
   &.contingency-active {
@@ -23,7 +43,8 @@ body {
       }
     }
 
-    .contingency > * {
+    .contingency > *:not(.contingency-container),
+    .contingency > .contingency-container.active {
       display: block;
     }
 
