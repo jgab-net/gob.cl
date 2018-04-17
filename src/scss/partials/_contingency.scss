@@ -16,6 +16,19 @@ body {
     .contingency-continue {
       padding: 18px 25px;
       line-height: 24px;
+
+      .contingency-link {
+        display: block;
+
+        @include mq($from: desktop) {
+          display: inline-block;
+        }
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+
       .col-12 {
         text-align: center;
 
@@ -56,7 +69,7 @@ body {
   &.status-continue {
     .contingency {
       .contingency-continue {
-        display: none;
+        //display: none;
       }
     }
   }

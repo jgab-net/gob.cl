@@ -25,6 +25,7 @@
   }
 
   Plugin.prototype.init = function () {
+    var that = this;
     var $body = $('body');
 
     this.update();
@@ -34,6 +35,12 @@
 
     $continueAction.on('click', function (e) {
       e.preventDefault();
+
+      that.$element.find('.contingency-container')
+        .removeClass('active');
+      $continueAction.removeClass('active');
+      $(this).addClass('active');
+
       var currentContingency = $(this).attr('href');
       $body.addClass('status-continue');
       $body.removeClass('status-navigate');
@@ -45,6 +52,7 @@
 
     $navigateAction.on('click', function (e) {
       e.preventDefault();
+
       $body.removeClass('status-continue');
       $body.addClass('status-navigate');
       localStorage.setItem(storageKey, JSON.stringify({}));
@@ -62,6 +70,7 @@
 
       if (this.options.currentContingency) {
         $(this.options.currentContingency).addClass('active');
+        $('[href="' + this.options.currentContingency + '"]').addClass('active');
       }
     } else {
       $body.removeClass('contingency-active');
