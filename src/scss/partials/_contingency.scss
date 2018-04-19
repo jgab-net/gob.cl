@@ -16,6 +16,29 @@ body {
     .contingency-continue {
       padding: 18px 0;
       line-height: 24px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 4px 1px $shadow;
+        z-index: 1;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 6px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-color: get-color(yellow);
+      }
 
       &.show {
         .contingency-option {
