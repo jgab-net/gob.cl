@@ -80,9 +80,16 @@ body {
 
         .contingency-link {
           margin-left: 110px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: calc(100% - 128px);
+          display: inline-block;
 
           @include mq($from: desktop) {
             margin-left: 0;
+            width: auto;
+            display: inline;
           }
 
           &.active {
