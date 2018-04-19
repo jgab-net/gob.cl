@@ -32,6 +32,12 @@
 
     var $continueAction = this.$element.find('.contingency-continue .contingency-link');
     var $navigateAction = this.$element.find('.contingency-navigate');
+    var $list = this.$element.find('.contingency-continue .contingency-list');
+
+    $list.on('click', function (e) {
+      e.preventDefault();
+      that.$element.find('.contingency-continue').toggleClass('show');
+    });
 
     $continueAction.on('click', function (e) {
       e.preventDefault();
@@ -52,7 +58,7 @@
 
     $navigateAction.on('click', function (e) {
       e.preventDefault();
-
+      $continueAction.removeClass('active');
       $body.removeClass('status-continue');
       $body.addClass('status-navigate');
       localStorage.setItem(storageKey, JSON.stringify({}));

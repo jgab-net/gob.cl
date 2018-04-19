@@ -14,33 +14,84 @@ body {
     }
 
     .contingency-continue {
-      padding: 18px 25px;
+      padding: 18px 0;
       line-height: 24px;
 
-      .contingency-link {
+      &.show {
+        .contingency-option {
+          display: block !important;
+
+          .contingency-list {
+            .fa-angle-down {
+              display: none;
+            }
+
+            .fa-angle-up {
+              display: block;
+            }
+          }
+
+          @include mq($from: desktop) {
+            display: inline-block !important;
+
+          }
+        }
+      }
+
+      .contingency-option {
         display: block;
+
+        &:not(:first-child) {
+          display: none;
+        }
 
         @include mq($from: desktop) {
           display: inline-block;
+
+          &:not(:first-child) {
+            display: inline-block;
+          }
         }
 
-        &.active {
-          font-weight: bold;
+        .contingency-list {
+          float: right;
+          text-decoration: none;
+
+          .fa-angle-up {
+            display: none;
+          }
+
+          .fa-angle-down {
+            display: block;
+          }
+
+          @include mq($from: desktop) {
+            display: none;
+          }
         }
-      }
 
-      .col-12 {
-        text-align: center;
-
-        &:first-child {
-          text-align: left;
+        .contingency-hint {
+          display: inline-block;
+          position: absolute;
+          @include mq($from: desktop) {
+            position: inherit;
+          }
         }
 
-        &:last-child {
-          text-align: right;
+        .contingency-link {
+          margin-left: 110px;
+
+          @include mq($from: desktop) {
+            margin-left: 0;
+          }
+
+          &.active {
+            font-weight: bold;
+          }
         }
       }
     }
+
 
     > .contingency-container {
       display: none;
